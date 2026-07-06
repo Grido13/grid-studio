@@ -17,7 +17,8 @@ mkdir -p db_dump
   -t grid.egon_etrago_load_timeseries -t grid.egon_bus_metadata \
   -t grid.municipality_energy -t grid.official_eeg_plants \
   -t grid.official_operators -t grid.official_redispatch_measures \
-  -t grid.official_redispatch_national_hourly -t boundaries.vg250_krs
+  -t grid.official_redispatch_hourly -t grid.official_redispatch_national_hourly \
+  -t boundaries.vg250_krs
 
 tar -cf db_dump/egon_grid.dump.tar -C db_dump egon_grid.dump
 split -b 1900m -d -a 2 db_dump/egon_grid.dump.tar db_dump/egon_grid.dump.tar.part
