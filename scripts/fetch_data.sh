@@ -3,7 +3,7 @@
 # the GitHub release into the paths the app expects. Run from the repo root:
 #   bash scripts/fetch_data.sh
 set -euo pipefail
-REPO="witto13/grid-studio"
+REPO="Grido13/grid-studio"
 TAG="v1.0-data"
 cd "$(dirname "$0")/.."
 

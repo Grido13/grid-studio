@@ -35,7 +35,7 @@ English ⇄ German interface, light and dark mode.
 ### 1 · Clone and install
 
 ```bash
-git clone https://github.com/witto13/grid-studio.git
+git clone https://github.com/Grido13/grid-studio.git
 cd grid-studio
 python -m venv .venv && source .venv/bin/activate     # or a conda env
 pip install -r requirements.txt
@@ -44,7 +44,7 @@ pip install -r requirements.txt
 ### 2 · Fetch the data
 
 The hourly simulation results and the database dump are too large for git and live in
-the [`v1.0-data` release](https://github.com/witto13/grid-studio/releases/tag/v1.0-data):
+the [`v1.0-data` release](https://github.com/Grido13/grid-studio/releases/tag/v1.0-data):
 
 ```bash
 bash scripts/fetch_data.sh
@@ -102,7 +102,7 @@ part of this repository.
 
 ## License
 
-[MIT No Attribution (MIT-0)](LICENSE) — © 2026 witto13.
+[MIT No Attribution (MIT-0)](LICENSE) — © 2026 Grido13.
 
 You may use, copy, modify, and sell this software, commercially and without
 attribution. The original work remains the author's.
