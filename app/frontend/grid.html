@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>German Grid — Power Flow & Redispatch</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<style>
+  :root { --bg:#0e1116; --panel:#161b22; --line:#2a3038; --txt:#e6edf3; --muted:#8b949e; }
+  * { box-sizing:border-box; }
+  html,body { margin:0; height:100%; font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+              background:var(--bg); color:var(--txt); }
+  #wrap { display:flex; height:100vh; }
+  #map { flex:1; height:100%; background:#0a0d12; }
+  #side { width:380px; background:var(--panel); border-left:1px solid var(--line);
+          display:flex; flex-direction:column; overflow:hidden; }
+  header { padding:12px 14px; border-bottom:1px solid var(--line); }
+  header h1 { font-size:15px; margin:0 0 2px; }
+  header .sub { font-size:11px; color:var(--muted); }
+  .ctrls { padding:10px 14px; border-bottom:1px solid var(--line); display:flex; flex-direction:column; gap:9px; }
+  .row { display:flex; align-items:center; gap:8px; font-size:13px; }
+  .row label { flex:1; cursor:pointer; }
+  select, input[type=range] { width:100%; }
+  .switch { position:relative; width:38px; height:20px; flex:0 0 38px; }
+  .row label.switch { flex:0 0 38px; }
+  .switch input { display:none; }
+  #day { background:#0d1117; color:var(--txt); border:1px solid var(--line); border-radius:4px; padding:5px 6px; flex:1; font-size:13px; }
+  #worst { background:#0d1117; color:var(--txt); border:1px solid var(--line); border-radius:4px; padding:5px 9px; cursor:pointer; font-size:12px; white-space:nowrap; }
+  #worst:hover { border-color:#2f81f7; }
+  .hourbar { display:flex; gap:3px; overflow-x:auto; padding-bottom:3px; scrollbar-width:thin; }
+  .hourbar button { flex:0 0 auto; width:30px; padding:6px 0; font-size:11px; background:#0d1117;
+    border:1px solid var(--line); color:var(--muted); border-radius:4px; cursor:pointer; font-variant-numeric:tabular-nums; }
+  .hourbar button:hover { border-color:#2f81f7; }
+  .hourbar button.sel { background:#2f81f7; color:#fff; border-color:#2f81f7; }
+  .tstamp { font-size:11px; color:var(--muted); min-height:14px; }
+  .slider { position:absolute; inset:0; background:#30363d; border-radius:20px; transition:.2s; cursor:pointer; }
+  .slider:before { content:""; position:absolute; width:16px; height:16px; left:2px; top:2px;
+                   background:#fff; border-radius:50%; transition:.2s; }
+  .switch input:checked + .slider { background:#2f81f7; }
+  .switch input:checked + .slider:before { transform:translateX(18px); }
+  .legend { display:flex; gap:12px; font-size:11px; color:var(--muted); padding:8px 14px; flex-wrap:wrap;
+            border-bottom:1px solid var(--line); }
+  .legend i { display:inline-block; width:11px; height:11px; border-radius:2px; margin-right:4px; vertical-align:-1px; }
+  .content { flex:1; overflow-y:auto; padding:12px 14px; }
+  .sumgrid { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:12px; }
+  .stat { background:#0d1117; border:1px solid var(--line); border-radius:6px; padding:8px; }
+  .stat .v { font-size:18px; font-weight:600; }
+  .stat .k { font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:.4px; }
+  h2 { font-size:12px; text-transform:uppercase; letter-spacing:.5px; color:var(--muted); margin:14px 0 6px; }
+  table { width:100%; border-collapse:collapse; font-size:12px; }
+  th,td { text-align:left; padding:4px 5px; border-bottom:1px solid var(--line); }
+  th { color:var(--muted); font-weight:500; font-size:10px; text-transform:uppercase; }
+  .ld { font-variant-numeric:tabular-nums; }
+  .ok { color:#3fb950; } .bad { color:#f85149; } .warn { color:#d29922; }
+  .pill { font-size:10px; padding:1px 6px; border-radius:10px; }
+  .pill.ok { background:rgba(63,185,80,.15);} .pill.bad{ background:rgba(248,81,73,.15);}
+  .carr { font-size:11px; color:var(--muted); line-height:1.6; }
+  .carr b { color:var(--txt); }
+  #loading { position:absolute; top:10px; left:50px; z-index:1000; background:#161b22cc; padding:5px 10px;
+             border-radius:6px; font-size:12px; display:none; }
+  /* investment plan controls */
+  #invctrls { padding:10px 14px; border-bottom:1px solid var(--line); display:none; flex-direction:column; gap:10px; }
+  #invctrls.on { display:flex; }
+  #invctrls .lab { font-size:10px; text-transform:uppercase; letter-spacing:.4px; color:var(--muted); margin-bottom:3px; }
+  #invop { width:100%; background:#0d1117; color:var(--txt); border:1px solid var(--line); border-radius:4px; padding:5px 6px; font-size:13px; }
+  .chips { display:flex; flex-wrap:wrap; gap:6px; }
+  .chip { font-size:11px; padding:3px 8px; border-radius:12px; border:1px solid var(--line); cursor:pointer;
+          user-select:none; display:flex; align-items:center; gap:5px; background:#0d1117; }
+  .chip i { width:9px; height:9px; border-radius:50%; display:inline-block; }
+  .chip.off { opacity:.35; }
+  #codval { font-variant-numeric:tabular-nums; color:var(--txt); }
+  .leaflet-tooltip.inv { background:#161b22; border:1px solid var(--line); color:var(--txt); font-size:11px; }
+  .invpop b { color:var(--txt); } .invpop { font-size:12px; line-height:1.5; }
+  .invpop .tag { font-size:10px; padding:1px 6px; border-radius:8px; }
+</style>
+</head>
+<body>
+<div id="wrap">
+  <div id="map"><div id="loading">Loading…</div></div>
+  <div id="side">
+    <header>
+      <h1>German Transmission Grid 2025</h1>
+      <div class="sub">grid_beta · 8 760 h · Redispatch 2.0</div>
+    </header>
+    <div class="ctrls">
+      <div class="row">
+        <input type="date" id="day" min="2025-01-01" max="2025-12-31" value="2025-06-25">
+        <button id="worst" title="Jump to the most congested hour of the year">⚡ worst</button>
+      </div>
+      <div class="hourbar" id="hours"></div>
+      <div class="tstamp" id="tstamp"></div>
+      <div class="row">
+        <label for="pf">Power flow (color lines by loading)</label>
+        <label class="switch"><input type="checkbox" id="pf"><span class="slider"></span></label>
+      </div>
+      <div class="row">
+        <label for="rd">Redispatch (post-flow + node actions)</label>
+        <label class="switch"><input type="checkbox" id="rd"><span class="slider"></span></label>
+      </div>
+      <div class="row">
+        <label for="inv">🏗 Investment plan (NEP 2025 + §14d DSO)</label>
+        <label class="switch"><input type="checkbox" id="inv"><span class="slider"></span></label>
+      </div>
+    </div>
+    <div id="invctrls">
+      <div>
+        <div class="lab">Operator</div>
+        <select id="invop"><option value="">All operators</option></select>
+      </div>
+      <div>
+        <div class="lab">Commitment tier</div>
+        <div class="chips" id="invtiers"></div>
+      </div>
+      <div>
+        <div class="lab">In service by year <span id="codval"></span></div>
+        <input type="range" id="invcod" min="2025" max="2045" value="2034" step="1">
+        <label class="row" style="font-size:11px;margin-top:4px;"><input type="checkbox" id="invundated" checked> include measures with no stated year</label>
+      </div>
+      <div>
+        <div class="lab">Show</div>
+        <div class="chips">
+          <span class="chip" data-show="line"><i style="background:#888"></i>Lines</span>
+          <span class="chip" data-show="sub"><i style="background:#888;border-radius:2px"></i>Substations</span>
+          <span class="chip" data-show="color">Color: <b id="invcolormode">tier</b></span>
+        </div>
+      </div>
+      <div class="carr" id="invcov"></div>
+    </div>
+    <div class="legend" id="legend"></div>
+    <div class="content" id="content"></div>
+  </div>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const map = L.map('map', { preferCanvas:true, zoomControl:true }).setView([51.1, 10.4], 6);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
+  { attribution:'© OpenStreetMap, © CARTO', subdomains:'abcd', maxZoom:19 }).addTo(map);
+
+let lineLayer = L.layerGroup().addTo(map);
+let nodeLayer = L.layerGroup().addTo(map);
+let STATE = null;
+const $ = id => document.getElementById(id);
+const showLoad = b => $('loading').style.display = b ? 'block' : 'none';
+
+const V_COLOR = {110:'#2b6cff', 220:'#16c784', 380:'#ff3b3b'};
+function loadColor(l){ // green->yellow->red by loading ratio
+  if(l<0.5) return '#3fb950';
+  if(l<0.8) return '#d4d400';
+  if(l<1.0) return '#d29922';
+  if(l<1.5) return '#f85149';
+  return '#ff00d0';
+}
+function legend(){
+  const pf=$('pf').checked, rd=$('rd').checked;
+  let h='';
+  if(pf||rd){
+    h = '<span><i style="background:#3fb950"></i>&lt;50%</span>'
+      + '<span><i style="background:#d29922"></i>80–100%</span>'
+      + '<span><i style="background:#f85149"></i>100–150%</span>'
+      + '<span><i style="background:#ff00d0"></i>&gt;150%</span>';
+    if(rd) h+='<span><i style="background:#3fb950;border-radius:50%"></i>ramp-up node</span>'
+             +'<span><i style="background:#f85149;border-radius:50%"></i>curtail node</span>';
+  } else {
+    h = '<span><i style="background:#2b6cff"></i>110 kV</span>'
+      + '<span><i style="background:#16c784"></i>220 kV</span>'
+      + '<span><i style="background:#ff3b3b"></i>380 kV</span>';
+  }
+  h += '<span><i style="background:#00e5ff"></i>HVDC</span>';
+  $('legend').innerHTML = h;
+}
+
+function draw(){
+  if(!STATE) return;
+  const pf=$('pf').checked, rd=$('rd').checked;
+  lineLayer.clearLayers(); nodeLayer.clearLayers();
+  for(const ln of STATE.lines){
+    let color, weight=ln.v_nom>=380?1.6:ln.v_nom>=220?1.2:0.7, op=0.55;
+    if(pf||rd){
+      const load = rd ? ln.load_post : ln.load_da;
+      color = loadColor(load||0);
+      weight = Math.min(1+ (load||0)*3, 7);
+      op = (load>0.5)?0.95:0.4;
+    } else { color = V_COLOR[ln.v_nom]||'#888'; }
+    const pl = L.polyline([[ln.y0,ln.x0],[ln.y1,ln.x1]], {color, weight, opacity:op});
+    pl.on('click', ()=>pl.bindPopup(
+      `<b>Line ${ln.id}</b> · ${ln.v_nom} kV<br>s_nom ${ln.s_nom} MVA<br>`+
+      `flow DA ${ln.flow_da} MW (${Math.round((ln.load_da||0)*100)}%)<br>`+
+      `flow post ${ln.flow_post} MW (${Math.round((ln.load_post||0)*100)}%)`).openPopup());
+    lineLayer.addLayer(pl);
+  }
+  // HVDC links (offshore export cables + interconnectors) — static, dashed
+  for(const lk of (STATE.links||[])){
+    const pl = L.polyline([[lk.y0,lk.x0],[lk.y1,lk.x1]],
+      {color:'#00e5ff', weight:2, opacity:(pf||rd)?0.55:0.8, dashArray:'8,6'});
+    pl.on('click', ()=>pl.bindPopup(
+      `<b>HVDC ${lk.id}</b> · ${lk.carrier}<br>p_nom ${lk.p_nom} MW · ${lk.length_km} km<br>`+
+      `bus ${lk.bus0} ↔ ${lk.bus1}`).openPopup());
+    lineLayer.addLayer(pl);
+  }
+  if(rd){
+    for(const nd of STATE.nodes){
+      const net=nd.net_MW, mag=Math.abs(net);
+      if(mag<2) continue;
+      const c = net>=0 ? '#3fb950' : '#f85149';
+      const m = L.circleMarker([nd.lat,nd.lon], {radius:Math.min(3+Math.sqrt(mag)/2,14),
+        color:c, weight:1, fillColor:c, fillOpacity:0.6});
+      m.bindPopup(`<b>Bus ${nd.bus}</b><br>ramp-up +${nd.up_MW} MW<br>curtailed −${nd.down_MW} MW<br>net ${nd.net_MW} MW`);
+      nodeLayer.addLayer(m);
+    }
+  }
+  legend(); panel();
+}
+
+function carrLine(obj){
+  return Object.entries(obj).slice(0,6).map(([k,v])=>`<b>${k}</b> ${v}`).join(' · ') || '—';
+}
+function panel(){
+  const s=STATE.summary;
+  let h = `<div class="sumgrid">
+    <div class="stat"><div class="v bad">${s.n_overloaded_pre}</div><div class="k">Overloaded (pre)</div></div>
+    <div class="stat"><div class="v ${s.n_overloaded_post? 'warn':'ok'}">${s.n_overloaded_post}</div><div class="k">Overloaded (post)</div></div>
+    <div class="stat"><div class="v">${(s.total_curtailed_MW/1).toFixed(0)}</div><div class="k">Curtailed MW</div></div>
+    <div class="stat"><div class="v">${(s.total_rampup_MW).toFixed(0)}</div><div class="k">Ramp-up MW</div></div>
+  </div>
+  <div class="carr">⬇ Curtailed: ${carrLine(s.curtail_by_carrier)}</div>
+  <div class="carr">⬆ Ramped up: ${carrLine(s.rampup_by_carrier)}</div>
+  <div class="carr">Redispatch cost this hour: <b>${s.redispatch_cost_kEUR.toLocaleString()} k€</b></div>
+  <h2>Top congested lines</h2>
+  <table><thead><tr><th>Line</th><th>kV</th><th>Load→post</th><th>Solved</th></tr></thead><tbody>`;
+  for(const t of STATE.top_congested){
+    h += `<tr><td>${t.id}</td><td>${t.v_nom}</td>`+
+         `<td class="ld">${(t.load_da*100).toFixed(0)}% → <span class="${t.load_post>1?'bad':'ok'}">${(t.load_post*100).toFixed(0)}%</span></td>`+
+         `<td><span class="pill ${t.resolved?'ok':'bad'}">${t.resolved?'yes':'no'}</span></td></tr>`;
+  }
+  h += '</tbody></table>';
+  $('content').innerHTML = h;
+}
+
+/* ===================== Investment plan ===================== */
+let INV = null;                 // {lines, substations, meta}
+let invLineLayer = L.layerGroup();
+let invSubLayer  = L.layerGroup();
+const TIER_COLOR = {safe:'#2ea043', firm:'#2f81f7', likely:'#d29922', maybe:'#8b949e'};
+const TIER_LABEL = {safe:'safe (built / under construction)', firm:'firm (decided / permitted)',
+                    likely:'likely (in planning)', maybe:'maybe (vorgesehen / 2045 outlook)'};
+const TIERS = ['safe','firm','likely','maybe'];
+const invF = {op:'', tiers:new Set(TIERS), cod:2034, undated:true, line:true, sub:true, colorBy:'tier'};
+
+function tierName(t){ return ({safe:'safe',firm:'firm',likely:'likely',maybe:'maybe'})[t]||t; }
+function itemColor(d){
+  if(invF.colorBy==='voltage'){
+    if(d.is_hvdc) return '#00e5ff';
+    return V_COLOR[d.voltage_kv]||'#888';
+  }
+  return TIER_COLOR[d.commitment]||'#888';
+}
+function passes(d){
+  if(invF.op && d.operator!==invF.op) return false;
+  if(!invF.tiers.has(d.commitment)) return false;
+  if(d.cod_year==null) return invF.undated;
+  return d.cod_year<=invF.cod;
+}
+function esc(s){ return (s==null?'':String(s)).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c])); }
+function lvl(d){ return (d.grid_level||'').startsWith('TSO')?'TSO':'DSO'; }
+function popHtml(d, kind){
+  const t=d.commitment, col=TIER_COLOR[t]||'#888';
+  let h=`<div class="invpop"><b>${esc(d.name)||kind}</b><br>`+
+    `<span class="tag" style="background:${col}33;color:${col}">${esc(t)}</span> `+
+    `<span style="color:#8b949e">${esc(d.status_de||d.status||'')}</span><br>`+
+    `${esc(d.operator)} · ${lvl(d)} · ${d.voltage_kv?d.voltage_kv+' kV':''}${d.is_hvdc?' (HVDC)':''}<br>`;
+  if(kind==='line' && d.from) h+=`${esc(d.from)} → ${esc(d.to)}<br>`;
+  if(d.cod_year) h+=`in service ~${d.cod_year}${d.cod_carried?' (carried)':''}<br>`;
+  else h+=`<span style="color:#8b949e">year not stated</span><br>`;
+  if(d.length_km) h+=`${d.length_km} km · `;
+  if(d.law) h+=`${esc(d.law)} · `;
+  if(d.nep_measure) h+=`${esc(d.nep_measure)} · `;
+  h+=`<br><span style="color:#8b949e;font-size:10px">${esc(d.source||'')}${d.source_page?' p.'+d.source_page:''}`+
+     `${d.notes?' · '+esc(d.notes):''}</span></div>`;
+  return h;
+}
+function tip(d){ return `${esc(d.name)} · ${esc(d.operator)} · ${esc(d.commitment)}${d.cod_year?' · '+d.cod_year:''}`; }
+
+function drawInvest(){
+  if(!INV) return;
+  invLineLayer.clearLayers(); invSubLayer.clearLayers();
+  let nL=0,nS=0,nPt=0;
+  if(invF.line){
+    for(const d of INV.lines){
+      if(d.placed==='none' || !passes(d)) continue;
+      const col=itemColor(d);
+      if(d.placed==='line'){
+        const w=d.voltage_kv>=380?2.4:d.voltage_kv>=220?1.8:1.2;
+        const pl=L.polyline([[d.y0,d.x0],[d.y1,d.x1]],{color:col,weight:w,opacity:.85,
+                  dashArray:(d.commitment==='maybe'||d.commitment==='likely')?'6,5':null});
+        pl.bindTooltip(tip(d),{className:'inv',sticky:true});
+        pl.on('click',()=>pl.bindPopup(popHtml(d,'line')).openPopup());
+        invLineLayer.addLayer(pl); nL++;
+      } else { // only one endpoint geocoded -> small diamond marker
+        const m=L.circleMarker([d.y0,d.x0],{radius:3,color:col,weight:1,fillColor:col,fillOpacity:.5});
+        m.bindTooltip(tip(d),{className:'inv',sticky:true});
+        m.on('click',()=>m.bindPopup(popHtml(d,'line (endpoint)')).openPopup());
+        invLineLayer.addLayer(m); nPt++;
+      }
+    }
+  }
+  if(invF.sub){
+    for(const d of INV.substations){
+      if(!d.placed || !passes(d)) continue;
+      const col=itemColor(d);
+      const m=L.circleMarker([d.lat,d.lon],{radius:4.5,color:'#0a0d12',weight:.6,fillColor:col,fillOpacity:.9});
+      m.bindTooltip(tip(d),{className:'inv',sticky:true});
+      m.on('click',()=>m.bindPopup(popHtml(d,'substation')).openPopup());
+      invSubLayer.addLayer(m); nS++;
+    }
+  }
+  // legend (tier or voltage)
+  let lg='';
+  if(invF.colorBy==='tier') lg=TIERS.map(t=>`<span><i style="background:${TIER_COLOR[t]}"></i>${t}</span>`).join('');
+  else lg='<span><i style="background:#2b6cff"></i>110</span><span><i style="background:#16c784"></i>220</span><span><i style="background:#ff3b3b"></i>380</span><span><i style="background:#00e5ff"></i>HVDC</span>';
+  $('legend').innerHTML=lg;
+  const c=INV.meta.counts;
+  $('invcov').innerHTML=`Showing <b>${nL}</b> lines, <b>${nPt}</b> partial, <b>${nS}</b> substations.<br>`+
+    `<span style="color:#8b949e">Geocoded (approx, by substation name) ${c.lines_placed+c.lines_point}/${c.lines} lines, ${c.substations_placed}/${c.substations} substations; ungeocoded items are hidden from the map.</span>`;
+  $('content').innerHTML='';
+}
+
+function buildInvControls(){
+  // operator select grouped TSO/DSO (level taken from the data, not name guessing)
+  const sel=$('invop'); const ops=INV.meta.operators;
+  const lvlOf={};
+  for(const d of INV.lines.concat(INV.substations)){ if(d.operator && !(d.operator in lvlOf)) lvlOf[d.operator]=lvl(d); }
+  const tso=ops.filter(o=>lvlOf[o]==='TSO'), dso=ops.filter(o=>lvlOf[o]!=='TSO');
+  const grp=(lab,arr)=>arr.length?`<optgroup label="${lab}">`+arr.map(o=>`<option>${esc(o)}</option>`).join('')+'</optgroup>':'';
+  sel.innerHTML='<option value="">All operators</option>'+grp('TSO',tso)+grp('DSO',dso);
+  sel.onchange=()=>{ invF.op=sel.value; drawInvest(); };
+  // tier chips
+  $('invtiers').innerHTML=TIERS.map(t=>`<span class="chip" data-tier="${t}" title="${TIER_LABEL[t]}"><i style="background:${TIER_COLOR[t]}"></i>${t}</span>`).join('');
+  $('invtiers').querySelectorAll('.chip').forEach(ch=>ch.onclick=()=>{
+    const t=ch.dataset.tier;
+    if(invF.tiers.has(t)){invF.tiers.delete(t);ch.classList.add('off');}else{invF.tiers.add(t);ch.classList.remove('off');}
+    drawInvest();
+  });
+  // cod slider
+  const cod=$('invcod'); $('codval').textContent='≤ '+cod.value;
+  cod.oninput=()=>{ invF.cod=+cod.value; $('codval').textContent='≤ '+cod.value; drawInvest(); };
+  $('invundated').onchange=e=>{ invF.undated=e.target.checked; drawInvest(); };
+  // show chips
+  document.querySelectorAll('#invctrls .chip[data-show]').forEach(ch=>ch.onclick=()=>{
+    const k=ch.dataset.show;
+    if(k==='color'){ invF.colorBy = invF.colorBy==='tier'?'voltage':'tier'; $('invcolormode').textContent=invF.colorBy; }
+    else { const key=k==='line'?'line':'sub'; invF[key]=!invF[key]; ch.classList.toggle('off',!invF[key]); }
+    drawInvest();
+  });
+}
+
+async function enterInvest(){
+  // turn off flow modes + clear their layers/controls
+  $('pf').checked=false; $('rd').checked=false; $('pf').disabled=true; $('rd').disabled=true;
+  lineLayer.clearLayers(); nodeLayer.clearLayers();
+  $('invctrls').classList.add('on');
+  map.addLayer(invLineLayer); map.addLayer(invSubLayer);
+  if(!INV){
+    showLoad(true);
+    try{ INV=await (await fetch('/api/investments')).json(); buildInvControls(); }
+    finally{ showLoad(false); }
+  }
+  drawInvest();
+}
+function exitInvest(){
+  $('invctrls').classList.remove('on');
+  map.removeLayer(invLineLayer); map.removeLayer(invSubLayer);
+  $('pf').disabled=false; $('rd').disabled=false;
+  refresh();   // restore flow view
+}
+
+const START = Date.UTC(2025,0,1,0,0,0);   // snapshot 0 = 2025-01-01 00:00
+let HOUR = 10;
+
+function idxFor(dayStr, hour){
+  const d = new Date(dayStr+'T00:00:00Z').getTime();
+  const days = Math.round((d - START)/86400000);
+  return Math.max(0, Math.min(days*24 + hour, 8759));
+}
+function buildHours(){
+  const bar=$('hours'); bar.innerHTML='';
+  for(let h=0; h<24; h++){
+    const b=document.createElement('button');
+    b.textContent=String(h).padStart(2,'0');
+    if(h===HOUR) b.className='sel';
+    b.onclick=()=>{ HOUR=h; [...bar.children].forEach(c=>c.classList.remove('sel')); b.classList.add('sel'); refresh(); };
+    bar.appendChild(b);
+  }
+}
+function refresh(){ loadState(idxFor($('day').value, HOUR)); }
+
+async function loadState(idx){
+  showLoad(true);
+  try {
+    const r = await fetch(`/api/grid/state?snapshot=${idx}`);
+    STATE = await r.json();
+    const s = STATE.summary;
+    $('tstamp').innerHTML = `🕐 ${s.time} — <b class="${s.n_overloaded_pre?'bad':'ok'}">${s.n_overloaded_pre}</b> lines overloaded`;
+    draw();
+  } finally { showLoad(false); }
+}
+
+async function init(){
+  buildHours();
+  $('day').onchange = refresh;
+  $('pf').onchange = draw;
+  $('rd').onchange = draw;
+  $('inv').onchange = e => e.target.checked ? enterInvest() : exitInvest();
+  $('worst').onclick = async ()=>{
+    const r = await fetch('/api/grid/snapshots?top=1');
+    const d = await r.json();
+    if(d.snapshots.length){
+      const t = d.snapshots[0].time;          // "2025-06-25 10:00:00"
+      $('day').value = t.slice(0,10);
+      HOUR = parseInt(t.slice(11,13), 10);
+      buildHours(); refresh();
+    }
+  };
+  refresh();
+}
+init();
+</script>
+</body>
+</html>

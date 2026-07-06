@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>German Grid Explorer — full year</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<style>
+ :root{--bg:#0e1116;--panel:#161b22;--line:#2a3038;--txt:#e6edf3;--muted:#8b949e}
+ *{box-sizing:border-box}html,body{margin:0;height:100%;font-family:system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt)}
+ #wrap{display:flex;height:100vh}#map{flex:1;background:#0a0d12}
+ #side{width:400px;background:var(--panel);border-left:1px solid var(--line);display:flex;flex-direction:column;overflow:hidden}
+ header{padding:11px 14px;border-bottom:1px solid var(--line)}header h1{font-size:15px;margin:0}header .s{font-size:11px;color:var(--muted)}
+ .ctrls{padding:10px 14px;border-bottom:1px solid var(--line)}
+ .tlabel{font-size:13px;font-variant-numeric:tabular-nums;margin-bottom:5px}.tlabel b{font-size:15px}
+ input[type=range]{width:100%}
+ .filters{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+ .chip{display:flex;align-items:center;gap:5px;font-size:12px;background:#0d1117;border:1px solid var(--line);border-radius:14px;padding:3px 9px;cursor:pointer;user-select:none}
+ .chip input{margin:0}.chip.gen{border-color:#3fb95066}.chip.load{border-color:#d2992266}.chip.curt{border-color:#f8514966}.chip.flow{border-color:#2f81f766}
+ .content{flex:1;overflow-y:auto;padding:12px 14px}
+ .row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;margin-bottom:12px}
+ .stat{background:#0d1117;border:1px solid var(--line);border-radius:6px;padding:7px}
+ .stat .v{font-size:16px;font-weight:600}.stat .k{font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.4px}
+ h2{font-size:11px;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);margin:14px 0 6px}
+ .balance{background:#0d1117;border:1px solid var(--line);border-radius:6px;padding:8px 10px;font-size:12px;font-variant-numeric:tabular-nums;line-height:1.55}
+ .balance b{font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted)}
+ .note{color:var(--muted);font-size:11px;line-height:1.4;margin-top:5px}
+ .note.warn{color:#d4a72c}
+ .bar{display:flex;align-items:center;gap:6px;font-size:12px;margin:2px 0}
+ .bar .n{width:78px;color:var(--muted)}.bar .t{flex:1;height:10px;background:#0d1117;border-radius:3px;overflow:hidden}
+ .bar .f{display:block;height:100%;min-width:2px}.bar .val{width:58px;text-align:right;font-variant-numeric:tabular-nums}
+ table{width:100%;border-collapse:collapse;font-size:12px;margin-top:4px}
+ th,td{text-align:right;padding:3px 5px;border-bottom:1px solid var(--line)}th:first-child,td:first-child{text-align:left}
+ th{color:var(--muted);font-size:10px;text-transform:uppercase}
+ #nodebox{border-top:1px solid var(--line);padding:10px 14px;max-height:38%;overflow-y:auto;background:#11151b}
+ #nodebox.empty{display:none}
+ .legend{font-size:11px;color:var(--muted);padding:6px 14px;border-bottom:1px solid var(--line);display:flex;gap:12px;flex-wrap:wrap}
+ .legend i{width:10px;height:10px;border-radius:50%;display:inline-block;margin-right:3px;vertical-align:-1px}
+ #ld{position:absolute;top:8px;left:48px;z-index:1000;background:#161b22cc;padding:4px 9px;border-radius:5px;font-size:12px;display:none}
+</style></head>
+<body><div id="wrap">
+ <div id="map"><div id="ld">loading…</div></div>
+ <div id="side">
+  <header><h1>German Grid Explorer</h1><div class="s">grid_beta · 1000 sampled hours · regional redispatch (DSO 110kV + TSO EHV)</div></header>
+  <div class="ctrls">
+   <div class="tlabel" id="tlabel">—</div>
+   <input type="range" id="slider" min="0" max="0" value="0"/>
+   <div class="filters">
+    <label class="chip flow"><input type="checkbox" id="f_flow"> Flows</label>
+    <label class="chip flow"><input type="checkbox" id="f_post"> ↳ post-redispatch</label>
+    <label class="chip gen"><input type="checkbox" id="f_gen" checked> Generation</label>
+    <label class="chip load"><input type="checkbox" id="f_load"> Load</label>
+    <label class="chip curt"><input type="checkbox" id="f_curt" checked> Curtailment</label>
+    <label class="chip" style="border-color:#ff00d088"><input type="checkbox" id="f_ovlhrs"> Congestion h/yr</label>
+   </div>
+  </div>
+  <div class="legend" id="legend"></div>
+  <div class="content" id="content"></div>
+  <div id="nodebox" class="empty"></div>
+ </div>
+</div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const map=L.map('map',{preferCanvas:true}).setView([51.1,10.4],6);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{subdomains:'abcd',attribution:'© OSM © CARTO',maxZoom:19}).addTo(map);
+const lineLayer=L.layerGroup().addTo(map), genLayer=L.layerGroup(), loadLayer=L.layerGroup(), curtLayer=L.layerGroup().addTo(map);
+const ovlLayer=L.layerGroup(); let OVL=null;
+function ovlColor(h){return h<10?'#3fb950':h<100?'#d4d400':h<500?'#ff8c00':h<2000?'#f85149':'#ff00d0';}
+async function drawOvl(){
+ if(!$('f_ovlhrs').checked){ if(map.hasLayer(ovlLayer))map.removeLayer(ovlLayer); return; }
+ if(!OVL){ const r=await fetch('/api/sample/overload_hours'); OVL=(await r.json()).lines||[]; }
+ ovlLayer.clearLayers();
+ for(const ln of OVL){ const h=ln.h_post; if(h<1)continue;
+  ovlLayer.addLayer(L.polyline([[ln.y0,ln.x0],[ln.y1,ln.x1]],{color:ovlColor(h),weight:Math.min(1+h/150,8),opacity:.9})
+   .bindPopup(`Line ${ln.id} · ${ln.v}kV<br>overloaded <b>${ln.h_post} h/yr</b> after redispatch<br><span style="color:#8b949e">${ln.h_da} h/yr before redispatch</span>`)); }
+ if(!map.hasLayer(ovlLayer))map.addLayer(ovlLayer);
+}
+const $=id=>document.getElementById(id); const ld=b=>$('ld').style.display=b?'block':'none';
+let SNAPS=[], STATE=null, CUR=0;
+const V={110:'#2b6cff',220:'#16c784',380:'#ff3b3b'};
+const TECH={solar:'#FFD700',onwind:'#4CAF50',offwind:'#00BCD4',biomass:'#795548',biogas:'#8BC34A',run_of_river:'#2196F3',reservoir:'#1565C0',gas_ccgt:'#FF9800',gas_chp:'#FF5722',coal:'#424242',lignite:'#6D4C41',oil:'#E91E63',waste:'#607D8B',other:'#9E9E9E',hydrogen:'#00E5FF'};
+const tc=c=> (c||'').startsWith('import')?'#888':(TECH[c]||'#9E9E9E');
+function loadColor(l){return l<0.5?'#3fb950':l<0.8?'#d4d400':l<1?'#d29922':l<1.5?'#f85149':'#ff00d0';}
+
+function draw(){
+ if(!STATE)return;
+ const flow=$('f_flow').checked, post=$('f_post').checked;
+ lineLayer.clearLayers();genLayer.clearLayers();loadLayer.clearLayers();curtLayer.clearLayers();
+ for(const ln of STATE.lines){
+  let color,w=ln.v>=380?1.5:ln.v>=220?1.1:0.6,op=0.5;
+  if(flow){const l=(post?ln.load_post:ln.load_da)||0;color=loadColor(l);w=Math.min(1+l*3,7);op=l>0.5?0.95:0.35;}
+  else color=V[ln.v]||'#888';
+  const da=Math.round((ln.load_da||0)*100), po=Math.round((ln.load_post||0)*100);
+  lineLayer.addLayer(L.polyline([[ln.y0,ln.x0],[ln.y1,ln.x1]],{color,weight:w,opacity:op})
+   .on('click',e=>e.target.bindPopup(`Line ${ln.id} · ${ln.v}kV<br>`
+     +`<b style="color:${post?'':'#f0d000'}">pre&nbsp; ${ln.flow_da} MW (${da}%)</b><br>`
+     +`<b style="color:${post?'#f0d000':''}">post ${ln.flow_post} MW (${po}%)</b>`
+     +(po!==da?`<br><span style="color:#8b949e">Δ ${po-da} pp</span>`:'')).openPopup()));
+ }
+ for(const nd of STATE.nodes){
+  if(nd.gen_MW>0.5) genLayer.addLayer(mk(nd,'gen_MW','#3fb950'));
+  if(nd.load_MW>0.5) loadLayer.addLayer(mk(nd,'load_MW','#d29922'));
+  if(nd.curtail_MW>0.5) curtLayer.addLayer(mk(nd,'curtail_MW','#f85149'));
+ }
+ toggle('f_gen',genLayer);toggle('f_load',loadLayer);toggle('f_curt',curtLayer);
+ legend();panel();
+}
+function mk(nd,key,col){
+ const v=nd[key],r=Math.min(2.5+Math.sqrt(v)/4,16);
+ return L.circleMarker([nd.lat,nd.lon],{radius:r,color:col,weight:1,fillColor:col,fillOpacity:.55})
+  .on('click',()=>nodeDetail(nd.bus));
+}
+function toggle(id,layer){ if($(id).checked){if(!map.hasLayer(layer))map.addLayer(layer);} else if(map.hasLayer(layer))map.removeLayer(layer); }
+function legend(){
+ if($('f_ovlhrs').checked){ $('legend').innerHTML=
+   '<span style="color:#ff00d0">hours/yr overloaded (post-redispatch)</span>'
+   +'<span><i style="background:#3fb950"></i>&lt;10</span><span><i style="background:#d4d400"></i>&lt;100</span>'
+   +'<span><i style="background:#ff8c00"></i>&lt;500</span><span><i style="background:#f85149"></i>&lt;2000</span><span><i style="background:#ff00d0"></i>&gt;2000</span>'; return; }
+ $('legend').innerHTML = $('f_flow').checked
+  ? `<span style="color:#f0d000">loading ${$('f_post').checked?'POST-redispatch':'pre (day-ahead)'}</span>`
+    +'<span><i style="background:#3fb950"></i>&lt;50%</span><span><i style="background:#d29922"></i>80-100%</span><span><i style="background:#f85149"></i>&gt;100%</span><span><i style="background:#ff00d0"></i>&gt;150%</span>'
+  : '<span><i style="background:#2b6cff"></i>110</span><span><i style="background:#16c784"></i>220</span><span><i style="background:#ff3b3b"></i>380 kV</span>'
+   +'<span><i style="background:#3fb950"></i>gen</span><span><i style="background:#d29922"></i>load</span><span><i style="background:#f85149"></i>curtail</span>';
+}
+function barlist(obj,total){
+ const mx=Math.max(...Object.values(obj),1);
+ return Object.entries(obj).slice(0,14).map(([k,v])=>
+  `<div class="bar"><span class="n">${k}</span><span class="t"><span class="f" style="width:${100*v/mx}%;background:${tc(k)}"></span></span><span class="val">${(v/1000).toFixed(2)}</span></div>`).join('');
+}
+const sgn=x=>(x>=0?'+':'−')+Math.abs(x/1000).toFixed(1);
+function panel(){
+ const c=STATE.country, G=x=>(x/1000).toFixed(1);
+ // congestion before vs after, split DSO (110 kV) vs TSO (EHV)
+ const over=c.n_overload||0, overPost=(c.n_overload_post!=null?c.n_overload_post:over);
+ const cleared=over-overPost, ml0=Math.round((c.max_loading_da||0)*100), ml1=Math.round((c.max_loading_post||0)*100);
+ let note='';
+ if(over>0){
+  const worse = overPost>over;
+  const dso = c.n_dso!=null ? `<br><span class=tech style="background:#2b6cff"></span><b>DSO</b> 110kV: ${c.n_dso}→${c.n_dso_post} · <span class=tech style="background:#ff3b3b"></span><b>TSO</b> EHV: ${c.n_tso}→${c.n_tso_post}` : '';
+  const tail = worse
+   ? ` ⚠ net +${overPost-over} overloads.`
+   : (overPost>0 ? ` Residual = pockets a DSO can't relieve by local curtailment (load-driven / no local generation).` : ` all cleared.`);
+  note=`<div class="note ${worse?'warn':''}"><b>Congestion:</b> ${over} pre → <b>${overPost} post</b> `
+   +`(${cleared>=0?cleared+' cleared':(-cleared)+' added'}); max loading ${ml0}%→${ml1}%.${dso}${tail}</div>`;
+ }
+ // balance terms (supply on the left, demand on the right)
+ const slackTxt = Math.abs(c.slack_MW)>=50 ? ` ${sgn(c.slack_MW)} resid` : '';
+ const bal = (c.imports_MW!==undefined) ? `
+  <div class="balance">
+   <b>Energy balance — GW</b><br>
+   gen ${G(c.total_gen_MW)} ${sgn(c.imports_MW)} imp ${sgn(c.storage_MW)} stor
+   = load ${G(c.total_load_MW)} ${sgn(c.exports_MW)} exp${slackTxt}
+   <div class="note">Domestic generation is balanced to the network each hour (distributed-slack closure): gen + imports + storage = load + exports. Imports add supply, exports add demand, storage shifts both${slackTxt?'; a small residual remains only when head-room is exhausted':''}.</div>
+  </div>` : '';
+ $('content').innerHTML=`
+  <div class="row">
+   <div class="stat"><div class="v">${G(c.total_load_MW)}</div><div class="k">Load GW</div></div>
+   <div class="stat"><div class="v">${G(c.total_gen_MW)}</div><div class="k">Generation GW</div></div>
+   <div class="stat"><div class="v" style="color:#f85149">${(c.total_curtail_MW/1000).toFixed(2)}</div><div class="k">Curtailed GW</div></div>
+  </div>
+  ${bal}${note}
+  <h2>Generation by technology (GW)</h2>${barlist(c.gen_by_tech_MW)}
+  <h2>Curtailment by technology (GW)</h2>${Object.keys(c.curtail_by_tech_MW).length?barlist(c.curtail_by_tech_MW):'<div style="color:var(--muted);font-size:12px">none this hour</div>'}
+  ${topOverloads(c)}${curtTable(c)}${annualTable()}`;
+}
+function topOverloads(c){
+ if(!c.top_overloads||!c.top_overloads.length) return '<h2>Top overloads</h2><div class="note">no line above 90% this hour</div>';
+ const rows=c.top_overloads.map(o=>{
+  const cls=l=>l>1?'over':'ok';
+  return `<tr><td>${o.id}</td><td>${o.v}</td><td>${o.s_nom}</td>`
+   +`<td class="${cls(o.load_da)}">${Math.round(o.load_da*100)}%</td>`
+   +`<td class="${cls(o.load_post)}">${Math.round(o.load_post*100)}%</td></tr>`;}).join('');
+ return `<h2>Top overloads this hour (pre → post)</h2>
+  <table><thead><tr><th>line</th><th>kV</th><th>MW</th><th>pre</th><th>post</th></tr></thead><tbody>${rows}</tbody></table>`;
+}
+function curtTable(c){
+ if(!c.curtail_rows||!c.curtail_rows.length) return '<h2>Curtailed this hour</h2><div class="note">nothing curtailed</div>';
+ const rows=c.curtail_rows.map(r=>`<tr><td><span class=tech style="background:${tc(r.carrier)}"></span>${r.carrier}</td><td>${r.bus}</td><td>${r.mw}</td></tr>`).join('');
+ return `<h2>Curtailed this hour (top groups)</h2>
+  <table><thead><tr><th>carrier</th><th>bus</th><th>MW down</th></tr></thead><tbody>${rows}</tbody></table>`;
+}
+let SUMMARY=null;
+function annualTable(){
+ if(!SUMMARY) return '';
+ const s=SUMMARY;
+ return `<h2>Annual congestion summary (${s.sampled_hours} sampled h ×${s.scale_to_year})</h2>
+  <table><thead><tr><th></th><th>before RD</th><th>after RD</th></tr></thead><tbody>
+  <tr><td>hours with ≥1 overload</td><td>${s.hours_with_overload_pre}</td><td>${s.hours_with_overload_post}</td></tr>
+  <tr><td>lines ever overloaded</td><td>${s.lines_ever_overloaded_pre}</td><td>${s.lines_ever_overloaded_post}</td></tr>
+  <tr><td>overload line-hours /yr</td><td>${s.line_hours_pre_yr.toLocaleString()}</td><td>${s.line_hours_post_yr.toLocaleString()}</td></tr>
+  <tr><td>mean overloads /hour</td><td>${s.mean_overloads_per_hour_pre}</td><td>${s.mean_overloads_per_hour_post}</td></tr>
+  <tr><td>max loading</td><td>${Math.round(s.max_loading_pre*100)}%</td><td>${Math.round(s.max_loading_post*100)}%</td></tr>
+  </tbody></table>
+  <div class="note">${s.hours_fully_cleared} congested hours fully cleared by redispatch.</div>`;
+}
+async function nodeDetail(bus){
+ const r=await fetch(`/api/sample/node?i=${CUR}&bus=${bus}`);const d=await r.json();
+ const rows=d.carriers.map(x=>`<tr><td>${x.carrier}</td><td>${x.cap_MW}</td><td>${x.gen_MW}</td><td style="color:${x.curtail_MW>0?'#f85149':''}">${x.curtail_MW}</td></tr>`).join('');
+ $('nodebox').className='';
+ $('nodebox').innerHTML=`<div style="display:flex;justify-content:space-between"><b>Bus ${d.bus}</b><span style="cursor:pointer;color:var(--muted)" onclick="document.getElementById('nodebox').className='empty'">✕</span></div>
+  <div style="font-size:11px;color:var(--muted);margin:3px 0 6px">cap ${(d.cap_MW/1000).toFixed(2)} GW · gen ${(d.gen_MW/1000).toFixed(2)} · load ${(d.load_MW/1000).toFixed(2)} · curtail ${(d.curtail_MW).toFixed(0)} MW</div>
+  <table><thead><tr><th>Carrier</th><th>Installed</th><th>Gen now</th><th>Curtail</th></tr></thead><tbody>${rows}</tbody></table>`;
+}
+async function load(i){
+ ld(true);CUR=i;$('slider').value=i;
+ if(location.hash!=='#'+i) history.replaceState(null,'','#'+i);
+ const r=await fetch(`/api/sample/state?i=${i}`);STATE=await r.json();
+ $('tlabel').innerHTML=`<b>${STATE.country.time}</b> &nbsp; hour ${i+1}/${SNAPS.length}`;
+ draw();ld(false);
+}
+// turning on post-redispatch implies the Flows layer is on
+$('f_post').onchange=()=>{ if($('f_post').checked) $('f_flow').checked=true; draw(); };
+$('f_ovlhrs').onchange=()=>{drawOvl();legend();};
+['f_flow','f_gen','f_load','f_curt'].forEach(id=>$(id).onchange=draw);
+$('slider').onchange=e=>load(+e.target.value);
+$('slider').oninput=e=>{const s=SNAPS[+e.target.value]; if(s)$('tlabel').innerHTML=`<b>${s.time}</b> &nbsp; hour ${(+e.target.value)+1}/${SNAPS.length}`;};
+(async function(){
+ ld(true);const r=await fetch('/api/sample/snapshots');const d=await r.json();SNAPS=d.snapshots;
+ fetch('/api/sample/summary').then(r=>r.json()).then(s=>{SUMMARY=s; if(STATE)panel();});
+ $('slider').max=SNAPS.length-1;
+ const hash=location.hash.slice(1);
+ const h=parseInt(hash); const start=(h>=0&&h<SNAPS.length)?h:0;
+ await load(start);
+ if(hash.includes('ovl')){ $('f_ovlhrs').checked=true; await drawOvl(); legend(); }
+})();
+</script></body></html>

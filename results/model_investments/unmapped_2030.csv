@@ -1,0 +1,83 @@
+level,operator,kind,name,kv,cod,reason,from,to
+DSO,MITNETZ Strom,line,HSL Freiberg/Nord - Clausnitz; (Ersatz-)Neubau,110,2028,unmatched/low-conf,Freiberg/Nord,Clausnitz
+DSO,MITNETZ Strom,line,"HSL Graustein-Schwarze Pumpe, Abzweig Spremberg",110,2029,unmatched/low-conf,Graustein,"Schwarze Pumpe, Spremberg"
+DSO,MITNETZ Strom,line,HSL Klostermansfeld-Klostermansfeld/Süd,110,2026,unmatched/low-conf,Klostermansfeld,Klostermansfeld/Süd
+DSO,MITNETZ Strom,line,HSL Niederwiesa - Freiberg/O.; Anbindung Freiberg/N.,110,2028,unmatched/low-conf,Niederwiesa,Freiberg/O
+DSO,MITNETZ Strom,line,HSL Querfurt - Oberröblingen,380,2030,unmatched/low-conf,Querfurt,Oberröblingen
+DSO,MITNETZ Strom,line,HSL Silberstraße - Steinberg,110,2029,unmatched/low-conf,Silberstraße,Steinberg
+DSO,MITNETZ Strom,line,HSL Zwönitz-Auerbach/Erzgebirge,110,2029,unmatched/low-conf,Zwönitz,Auerbach/Erzgebirge
+DSO,N-ERGIE Netz,substation,"Neubau UA Altentrüdingen,",110,2026,new site: no coordinates/connection,,
+DSO,SH Netz,line,Leitung UW Hardebek - UW Brachenfeld,110,2029,unmatched/low-conf,Hardebek,Brachenfeld
+DSO,SH Netz,line,Leitung UW Lübeck - UW Sahms,110,2029,unmatched/low-conf,Lübeck,Sahms
+DSO,SH Netz,line,Leitung UW Lütjenburg - Röbsdorf,110,2026,unmatched/low-conf,Lütjenburg,Röbsdorf
+DSO,SH Netz,line,Leitung UWLütenburg- Röbsdorf,110,2026,unmatched/low-conf,UWLütenburg,Röbsdorf
+DSO,Syna,substation,Neubau RZ FRA4.2,110,2028,new site: no coordinates/connection,,
+DSO,Syna,substation,Neubau SST Eschhofen,110,2028,new site: no coordinates/connection,,
+DSO,Syna,substation,Neubau UA RZ Gewerbegebiet Nord,110,2027,new site: no coordinates/connection,,
+DSO,Westnetz,line,"Anschluss Hahn Kunststoffe, n-1 Versorgung",110,2026,unmatched/low-conf,"Anschluss Hahn Kunststoffe, n",Versorgung
+DSO,Westnetz,line,Leitung Abzweig Winterberg,110,2026,unmatched/low-conf,,
+DSO,Westnetz,line,Leitung BL1463 Walldorf-Urberach,110,2030,unmatched/low-conf,Walldorf,Urberach
+DSO,Westnetz,line,Leitung Büderich-Memeler Str.,110,2027,unmatched/low-conf,Büderich,Memeler Str
+DSO,Westnetz,line,Leitung Garenfeld-Pkt.Ochsenkopf,110,2027,unmatched/low-conf,Garenfeld,Ochsenkopf
+DSO,Westnetz,line,Leitung Haarzopf-Stadtwald,110,2028,unmatched/low-conf,Haarzopf,Stadtwald
+DSO,Westnetz,line,Leitung Hesseln-Pkt. Allendorf,110,2027,unmatched/low-conf,Hesseln,Allendorf
+DSO,Westnetz,line,Leitung Mödrath - Grefrath,110,2026,unmatched/low-conf,Mödrath,Grefrath
+DSO,Westnetz,line,Leitung Nordlicht - Vonderort,110,2026,unmatched/low-conf,Nordlicht,Vonderort
+DSO,Westnetz,line,Leitung Pkt. Lemförde-Pkt. Heithöfen,110,2026,unmatched/low-conf,Lemförde,Heithöfen
+DSO,Westnetz,line,"Station Bingen,",110,2029,unmatched/low-conf,,
+DSO,Westnetz,line,Station Büscherhof,110,2028,unmatched/low-conf,,
+DSO,Westnetz,line,Station Hischebach,110,2026,unmatched/low-conf,,
+DSO,Westnetz,line,Station Holthausen,110,2026,unmatched/low-conf,,
+DSO,Westnetz,line,Station Lippe,110,2027,unmatched/low-conf,,
+DSO,Westnetz,line,Station Neufeld (neu),110,2026,unmatched/low-conf,,
+DSO,Westnetz,line,Station Prosper II,110,2026,unmatched/low-conf,,
+DSO,Westnetz,line,Station RZ Heusenstamm,110,2027,unmatched/low-conf,,
+DSO,Westnetz,line,Station Rheinau und Laudenbach,110,2028,unmatched/low-conf,,
+TSO,50Hertz,line,AC-Verbindung OST-1-4,380,2026,unmatched/low-conf,,
+TSO,50Hertz,line,Güstrow - Bentwisch - Gnewitz,380,2029,upgrade unroutable,Güstrow,Gnewitz
+TSO,50Hertz,line,Güstrow - Parchim/Süd,380,2026,upgrade unroutable,Güstrow,Parchim/Süd
+TSO,50Hertz,line,Klostermansfeld - Querfurt - Lauchstädt,380,2026,upgrade unroutable,Klostermansfeld,Lauchstädt
+TSO,50Hertz,line,Querfurt - Wolkramshausen,380,2028,unmatched/low-conf,Querfurt,Wolkramshausen
+TSO,50Hertz,line,Vieselbach - Landesgrenze Thüringen/Hessen,380,2028,unmatched/low-conf,Vieselbach,Landesgrenze Thüringen/Hessen
+TSO,50Hertz,line,Wolkramshausen - Vieselbach,380,2028,upgrade unroutable,Wolkramshausen,Vieselbach
+TSO,Amprion,line,Aach - Bofferdange,380,2028,unmatched/low-conf,Aach,Bofferdange
+TSO,Amprion,line,Bauler - Bundesgrenze (LU),380,2028,unmatched/low-conf,Bauler,Bundesgrenze
+TSO,Amprion,line,Bürstadt - BASF,380,2029,upgrade unroutable,Bürstadt,BASF
+TSO,Amprion,line,Emscherbruch - Hüllen - Eiberg (Ad-hoc-Maßnahme),380,2029,upgrade unroutable,Emscherbruch,Eiberg
+TSO,Amprion,line,Kruckel - Punkt Ochsenkopf,380,2030,unmatched/low-conf,Kruckel,Punkt Ochsenkopf
+TSO,Amprion,line,Lüstringen - Hesseln,380,2030,upgrade path implausible (239 km > 90),Lüstringen,Hesseln
+TSO,Amprion,line,Lüstringen - Wehrendorf,380,2030,upgrade path implausible (78 km > 60),Lüstringen,Wehrendorf
+TSO,Amprion,line,Punkt Ochsenkopf - Dauersberg,380,2030,unmatched/low-conf,Punkt Ochsenkopf,Dauersberg
+TSO,Amprion,line,Punkt Wettringen - Punkt Meppen,380,2027,unmatched/low-conf,Punkt Wettringen,Punkt Meppen
+TSO,Amprion,line,Regelzonengrenze TTG/AMP - Merzen,380,2027,unmatched/low-conf,Regelzonengrenze TTG/AMP,Merzen
+TSO,TenneT,line,Abzweig Göhl,380,2027,unmatched/low-conf,,
+TSO,TenneT,line,Abzweig Pirach,220,2029,unmatched/low-conf,,
+TSO,TenneT,line,Adlkofen - Matzenhof,380,2027,unmatched/low-conf,Adlkofen,Matzenhof
+TSO,TenneT,line,Altheim - Adlkofen,380,2027,unmatched/low-conf,Altheim,Adlkofen
+TSO,TenneT,line,Altheim - Isar mit Kreuzung Adlkofen,380,2029,unmatched/low-conf,Altheim,Isar mit Kreuzung Adlkofen
+TSO,TenneT,line,Bergshausen - Borken,380,2027,upgrade path implausible (212 km > 78),Bergshausen,Borken
+TSO,TenneT,line,Borken - Gießen/Nord,380,2027,upgrade unroutable,Borken,Gießen/Nord
+TSO,TenneT,line,Cappeln/West - Regelzonengrenze TTG/AMP,380,2026,unmatched/low-conf,Cappeln/West,Regelzonengrenze TTG/AMP
+TSO,TenneT,line,Conneforde - Garrel/Ost - Cappeln/West,380,2026,unmatched/low-conf,Conneforde,Cappeln/West
+TSO,TenneT,line,Gießen/Nord - Karben,380,2029,upgrade unroutable,Gießen/Nord,Karben
+TSO,TenneT,line,Grafenrheinfeld - Punkt Rittershausen,380,2026,unmatched/low-conf,Grafenrheinfeld,Punkt Rittershausen
+TSO,TenneT,line,Landesgrenze Thüringen/Hessen - Mecklar,380,2028,unmatched/low-conf,Landesgrenze Thüringen/Hessen,Mecklar
+TSO,TenneT,line,Liedingen - Bleckenstedt/Süd,220,2026,unmatched/low-conf,Liedingen,Bleckenstedt/Süd
+TSO,TenneT,line,Lübeck/West - Sahms,380,2029,unmatched/low-conf,Lübeck/West,Sahms
+TSO,TenneT,line,Lübeck/West - Siems,380,2027,upgrade unroutable,Lübeck/West,Siems
+TSO,TenneT,line,Mecklar - Dipperz,380,2029,unmatched/low-conf,Mecklar,Dipperz
+TSO,TenneT,line,Mehringen - Landesbergen,380,2026,upgrade unroutable,Mehringen,Landesbergen
+TSO,TenneT,line,Netzverstärkung Karben - Großkrotzenburg,380,2027,unmatched/low-conf,Netzverstärkung Karben,Großkrotzenburg
+TSO,TenneT,line,Ovenstädt - Eickum - Bechterdissen,380,2029,upgrade unroutable,Ovenstädt,Bechterdissen
+TSO,TenneT,line,Pleinting - Bundesgrenze DE/AT,380,2030,unmatched/low-conf,Pleinting,Bundesgrenze DE/AT
+TSO,TenneT,line,Sengwarden - Fedderwarden,380,2027,unmatched/low-conf,Sengwarden,Fedderwarden
+TSO,TenneT,line,Sengwarden - Sande - Conneforde,220,2029,unmatched/low-conf,Sengwarden,Conneforde
+TSO,TenneT,line,Simbach - Matzenhof - Bundesgrenze AT,380,2027,upgrade unroutable,Simbach,Bundesgrenze AT
+TSO,TenneT,line,Sottrum - Mehringen,380,2026,upgrade unroutable,Sottrum,Mehringen
+TSO,TenneT,line,Suchraum Ludersheim/West - Sittling - Suchraum Rottenburg - Altheim,220,2029,unmatched/low-conf,Suchraum Ludersheim/West,Altheim
+TSO,TenneT,line,Ulzburg - Lübeck/West,380,2027,unmatched/low-conf,Ulzburg,Lübeck/West
+TSO,TenneT,line,Wilster/West - Kreis Steinburg - Stade/West,380,2030,unmatched/low-conf,Wilster/West,Stade/West
+TSO,TenneT,substation,Suchraum Ludersheim/West: 380-kV-Kompensationsspule (1x),380,2030,new site: no coordinates/connection,,
+TSO,TenneT,substation,Suchraum Melbeck: 380-kV-Kompensationsspule (1x),380,2030,new site: no coordinates/connection,,
+TSO,TransnetBW,line,Punkt Reicheneck - Punkt Rommelsbach,380,2027,unmatched/low-conf,Punkt Reicheneck,Punkt Rommelsbach
+TSO,TransnetBW,line,Punkt Rittershausen - Kupferzell,380,2026,unmatched/low-conf,Punkt Rittershausen,Kupferzell

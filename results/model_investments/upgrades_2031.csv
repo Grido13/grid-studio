@@ -1,0 +1,68 @@
+investment_id,nep_measure,name,operator,bus0,bus1,v_nom,add_s_nom,s_nom_source,x,r,length,length_source,add_num_parallel,cod_year,commitment,match_confidence,source
+7240,,HSL Marke - Roßlau; teilw. Trassierung auf 80°C,MITNETZ Strom,35116,19994,110,150.0,standard_per_circuit,1.52,0.22,4.0,stated,1,2028,firm,0.9,VNB Netzausbauplan (NAP 2024)
+8976,,110-kV-Leitung UW Windheim - Stockheim - 80-°C-Ertüchtigung UW Redwitz 80-°C-Ertüchtigung,Bayernwerk Netz,18061,12330,110,20.0,stated,4.484,0.649,11.8,stated,1,2023,safe,0.8,§14d EnWG NAP 2024
+8985,,110-kV-Leitung UW Bayreuth - UW Pegnitz - 80-°C-Ertüchtigung UW Würgau 80-°C-Ertüchtigung,Bayernwerk Netz,24461,35398,110,24.0,stated,10.412,1.507,27.4,stated,1,2024,safe,0.7,§14d EnWG NAP 2024
+8986,,110-kV-Leitung UW Höllriegelskreuth - UW Hohenbrunn - 80-°C-Ertüchtigung UW Oberbachern 80,Bayernwerk Netz,38123,34802,110,80.0,stated,6.384,0.924,16.8,stated,1,2023,safe,0.75,§14d EnWG NAP 2024
+9807,M014c,Utfort - Punkt Hüls-West,Amprion,34959,4492,380,3580.0,standard_per_circuit,1.827,0.196,14.0,stated,2,2031,firm,0.75,NEP 2037/2045 (2025) 2.E
+9808,M014f,Utfort - Osterath,Amprion,5369,4492,380,3580.0,standard_per_circuit,6.525,0.7,50.0,stated,2,2031,firm,0.9,NEP 2037/2045 (2025) 2.E
+9809,M014g,Punkt Birkenhof - Gellep,Amprion,34959,4492,380,3580.0,standard_per_circuit,0.261,0.028,2.0,stated,2,2031,firm,0.75,NEP 2037/2045 (2025) 2.E
+9925,M209a,Wolmirstedt - Suchraum Stadt Schwanebeck/Gemeinde Huy - Klostermansfeld,50Hertz,35173,638,380,3580.0,standard_per_circuit,15.2685,1.638,117.0,stated,2,2027,firm,0.9,NEP 2037/2045 (2025) 2.E
+9926,M209b,Klostermansfeld - Querfurt - Lauchstädt,50Hertz,638,12051,380,3580.0,standard_per_circuit,5.0895,0.546,39.0,stated,2,2026,firm,0.8,NEP 2037/2045 (2025) 2.E
+9927,M352a,Querfurt - Wolkramshausen,50Hertz,39758,12053,380,3580.0,standard_per_circuit,9.2655,0.994,71.0,stated,2,2028,firm,0.75,NEP 2037/2045 (2025) 2.E
+9928,M463,Wolkramshausen - Vieselbach,50Hertz,12053,37610,380,3580.0,standard_per_circuit,9.7875,1.05,75.0,stated,2,2028,firm,0.8,NEP 2037/2045 (2025) 2.E
+9929,M454,Güstrow - Bentwisch - Gnewitz,50Hertz,35618,14595,380,3580.0,standard_per_circuit,7.308,0.784,56.0,stated,2,2029,firm,0.75,NEP 2037/2045 (2025) 2.E
+9930,M455,Güstrow - Siedenbrünzow - Iven/West,50Hertz,2751,39430,220,984.0,standard_per_circuit,14.31,2.655,90.0,stated,2,2031,firm,0.75,NEP 2037/2045 (2025) 2.E
+9931,M523,Iven/West - Pasewalk/Nord - Pasewalk,50Hertz,2751,39430,220,984.0,standard_per_circuit,9.858,1.829,62.0,stated,2,2028,firm,0.75,NEP 2037/2045 (2025) 2.E
+9932,M22a,Perleberg - Stendal/West - Wolmirstedt,50Hertz,1472,35173,380,3580.0,standard_per_circuit,13.1805,1.414,101.0,stated,2,2028,firm,0.75,NEP 2037/2045 (2025) 2.E
+9933,M22c,Güstrow - Parchim/Süd,50Hertz,35618,10742,380,3580.0,standard_per_circuit,6.9165,0.742,53.0,stated,2,2026,firm,0.8,NEP 2037/2045 (2025) 2.E
+9934,M25a,Vieselbach - Landesgrenze Thüringen/Hessen,50Hertz,35405,37610,380,3580.0,standard_per_circuit,11.3535,1.218,87.0,stated,2,2028,firm,0.75,NEP 2037/2045 (2025) 2.E
+9938,M010f,Lüstringen - Wehrendorf,Amprion,35897,2308,380,3580.0,standard_per_circuit,2.7405,0.294,21.0,stated,2,2030,firm,0.9,NEP 2037/2045 (2025) 2.E
+9939,M010g,Lüstringen - Hesseln,Amprion,35897,22581,380,3580.0,standard_per_circuit,4.698,0.504,36.0,stated,2,2030,firm,0.9,NEP 2037/2045 (2025) 2.E
+9940,M022a,Kruckel - Punkt Ochsenkopf,Amprion,3612,37842,380,3580.0,standard_per_circuit,2.7405,0.294,21.0,stated,2,2030,firm,0.75,NEP 2037/2045 (2025) 2.E
+9941,M022b,Punkt Ochsenkopf - Dauersberg,Amprion,3612,37842,380,3580.0,standard_per_circuit,13.7025,1.47,105.0,stated,2,2030,firm,0.75,NEP 2037/2045 (2025) 2.E
+9943,M62,Bürstadt - BASF,Amprion,37760,37858,380,3580.0,standard_per_circuit,2.349,0.252,18.0,stated,2,2029,firm,0.8,NEP 2037/2045 (2025) 2.E
+9944,M91,Großkrotzenburg - Dettingen - Urberach,Amprion,36079,165,380,3580.0,standard_per_circuit,3.1007,0.3326,23.76,stated,2,2030,firm,0.9,NEP 2037/2045 (2025) 2.E
+9945,M380,Uchtelfangen - Ensdorf - Bundesgrenze,Amprion,36394,14741,380,3580.0,standard_per_circuit,4.437,0.476,34.0,stated,2,2028,firm,0.75,NEP 2037/2045 (2025) 2.E
+9946,M381,Hanekenfähr – Merzen (Ad-hoc-Maßnahme),Amprion,36532,2090,380,3580.0,standard_per_circuit,4.959,0.532,38.0,stated,2,2028,firm,0.9,NEP 2037/2045 (2025) 2.E
+9947,M425,Punkt Blatzheim - Oberzier,Amprion,2495,35187,380,3580.0,standard_per_circuit,2.088,0.224,16.0,stated,2,2028,firm,0.8,NEP 2037/2045 (2025) 2.E
+9954,M606,Aach - Bofferdange,Amprion,8610,4639,380,3580.0,standard_per_circuit,1.305,0.14,10.0,stated,2,2028,firm,0.75,NEP 2037/2045 (2025) 2.E
+9955,M744,Emscherbruch - Hüllen - Eiberg (Ad-hoc-Maßnahme),Amprion,39406,1836,380,3580.0,standard_per_circuit,2.2185,0.238,17.0,stated,2,2029,firm,0.8,NEP 2037/2045 (2025) 2.E
+9956,M57,Punkt Metternich - Niederstedem,Amprion,8615,2957,380,3580.0,standard_per_circuit,13.7025,1.47,105.0,stated,2,2028,firm,0.8,NEP 2037/2045 (2025) 2.E
+10069,M387,Eichstetten - Bundesgrenze [FR],TransnetBW,732,13012,380,3580.0,standard_per_circuit,2.61,0.28,20.0,stated,2,2030,firm,0.8,NEP 2037/2045 (2025) 2.E
+10072,M31,Weinheim - Daxlanden,TransnetBW,38047,781,380,3580.0,standard_per_circuit,9.918,1.064,76.0,stated,2,2031,firm,0.65,NEP 2037/2045 (2025) 2.E
+10073,M32,Weinheim - Mannheim (G380),TransnetBW,38047,38880,380,3580.0,standard_per_circuit,2.2185,0.238,17.0,stated,2,2031,firm,0.65,NEP 2037/2045 (2025) 2.E
+10074,M33,Mannheim (G380) - Altlußheim,TransnetBW,38880,384,380,3580.0,standard_per_circuit,2.9363,0.315,22.5,stated,2,2031,firm,0.8,NEP 2037/2045 (2025) 2.E
+10075,M34,Altlußheim - Daxlanden,TransnetBW,384,781,380,3580.0,standard_per_circuit,5.481,0.588,42.0,stated,2,2031,firm,0.8,NEP 2037/2045 (2025) 2.E
+10076,M38a2,Punkt Rittershausen - Kupferzell,TransnetBW,35118,37282,380,3580.0,standard_per_circuit,6.6555,0.714,51.0,stated,2,2026,firm,0.75,NEP 2037/2045 (2025) 2.E
+10077,M39,Kupferzell - Großgartach,TransnetBW,37604,35118,380,3580.0,standard_per_circuit,6.264,0.672,48.0,stated,2,2026,firm,0.9,NEP 2037/2045 (2025) 2.E
+10078,M41a,Daxlanden - Bühl/Kuppenheim - Weier - Eichstetten,TransnetBW,781,732,380,3580.0,standard_per_circuit,15.7905,1.694,121.0,stated,2,2030,firm,0.9,NEP 2037/2045 (2025) 2.E
+10082,M201,Pleinting - Bundesgrenze DE/AT,TenneT,11803,12874,380,3580.0,standard_per_circuit,5.6115,0.602,43.0,stated,2,2030,firm,0.75,NEP 2037/2045 (2025) 2.E
+10083,M212,Abzweig Pirach,TenneT,11803,12093,220,984.0,standard_per_circuit,4.293,0.7965,27.0,stated,2,2029,firm,0.75,NEP 2037/2045 (2025) 2.E
+10087,M90,Conneforde - Großenmeer - Elsfleth/West,TenneT,39472,1361,220,984.0,standard_per_circuit,4.452,0.826,28.0,stated,2,2029,firm,0.9,NEP 2037/2045 (2025) 2.E
+10088,M535,Elsfleth/West - Suchraum Werderland - Bötersen,TenneT,39472,39328,220,984.0,standard_per_circuit,12.402,2.301,78.0,stated,2,2031,firm,0.75,NEP 2037/2045 (2025) 2.E
+10089,M253,Borken - Gießen/Nord,TenneT,37934,37225,380,3580.0,standard_per_circuit,9.5265,1.022,73.0,stated,2,2027,firm,0.7,NEP 2037/2045 (2025) 2.E
+10090,M255,Ovenstädt - Eickum - Bechterdissen,TenneT,34997,34925,380,3580.0,standard_per_circuit,7.83,0.84,60.0,stated,2,2029,firm,0.8,NEP 2037/2045 (2025) 2.E
+10092,M466,Sengwarden - Sande - Conneforde,TenneT,967,39472,220,984.0,standard_per_circuit,5.724,1.062,36.0,stated,2,2029,firm,0.75,NEP 2037/2045 (2025) 2.E
+10093,M51a,Conneforde - Garrel/Ost - Cappeln/West,TenneT,39473,2090,380,3580.0,standard_per_circuit,9.7875,1.05,75.0,stated,2,2026,firm,0.75,NEP 2037/2045 (2025) 2.E
+10095,M434,Gießen/Nord - Karben,TenneT,37225,34901,380,3580.0,standard_per_circuit,6.6555,0.714,51.0,stated,2,2029,firm,0.75,NEP 2037/2045 (2025) 2.E
+10096,M435,Emmerthal - Marienmünster - Würgassen,TenneT,7763,15353,380,3580.0,standard_per_circuit,7.4385,0.798,57.0,stated,2,2028,firm,0.7,NEP 2037/2045 (2025) 2.E
+10097,M472,Würgassen - Sandershausen - Bergshausen,TenneT,15353,37950,380,3580.0,standard_per_circuit,7.4385,0.798,57.0,stated,2,2030,firm,0.9,NEP 2037/2045 (2025) 2.E
+10098,M473,Bergshausen - Borken,TenneT,37950,37934,380,3580.0,standard_per_circuit,4.0455,0.434,31.0,stated,2,2027,firm,0.7,NEP 2037/2045 (2025) 2.E
+10099,M797,Landesbergen - Emmerthal,TenneT,35263,7763,380,3580.0,standard_per_circuit,9.5265,1.022,73.0,stated,2,2030,firm,0.7,NEP 2037/2045 (2025) 2.E
+10100,M80,Elsfleth/West - Schönemoor - Ganderkesee,TenneT,39152,34976,380,3580.0,standard_per_circuit,4.437,0.476,34.0,stated,2,2029,firm,0.8,NEP 2037/2045 (2025) 2.E
+10101,M82,Conneforde - Unterweser,TenneT,39472,35622,220,984.0,standard_per_circuit,5.088,0.944,32.0,stated,2,2028,firm,0.9,NEP 2037/2045 (2025) 2.E
+10102,M461,Oberbachern - Ottenhofen,TenneT,34744,35149,380,3580.0,standard_per_circuit,6.6555,0.714,51.0,stated,2,2030,firm,0.9,NEP 2037/2045 (2025) 2.E
+10105,M800,Liedingen - Bleckenstedt/Süd,TenneT,35366,23312,220,984.0,standard_per_circuit,1.908,0.354,12.0,stated,2,2026,firm,0.75,NEP 2037/2045 (2025) 2.E
+10106,M20,Dollern - Alfstedt - Neuenkirchen - Elsfleth/West,TenneT,34980,39152,380,3580.0,standard_per_circuit,13.05,1.4,100.0,stated,2,2028,firm,0.8,NEP 2037/2045 (2025) 2.E
+10107,M72,Sottrum - Mehringen,TenneT,39331,39994,380,3580.0,standard_per_circuit,5.481,0.588,42.0,stated,2,2026,firm,0.65,NEP 2037/2045 (2025) 2.E
+10108,M73,Mehringen - Landesbergen,TenneT,39994,35263,380,3580.0,standard_per_circuit,5.8725,0.63,45.0,stated,2,2026,firm,0.65,NEP 2037/2045 (2025) 2.E
+10109,M76,Büttel/Süd - Wilster/West,TenneT,1047,38907,380,3580.0,standard_per_circuit,1.044,0.112,8.0,stated,2,2031,firm,0.8,NEP 2037/2045 (2025) 2.E
+10111,M432,Brunsbüttel - Büttel/Süd,TenneT,19685,1047,380,3580.0,standard_per_circuit,0.3915,0.042,3.0,stated,2,2031,firm,0.8,NEP 2037/2045 (2025) 2.E
+10113,M25b,Landesgrenze Thüringen/Hessen - Mecklar,TenneT,35405,37610,380,3580.0,standard_per_circuit,5.6115,0.602,43.0,stated,2,2028,firm,0.75,NEP 2037/2045 (2025) 2.E
+10114,M74a,Mecklar - Dipperz,TenneT,35405,37687,380,3580.0,standard_per_circuit,6.525,0.7,50.0,stated,2,2029,firm,0.7,NEP 2037/2045 (2025) 2.E
+10118,M38a1,Grafenrheinfeld - Punkt Rittershausen,TenneT,35118,37282,380,3580.0,standard_per_circuit,6.525,0.7,50.0,stated,2,2026,firm,0.75,NEP 2037/2045 (2025) 2.E
+10121,M102,Simbach - Matzenhof - Bundesgrenze AT,TenneT,11803,12874,380,3580.0,standard_per_circuit,1.6965,0.182,13.0,stated,2,2027,firm,0.75,NEP 2037/2045 (2025) 2.E
+10122,M103a,Altheim - Adlkofen,TenneT,11803,12874,380,3580.0,standard_per_circuit,0.9135,0.098,7.0,stated,2,2027,firm,0.75,NEP 2037/2045 (2025) 2.E
+10123,M103b,Adlkofen - Matzenhof,TenneT,11803,12874,380,3580.0,standard_per_circuit,8.613,0.924,66.0,stated,2,2027,firm,0.75,NEP 2037/2045 (2025) 2.E
+10125,M49,Lübeck/West - Siems,TenneT,15065,39442,380,3580.0,standard_per_circuit,1.827,0.196,14.0,stated,2,2027,firm,0.65,NEP 2037/2045 (2025) 2.E
+10126,M50,Ulzburg - Lübeck/West,TenneT,15935,39750,380,3580.0,standard_per_circuit,6.525,0.7,50.0,stated,2,2027,firm,0.75,NEP 2037/2045 (2025) 2.E

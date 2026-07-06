@@ -1,0 +1,10 @@
+# Grid Studio backend — tested with Python 3.11
+fastapi==0.136.3
+uvicorn==0.48.0
+SQLAlchemy==2.0.50
+psycopg2-binary==2.9.12
+numpy==2.4.6
+pandas==3.0.3
+pypsa==1.2.2
+pydantic==2.13.4
+openpyxl==3.1.5

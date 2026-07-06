@@ -1,0 +1,20 @@
+# python
+__pycache__/
+*.pyc
+.venv/
+
+# macOS
+.DS_Store
+
+# large data fetched from the GitHub release (scripts/fetch_data.sh)
+results/app_year.npz
+results/app_year_2030.npz
+results/app_year_2032.npz
+results/app_year_2035.npz
+data/plants/renewables_de.csv
+db_dump/
+
+# runtime caches the app writes
+results/.mmcache/
+results/bess_dispatch_*.xlsx
+results/.bess_siting_*.json
