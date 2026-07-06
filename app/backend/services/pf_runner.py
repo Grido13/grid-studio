@@ -30,7 +30,7 @@ from ..db import SCN, YEAR, get_engine
 
 log = logging.getLogger(__name__)
 
-JOB_DIR = pathlib.Path("/Users/juanwitt/LSBP/Grid/results/pf_jobs")
+JOB_DIR = pathlib.Path(__file__).resolve().parents[3] / "results" / "pf_jobs"
 JOB_DIR.mkdir(parents=True, exist_ok=True)
 
 # In-memory job registry

@@ -102,7 +102,7 @@ part of this repository.
 
 ## License
 
-[MIT No Attribution (MIT-0)](LICENSE) — © 2026 Juan Pablo Witt.
+[MIT No Attribution (MIT-0)](LICENSE) — © 2026 witto13.
 
 You may use, copy, modify, and sell this software, commercially and without
 attribution. The original work remains the author's.
