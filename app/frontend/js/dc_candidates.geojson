@@ -1,0 +1,4307 @@
+{
+ "type": "FeatureCollection",
+ "meta": {
+  "generated": "2026-07-04",
+  "target_mw": 45,
+  "n": 110,
+  "tiers": {
+   "prime": 6,
+   "strong": 15,
+   "possible": 35,
+   "weak": 54
+  },
+  "source": "Reifegradverfahren (TSO connection availability) × SEFE fibre × PeeringDB exchanges × OSM data centres"
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.9848,
+     53.74237
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Hamburg/Nord (NOR)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "3 free",
+    "year": null,
+    "restriction": null,
+    "tso_note": "Hamburg ring reinforcement; 3 bays and 700 MW kept free — city load growth expected.",
+    "fibre_km": 0.1,
+    "ix_km": 21.7,
+    "ix_name": "DE-CIX Hamburg",
+    "fra_km": 414.5,
+    "dc_km": 10.9,
+    "dc_name": "Equinix",
+    "target_mw": 45,
+    "score": 77,
+    "tier": "prime",
+    "why": "380 kV 50Hertz substation — bays: 3 free, availability year n/a. Fibre backbone 0 km, nearest IX DE-CIX Hamburg 22 km, Frankfurt 414 km, nearest large DC (Equinix) 11 km.",
+    "parts": {
+     "bays": 30,
+     "year": 8,
+     "restriction": 4,
+     "fibre": 15,
+     "ix": 10,
+     "dc_cluster": 10
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.775,
+     51.023
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Esch",
+    "tso": "Amprion",
+    "city": "Pulheim",
+    "kv": 380,
+    "bays": "n-1",
+    "year": 2032,
+    "restriction": null,
+    "tso_note": "Rhineland lignite district: Niederaußem/Neurath retirements free bays and headroom at the Cologne ring; NEP keeps Esch a major node.",
+    "fibre_km": 1.4,
+    "ix_km": 19.3,
+    "ix_name": "DE-CIX Dusseldorf",
+    "fra_km": 165.9,
+    "dc_km": 19.4,
+    "dc_name": "Digital Reality DUS2",
+    "target_mw": 45,
+    "score": 74,
+    "tier": "prime",
+    "why": "380 kV Amprion substation — bays: n-1, connectable from 2032. Fibre backbone 1 km, nearest IX DE-CIX Dusseldorf 19 km, Frankfurt 166 km, nearest large DC (Digital Reality DUS2) 19 km.",
+    "parts": {
+     "bays": 30,
+     "year": 5,
+     "restriction": 4,
+     "fibre": 15,
+     "ix": 10,
+     "dc_cluster": 10
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.90389,
+     51.87649
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Ragow (RAG)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "4 free",
+    "year": null,
+    "restriction": null,
+    "tso_note": "Lusatia node next to the former Lübbenau plant site; lignite exit frees bays.",
+    "fibre_km": 0.6,
+    "ix_km": 76.7,
+    "ix_name": "BCIX",
+    "fra_km": 417.9,
+    "dc_km": 48.5,
+    "dc_name": "Vantage Berlin II (BER2)",
+    "target_mw": 45,
+    "score": 70,
+    "tier": "prime",
+    "why": "380 kV 50Hertz substation — bays: 4 free, availability year n/a. Fibre backbone 1 km, nearest IX BCIX 77 km, Frankfurt 418 km, nearest large DC (Vantage Berlin II (BER2)) 49 km.",
+    "parts": {
+     "bays": 30,
+     "year": 8,
+     "restriction": 4,
+     "fibre": 15,
+     "ix": 7,
+     "dc_cluster": 6
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.31,
+     52.69
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Meppen",
+    "tso": "Amprion",
+    "city": "Meppen",
+    "kv": 380,
+    "bays": "n-1",
+    "year": 2032,
+    "restriction": "Load connections only",
+    "tso_note": "Emsland/NL-border corridor is feed-in-saturated; load here is grid-serving (absorbs northern wind surplus), so bays are earmarked for consumers only.",
+    "fibre_km": 8.3,
+    "ix_km": 107.2,
+    "ix_name": "BREM-IX",
+    "fra_km": 301.2,
+    "dc_km": 167.1,
+    "dc_name": "Equinix DU1",
+    "target_mw": 45,
+    "score": 68,
+    "tier": "prime",
+    "why": "380 kV Amprion substation — bays: n-1, connectable from 2032; restriction: Load connections only. Fibre backbone 8 km, nearest IX BREM-IX 107 km, Frankfurt 301 km, nearest large DC (Equinix DU1) 167 km.",
+    "parts": {
+     "bays": 30,
+     "year": 5,
+     "restriction": 15,
+     "fibre": 12,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.70792,
+     52.54017
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Neuenhagen (NHG)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "110",
+    "bays": "4 free",
+    "year": null,
+    "restriction": null,
+    "tso_note": "Berlin ring node (110 kV listing); 4 bays with modest available capacity.",
+    "fibre_km": 15.7,
+    "ix_km": 23.7,
+    "ix_name": "BCIX",
+    "fra_km": 444.2,
+    "dc_km": 28.2,
+    "dc_name": "Rechenzentrum BER01",
+    "target_mw": 45,
+    "score": 66,
+    "tier": "prime",
+    "why": "110 kV 50Hertz substation — bays: 4 free, availability year n/a. Fibre backbone 16 km, nearest IX BCIX 24 km, Frankfurt 444 km, nearest large DC (Rechenzentrum BER01) 28 km.",
+    "parts": {
+     "bays": 30,
+     "year": 8,
+     "restriction": 4,
+     "fibre": 8,
+     "ix": 10,
+     "dc_cluster": 6
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.297,
+     52.545
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Clusorth",
+    "tso": "Amprion",
+    "city": "Lingen (Ems)",
+    "kv": 380,
+    "bays": "n-1",
+    "year": 2035,
+    "restriction": "Load connections only",
+    "tso_note": "Same Emsland logic as Meppen: wind-saturated corridor — only load connections reduce congestion, hence load-only from 2035.",
+    "fibre_km": 5.5,
+    "ix_km": 112.4,
+    "ix_name": "Ruhr-CIX",
+    "fra_km": 286.3,
+    "dc_km": 151.1,
+    "dc_name": "Equinix DU1",
+    "target_mw": 45,
+    "score": 65,
+    "tier": "prime",
+    "why": "380 kV Amprion substation — bays: n-1, connectable from 2035; restriction: Load connections only. Fibre backbone 6 km, nearest IX Ruhr-CIX 112 km, Frankfurt 286 km, nearest large DC (Equinix DU1) 151 km.",
+    "parts": {
+     "bays": 30,
+     "year": 2,
+     "restriction": 15,
+     "fibre": 12,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.33,
+     48.985
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Daxlanden",
+    "tso": "TransnetBW",
+    "city": "Karlsruhe-Daxlanden",
+    "kv": 380,
+    "bays": "n-1",
+    "year": 2035,
+    "restriction": "No feed-in capacity",
+    "tso_note": "RDK power-plant site Karlsruhe: 0 MW feed-in (already used), but 0.5–1 GW load headroom from 2035.",
+    "fibre_km": 4.9,
+    "ix_km": 7.0,
+    "ix_name": "KA-NIX",
+    "fra_km": 126.9,
+    "dc_km": 73.5,
+    "dc_name": "Rechenzentrum Ellhofen",
+    "target_mw": 45,
+    "score": 64,
+    "tier": "strong",
+    "why": "380 kV TransnetBW substation — bays: n-1, connectable from 2035; restriction: No feed-in capacity. Fibre backbone 5 km, nearest IX KA-NIX 7 km, Frankfurt 127 km, nearest large DC (Rechenzentrum Ellhofen) 73 km.",
+    "parts": {
+     "bays": 30,
+     "year": 2,
+     "restriction": 8,
+     "fibre": 12,
+     "ix": 10,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.437,
+     49.244
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Philippsburg",
+    "tso": "TransnetBW",
+    "city": "Philippsburg",
+    "kv": 380,
+    "bays": "n-1",
+    "year": 2032,
+    "restriction": null,
+    "tso_note": "Nuclear site (KKP off 2011/2019): the plant's bays and strong lines remain, and the Ultranet HVDC converter makes it a premium node — capacity from 2032.",
+    "fibre_km": 7.9,
+    "ix_km": 25.8,
+    "ix_name": "KA-NIX",
+    "fra_km": 97.2,
+    "dc_km": 64.2,
+    "dc_name": "Rechenzentrum Ellhofen",
+    "target_mw": 45,
+    "score": 63,
+    "tier": "strong",
+    "why": "380 kV TransnetBW substation — bays: n-1, connectable from 2032. Fibre backbone 8 km, nearest IX KA-NIX 26 km, Frankfurt 97 km, nearest large DC (Rechenzentrum Ellhofen) 64 km.",
+    "parts": {
+     "bays": 30,
+     "year": 5,
+     "restriction": 4,
+     "fibre": 12,
+     "ix": 10,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.5,
+     49.46
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Mannheim",
+    "tso": "TransnetBW",
+    "city": "Mannheim",
+    "kv": 380,
+    "bays": "n-1",
+    "year": 2032,
+    "restriction": "No battery storage (keine BESS)",
+    "tso_note": "GKM hard-coal retirement frees capacity; TSO explicitly bars BESS here (\"keine BESS\") — plausibly short-circuit-power and stability duties of the node, reason not published.",
+    "fibre_km": 2.4,
+    "ix_km": 50.2,
+    "ix_name": "KA-NIX",
+    "fra_km": 72.8,
+    "dc_km": 61.5,
+    "dc_name": "Vantage Data Center FRA22",
+    "target_mw": 45,
+    "score": 61,
+    "tier": "strong",
+    "why": "380 kV TransnetBW substation — bays: n-1, connectable from 2032; restriction: No battery storage (keine BESS). Fibre backbone 2 km, nearest IX KA-NIX 50 km, Frankfurt 73 km, nearest large DC (Vantage Data Center FRA22) 61 km.",
+    "parts": {
+     "bays": 30,
+     "year": 5,
+     "restriction": 2,
+     "fibre": 15,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.927,
+     54.285
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Göhl West",
+    "tso": "TenneT",
+    "city": "",
+    "kv": null,
+    "bays": "≥1 assumed",
+    "year": 2030,
+    "restriction": "Load connections only",
+    "tso_note": "Ostholstein endpoint of the new Ostküstenleitung; wind-saturated coast → load-only offer.",
+    "fibre_km": 1.8,
+    "ix_km": 78.3,
+    "ix_name": "CSNIX - Kehrsen",
+    "fra_km": 489.9,
+    "dc_km": 94.6,
+    "dc_name": "Equinix",
+    "target_mw": 45,
+    "score": 61,
+    "tier": "strong",
+    "why": "None kV TenneT substation — bays: ≥1 assumed, connectable from 2030; restriction: Load connections only. Fibre backbone 2 km, nearest IX CSNIX - Kehrsen 78 km, Frankfurt 490 km, nearest large DC (Equinix) 95 km.",
+    "parts": {
+     "bays": 12,
+     "year": 10,
+     "restriction": 15,
+     "fibre": 15,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.135,
+     48.695
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Bühl",
+    "tso": "TransnetBW",
+    "city": "Bühl",
+    "kv": 380,
+    "bays": "n-1",
+    "year": 2032,
+    "restriction": null,
+    "tso_note": "Same Rheinschiene reinforcement as Kork; big feed-in band, small load band.",
+    "fibre_km": 4.1,
+    "ix_km": 40.8,
+    "ix_name": "KA-NIX",
+    "fra_km": 161.3,
+    "dc_km": 99.3,
+    "dc_name": "Rechenzentrum Ellhofen",
+    "target_mw": 45,
+    "score": 60,
+    "tier": "strong",
+    "why": "380 kV TransnetBW substation — bays: n-1, connectable from 2032. Fibre backbone 4 km, nearest IX KA-NIX 41 km, Frankfurt 161 km, nearest large DC (Rechenzentrum Ellhofen) 99 km.",
+    "parts": {
+     "bays": 30,
+     "year": 5,
+     "restriction": 4,
+     "fibre": 12,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.55,
+     49.475
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Mannheim Ost",
+    "tso": "TransnetBW",
+    "city": "Mannheim",
+    "kv": 380,
+    "bays": "n-1",
+    "year": 2035,
+    "restriction": null,
+    "tso_note": "Second Mannheim node, long-term (2035) once GKM exit and regional reinforcements settle.",
+    "fibre_km": 0.5,
+    "ix_km": 52.4,
+    "ix_name": "KA-NIX",
+    "fra_km": 70.8,
+    "dc_km": 60.1,
+    "dc_name": "Vantage Data Center FRA22",
+    "target_mw": 45,
+    "score": 60,
+    "tier": "strong",
+    "why": "380 kV TransnetBW substation — bays: n-1, connectable from 2035. Fibre backbone 0 km, nearest IX KA-NIX 52 km, Frankfurt 71 km, nearest large DC (Vantage Data Center FRA22) 60 km.",
+    "parts": {
+     "bays": 30,
+     "year": 2,
+     "restriction": 4,
+     "fibre": 15,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.25,
+     47.92
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Pfullendorf",
+    "tso": "TransnetBW",
+    "city": "Pfullendorf",
+    "kv": 380,
+    "bays": "n-1",
+    "year": 2035,
+    "restriction": null,
+    "tso_note": "Oberschwaben node, long-term 2035, small bands.",
+    "fibre_km": 1.5,
+    "ix_km": 53.9,
+    "ix_name": "Rottweiler Internet Exchange",
+    "fra_km": 247.6,
+    "dc_km": 136.4,
+    "dc_name": "Rechenzentrum Ellhofen",
+    "target_mw": 45,
+    "score": 60,
+    "tier": "strong",
+    "why": "380 kV TransnetBW substation — bays: n-1, connectable from 2035. Fibre backbone 1 km, nearest IX Rottweiler Internet Exchange 54 km, Frankfurt 248 km, nearest large DC (Rechenzentrum Ellhofen) 136 km.",
+    "parts": {
+     "bays": 30,
+     "year": 2,
+     "restriction": 4,
+     "fibre": 15,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.133,
+     52.444
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Heinersdorf (HND)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "1 free",
+    "year": null,
+    "restriction": null,
+    "tso_note": "East-Brandenburg node; 1 bay, 0.5/0.7 GW available.",
+    "fibre_km": 0.3,
+    "ix_km": 51.9,
+    "ix_name": "BCIX",
+    "fra_km": 462.2,
+    "dc_km": 43.0,
+    "dc_name": "Vantage Berlin II (BER2)",
+    "target_mw": 45,
+    "score": 60,
+    "tier": "strong",
+    "why": "380 kV 50Hertz substation — bays: 1 free, availability year n/a. Fibre backbone 0 km, nearest IX BCIX 52 km, Frankfurt 462 km, nearest large DC (Vantage Berlin II (BER2)) 43 km.",
+    "parts": {
+     "bays": 20,
+     "year": 8,
+     "restriction": 4,
+     "fibre": 15,
+     "ix": 7,
+     "dc_cluster": 6
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.633,
+     48.872
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Birkenfeld",
+    "tso": "TransnetBW",
+    "city": "Birkenfeld (Enz)",
+    "kv": 380,
+    "bays": "n-1",
+    "year": 2032,
+    "restriction": null,
+    "tso_note": "Node west of Pforzheim strengthened in the NEP; both n-0 and n-1 bays realisable from 2032.",
+    "fibre_km": 11.3,
+    "ix_km": 22.2,
+    "ix_name": "KA-NIX",
+    "fra_km": 137.6,
+    "dc_km": 57.9,
+    "dc_name": "Rechenzentrum Ellhofen",
+    "target_mw": 45,
+    "score": 59,
+    "tier": "strong",
+    "why": "380 kV TransnetBW substation — bays: n-1, connectable from 2032. Fibre backbone 11 km, nearest IX KA-NIX 22 km, Frankfurt 138 km, nearest large DC (Rechenzentrum Ellhofen) 58 km.",
+    "parts": {
+     "bays": 30,
+     "year": 5,
+     "restriction": 4,
+     "fibre": 8,
+     "ix": 10,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.46918,
+     51.55439
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Graustein (GRS)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "5 free",
+    "year": null,
+    "restriction": null,
+    "tso_note": "1950s lignite-era node in Lusatia (built for the Boxberg/Lübbenau complex): coal decline frees 5 bays. Feed-in is already RE-saturated (0 MW), but 1.9 GW load headroom.",
+    "fibre_km": 36.0,
+    "ix_km": 78.8,
+    "ix_name": "DD-IX",
+    "fra_km": 440.2,
+    "dc_km": 41.0,
+    "dc_name": "NTT DATA Business Solutions Global Managed Services",
+    "target_mw": 45,
+    "score": 59,
+    "tier": "strong",
+    "why": "380 kV 50Hertz substation — bays: 5 free, availability year n/a. Fibre backbone 36 km, nearest IX DD-IX 79 km, Frankfurt 440 km, nearest large DC (NTT DATA Business Solutions Global Managed Services) 41 km.",
+    "parts": {
+     "bays": 30,
+     "year": 8,
+     "restriction": 4,
+     "fibre": 4,
+     "ix": 7,
+     "dc_cluster": 6
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.547,
+     52.0714
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Eulenberg (EUB) Neubau",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "4 free",
+    "year": null,
+    "restriction": null,
+    "tso_note": "Brand-new 50Hertz substation near Magdeburg/A14, designed 400→1,600 MW — new bays, top BKZ (100 €/kW).",
+    "fibre_km": 16.6,
+    "ix_km": 64.9,
+    "ix_name": "SON-IX",
+    "fra_km": 298.4,
+    "dc_km": 109.4,
+    "dc_name": "Virtus Wustermark Megacampus",
+    "target_mw": 45,
+    "score": 59,
+    "tier": "strong",
+    "why": "380 kV 50Hertz substation — bays: 4 free, availability year n/a. Fibre backbone 17 km, nearest IX SON-IX 65 km, Frankfurt 298 km, nearest large DC (Virtus Wustermark Megacampus) 109 km.",
+    "parts": {
+     "bays": 30,
+     "year": 8,
+     "restriction": 4,
+     "fibre": 8,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.547,
+     52.0714
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Eulenberg (EUB)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "4 free",
+    "year": null,
+    "restriction": null,
+    "tso_note": "Brand-new 50Hertz substation near Magdeburg/A14 (industrial build-out corridor), designed 400→1,600 MW — hence 1.8–2 GW still available but BKZ 100 €/kW.",
+    "fibre_km": 16.6,
+    "ix_km": 64.9,
+    "ix_name": "SON-IX",
+    "fra_km": 298.4,
+    "dc_km": 109.4,
+    "dc_name": "Virtus Wustermark Megacampus",
+    "target_mw": 45,
+    "score": 59,
+    "tier": "strong",
+    "why": "380 kV 50Hertz substation — bays: 4 free, availability year n/a. Fibre backbone 17 km, nearest IX SON-IX 65 km, Frankfurt 298 km, nearest large DC (Virtus Wustermark Megacampus) 109 km.",
+    "parts": {
+     "bays": 30,
+     "year": 8,
+     "restriction": 4,
+     "fibre": 8,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.37,
+     48.67
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Wendlingen",
+    "tso": "TransnetBW",
+    "city": "Wendlingen",
+    "kv": 380,
+    "bays": "n-1",
+    "year": 2035,
+    "restriction": null,
+    "tso_note": "Neckar valley node, long-term 2035 (nearby Altbach/Bünzwangen occupied).",
+    "fibre_km": 15.1,
+    "ix_km": 15.2,
+    "ix_name": "Stuttgart-IX",
+    "fra_km": 168.7,
+    "dc_km": 53.1,
+    "dc_name": "Rechenzentrum Ellhofen",
+    "target_mw": 45,
+    "score": 56,
+    "tier": "strong",
+    "why": "380 kV TransnetBW substation — bays: n-1, connectable from 2035. Fibre backbone 15 km, nearest IX Stuttgart-IX 15 km, Frankfurt 169 km, nearest large DC (Rechenzentrum Ellhofen) 53 km.",
+    "parts": {
+     "bays": 30,
+     "year": 2,
+     "restriction": 4,
+     "fibre": 8,
+     "ix": 10,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.24,
+     47.64
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Gurtweil",
+    "tso": "TransnetBW",
+    "city": "Waldshut-Tiengen",
+    "kv": 380,
+    "bays": "n-1",
+    "year": 2032,
+    "restriction": null,
+    "tso_note": "High Rhine / Swiss border hydro corridor; Hochrhein upgrade brings capacity 2032.",
+    "fibre_km": 39.4,
+    "ix_km": 65.4,
+    "ix_name": "Rottweiler Internet Exchange",
+    "fra_km": 276.1,
+    "dc_km": 185.1,
+    "dc_name": "Rechenzentrum Ellhofen",
+    "target_mw": 45,
+    "score": 52,
+    "tier": "strong",
+    "why": "380 kV TransnetBW substation — bays: n-1, connectable from 2032. Fibre backbone 39 km, nearest IX Rottweiler Internet Exchange 65 km, Frankfurt 276 km, nearest large DC (Rechenzentrum Ellhofen) 185 km.",
+    "parts": {
+     "bays": 30,
+     "year": 5,
+     "restriction": 4,
+     "fibre": 4,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.272,
+     48.402
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Kötz",
+    "tso": "Amprion",
+    "city": "Bubesheim",
+    "kv": 380,
+    "bays": "n-1",
+    "year": 2035,
+    "restriction": "Feed-in only at reduced power",
+    "tso_note": "Bavarian Swabia node; bays realisable but feed-in reduced until the regional 380-kV upgrades land.",
+    "fibre_km": 41.6,
+    "ix_km": 87.9,
+    "ix_name": "Stuttgart-IX",
+    "fra_km": 224.1,
+    "dc_km": 99.3,
+    "dc_name": "Equinix MU1",
+    "target_mw": 45,
+    "score": 50,
+    "tier": "strong",
+    "why": "380 kV Amprion substation — bays: n-1, connectable from 2035; restriction: Feed-in only at reduced power. Fibre backbone 42 km, nearest IX Stuttgart-IX 88 km, Frankfurt 224 km, nearest large DC (Equinix MU1) 99 km.",
+    "parts": {
+     "bays": 30,
+     "year": 2,
+     "restriction": 8,
+     "fibre": 4,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.0584,
+     51.8
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Jessen/Nord (JSN)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "1 free",
+    "year": null,
+    "restriction": null,
+    "tso_note": "Wind-collection node in Saxony-Anhalt; bays built with the RE build-out, 1.5–1.9 GW available.",
+    "fibre_km": 13.5,
+    "ix_km": 67.7,
+    "ix_name": "DE-CIX Leipzig",
+    "fra_km": 362.5,
+    "dc_km": 60.3,
+    "dc_name": "BER11",
+    "target_mw": 45,
+    "score": 49,
+    "tier": "possible",
+    "why": "380 kV 50Hertz substation — bays: 1 free, availability year n/a. Fibre backbone 14 km, nearest IX DE-CIX Leipzig 68 km, Frankfurt 363 km, nearest large DC (BER11) 60 km.",
+    "parts": {
+     "bays": 20,
+     "year": 8,
+     "restriction": 4,
+     "fibre": 8,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.38503,
+     51.35524
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Streumen (STR)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "1 free",
+    "year": null,
+    "restriction": null,
+    "tso_note": "Saxony node; 1 bay, 200 MW available.",
+    "fibre_km": 15.8,
+    "ix_km": 43.6,
+    "ix_name": "DD-IX",
+    "fra_km": 362.0,
+    "dc_km": 69.2,
+    "dc_name": "NTT DATA Business Solutions Global Managed Services",
+    "target_mw": 45,
+    "score": 49,
+    "tier": "possible",
+    "why": "380 kV 50Hertz substation — bays: 1 free, availability year n/a. Fibre backbone 16 km, nearest IX DD-IX 44 km, Frankfurt 362 km, nearest large DC (NTT DATA Business Solutions Global Managed Services) 69 km.",
+    "parts": {
+     "bays": 20,
+     "year": 8,
+     "restriction": 4,
+     "fibre": 8,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.016,
+     52.8017
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Cappeln West",
+    "tso": "TenneT",
+    "city": "",
+    "kv": null,
+    "bays": "≥1 assumed",
+    "year": 2030,
+    "restriction": null,
+    "tso_note": "Brand-new NEP substation (BImSchG-approved, under construction) in the Cloppenburg wind belt; built to collect onshore wind — customer bays from 2030.",
+    "fibre_km": 7.8,
+    "ix_km": 59.4,
+    "ix_name": "BREM-IX",
+    "fra_km": 302.4,
+    "dc_km": 160.6,
+    "dc_name": "Equinix",
+    "target_mw": 45,
+    "score": 47,
+    "tier": "possible",
+    "why": "None kV TenneT substation — bays: ≥1 assumed, connectable from 2030. Fibre backbone 8 km, nearest IX BREM-IX 59 km, Frankfurt 302 km, nearest large DC (Equinix) 161 km.",
+    "parts": {
+     "bays": 12,
+     "year": 10,
+     "restriction": 4,
+     "fibre": 12,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.0792,
+     52.9484
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Garrel Ost",
+    "tso": "TenneT",
+    "city": "",
+    "kv": null,
+    "bays": "≥1 assumed",
+    "year": 2030,
+    "restriction": null,
+    "tso_note": "Twin of Cappeln West, 25 km apart; same new-build logic, 2030.",
+    "fibre_km": 3.8,
+    "ix_km": 48.5,
+    "ix_name": "BREM-IX",
+    "fra_km": 318.0,
+    "dc_km": 147.9,
+    "dc_name": "Equinix",
+    "target_mw": 45,
+    "score": 47,
+    "tier": "possible",
+    "why": "None kV TenneT substation — bays: ≥1 assumed, connectable from 2030. Fibre backbone 4 km, nearest IX BREM-IX 49 km, Frankfurt 318 km, nearest large DC (Equinix) 148 km.",
+    "parts": {
+     "bays": 12,
+     "year": 10,
+     "restriction": 4,
+     "fibre": 12,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.0464,
+     54.162
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Hochwöhrden",
+    "tso": "TenneT",
+    "city": "",
+    "kv": null,
+    "bays": "≥1 assumed",
+    "year": 2031,
+    "restriction": "Load connections only",
+    "tso_note": "Dithmarschen / Westküstenleitung corridor; wind-saturated, electrolysis target region (Heide) → load-only.",
+    "fibre_km": 36.2,
+    "ix_km": 94.5,
+    "ix_name": "DE-CIX Hamburg",
+    "fra_km": 451.5,
+    "dc_km": 83.7,
+    "dc_name": "Equinix",
+    "target_mw": 45,
+    "score": 47,
+    "tier": "possible",
+    "why": "None kV TenneT substation — bays: ≥1 assumed, connectable from 2031; restriction: Load connections only. Fibre backbone 36 km, nearest IX DE-CIX Hamburg 94 km, Frankfurt 452 km, nearest large DC (Equinix) 84 km.",
+    "parts": {
+     "bays": 12,
+     "year": 10,
+     "restriction": 15,
+     "fibre": 4,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.14361,
+     53.90772
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Siedenbrünzow (SOW)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "1 free",
+    "year": null,
+    "restriction": null,
+    "tso_note": "Mecklenburg wind-collection node; 1 bay free, 0.5/0.9 GW still available.",
+    "fibre_km": 7.5,
+    "ix_km": 158.9,
+    "ix_name": "CSNIX - Kehrsen",
+    "fra_km": 523.0,
+    "dc_km": 151.8,
+    "dc_name": "Virtus Wustermark Megacampus",
+    "target_mw": 45,
+    "score": 47,
+    "tier": "possible",
+    "why": "380 kV 50Hertz substation — bays: 1 free, availability year n/a. Fibre backbone 7 km, nearest IX CSNIX - Kehrsen 159 km, Frankfurt 523 km, nearest large DC (Virtus Wustermark Megacampus) 152 km.",
+    "parts": {
+     "bays": 20,
+     "year": 8,
+     "restriction": 4,
+     "fibre": 12,
+     "ix": 1,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.755,
+     48.09
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Eichstetten",
+    "tso": "TransnetBW",
+    "city": "Eichstetten",
+    "kv": 380,
+    "bays": "n-1",
+    "year": 2032,
+    "restriction": "Temporary until 2045",
+    "tso_note": "Endpoint of the new Daxlanden–Eichstetten Rheinschiene line; biggest band in BW (1.5–2 GW) but temporary until 2045 — the node is re-dedicated afterwards.",
+    "fibre_km": 50.9,
+    "ix_km": 65.3,
+    "ix_name": "Rottweiler Internet Exchange",
+    "fra_km": 233.4,
+    "dc_km": 163.8,
+    "dc_name": "Rechenzentrum Ellhofen",
+    "target_mw": 45,
+    "score": 46,
+    "tier": "possible",
+    "why": "380 kV TransnetBW substation — bays: n-1, connectable from 2032; restriction: Temporary until 2045. Fibre backbone 51 km, nearest IX Rottweiler Internet Exchange 65 km, Frankfurt 233 km, nearest large DC (Rechenzentrum Ellhofen) 164 km.",
+    "parts": {
+     "bays": 30,
+     "year": 5,
+     "restriction": 2,
+     "fibre": 0,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.5295,
+     53.2479
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Neuenkirchen",
+    "tso": "TenneT",
+    "city": "",
+    "kv": null,
+    "bays": "≥1 assumed",
+    "year": 2031,
+    "restriction": null,
+    "tso_note": "Same Conneforde/Wesermarsch build-out, 2031.",
+    "fibre_km": 18.4,
+    "ix_km": 24.2,
+    "ix_name": "BREM-IX",
+    "fra_km": 349.1,
+    "dc_km": 105.4,
+    "dc_name": "Equinix",
+    "target_mw": 45,
+    "score": 46,
+    "tier": "possible",
+    "why": "None kV TenneT substation — bays: ≥1 assumed, connectable from 2031. Fibre backbone 18 km, nearest IX BREM-IX 24 km, Frankfurt 349 km, nearest large DC (Equinix) 105 km.",
+    "parts": {
+     "bays": 12,
+     "year": 10,
+     "restriction": 4,
+     "fibre": 8,
+     "ix": 10,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.4005,
+     53.7913
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Iven/West (IVW)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "1 free",
+    "year": null,
+    "restriction": null,
+    "tso_note": "Mecklenburg node; 1 bay free, load headroom 1.35 GW.",
+    "fibre_km": 13.8,
+    "ix_km": 145.4,
+    "ix_name": "BCIX",
+    "fra_km": 523.6,
+    "dc_km": 141.5,
+    "dc_name": "Virtus Wustermark Megacampus",
+    "target_mw": 45,
+    "score": 46,
+    "tier": "possible",
+    "why": "380 kV 50Hertz substation — bays: 1 free, availability year n/a. Fibre backbone 14 km, nearest IX BCIX 145 km, Frankfurt 524 km, nearest large DC (Virtus Wustermark Megacampus) 141 km.",
+    "parts": {
+     "bays": 20,
+     "year": 8,
+     "restriction": 4,
+     "fibre": 8,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.87,
+     48.56
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Kork",
+    "tso": "TransnetBW",
+    "city": "Kehl-Kork",
+    "kv": 380,
+    "bays": "n-0",
+    "year": 2032,
+    "restriction": null,
+    "tso_note": "Upper Rhine valley; capacity rides on the NEP Badische Rheinschiene 380-kV reinforcement (2032).",
+    "fibre_km": 0.6,
+    "ix_km": 64.3,
+    "ix_name": "KA-NIX",
+    "fra_km": 180.9,
+    "dc_km": 123.7,
+    "dc_name": "Rechenzentrum Ellhofen",
+    "target_mw": 45,
+    "score": 45,
+    "tier": "possible",
+    "why": "380 kV TransnetBW substation — bays: n-0, connectable from 2032. Fibre backbone 1 km, nearest IX KA-NIX 64 km, Frankfurt 181 km, nearest large DC (Rechenzentrum Ellhofen) 124 km.",
+    "parts": {
+     "bays": 12,
+     "year": 5,
+     "restriction": 4,
+     "fibre": 15,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.379,
+     48.723
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Altbach",
+    "tso": "TransnetBW",
+    "city": "Altbach",
+    "kv": 380,
+    "bays": "n-0",
+    "year": 2032,
+    "restriction": "Temporary until 2045",
+    "tso_note": "Coal→gas fuel-switch site; connection only temporary until 2045 because the node is re-planned in the NEP.",
+    "fibre_km": 11.3,
+    "ix_km": 15.3,
+    "ix_name": "Stuttgart-IX",
+    "fra_km": 163.4,
+    "dc_km": 47.3,
+    "dc_name": "Rechenzentrum Ellhofen",
+    "target_mw": 45,
+    "score": 43,
+    "tier": "possible",
+    "why": "380 kV TransnetBW substation — bays: n-0, connectable from 2032; restriction: Temporary until 2045. Fibre backbone 11 km, nearest IX Stuttgart-IX 15 km, Frankfurt 163 km, nearest large DC (Rechenzentrum Ellhofen) 47 km.",
+    "parts": {
+     "bays": 12,
+     "year": 5,
+     "restriction": 2,
+     "fibre": 8,
+     "ix": 10,
+     "dc_cluster": 6
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.3394,
+     53.2619
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Großenmeer",
+    "tso": "TenneT",
+    "city": "",
+    "kv": null,
+    "bays": "≥1 assumed",
+    "year": 2031,
+    "restriction": null,
+    "tso_note": "Wesermarsch node on the Conneforde corridor collecting coastal and offshore wind; 2031.",
+    "fibre_km": 14.1,
+    "ix_km": 34.8,
+    "ix_name": "BREM-IX",
+    "fra_km": 351.1,
+    "dc_km": 116.4,
+    "dc_name": "Equinix",
+    "target_mw": 45,
+    "score": 43,
+    "tier": "possible",
+    "why": "None kV TenneT substation — bays: ≥1 assumed, connectable from 2031. Fibre backbone 14 km, nearest IX BREM-IX 35 km, Frankfurt 351 km, nearest large DC (Equinix) 116 km.",
+    "parts": {
+     "bays": 12,
+     "year": 10,
+     "restriction": 4,
+     "fibre": 8,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.31579,
+     52.52199
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Charlottenburg (CH)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 2.4,
+    "ix_km": 5.6,
+    "ix_name": "BCIX",
+    "fra_km": 421.7,
+    "dc_km": 4.9,
+    "dc_name": "Rechenzentrum BER01",
+    "target_mw": 45,
+    "score": 43,
+    "tier": "possible",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 2 km, nearest IX BCIX 6 km, Frankfurt 422 km, nearest large DC (Rechenzentrum BER01) 5 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 15,
+     "ix": 10,
+     "dc_cluster": 10
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.90832,
+     53.48828
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Hamburg/Süd (SUE)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 0.8,
+    "ix_km": 11.5,
+    "ix_name": "DE-CIX Hamburg",
+    "fra_km": 385.8,
+    "dc_km": 17.9,
+    "dc_name": "Equinix",
+    "target_mw": 45,
+    "score": 43,
+    "tier": "possible",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 1 km, nearest IX DE-CIX Hamburg 12 km, Frankfurt 386 km, nearest large DC (Equinix) 18 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 15,
+     "ix": 10,
+     "dc_cluster": 10
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.36843,
+     52.50341
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Mitte (MIT)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 2.5,
+    "ix_km": 2.2,
+    "ix_name": "BCIX",
+    "fra_km": 423.3,
+    "dc_km": 5.2,
+    "dc_name": "Rechenzentrum BER01",
+    "target_mw": 45,
+    "score": 43,
+    "tier": "possible",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 3 km, nearest IX BCIX 2 km, Frankfurt 423 km, nearest large DC (Rechenzentrum BER01) 5 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 15,
+     "ix": 10,
+     "dc_cluster": 10
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.2495,
+     52.53134
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Reuter (REU)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 0.9,
+    "ix_km": 9.7,
+    "ix_name": "BCIX",
+    "fra_km": 418.8,
+    "dc_km": 6.9,
+    "dc_name": "Rechenzentrum BER01",
+    "target_mw": 45,
+    "score": 43,
+    "tier": "possible",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 1 km, nearest IX BCIX 10 km, Frankfurt 419 km, nearest large DC (Rechenzentrum BER01) 7 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 15,
+     "ix": 10,
+     "dc_cluster": 10
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.046,
+     52.183
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Flör",
+    "tso": "Amprion",
+    "city": "Gronau (Westfalen)",
+    "kv": 380,
+    "bays": "n-0",
+    "year": 2032,
+    "restriction": null,
+    "tso_note": "Westmünsterland / NL interconnection area; capacity follows NEP reinforcement of the border corridor.",
+    "fibre_km": 3.4,
+    "ix_km": 72.9,
+    "ix_name": "Ruhr-CIX",
+    "fra_km": 255.7,
+    "dc_km": 108.4,
+    "dc_name": "Equinix DU1",
+    "target_mw": 45,
+    "score": 42,
+    "tier": "possible",
+    "why": "380 kV Amprion substation — bays: n-0, connectable from 2032. Fibre backbone 3 km, nearest IX Ruhr-CIX 73 km, Frankfurt 256 km, nearest large DC (Equinix DU1) 108 km.",
+    "parts": {
+     "bays": 12,
+     "year": 5,
+     "restriction": 4,
+     "fibre": 12,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.38,
+     51.64
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Rieselfeld",
+    "tso": "Amprion",
+    "city": "Waltrop",
+    "kv": 380,
+    "bays": "n-0",
+    "year": 2035,
+    "restriction": "Feed-in only at reduced power",
+    "tso_note": "Ruhr region: coal phase-out frees grid headroom, but feed-in reduced until line upgrades; load welcome.",
+    "fibre_km": 15.5,
+    "ix_km": 15.2,
+    "ix_name": "DO-IX",
+    "fra_km": 191.5,
+    "dc_km": 61.3,
+    "dc_name": "Equinix DU1",
+    "target_mw": 45,
+    "score": 42,
+    "tier": "possible",
+    "why": "380 kV Amprion substation — bays: n-0, connectable from 2035; restriction: Feed-in only at reduced power. Fibre backbone 16 km, nearest IX DO-IX 15 km, Frankfurt 192 km, nearest large DC (Equinix DU1) 61 km.",
+    "parts": {
+     "bays": 12,
+     "year": 2,
+     "restriction": 8,
+     "fibre": 8,
+     "ix": 10,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.996,
+     47.572
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Kühmoos (TNG)",
+    "tso": "TransnetBW",
+    "city": "Rickenbach",
+    "kv": 380,
+    "bays": "n-1",
+    "year": 2035,
+    "restriction": null,
+    "tso_note": "TransnetBW side of the shared Kühmoos node; long-term 2035.",
+    "fibre_km": 59.1,
+    "ix_km": 81.3,
+    "ix_name": "Rottweiler Internet Exchange",
+    "fra_km": 285.9,
+    "dc_km": 200.1,
+    "dc_name": "Rechenzentrum Ellhofen",
+    "target_mw": 45,
+    "score": 42,
+    "tier": "possible",
+    "why": "380 kV TransnetBW substation — bays: n-1, connectable from 2035. Fibre backbone 59 km, nearest IX Rottweiler Internet Exchange 81 km, Frankfurt 286 km, nearest large DC (Rechenzentrum Ellhofen) 200 km.",
+    "parts": {
+     "bays": 30,
+     "year": 2,
+     "restriction": 4,
+     "fibre": 0,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.9938,
+     53.4874
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Sande",
+    "tso": "TenneT",
+    "city": "",
+    "kv": null,
+    "bays": "≥1 assumed",
+    "year": 2033,
+    "restriction": null,
+    "tso_note": "Near Wilhelmshaven: offshore landing point and planned H2/industry hub; 2033.",
+    "fibre_km": 9.0,
+    "ix_km": 68.3,
+    "ix_name": "BREM-IX",
+    "fra_km": 378.2,
+    "dc_km": 132.0,
+    "dc_name": "Equinix",
+    "target_mw": 45,
+    "score": 42,
+    "tier": "possible",
+    "why": "None kV TenneT substation — bays: ≥1 assumed, connectable from 2033. Fibre backbone 9 km, nearest IX BREM-IX 68 km, Frankfurt 378 km, nearest large DC (Equinix) 132 km.",
+    "parts": {
+     "bays": 12,
+     "year": 5,
+     "restriction": 4,
+     "fibre": 12,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.17442,
+     53.62405
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Altentreptow Süd (ATS)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "1 free",
+    "year": null,
+    "restriction": null,
+    "tso_note": "Mecklenburg wind belt: bays exist from RE build-out, but 5.2 GW requested vs 0.65 GW available — Germany's most oversubscribed node.",
+    "fibre_km": 34.8,
+    "ix_km": 127.5,
+    "ix_name": "BCIX",
+    "fra_km": 499.8,
+    "dc_km": 120.6,
+    "dc_name": "Virtus Wustermark Megacampus",
+    "target_mw": 45,
+    "score": 42,
+    "tier": "possible",
+    "why": "380 kV 50Hertz substation — bays: 1 free, availability year n/a. Fibre backbone 35 km, nearest IX BCIX 127 km, Frankfurt 500 km, nearest large DC (Virtus Wustermark Megacampus) 121 km.",
+    "parts": {
+     "bays": 20,
+     "year": 8,
+     "restriction": 4,
+     "fibre": 4,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.34,
+     51.585
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Pöppinghausen",
+    "tso": "Amprion",
+    "city": "Castrop-Rauxel",
+    "kv": 380,
+    "bays": "n-0",
+    "year": 2033,
+    "restriction": null,
+    "tso_note": "Ruhr coal phase-out frees bays; 2033 after switchgear extension.",
+    "fibre_km": 11.9,
+    "ix_km": 10.7,
+    "ix_name": "Ruhr-CIX",
+    "fra_km": 187.5,
+    "dc_km": 54.9,
+    "dc_name": "Equinix DU1",
+    "target_mw": 45,
+    "score": 41,
+    "tier": "possible",
+    "why": "380 kV Amprion substation — bays: n-0, connectable from 2033. Fibre backbone 12 km, nearest IX Ruhr-CIX 11 km, Frankfurt 187 km, nearest large DC (Equinix DU1) 55 km.",
+    "parts": {
+     "bays": 12,
+     "year": 5,
+     "restriction": 4,
+     "fibre": 8,
+     "ix": 10,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.26332,
+     52.99434
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Gransee (GSE)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "1 free",
+    "year": null,
+    "restriction": null,
+    "tso_note": "Rural Brandenburg node recently extended for wind collection; 1.55 GW still available.",
+    "fibre_km": 50.5,
+    "ix_km": 57.2,
+    "ix_name": "BCIX",
+    "fra_km": 453.1,
+    "dc_km": 53.9,
+    "dc_name": "Virtus Wustermark Megacampus",
+    "target_mw": 45,
+    "score": 41,
+    "tier": "possible",
+    "why": "380 kV 50Hertz substation — bays: 1 free, availability year n/a. Fibre backbone 51 km, nearest IX BCIX 57 km, Frankfurt 453 km, nearest large DC (Virtus Wustermark Megacampus) 54 km.",
+    "parts": {
+     "bays": 20,
+     "year": 8,
+     "restriction": 4,
+     "fibre": 0,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.30537,
+     52.23057
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Thyrow (THY)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380/220",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 8.3,
+    "ix_km": 28.5,
+    "ix_name": "BCIX",
+    "fra_km": 402.1,
+    "dc_km": 10.2,
+    "dc_name": "BER11",
+    "target_mw": 45,
+    "score": 40,
+    "tier": "possible",
+    "why": "380/220 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 8 km, nearest IX BCIX 29 km, Frankfurt 402 km, nearest large DC (BER11) 10 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 12,
+     "ix": 10,
+     "dc_cluster": 10
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.45604,
+     52.52176
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Friedrichshain (FRH)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 8.1,
+    "ix_km": 7.2,
+    "ix_name": "BCIX",
+    "fra_km": 429.2,
+    "dc_km": 11.4,
+    "dc_name": "Rechenzentrum BER01",
+    "target_mw": 45,
+    "score": 40,
+    "tier": "possible",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 8 km, nearest IX BCIX 7 km, Frankfurt 429 km, nearest large DC (Rechenzentrum BER01) 11 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 12,
+     "ix": 10,
+     "dc_cluster": 10
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.15614,
+     53.55514
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Hamburg/Ost (OST)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 4.7,
+    "ix_km": 7.2,
+    "ix_name": "DE-CIX Hamburg",
+    "fra_km": 397.2,
+    "dc_km": 15.5,
+    "dc_name": "Equinix",
+    "target_mw": 45,
+    "score": 40,
+    "tier": "possible",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 5 km, nearest IX DE-CIX Hamburg 7 km, Frankfurt 397 km, nearest large DC (Equinix) 16 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 12,
+     "ix": 10,
+     "dc_cluster": 10
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.2116,
+     52.58076
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Teufelsbruch (TB)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 4.4,
+    "ix_km": 15.2,
+    "ix_name": "BCIX",
+    "fra_km": 420.2,
+    "dc_km": 12.9,
+    "dc_name": "Rechenzentrum BER01",
+    "target_mw": 45,
+    "score": 40,
+    "tier": "possible",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 4 km, nearest IX BCIX 15 km, Frankfurt 420 km, nearest large DC (Rechenzentrum BER01) 13 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 12,
+     "ix": 10,
+     "dc_cluster": 10
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.50598,
+     52.47426
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Wuhlheide (WUH)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "220",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 7.8,
+    "ix_km": 9.3,
+    "ix_name": "BCIX",
+    "fra_km": 428.8,
+    "dc_km": 13.7,
+    "dc_name": "Rechenzentrum BER01",
+    "target_mw": 45,
+    "score": 40,
+    "tier": "possible",
+    "why": "220 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 8 km, nearest IX BCIX 9 km, Frankfurt 429 km, nearest large DC (Rechenzentrum BER01) 14 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 12,
+     "ix": 10,
+     "dc_cluster": 10
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.4402,
+     52.3723
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Berlin/Südost (BnS)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 7.1,
+    "ix_km": 13.3,
+    "ix_name": "BCIX",
+    "fra_km": 418.6,
+    "dc_km": 11.4,
+    "dc_name": "BER11",
+    "target_mw": 45,
+    "score": 40,
+    "tier": "possible",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 7 km, nearest IX BCIX 13 km, Frankfurt 419 km, nearest large DC (BER11) 11 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 12,
+     "ix": 10,
+     "dc_cluster": 10
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.55,
+     51.75
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Wittenhorst",
+    "tso": "Amprion",
+    "city": "Hamminkeln",
+    "kv": 380,
+    "bays": "n-0",
+    "year": 2033,
+    "restriction": null,
+    "tso_note": "Lower Rhine near the Doetinchem–Wesel NL interconnector; NEP corridor strengthening enables bays from 2033.",
+    "fibre_km": 17.3,
+    "ix_km": 51.3,
+    "ix_name": "Ruhr-CIX",
+    "fra_km": 233.6,
+    "dc_km": 61.6,
+    "dc_name": "Equinix DU1",
+    "target_mw": 45,
+    "score": 38,
+    "tier": "possible",
+    "why": "380 kV Amprion substation — bays: n-0, connectable from 2033. Fibre backbone 17 km, nearest IX Ruhr-CIX 51 km, Frankfurt 234 km, nearest large DC (Equinix DU1) 62 km.",
+    "parts": {
+     "bays": 12,
+     "year": 5,
+     "restriction": 4,
+     "fibre": 8,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.36,
+     52.383
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Herringhausen",
+    "tso": "Amprion",
+    "city": "Bohmte",
+    "kv": 380,
+    "bays": "n-0",
+    "year": 2035,
+    "restriction": "Feed-in only at reduced power",
+    "tso_note": "Feed-in only at reduced power until upstream NEP reinforcements complete (~2035).",
+    "fibre_km": 12.1,
+    "ix_km": 82.7,
+    "ix_name": "BREM-IX",
+    "fra_km": 253.5,
+    "dc_km": 167.7,
+    "dc_name": "Equinix DU1",
+    "target_mw": 45,
+    "score": 36,
+    "tier": "possible",
+    "why": "380 kV Amprion substation — bays: n-0, connectable from 2035; restriction: Feed-in only at reduced power. Fibre backbone 12 km, nearest IX BREM-IX 83 km, Frankfurt 254 km, nearest large DC (Equinix DU1) 168 km.",
+    "parts": {
+     "bays": 12,
+     "year": 2,
+     "restriction": 8,
+     "fibre": 8,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.49345,
+     52.59107
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Malchow (MOW)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 15.4,
+    "ix_km": 14.6,
+    "ix_name": "BCIX",
+    "fra_km": 435.9,
+    "dc_km": 17.9,
+    "dc_name": "Rechenzentrum BER01",
+    "target_mw": 45,
+    "score": 36,
+    "tier": "possible",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 15 km, nearest IX BCIX 15 km, Frankfurt 436 km, nearest large DC (Rechenzentrum BER01) 18 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 8,
+     "ix": 10,
+     "dc_cluster": 10
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.52346,
+     52.53567
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Marzahn (MZA)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 12.3,
+    "ix_km": 11.9,
+    "ix_name": "BCIX",
+    "fra_km": 433.8,
+    "dc_km": 16.2,
+    "dc_name": "Rechenzentrum BER01",
+    "target_mw": 45,
+    "score": 36,
+    "tier": "possible",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 12 km, nearest IX BCIX 12 km, Frankfurt 434 km, nearest large DC (Rechenzentrum BER01) 16 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 8,
+     "ix": 10,
+     "dc_cluster": 10
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.61025,
+     51.09424
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Niederwartha (NW)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 1.0,
+    "ix_km": 10.9,
+    "ix_name": "DD-IX",
+    "fra_km": 368.0,
+    "dc_km": 52.5,
+    "dc_name": "NTT DATA Business Solutions Global Managed Services",
+    "target_mw": 45,
+    "score": 35,
+    "tier": "possible",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 1 km, nearest IX DD-IX 11 km, Frankfurt 368 km, nearest large DC (NTT DATA Business Solutions Global Managed Services) 53 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 15,
+     "ix": 10,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.47116,
+     51.37161
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Taucha (TA)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "220",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 0.8,
+    "ix_km": 6.1,
+    "ix_name": "DE-CIX Leipzig",
+    "fra_km": 304.4,
+    "dc_km": 119.9,
+    "dc_name": "BER11",
+    "target_mw": 45,
+    "score": 35,
+    "tier": "possible",
+    "why": "220 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 1 km, nearest IX DE-CIX Leipzig 6 km, Frankfurt 304 km, nearest large DC (BER11) 120 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 15,
+     "ix": 10,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.86,
+     48.253
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Engslatt",
+    "tso": "TransnetBW",
+    "city": "Balingen",
+    "kv": 380,
+    "bays": "n-0",
+    "year": 2035,
+    "restriction": null,
+    "tso_note": "Balingen area, long-term after regional 380-kV upgrades (2035).",
+    "fibre_km": 45.0,
+    "ix_km": 19.7,
+    "ix_name": "Rottweiler Internet Exchange",
+    "fra_km": 207.1,
+    "dc_km": 104.6,
+    "dc_name": "Rechenzentrum Ellhofen",
+    "target_mw": 45,
+    "score": 34,
+    "tier": "weak",
+    "why": "380 kV TransnetBW substation — bays: n-0, connectable from 2035. Fibre backbone 45 km, nearest IX Rottweiler Internet Exchange 20 km, Frankfurt 207 km, nearest large DC (Rechenzentrum Ellhofen) 105 km.",
+    "parts": {
+     "bays": 12,
+     "year": 2,
+     "restriction": 4,
+     "fibre": 4,
+     "ix": 10,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.94211,
+     52.56087
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Wustermark (WU)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380/220",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 12.3,
+    "ix_km": 30.2,
+    "ix_name": "BCIX",
+    "fra_km": 404.8,
+    "dc_km": 1.8,
+    "dc_name": "Virtus Wustermark Megacampus",
+    "target_mw": 45,
+    "score": 33,
+    "tier": "weak",
+    "why": "380/220 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 12 km, nearest IX BCIX 30 km, Frankfurt 405 km, nearest large DC (Virtus Wustermark Megacampus) 2 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 8,
+     "ix": 7,
+     "dc_cluster": 10
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.26317,
+     51.73999
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Marke (MA)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 1.9,
+    "ix_km": 43.5,
+    "ix_name": "DE-CIX Leipzig",
+    "fra_km": 312.5,
+    "dc_km": 95.8,
+    "dc_name": "BER11",
+    "target_mw": 45,
+    "score": 32,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 2 km, nearest IX DE-CIX Leipzig 44 km, Frankfurt 312 km, nearest large DC (BER11) 96 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 15,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.33737,
+     51.19721
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Pulgar (PUL)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 7.2,
+    "ix_km": 18.0,
+    "ix_name": "DE-CIX Leipzig",
+    "fra_km": 287.8,
+    "dc_km": 140.0,
+    "dc_name": "NTT DATA Business Solutions Global Managed Services",
+    "target_mw": 45,
+    "score": 32,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 7 km, nearest IX DE-CIX Leipzig 18 km, Frankfurt 288 km, nearest large DC (NTT DATA Business Solutions Global Managed Services) 140 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 12,
+     "ix": 10,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.84119,
+     50.9895
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Dresden/Süd (DRS)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 14.1,
+    "ix_km": 9.4,
+    "ix_name": "DD-IX",
+    "fra_km": 380.8,
+    "dc_km": 42.0,
+    "dc_name": "NTT DATA Business Solutions Global Managed Services",
+    "target_mw": 45,
+    "score": 32,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 14 km, nearest IX DD-IX 9 km, Frankfurt 381 km, nearest large DC (NTT DATA Business Solutions Global Managed Services) 42 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 8,
+     "ix": 10,
+     "dc_cluster": 6
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.25583,
+     50.93012
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Freiberg/Nord (FRN)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 1.0,
+    "ix_km": 34.0,
+    "ix_name": "DD-IX",
+    "fra_km": 339.4,
+    "dc_km": 81.7,
+    "dc_name": "NTT DATA Business Solutions Global Managed Services",
+    "target_mw": 45,
+    "score": 32,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 1 km, nearest IX DD-IX 34 km, Frankfurt 339 km, nearest large DC (NTT DATA Business Solutions Global Managed Services) 82 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 15,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.69951,
+     53.57248
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Wessin (WE)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 1.1,
+    "ix_km": 60.2,
+    "ix_name": "CSNIX - Kehrsen",
+    "fra_km": 438.9,
+    "dc_km": 114.0,
+    "dc_name": "Equinix",
+    "target_mw": 45,
+    "score": 32,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 1 km, nearest IX CSNIX - Kehrsen 60 km, Frankfurt 439 km, nearest large DC (Equinix) 114 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 15,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.1646,
+     54.2662
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Kiel Rönne",
+    "tso": "TenneT",
+    "city": "",
+    "kv": null,
+    "bays": "≥1 assumed",
+    "year": 2036,
+    "restriction": null,
+    "tso_note": "The new Kiel 380-kV substation from the NEP (Audorf–Kiel–Göhl ring); bays come with line completion ~2036.",
+    "fibre_km": 28.0,
+    "ix_km": 79.9,
+    "ix_name": "DE-CIX Hamburg",
+    "fra_km": 473.9,
+    "dc_km": 70.2,
+    "dc_name": "Equinix",
+    "target_mw": 45,
+    "score": 31,
+    "tier": "weak",
+    "why": "None kV TenneT substation — bays: ≥1 assumed, connectable from 2036. Fibre backbone 28 km, nearest IX DE-CIX Hamburg 80 km, Frankfurt 474 km, nearest large DC (Equinix) 70 km.",
+    "parts": {
+     "bays": 12,
+     "year": 2,
+     "restriction": 4,
+     "fibre": 4,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.95768,
+     53.25251
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Bertikow (BE)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 0.1,
+    "ix_km": 94.1,
+    "ix_name": "BCIX",
+    "fra_km": 506.7,
+    "dc_km": 96.6,
+    "dc_name": "Rechenzentrum BER01",
+    "target_mw": 45,
+    "score": 29,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 0 km, nearest IX BCIX 94 km, Frankfurt 507 km, nearest large DC (Rechenzentrum BER01) 97 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 15,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.38581,
+     51.00186
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Eisenach (EI)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 0.8,
+    "ix_km": 145.0,
+    "ix_name": "DE-CIX Leipzig",
+    "fra_km": 158.8,
+    "dc_km": 141.5,
+    "dc_name": "Google Data Centre Hanau",
+    "target_mw": 45,
+    "score": 29,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 1 km, nearest IX DE-CIX Leipzig 145 km, Frankfurt 159 km, nearest large DC (Google Data Centre Hanau) 142 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 15,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.47133,
+     50.93036
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Großschwabhausen (GSH)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 4.4,
+    "ix_km": 79.5,
+    "ix_name": "DE-CIX Leipzig",
+    "fra_km": 220.5,
+    "dc_km": 199.5,
+    "dc_name": "BER11",
+    "target_mw": 45,
+    "score": 29,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 4 km, nearest IX DE-CIX Leipzig 80 km, Frankfurt 221 km, nearest large DC (BER11) 199 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 12,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.63976,
+     52.26787
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Wolmirstedt (WOL)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 4.4,
+    "ix_km": 60.3,
+    "ix_name": "SON-IX",
+    "fra_km": 318.6,
+    "dc_km": 94.5,
+    "dc_name": "Virtus Wustermark Megacampus",
+    "target_mw": 45,
+    "score": 29,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 4 km, nearest IX SON-IX 60 km, Frankfurt 319 km, nearest large DC (Virtus Wustermark Megacampus) 95 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 12,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.0,
+     51.64
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Altdöbern (ADB)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 4.0,
+    "ix_km": 71.3,
+    "ix_name": "DD-IX",
+    "fra_km": 413.2,
+    "dc_km": 55.1,
+    "dc_name": "NTT DATA Business Solutions Global Managed Services",
+    "target_mw": 45,
+    "score": 29,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 4 km, nearest IX DD-IX 71 km, Frankfurt 413 km, nearest large DC (NTT DATA Business Solutions Global Managed Services) 55 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 12,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.47801,
+     50.75287
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Crossen (CRO)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "220",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 3.4,
+    "ix_km": 67.4,
+    "ix_name": "DE-CIX Leipzig",
+    "fra_km": 281.6,
+    "dc_km": 139.7,
+    "dc_name": "NTT DATA Business Solutions Global Managed Services",
+    "target_mw": 45,
+    "score": 29,
+    "tier": "weak",
+    "why": "220 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 3 km, nearest IX DE-CIX Leipzig 67 km, Frankfurt 282 km, nearest large DC (NTT DATA Business Solutions Global Managed Services) 140 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 12,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.37262,
+     53.60057
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Görries (GOES)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 8.8,
+    "ix_km": 38.6,
+    "ix_name": "CSNIX - Kehrsen",
+    "fra_km": 431.4,
+    "dc_km": 92.3,
+    "dc_name": "Equinix",
+    "target_mw": 45,
+    "score": 29,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 9 km, nearest IX CSNIX - Kehrsen 39 km, Frankfurt 431 km, nearest large DC (Equinix) 92 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 12,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.81218,
+     50.85804
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Röhrsdorf (ROE)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380/220",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 7.0,
+    "ix_km": 62.8,
+    "ix_name": "DE-CIX Leipzig",
+    "fra_km": 307.2,
+    "dc_km": 113.6,
+    "dc_name": "NTT DATA Business Solutions Global Managed Services",
+    "target_mw": 45,
+    "score": 29,
+    "tier": "weak",
+    "why": "380/220 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 7 km, nearest IX DE-CIX Leipzig 63 km, Frankfurt 307 km, nearest large DC (NTT DATA Business Solutions Global Managed Services) 114 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 12,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.22081,
+     51.12122
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Schmölln (SM)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 37.0,
+    "ix_km": 36.7,
+    "ix_name": "DD-IX",
+    "fra_km": 410.0,
+    "dc_km": 11.9,
+    "dc_name": "NTT DATA Business Solutions Global Managed Services",
+    "target_mw": 45,
+    "score": 29,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 37 km, nearest IX DD-IX 37 km, Frankfurt 410 km, nearest large DC (NTT DATA Business Solutions Global Managed Services) 12 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 4,
+     "ix": 7,
+     "dc_cluster": 10
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.04521,
+     50.7805
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Weida (WD)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 5.1,
+    "ix_km": 68.3,
+    "ix_name": "DE-CIX Leipzig",
+    "fra_km": 252.9,
+    "dc_km": 167.5,
+    "dc_name": "NTT DATA Business Solutions Global Managed Services",
+    "target_mw": 45,
+    "score": 29,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 5 km, nearest IX DE-CIX Leipzig 68 km, Frankfurt 253 km, nearest large DC (NTT DATA Business Solutions Global Managed Services) 168 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 12,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.51992,
+     51.1577
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Eula (EU)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380/220",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 18.4,
+    "ix_km": 23.9,
+    "ix_name": "DE-CIX Leipzig",
+    "fra_km": 297.9,
+    "dc_km": 127.4,
+    "dc_name": "NTT DATA Business Solutions Global Managed Services",
+    "target_mw": 45,
+    "score": 28,
+    "tier": "weak",
+    "why": "380/220 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 18 km, nearest IX DE-CIX Leipzig 24 km, Frankfurt 298 km, nearest large DC (NTT DATA Business Solutions Global Managed Services) 127 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 8,
+     "ix": 10,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.87,
+     47.59
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Schwörstadt",
+    "tso": "TransnetBW",
+    "city": "Schwörstadt",
+    "kv": 380,
+    "bays": "n-0",
+    "year": 2032,
+    "restriction": null,
+    "tso_note": "Small High-Rhine node on the same corridor, 2032.",
+    "fibre_km": 67.6,
+    "ix_km": 85.5,
+    "ix_name": "Rottweiler Internet Exchange",
+    "fra_km": 285.6,
+    "dc_km": 203.0,
+    "dc_name": "Rechenzentrum Ellhofen",
+    "target_mw": 45,
+    "score": 27,
+    "tier": "weak",
+    "why": "380 kV TransnetBW substation — bays: n-0, connectable from 2032. Fibre backbone 68 km, nearest IX Rottweiler Internet Exchange 86 km, Frankfurt 286 km, nearest large DC (Rechenzentrum Ellhofen) 203 km.",
+    "parts": {
+     "bays": 12,
+     "year": 5,
+     "restriction": 4,
+     "fibre": 0,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.03206,
+     53.50809
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Pasewalk (PAS)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380/220",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 4.2,
+    "ix_km": 122.2,
+    "ix_name": "BCIX",
+    "fra_km": 529.5,
+    "dc_km": 124.4,
+    "dc_name": "Rechenzentrum BER01",
+    "target_mw": 45,
+    "score": 26,
+    "tier": "weak",
+    "why": "380/220 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 4 km, nearest IX BCIX 122 km, Frankfurt 530 km, nearest large DC (Rechenzentrum BER01) 124 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 12,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.68515,
+     54.13873
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Lubmin (LUB)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380/220",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 2.5,
+    "ix_km": 185.2,
+    "ix_name": "BCIX",
+    "fra_km": 565.2,
+    "dc_km": 183.5,
+    "dc_name": "Virtus Wustermark Megacampus",
+    "target_mw": 45,
+    "score": 26,
+    "tier": "weak",
+    "why": "380/220 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 2 km, nearest IX BCIX 185 km, Frankfurt 565 km, nearest large DC (Virtus Wustermark Megacampus) 183 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 15,
+     "ix": 1,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.64652,
+     50.53364
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Remptendorf (RE)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380/220",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 9.1,
+    "ix_km": 105.2,
+    "ix_name": "DE-CIX Leipzig",
+    "fra_km": 219.2,
+    "dc_km": 198.5,
+    "dc_name": "Google Data Centre Hanau",
+    "target_mw": 45,
+    "score": 26,
+    "tier": "weak",
+    "why": "380/220 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 9 km, nearest IX DE-CIX Leipzig 105 km, Frankfurt 219 km, nearest large DC (Google Data Centre Hanau) 199 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 12,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.12405,
+     51.00027
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Vieselbach (VIB)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380/220",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 7.3,
+    "ix_km": 96.5,
+    "ix_name": "DE-CIX Leipzig",
+    "fra_km": 202.0,
+    "dc_km": 183.0,
+    "dc_name": "Google Data Centre Hanau",
+    "target_mw": 45,
+    "score": 26,
+    "tier": "weak",
+    "why": "380/220 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 7 km, nearest IX DE-CIX Leipzig 97 km, Frankfurt 202 km, nearest large DC (Google Data Centre Hanau) 183 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 12,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.5838,
+     54.0943
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Stilow (STI)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380/220",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 0.6,
+    "ix_km": 179.6,
+    "ix_name": "BCIX",
+    "fra_km": 557.2,
+    "dc_km": 177.0,
+    "dc_name": "Virtus Wustermark Megacampus",
+    "target_mw": 45,
+    "score": 26,
+    "tier": "weak",
+    "why": "380/220 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 1 km, nearest IX BCIX 180 km, Frankfurt 557 km, nearest large DC (Virtus Wustermark Megacampus) 177 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 15,
+     "ix": 1,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.50736,
+     51.41335
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Bärwalde (BAE) Schaltanlage",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 42.8,
+    "ix_km": 70.0,
+    "ix_name": "DD-IX",
+    "fra_km": 437.8,
+    "dc_km": 26.8,
+    "dc_name": "NTT DATA Business Solutions Global Managed Services",
+    "target_mw": 45,
+    "score": 25,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 43 km, nearest IX DD-IX 70 km, Frankfurt 438 km, nearest large DC (NTT DATA Business Solutions Global Managed Services) 27 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 4,
+     "ix": 7,
+     "dc_cluster": 6
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.89449,
+     51.40564
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Lauchstädt (LAU)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 13.6,
+    "ix_km": 34.6,
+    "ix_name": "DE-CIX Leipzig",
+    "fra_km": 271.0,
+    "dc_km": 140.1,
+    "dc_name": "BER11",
+    "target_mw": 45,
+    "score": 25,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 14 km, nearest IX DE-CIX Leipzig 35 km, Frankfurt 271 km, nearest large DC (BER11) 140 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 8,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.90017,
+     53.40724
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Parchim/Süd (PMS)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380/220",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 19.5,
+    "ix_km": 76.2,
+    "ix_name": "CSNIX - Kehrsen",
+    "fra_km": 430.1,
+    "dc_km": 118.9,
+    "dc_name": "Virtus Wustermark Megacampus",
+    "target_mw": 45,
+    "score": 25,
+    "tier": "weak",
+    "why": "380/220 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 19 km, nearest IX CSNIX - Kehrsen 76 km, Frankfurt 430 km, nearest large DC (Virtus Wustermark Megacampus) 119 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 8,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.15701,
+     51.82882
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Schönewalde (SW)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 10.4,
+    "ix_km": 74.3,
+    "ix_name": "BCIX",
+    "fra_km": 370.0,
+    "dc_km": 55.6,
+    "dc_name": "BER11",
+    "target_mw": 45,
+    "score": 25,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 10 km, nearest IX BCIX 74 km, Frankfurt 370 km, nearest large DC (BER11) 56 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 8,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.00292,
+     50.86524
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Niederwiesa (NWS)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "220",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 10.4,
+    "ix_km": 53.1,
+    "ix_name": "DD-IX",
+    "fra_km": 320.4,
+    "dc_km": 100.8,
+    "dc_name": "NTT DATA Business Solutions Global Managed Services",
+    "target_mw": 45,
+    "score": 25,
+    "tier": "weak",
+    "why": "220 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 10 km, nearest IX DD-IX 53 km, Frankfurt 320 km, nearest large DC (NTT DATA Business Solutions Global Managed Services) 101 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 8,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.7881,
+     50.62658
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Zwönitz (ZW)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 15.8,
+    "ix_km": 78.9,
+    "ix_name": "DD-IX",
+    "fra_km": 300.3,
+    "dc_km": 126.2,
+    "dc_name": "NTT DATA Business Solutions Global Managed Services",
+    "target_mw": 45,
+    "score": 25,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 16 km, nearest IX DD-IX 79 km, Frankfurt 300 km, nearest large DC (NTT DATA Business Solutions Global Managed Services) 126 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 8,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.50736,
+     51.41335
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Bärwalde (BAE)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 42.8,
+    "ix_km": 70.0,
+    "ix_name": "DD-IX",
+    "fra_km": 437.8,
+    "dc_km": 26.8,
+    "dc_name": "NTT DATA Business Solutions Global Managed Services",
+    "target_mw": 45,
+    "score": 25,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 43 km, nearest IX DD-IX 70 km, Frankfurt 438 km, nearest large DC (NTT DATA Business Solutions Global Managed Services) 27 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 4,
+     "ix": 7,
+     "dc_cluster": 6
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.99,
+     47.578
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Kühmoos",
+    "tso": "Amprion",
+    "city": "Rickenbach",
+    "kv": 380,
+    "bays": "n-0",
+    "year": 2035,
+    "restriction": null,
+    "tso_note": "High Rhine / Swiss border, pumped-storage corridor; capacity appears with the Hochrhein reinforcement. Shared node with TransnetBW.",
+    "fibre_km": 59.4,
+    "ix_km": 81.0,
+    "ix_name": "Rottweiler Internet Exchange",
+    "fra_km": 285.4,
+    "dc_km": 199.7,
+    "dc_name": "Rechenzentrum Ellhofen",
+    "target_mw": 45,
+    "score": 24,
+    "tier": "weak",
+    "why": "380 kV Amprion substation — bays: n-0, connectable from 2035. Fibre backbone 59 km, nearest IX Rottweiler Internet Exchange 81 km, Frankfurt 285 km, nearest large DC (Rechenzentrum Ellhofen) 200 km.",
+    "parts": {
+     "bays": 12,
+     "year": 2,
+     "restriction": 4,
+     "fibre": 0,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.1039,
+     48.6671
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Pleinting",
+    "tso": "TenneT",
+    "city": "",
+    "kv": null,
+    "bays": "≥1 assumed",
+    "year": 2034,
+    "restriction": null,
+    "tso_note": "Site of the retired Pleinting oil plant on the Danube — legacy strong node reactivated after reinforcement, 2034.",
+    "fibre_km": 55.4,
+    "ix_km": 126.9,
+    "ix_name": "DE-CIX Munich",
+    "fra_km": 361.2,
+    "dc_km": 128.3,
+    "dc_name": "Equinix MU1",
+    "target_mw": 45,
+    "score": 24,
+    "tier": "weak",
+    "why": "None kV TenneT substation — bays: ≥1 assumed, connectable from 2034. Fibre backbone 55 km, nearest IX DE-CIX Munich 127 km, Frankfurt 361 km, nearest large DC (Equinix MU1) 128 km.",
+    "parts": {
+     "bays": 12,
+     "year": 2,
+     "restriction": 4,
+     "fibre": 0,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.1391,
+     49.0812
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Wenzenbach",
+    "tso": "TenneT",
+    "city": "",
+    "kv": null,
+    "bays": "≥1 assumed",
+    "year": 2036,
+    "restriction": null,
+    "tso_note": "Near Regensburg, endpoint of the Ostbayernring reinforcement; bays with completion ~2036.",
+    "fibre_km": 51.5,
+    "ix_km": 88.3,
+    "ix_name": "N-IX",
+    "fra_km": 277.4,
+    "dc_km": 112.8,
+    "dc_name": "Equinix MU1",
+    "target_mw": 45,
+    "score": 24,
+    "tier": "weak",
+    "why": "None kV TenneT substation — bays: ≥1 assumed, connectable from 2036. Fibre backbone 52 km, nearest IX N-IX 88 km, Frankfurt 277 km, nearest large DC (Equinix MU1) 113 km.",
+    "parts": {
+     "bays": 12,
+     "year": 2,
+     "restriction": 4,
+     "fibre": 0,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.31784,
+     53.73673
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Altentreptow Nord (ATN)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 21.7,
+    "ix_km": 139.4,
+    "ix_name": "BCIX",
+    "fra_km": 515.5,
+    "dc_km": 134.5,
+    "dc_name": "Virtus Wustermark Megacampus",
+    "target_mw": 45,
+    "score": 22,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 22 km, nearest IX BCIX 139 km, Frankfurt 515 km, nearest large DC (Virtus Wustermark Megacampus) 134 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 8,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.18675,
+     53.81586
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Güstrow (GUE)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 14.6,
+    "ix_km": 95.5,
+    "ix_name": "CSNIX - Kehrsen",
+    "fra_km": 478.6,
+    "dc_km": 146.7,
+    "dc_name": "Equinix",
+    "target_mw": 45,
+    "score": 22,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 15 km, nearest IX CSNIX - Kehrsen 96 km, Frankfurt 479 km, nearest large DC (Equinix) 147 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 8,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.47447,
+     50.60399
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Hohenwarte II (HOH2) Schaltanlage",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "220",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "Pumped-storage plant switchyard (220 kV): plant-scale bays exist, so ~2 GW is technically available.",
+    "fibre_km": 20.5,
+    "ix_km": 105.2,
+    "ix_name": "DE-CIX Leipzig",
+    "fra_km": 209.0,
+    "dc_km": 188.5,
+    "dc_name": "Google Data Centre Hanau",
+    "target_mw": 45,
+    "score": 22,
+    "tier": "weak",
+    "why": "220 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 21 km, nearest IX DE-CIX Leipzig 105 km, Frankfurt 209 km, nearest large DC (Google Data Centre Hanau) 189 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 8,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.18675,
+     53.81586
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Güstrow (GUES)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380/110",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 14.6,
+    "ix_km": 95.5,
+    "ix_name": "CSNIX - Kehrsen",
+    "fra_km": 478.6,
+    "dc_km": 146.7,
+    "dc_name": "Equinix",
+    "target_mw": 45,
+    "score": 22,
+    "tier": "weak",
+    "why": "380/110 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 15 km, nearest IX CSNIX - Kehrsen 96 km, Frankfurt 479 km, nearest large DC (Equinix) 147 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 8,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.27208,
+     53.09673
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Vierraden (VIE)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 13.6,
+    "ix_km": 91.2,
+    "ix_name": "BCIX",
+    "fra_km": 511.7,
+    "dc_km": 94.7,
+    "dc_name": "Rechenzentrum BER01",
+    "target_mw": 45,
+    "score": 22,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 14 km, nearest IX BCIX 91 km, Frankfurt 512 km, nearest large DC (Rechenzentrum BER01) 95 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 8,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.64453,
+     51.90864
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Förderstedt (FOE)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380/110",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 33.6,
+    "ix_km": 80.0,
+    "ix_name": "DE-CIX Leipzig",
+    "fra_km": 290.6,
+    "dc_km": 114.1,
+    "dc_name": "Virtus Wustermark Megacampus",
+    "target_mw": 45,
+    "score": 21,
+    "tier": "weak",
+    "why": "380/110 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 34 km, nearest IX DE-CIX Leipzig 80 km, Frankfurt 291 km, nearest large DC (Virtus Wustermark Megacampus) 114 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 4,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.51507,
+     51.58442
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Klostermansfeld (KLM)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 39.2,
+    "ix_km": 65.5,
+    "ix_name": "DE-CIX Leipzig",
+    "fra_km": 260.5,
+    "dc_km": 145.5,
+    "dc_name": "Virtus Wustermark Megacampus",
+    "target_mw": 45,
+    "score": 21,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 39 km, nearest IX DE-CIX Leipzig 66 km, Frankfurt 261 km, nearest large DC (Virtus Wustermark Megacampus) 145 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 4,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.72785,
+     52.56905
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Stendal/West (STW)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 35.1,
+    "ix_km": 65.3,
+    "ix_name": "SON-IX",
+    "fra_km": 347.9,
+    "dc_km": 83.1,
+    "dc_name": "Virtus Wustermark Megacampus",
+    "target_mw": 45,
+    "score": 21,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 35 km, nearest IX SON-IX 65 km, Frankfurt 348 km, nearest large DC (Virtus Wustermark Megacampus) 83 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 4,
+     "ix": 7,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.21339,
+     54.11259
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Bentwisch (BW)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380/220",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 39.5,
+    "ix_km": 110.3,
+    "ix_name": "CSNIX - Kehrsen",
+    "fra_km": 507.8,
+    "dc_km": 155.7,
+    "dc_name": "Equinix",
+    "target_mw": 45,
+    "score": 18,
+    "tier": "weak",
+    "why": "380/220 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 39 km, nearest IX CSNIX - Kehrsen 110 km, Frankfurt 508 km, nearest large DC (Equinix) 156 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 4,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.94618,
+     51.06207
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Hagenwerder (HGW)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 87.4,
+    "ix_km": 85.9,
+    "ix_name": "DD-IX",
+    "fra_km": 458.1,
+    "dc_km": 44.3,
+    "dc_name": "NTT DATA Business Solutions Global Managed Services",
+    "target_mw": 45,
+    "score": 18,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 87 km, nearest IX DD-IX 86 km, Frankfurt 458 km, nearest large DC (NTT DATA Business Solutions Global Managed Services) 44 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 0,
+     "ix": 4,
+     "dc_cluster": 6
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.24268,
+     50.56763
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Herlasgrün (HER)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "220",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 25.4,
+    "ix_km": 88.3,
+    "ix_name": "DE-CIX Leipzig",
+    "fra_km": 261.3,
+    "dc_km": 163.2,
+    "dc_name": "NTT DATA Business Solutions Global Managed Services",
+    "target_mw": 45,
+    "score": 18,
+    "tier": "weak",
+    "why": "220 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 25 km, nearest IX DE-CIX Leipzig 88 km, Frankfurt 261 km, nearest large DC (NTT DATA Business Solutions Global Managed Services) 163 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 4,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.42786,
+     51.88754
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Preilack (PRL)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 35.4,
+    "ix_km": 98.0,
+    "ix_name": "BCIX",
+    "fra_km": 451.1,
+    "dc_km": 71.7,
+    "dc_name": "Vantage Berlin II (BER2)",
+    "target_mw": 45,
+    "score": 18,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 35 km, nearest IX BCIX 98 km, Frankfurt 451 km, nearest large DC (Vantage Berlin II (BER2)) 72 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 4,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.99002,
+     50.57401
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Altenfeld (ATF)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 35.2,
+    "ix_km": 124.7,
+    "ix_name": "N-IX",
+    "fra_km": 175.1,
+    "dc_km": 154.8,
+    "dc_name": "Google Data Centre Hanau",
+    "target_mw": 45,
+    "score": 18,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 35 km, nearest IX N-IX 125 km, Frankfurt 175 km, nearest large DC (Google Data Centre Hanau) 155 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 4,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     14.60507,
+     52.175
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Eisenhüttenstadt (EH)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 30.6,
+    "ix_km": 90.7,
+    "ix_name": "BCIX",
+    "fra_km": 475.6,
+    "dc_km": 70.9,
+    "dc_name": "Vantage Berlin II (BER2)",
+    "target_mw": 45,
+    "score": 18,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 31 km, nearest IX BCIX 91 km, Frankfurt 476 km, nearest large DC (Vantage Berlin II (BER2)) 71 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 4,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.73448,
+     51.44065
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Wolkramshausen (WK)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380/220",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 47.8,
+    "ix_km": 109.9,
+    "ix_name": "SON-IX",
+    "fra_km": 209.2,
+    "dc_km": 193.4,
+    "dc_name": "Google Data Centre Hanau",
+    "target_mw": 45,
+    "score": 18,
+    "tier": "weak",
+    "why": "380/220 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 48 km, nearest IX SON-IX 110 km, Frankfurt 209 km, nearest large DC (Google Data Centre Hanau) 193 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 4,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.10891,
+     53.25047
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Putlitz/Süd (PZS)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 39.9,
+    "ix_km": 95.0,
+    "ix_name": "CSNIX - Gudow",
+    "fra_km": 423.5,
+    "dc_km": 96.7,
+    "dc_name": "Virtus Wustermark Megacampus",
+    "target_mw": 45,
+    "score": 18,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 40 km, nearest IX CSNIX - Gudow 95 km, Frankfurt 424 km, nearest large DC (Virtus Wustermark Megacampus) 97 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 4,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.4808,
+     54.0807
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Gnewitz (GNW)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380/220",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 26.8,
+    "ix_km": 123.9,
+    "ix_name": "CSNIX - Kehrsen",
+    "fra_km": 513.8,
+    "dc_km": 171.3,
+    "dc_name": "Equinix",
+    "target_mw": 45,
+    "score": 18,
+    "tier": "weak",
+    "why": "380/220 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 27 km, nearest IX CSNIX - Kehrsen 124 km, Frankfurt 514 km, nearest large DC (Equinix) 171 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 4,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.08025,
+     54.28529
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Lüdershagen (LHG)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "220",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 29.8,
+    "ix_km": 169.0,
+    "ix_name": "CSNIX - Kehrsen",
+    "fra_km": 554.3,
+    "dc_km": 193.5,
+    "dc_name": "Virtus Wustermark Megacampus",
+    "target_mw": 45,
+    "score": 15,
+    "tier": "weak",
+    "why": "220 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 30 km, nearest IX CSNIX - Kehrsen 169 km, Frankfurt 554 km, nearest large DC (Virtus Wustermark Megacampus) 193 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 4,
+     "ix": 1,
+     "dc_cluster": 2
+    }
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.85309,
+     53.08612
+    ]
+   },
+   "properties": {
+    "kind": "site",
+    "name": "Perleberg (PE)",
+    "tso": "50Hertz",
+    "city": "",
+    "kv": "380",
+    "bays": "0 free",
+    "year": null,
+    "restriction": "No free switch bay",
+    "tso_note": "",
+    "fibre_km": 53.6,
+    "ix_km": 88.9,
+    "ix_name": "CSNIX - Gudow",
+    "fra_km": 398.7,
+    "dc_km": 95.3,
+    "dc_name": "Virtus Wustermark Megacampus",
+    "target_mw": 45,
+    "score": 14,
+    "tier": "weak",
+    "why": "380 kV 50Hertz substation — bays: 0 free, availability year n/a; restriction: No free switch bay. Fibre backbone 54 km, nearest IX CSNIX - Gudow 89 km, Frankfurt 399 km, nearest large DC (Virtus Wustermark Megacampus) 95 km.",
+    "parts": {
+     "bays": 0,
+     "year": 8,
+     "restriction": 0,
+     "fibre": 0,
+     "ix": 4,
+     "dc_cluster": 2
+    }
+   }
+  }
+ ]
+}

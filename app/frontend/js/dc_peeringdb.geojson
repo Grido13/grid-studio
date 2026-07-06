@@ -1,0 +1,8400 @@
+{
+ "type": "FeatureCollection",
+ "meta": {
+  "cities_summary": [
+   {
+    "city": "Frankfurt am Main",
+    "country": "DE",
+    "exchanges": 20,
+    "capacity_gbps": 145517,
+    "unique_networks": 1780
+   },
+   {
+    "city": "London",
+    "country": "GB",
+    "exchanges": 14,
+    "capacity_gbps": 75675,
+    "unique_networks": 1048
+   },
+   {
+    "city": "Warsaw",
+    "country": "PL",
+    "exchanges": 7,
+    "capacity_gbps": 56975,
+    "unique_networks": 827
+   },
+   {
+    "city": "Madrid",
+    "country": "ES",
+    "exchanges": 6,
+    "capacity_gbps": 23321,
+    "unique_networks": 287
+   },
+   {
+    "city": "Berlin",
+    "country": "DE",
+    "exchanges": 5,
+    "capacity_gbps": 9230,
+    "unique_networks": 205
+   },
+   {
+    "city": "Düsseldorf",
+    "country": "DE",
+    "exchanges": 9,
+    "capacity_gbps": 8773,
+    "unique_networks": 513
+   },
+   {
+    "city": "Katowice",
+    "country": "PL",
+    "exchanges": 1,
+    "capacity_gbps": 8599,
+    "unique_networks": 394
+   },
+   {
+    "city": "Manchester",
+    "country": "GB",
+    "exchanges": 2,
+    "capacity_gbps": 5827,
+    "unique_networks": 141
+   },
+   {
+    "city": "Munich",
+    "country": "DE",
+    "exchanges": 2,
+    "capacity_gbps": 4931,
+    "unique_networks": 193
+   },
+   {
+    "city": "Lisbon",
+    "country": "PT",
+    "exchanges": 6,
+    "capacity_gbps": 4803,
+    "unique_networks": 95
+   },
+   {
+    "city": "Hamburg",
+    "country": "DE",
+    "exchanges": 4,
+    "capacity_gbps": 4707,
+    "unique_networks": 192
+   },
+   {
+    "city": "Barcelona",
+    "country": "ES",
+    "exchanges": 7,
+    "capacity_gbps": 3719,
+    "unique_networks": 149
+   },
+   {
+    "city": "Poznań",
+    "country": "PL",
+    "exchanges": 2,
+    "capacity_gbps": 1788,
+    "unique_networks": 50
+   },
+   {
+    "city": "Wrocław",
+    "country": "PL",
+    "exchanges": 1,
+    "capacity_gbps": 1747,
+    "unique_networks": 35
+   },
+   {
+    "city": "Stuttgart",
+    "country": "DE",
+    "exchanges": 1,
+    "capacity_gbps": 1615,
+    "unique_networks": 36
+   },
+   {
+    "city": "Nuremberg",
+    "country": "DE",
+    "exchanges": 3,
+    "capacity_gbps": 991,
+    "unique_networks": 43
+   },
+   {
+    "city": "Dortmund",
+    "country": "DE",
+    "exchanges": 1,
+    "capacity_gbps": 542,
+    "unique_networks": 9
+   },
+   {
+    "city": "Bremen",
+    "country": "DE",
+    "exchanges": 2,
+    "capacity_gbps": 451,
+    "unique_networks": 8
+   },
+   {
+    "city": "Kehrsen",
+    "country": "DE",
+    "exchanges": 1,
+    "capacity_gbps": 410,
+    "unique_networks": 2
+   },
+   {
+    "city": "Gudow",
+    "country": "DE",
+    "exchanges": 1,
+    "capacity_gbps": 400,
+    "unique_networks": 1
+   },
+   {
+    "city": "Scotland",
+    "country": "GB",
+    "exchanges": 1,
+    "capacity_gbps": 359,
+    "unique_networks": 33
+   },
+   {
+    "city": "Łódź",
+    "country": "PL",
+    "exchanges": 1,
+    "capacity_gbps": 311,
+    "unique_networks": 10
+   },
+   {
+    "city": "Ruhr Region",
+    "country": "DE",
+    "exchanges": 1,
+    "capacity_gbps": 246,
+    "unique_networks": 9
+   },
+   {
+    "city": "Dresden",
+    "country": "DE",
+    "exchanges": 1,
+    "capacity_gbps": 231,
+    "unique_networks": 11
+   },
+   {
+    "city": "Wolfsburg",
+    "country": "DE",
+    "exchanges": 1,
+    "capacity_gbps": 220,
+    "unique_networks": 10
+   },
+   {
+    "city": "Wolverhampton",
+    "country": "GB",
+    "exchanges": 1,
+    "capacity_gbps": 200,
+    "unique_networks": 2
+   },
+   {
+    "city": "Rzeszów",
+    "country": "PL",
+    "exchanges": 1,
+    "capacity_gbps": 171,
+    "unique_networks": 14
+   },
+   {
+    "city": "Karlsruhe",
+    "country": "DE",
+    "exchanges": 2,
+    "capacity_gbps": 162,
+    "unique_networks": 13
+   },
+   {
+    "city": "Bradford",
+    "country": "GB",
+    "exchanges": 2,
+    "capacity_gbps": 147,
+    "unique_networks": 21
+   },
+   {
+    "city": "Leeds",
+    "country": "GB",
+    "exchanges": 1,
+    "capacity_gbps": 144,
+    "unique_networks": 18
+   },
+   {
+    "city": "Leipzig",
+    "country": "DE",
+    "exchanges": 1,
+    "capacity_gbps": 143,
+    "unique_networks": 15
+   },
+   {
+    "city": "Gdańsk",
+    "country": "PL",
+    "exchanges": 1,
+    "capacity_gbps": 130,
+    "unique_networks": 11
+   },
+   {
+    "city": "Cardiff",
+    "country": "GB",
+    "exchanges": 1,
+    "capacity_gbps": 102,
+    "unique_networks": 10
+   },
+   {
+    "city": "Liverpool",
+    "country": "GB",
+    "exchanges": 4,
+    "capacity_gbps": 84,
+    "unique_networks": 3
+   },
+   {
+    "city": "Newcastle upon Tyne",
+    "country": "GB",
+    "exchanges": 1,
+    "capacity_gbps": 72,
+    "unique_networks": 6
+   },
+   {
+    "city": "Valencia",
+    "country": "ES",
+    "exchanges": 1,
+    "capacity_gbps": 65,
+    "unique_networks": 10
+   },
+   {
+    "city": "Kraków",
+    "country": "PL",
+    "exchanges": 1,
+    "capacity_gbps": 62,
+    "unique_networks": 8
+   },
+   {
+    "city": "Białystok",
+    "country": "PL",
+    "exchanges": 1,
+    "capacity_gbps": 31,
+    "unique_networks": 5
+   },
+   {
+    "city": "Rottweil",
+    "country": "DE",
+    "exchanges": 1,
+    "capacity_gbps": 11,
+    "unique_networks": 3
+   },
+   {
+    "city": "Eastnor",
+    "country": "GB",
+    "exchanges": 1,
+    "capacity_gbps": 10,
+    "unique_networks": 10
+   },
+   {
+    "city": "Saarbrücken",
+    "country": "DE",
+    "exchanges": 1,
+    "capacity_gbps": 10,
+    "unique_networks": 1
+   },
+   {
+    "city": "Wuppertal",
+    "country": "DE",
+    "exchanges": 1,
+    "capacity_gbps": 3,
+    "unique_networks": 3
+   },
+   {
+    "city": "Mogilno",
+    "country": "PL",
+    "exchanges": 1,
+    "capacity_gbps": 1,
+    "unique_networks": 1
+   },
+   {
+    "city": "Brighton",
+    "country": "GB",
+    "exchanges": 1,
+    "capacity_gbps": 0,
+    "unique_networks": 0
+   },
+   {
+    "city": "Birmingham",
+    "country": "GB",
+    "exchanges": 1,
+    "capacity_gbps": 0,
+    "unique_networks": 0
+   },
+   {
+    "city": "Elche",
+    "country": "ES",
+    "exchanges": 2,
+    "capacity_gbps": 0,
+    "unique_networks": 0
+   }
+  ],
+  "source": "PeeringDB public API + GeoNames top-200 cities of DE/GB/PL/PT/ES",
+  "generated": "2026-07-04",
+  "countries": [
+   "DE",
+   "GB",
+   "PL",
+   "PT",
+   "ES"
+  ],
+  "cities_checked": 979,
+  "cities_with_ix": 46,
+  "ix_total": 128,
+  "ix_per_country": {
+   "DE": 58,
+   "GB": 30,
+   "PL": 17,
+   "PT": 6,
+   "ES": 17
+  }
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.63176,
+     50.1093
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "DE-CIX Frankfurt",
+    "name_long": "DE-CIX Frankfurt",
+    "city": "Frankfurt am Main",
+    "city_rank": 5,
+    "placement": "local facilities",
+    "website": "https://www.de-cix.net/en/locations/germany/frankfurt",
+    "pdb_url": "https://www.peeringdb.com/ix/31",
+    "members": 1008,
+    "capacity_gbps": 109570,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 348,
+      "pct": 35
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 311,
+      "pct": 31
+     },
+     {
+      "type": "content/cloud",
+      "n": 147,
+      "pct": 15
+     },
+     {
+      "type": "?",
+      "n": 63,
+      "pct": 6
+     },
+     {
+      "type": "enterprise",
+      "n": 53,
+      "pct": 5
+     },
+     {
+      "type": "research/edu",
+      "n": 28,
+      "pct": 3
+     },
+     {
+      "type": "network services",
+      "n": 26,
+      "pct": 3
+     },
+     {
+      "type": "non-profit",
+      "n": 24,
+      "pct": 2
+     },
+     {
+      "type": "route collector",
+      "n": 4,
+      "pct": 0
+     },
+     {
+      "type": "route server",
+      "n": 2,
+      "pct": 0
+     },
+     {
+      "type": "government",
+      "n": 2,
+      "pct": 0
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Amazon",
+     "Apple",
+     "Cloudflare",
+     "Deutsche Telekom",
+     "Fastly",
+     "Google",
+     "Hetzner",
+     "Meta",
+     "Microsoft",
+     "Netflix",
+     "OVHcloud",
+     "Play/Netia",
+     "T-Mobile PL",
+     "TalkTalk",
+     "Telefónica DE",
+     "Valve",
+     "Vodafone DE"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Amazon",
+     "Apple",
+     "Cloudflare",
+     "Fastly",
+     "Google",
+     "Meta",
+     "Microsoft",
+     "Netflix"
+    ],
+    "n_facilities": 23,
+    "n_facilities_total": 26,
+    "score": 90,
+    "tier": "high",
+    "why": "1008 member networks, ~109,570 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Amazon, Apple, Cloudflare, Fastly, Google, Meta, Microsoft, Netflix. Dominant customer group: carrier/transit (35%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.19886,
+     51.52225
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "LINX LON1",
+    "name_long": "London Internet Exchange Ltd.",
+    "city": "London",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://www.linx.net/",
+    "pdb_url": "https://www.peeringdb.com/ix/18",
+    "members": 824,
+    "capacity_gbps": 46544,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 271,
+      "pct": 33
+     },
+     {
+      "type": "carrier/transit",
+      "n": 265,
+      "pct": 32
+     },
+     {
+      "type": "content/cloud",
+      "n": 130,
+      "pct": 16
+     },
+     {
+      "type": "?",
+      "n": 53,
+      "pct": 6
+     },
+     {
+      "type": "enterprise",
+      "n": 46,
+      "pct": 6
+     },
+     {
+      "type": "network services",
+      "n": 22,
+      "pct": 3
+     },
+     {
+      "type": "research/edu",
+      "n": 18,
+      "pct": 2
+     },
+     {
+      "type": "non-profit",
+      "n": 12,
+      "pct": 1
+     },
+     {
+      "type": "route collector",
+      "n": 3,
+      "pct": 0
+     },
+     {
+      "type": "route server",
+      "n": 2,
+      "pct": 0
+     },
+     {
+      "type": "government",
+      "n": 2,
+      "pct": 0
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Amazon",
+     "Apple",
+     "BT",
+     "Cloudflare",
+     "Deutsche Telekom",
+     "Fastly",
+     "Google",
+     "Hetzner",
+     "Meta",
+     "Microsoft",
+     "Netflix",
+     "OVHcloud",
+     "Play/Netia",
+     "Sky UK",
+     "TalkTalk",
+     "Valve",
+     "Virgin Media"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Amazon",
+     "Apple",
+     "Cloudflare",
+     "Fastly",
+     "Google",
+     "Meta",
+     "Microsoft",
+     "Netflix"
+    ],
+    "n_facilities": 14,
+    "n_facilities_total": 14,
+    "score": 90,
+    "tier": "high",
+    "why": "824 member networks, ~46,544 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Amazon, Apple, Cloudflare, Fastly, Google, Meta, Microsoft, Netflix. Dominant customer group: eyeball ISP (33%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.34876,
+     51.52122
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "LONAP",
+    "name_long": "London Access Point",
+    "city": "London",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://www.lonap.net/",
+    "pdb_url": "https://www.peeringdb.com/ix/53",
+    "members": 303,
+    "capacity_gbps": 15893,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 118,
+      "pct": 39
+     },
+     {
+      "type": "carrier/transit",
+      "n": 70,
+      "pct": 23
+     },
+     {
+      "type": "content/cloud",
+      "n": 58,
+      "pct": 19
+     },
+     {
+      "type": "?",
+      "n": 18,
+      "pct": 6
+     },
+     {
+      "type": "research/edu",
+      "n": 14,
+      "pct": 5
+     },
+     {
+      "type": "network services",
+      "n": 10,
+      "pct": 3
+     },
+     {
+      "type": "enterprise",
+      "n": 6,
+      "pct": 2
+     },
+     {
+      "type": "non-profit",
+      "n": 5,
+      "pct": 2
+     },
+     {
+      "type": "route collector",
+      "n": 3,
+      "pct": 1
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 0
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Apple",
+     "Cloudflare",
+     "Fastly",
+     "Google",
+     "Microsoft",
+     "Netflix",
+     "OVHcloud",
+     "Sky UK"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Apple",
+     "Cloudflare",
+     "Fastly",
+     "Google",
+     "Microsoft",
+     "Netflix"
+    ],
+    "n_facilities": 10,
+    "n_facilities_total": 10,
+    "score": 78,
+    "tier": "high",
+    "why": "303 member networks, ~15,893 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Apple, Cloudflare, Fastly, Google, Microsoft, Netflix. Dominant customer group: eyeball ISP (39%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.19886,
+     51.52225
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "LINX LON2",
+    "name_long": "London Internet Exchange Ltd.",
+    "city": "London",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "http://www.linx.net/",
+    "pdb_url": "https://www.peeringdb.com/ix/321",
+    "members": 315,
+    "capacity_gbps": 10021,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 103,
+      "pct": 33
+     },
+     {
+      "type": "carrier/transit",
+      "n": 93,
+      "pct": 30
+     },
+     {
+      "type": "content/cloud",
+      "n": 53,
+      "pct": 17
+     },
+     {
+      "type": "?",
+      "n": 24,
+      "pct": 8
+     },
+     {
+      "type": "enterprise",
+      "n": 20,
+      "pct": 6
+     },
+     {
+      "type": "network services",
+      "n": 11,
+      "pct": 3
+     },
+     {
+      "type": "research/edu",
+      "n": 4,
+      "pct": 1
+     },
+     {
+      "type": "non-profit",
+      "n": 3,
+      "pct": 1
+     },
+     {
+      "type": "route collector",
+      "n": 3,
+      "pct": 1
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 0
+     }
+    ],
+    "marquee": [
+     "Amazon",
+     "BT",
+     "Deutsche Telekom",
+     "Google",
+     "Meta",
+     "Microsoft",
+     "OVHcloud",
+     "Sky UK",
+     "TalkTalk"
+    ],
+    "hyperscalers": [
+     "Amazon",
+     "Google",
+     "Meta",
+     "Microsoft"
+    ],
+    "n_facilities": 14,
+    "n_facilities_total": 14,
+    "score": 78,
+    "tier": "high",
+    "why": "315 member networks, ~10,021 Gbit/s of connected port capacity; hyperscalers on the fabric: Amazon, Google, Meta, Microsoft. Dominant customer group: eyeball ISP (33%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     21.00238,
+     52.18997
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PL",
+    "name": "Equinix Warsaw",
+    "name_long": "Equinix Internet Exchange Warsaw",
+    "city": "Warsaw",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://www.equinix.com/",
+    "pdb_url": "https://www.peeringdb.com/ix/264",
+    "members": 235,
+    "capacity_gbps": 9383,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 109,
+      "pct": 46
+     },
+     {
+      "type": "carrier/transit",
+      "n": 49,
+      "pct": 21
+     },
+     {
+      "type": "content/cloud",
+      "n": 36,
+      "pct": 15
+     },
+     {
+      "type": "?",
+      "n": 13,
+      "pct": 6
+     },
+     {
+      "type": "enterprise",
+      "n": 12,
+      "pct": 5
+     },
+     {
+      "type": "research/edu",
+      "n": 7,
+      "pct": 3
+     },
+     {
+      "type": "network services",
+      "n": 4,
+      "pct": 2
+     },
+     {
+      "type": "government",
+      "n": 2,
+      "pct": 1
+     },
+     {
+      "type": "route server",
+      "n": 2,
+      "pct": 1
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 0
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Amazon",
+     "Cloudflare",
+     "Google",
+     "Meta",
+     "Microsoft",
+     "Netflix",
+     "OVHcloud",
+     "Play/Netia",
+     "T-Mobile PL",
+     "Valve"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Amazon",
+     "Cloudflare",
+     "Google",
+     "Meta",
+     "Microsoft",
+     "Netflix"
+    ],
+    "n_facilities": 3,
+    "n_facilities_total": 3,
+    "score": 75,
+    "tier": "high",
+    "why": "235 member networks, ~9,383 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Amazon, Cloudflare, Google, Meta, Microsoft, Netflix. Dominant customer group: eyeball ISP (46%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     21.00082,
+     52.21537
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PL",
+    "name": "THINX Warsaw",
+    "name_long": "Thinx Warsaw",
+    "city": "Warsaw",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "http://thinx.pl",
+    "pdb_url": "https://www.peeringdb.com/ix/481",
+    "members": 152,
+    "capacity_gbps": 7353,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 65,
+      "pct": 43
+     },
+     {
+      "type": "content/cloud",
+      "n": 28,
+      "pct": 18
+     },
+     {
+      "type": "?",
+      "n": 19,
+      "pct": 12
+     },
+     {
+      "type": "carrier/transit",
+      "n": 19,
+      "pct": 12
+     },
+     {
+      "type": "enterprise",
+      "n": 9,
+      "pct": 6
+     },
+     {
+      "type": "research/edu",
+      "n": 8,
+      "pct": 5
+     },
+     {
+      "type": "non-profit",
+      "n": 2,
+      "pct": 1
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 1
+     },
+     {
+      "type": "network services",
+      "n": 1,
+      "pct": 1
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Cloudflare",
+     "Google",
+     "Meta",
+     "Microsoft",
+     "Netflix",
+     "OVHcloud",
+     "Play/Netia",
+     "T-Mobile PL",
+     "Valve"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Cloudflare",
+     "Google",
+     "Meta",
+     "Microsoft",
+     "Netflix"
+    ],
+    "n_facilities": 8,
+    "n_facilities_total": 16,
+    "score": 75,
+    "tier": "high",
+    "why": "152 member networks, ~7,353 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Cloudflare, Google, Meta, Microsoft, Netflix. Dominant customer group: eyeball ISP (43%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.65884,
+     40.46765
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "ES",
+    "name": "ESpanix Madrid Lower LAN",
+    "name_long": "Espanix Lower LAN",
+    "city": "Madrid",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://www.espanix.net",
+    "pdb_url": "https://www.peeringdb.com/ix/63",
+    "members": 159,
+    "capacity_gbps": 7700,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 50,
+      "pct": 31
+     },
+     {
+      "type": "carrier/transit",
+      "n": 39,
+      "pct": 25
+     },
+     {
+      "type": "content/cloud",
+      "n": 37,
+      "pct": 23
+     },
+     {
+      "type": "?",
+      "n": 15,
+      "pct": 9
+     },
+     {
+      "type": "network services",
+      "n": 7,
+      "pct": 4
+     },
+     {
+      "type": "enterprise",
+      "n": 5,
+      "pct": 3
+     },
+     {
+      "type": "research/edu",
+      "n": 3,
+      "pct": 2
+     },
+     {
+      "type": "non-profit",
+      "n": 2,
+      "pct": 1
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 1
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Apple",
+     "Cloudflare",
+     "Fastly",
+     "Google",
+     "Meta",
+     "Microsoft",
+     "NOS",
+     "Netflix",
+     "OVHcloud",
+     "Orange ES",
+     "Telefónica ES",
+     "Valve",
+     "Vodafone ES"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Apple",
+     "Cloudflare",
+     "Fastly",
+     "Google",
+     "Meta",
+     "Microsoft",
+     "Netflix"
+    ],
+    "n_facilities": 7,
+    "n_facilities_total": 8,
+    "score": 75,
+    "tier": "high",
+    "why": "159 member networks, ~7,700 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Apple, Cloudflare, Fastly, Google, Meta, Microsoft, Netflix. Dominant customer group: eyeball ISP (31%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.6349,
+     40.46922
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "ES",
+    "name": "DE-CIX Madrid",
+    "name_long": "",
+    "city": "Madrid",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://www.de-cix.net/locations/madrid/",
+    "pdb_url": "https://www.peeringdb.com/ix/1277",
+    "members": 189,
+    "capacity_gbps": 8432,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 65,
+      "pct": 34
+     },
+     {
+      "type": "carrier/transit",
+      "n": 36,
+      "pct": 19
+     },
+     {
+      "type": "content/cloud",
+      "n": 35,
+      "pct": 19
+     },
+     {
+      "type": "?",
+      "n": 21,
+      "pct": 11
+     },
+     {
+      "type": "enterprise",
+      "n": 11,
+      "pct": 6
+     },
+     {
+      "type": "network services",
+      "n": 10,
+      "pct": 5
+     },
+     {
+      "type": "research/edu",
+      "n": 8,
+      "pct": 4
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 1
+     },
+     {
+      "type": "non-profit",
+      "n": 1,
+      "pct": 1
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 1
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Amazon",
+     "Apple",
+     "Cloudflare",
+     "Fastly",
+     "Google",
+     "Hetzner",
+     "NOS",
+     "Netflix",
+     "OVHcloud",
+     "Orange ES",
+     "Valve",
+     "Vodafone ES"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Amazon",
+     "Apple",
+     "Cloudflare",
+     "Fastly",
+     "Google",
+     "Netflix"
+    ],
+    "n_facilities": 4,
+    "n_facilities_total": 4,
+    "score": 75,
+    "tier": "high",
+    "why": "189 member networks, ~8,432 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Amazon, Apple, Cloudflare, Fastly, Google, Netflix. Dominant customer group: eyeball ISP (34%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     21.00364,
+     52.22767
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PL",
+    "name": "1-IX EU",
+    "name_long": "1-IX Internet Exchange Europe",
+    "city": "Warsaw",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://1-ix.eu",
+    "pdb_url": "https://www.peeringdb.com/ix/3958",
+    "members": 170,
+    "capacity_gbps": 15318,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 70,
+      "pct": 41
+     },
+     {
+      "type": "carrier/transit",
+      "n": 34,
+      "pct": 20
+     },
+     {
+      "type": "content/cloud",
+      "n": 26,
+      "pct": 15
+     },
+     {
+      "type": "?",
+      "n": 25,
+      "pct": 15
+     },
+     {
+      "type": "enterprise",
+      "n": 10,
+      "pct": 6
+     },
+     {
+      "type": "network services",
+      "n": 2,
+      "pct": 1
+     },
+     {
+      "type": "research/edu",
+      "n": 2,
+      "pct": 1
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 1
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Amazon",
+     "Cloudflare",
+     "Hetzner",
+     "Microsoft",
+     "OVHcloud",
+     "Valve"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Amazon",
+     "Cloudflare",
+     "Microsoft"
+    ],
+    "n_facilities": 5,
+    "n_facilities_total": 25,
+    "score": 74,
+    "tier": "high",
+    "why": "170 member networks, ~15,318 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Amazon, Cloudflare, Microsoft. Dominant customer group: eyeball ISP (41%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     21.00419,
+     52.22538
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PL",
+    "name": "TPIX PL",
+    "name_long": "TPIX",
+    "city": "Warsaw",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://www.tpix.pl/en/",
+    "pdb_url": "https://www.peeringdb.com/ix/482",
+    "members": 331,
+    "capacity_gbps": 10050,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 224,
+      "pct": 68
+     },
+     {
+      "type": "content/cloud",
+      "n": 28,
+      "pct": 8
+     },
+     {
+      "type": "carrier/transit",
+      "n": 27,
+      "pct": 8
+     },
+     {
+      "type": "?",
+      "n": 27,
+      "pct": 8
+     },
+     {
+      "type": "enterprise",
+      "n": 11,
+      "pct": 3
+     },
+     {
+      "type": "research/edu",
+      "n": 8,
+      "pct": 2
+     },
+     {
+      "type": "network services",
+      "n": 5,
+      "pct": 2
+     },
+     {
+      "type": "non-profit",
+      "n": 1,
+      "pct": 0
+     }
+    ],
+    "marquee": [
+     "Amazon",
+     "Cloudflare",
+     "Google",
+     "Meta",
+     "Microsoft",
+     "Netflix",
+     "OVHcloud",
+     "Play/Netia",
+     "T-Mobile PL",
+     "Valve"
+    ],
+    "hyperscalers": [
+     "Amazon",
+     "Cloudflare",
+     "Google",
+     "Meta",
+     "Microsoft",
+     "Netflix"
+    ],
+    "n_facilities": 8,
+    "n_facilities_total": 22,
+    "score": 70,
+    "tier": "high",
+    "why": "331 member networks, ~10,050 Gbit/s of connected port capacity; hyperscalers on the fabric: Amazon, Cloudflare, Google, Meta, Microsoft, Netflix. Dominant customer group: eyeball ISP (68%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.57346,
+     48.14639
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "DE-CIX Munich",
+    "name_long": "",
+    "city": "Munich",
+    "city_rank": 3,
+    "placement": "local facilities",
+    "website": "https://www.de-cix.net/locations/munich",
+    "pdb_url": "https://www.peeringdb.com/ix/248",
+    "members": 179,
+    "capacity_gbps": 4023,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 61,
+      "pct": 34
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 44,
+      "pct": 25
+     },
+     {
+      "type": "content/cloud",
+      "n": 31,
+      "pct": 17
+     },
+     {
+      "type": "?",
+      "n": 9,
+      "pct": 5
+     },
+     {
+      "type": "research/edu",
+      "n": 9,
+      "pct": 5
+     },
+     {
+      "type": "non-profit",
+      "n": 8,
+      "pct": 4
+     },
+     {
+      "type": "enterprise",
+      "n": 8,
+      "pct": 4
+     },
+     {
+      "type": "network services",
+      "n": 7,
+      "pct": 4
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 1
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 1
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Cloudflare",
+     "Fastly",
+     "Google",
+     "Microsoft",
+     "Telefónica DE"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Cloudflare",
+     "Fastly",
+     "Google",
+     "Microsoft"
+    ],
+    "n_facilities": 7,
+    "n_facilities_total": 8,
+    "score": 67,
+    "tier": "high",
+    "why": "179 member networks, ~4,023 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Cloudflare, Fastly, Google, Microsoft. Dominant customer group: carrier/transit (34%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.37006,
+     52.48385
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "BCIX",
+    "name_long": "Berlin Commercial Internet Exchange",
+    "city": "Berlin",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://www.bcix.de/",
+    "pdb_url": "https://www.peeringdb.com/ix/87",
+    "members": 138,
+    "capacity_gbps": 7071,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 43,
+      "pct": 31
+     },
+     {
+      "type": "content/cloud",
+      "n": 25,
+      "pct": 18
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 24,
+      "pct": 17
+     },
+     {
+      "type": "non-profit",
+      "n": 12,
+      "pct": 9
+     },
+     {
+      "type": "?",
+      "n": 12,
+      "pct": 9
+     },
+     {
+      "type": "research/edu",
+      "n": 9,
+      "pct": 7
+     },
+     {
+      "type": "enterprise",
+      "n": 8,
+      "pct": 6
+     },
+     {
+      "type": "route collector",
+      "n": 3,
+      "pct": 2
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 1
+     },
+     {
+      "type": "network services",
+      "n": 1,
+      "pct": 1
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Amazon",
+     "Apple",
+     "Cloudflare",
+     "Fastly",
+     "Meta",
+     "Microsoft",
+     "Netflix",
+     "Play/Netia",
+     "Telefónica DE",
+     "Vodafone DE"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Amazon",
+     "Apple",
+     "Cloudflare",
+     "Fastly",
+     "Meta",
+     "Microsoft",
+     "Netflix"
+    ],
+    "n_facilities": 12,
+    "n_facilities_total": 12,
+    "score": 65,
+    "tier": "high",
+    "why": "138 member networks, ~7,071 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Amazon, Apple, Cloudflare, Fastly, Meta, Microsoft, Netflix. Dominant customer group: carrier/transit (31%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.63006,
+     50.1093
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "MegaIX Frankfurt",
+    "name_long": "Megaport MegaIX Frankfurt",
+    "city": "Frankfurt am Main",
+    "city_rank": 5,
+    "placement": "local facilities",
+    "website": "https://www.megaport.com/services/internet-exchange/",
+    "pdb_url": "https://www.peeringdb.com/ix/676",
+    "members": 109,
+    "capacity_gbps": 7202,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 35,
+      "pct": 32
+     },
+     {
+      "type": "content/cloud",
+      "n": 32,
+      "pct": 29
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 20,
+      "pct": 18
+     },
+     {
+      "type": "research/edu",
+      "n": 7,
+      "pct": 6
+     },
+     {
+      "type": "enterprise",
+      "n": 6,
+      "pct": 6
+     },
+     {
+      "type": "non-profit",
+      "n": 5,
+      "pct": 5
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 1
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 1
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 1
+     },
+     {
+      "type": "network services",
+      "n": 1,
+      "pct": 1
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Apple",
+     "Cloudflare",
+     "Fastly",
+     "Google",
+     "Hetzner",
+     "Meta",
+     "Microsoft",
+     "Netflix",
+     "OVHcloud",
+     "Telefónica DE"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Apple",
+     "Cloudflare",
+     "Fastly",
+     "Google",
+     "Meta",
+     "Microsoft",
+     "Netflix"
+    ],
+    "n_facilities": 11,
+    "n_facilities_total": 11,
+    "score": 65,
+    "tier": "high",
+    "why": "109 member networks, ~7,202 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Apple, Cloudflare, Fastly, Google, Meta, Microsoft, Netflix. Dominant customer group: carrier/transit (32%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.65884,
+     40.46765
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "ES",
+    "name": "ESpanix Madrid Upper LAN",
+    "name_long": "Espanix Upper LAN",
+    "city": "Madrid",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://www.espanix.net/",
+    "pdb_url": "https://www.peeringdb.com/ix/1146",
+    "members": 56,
+    "capacity_gbps": 3121,
+    "customer_mix": [
+     {
+      "type": "content/cloud",
+      "n": 17,
+      "pct": 30
+     },
+     {
+      "type": "carrier/transit",
+      "n": 15,
+      "pct": 27
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 12,
+      "pct": 21
+     },
+     {
+      "type": "?",
+      "n": 6,
+      "pct": 11
+     },
+     {
+      "type": "enterprise",
+      "n": 2,
+      "pct": 4
+     },
+     {
+      "type": "network services",
+      "n": 2,
+      "pct": 4
+     },
+     {
+      "type": "research/edu",
+      "n": 1,
+      "pct": 2
+     },
+     {
+      "type": "non-profit",
+      "n": 1,
+      "pct": 2
+     }
+    ],
+    "marquee": [
+     "Apple",
+     "Cloudflare",
+     "Fastly",
+     "Google",
+     "Meta",
+     "Microsoft",
+     "OVHcloud",
+     "Orange ES",
+     "Telefónica ES",
+     "Valve",
+     "Vodafone ES"
+    ],
+    "hyperscalers": [
+     "Apple",
+     "Cloudflare",
+     "Fastly",
+     "Google",
+     "Meta",
+     "Microsoft"
+    ],
+    "n_facilities": 7,
+    "n_facilities_total": 8,
+    "score": 65,
+    "tier": "high",
+    "why": "56 member networks, ~3,121 Gbit/s of connected port capacity; hyperscalers on the fabric: Apple, Cloudflare, Fastly, Google, Meta, Microsoft. Dominant customer group: content/cloud (30%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.04706,
+     53.55091
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "DE-CIX Hamburg",
+    "name_long": "",
+    "city": "Hamburg",
+    "city_rank": 2,
+    "placement": "local facilities",
+    "website": "https://www.de-cix.net/locations/hamburg",
+    "pdb_url": "https://www.peeringdb.com/ix/74",
+    "members": 167,
+    "capacity_gbps": 2926,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 60,
+      "pct": 36
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 37,
+      "pct": 22
+     },
+     {
+      "type": "content/cloud",
+      "n": 30,
+      "pct": 18
+     },
+     {
+      "type": "?",
+      "n": 9,
+      "pct": 5
+     },
+     {
+      "type": "research/edu",
+      "n": 9,
+      "pct": 5
+     },
+     {
+      "type": "non-profit",
+      "n": 8,
+      "pct": 5
+     },
+     {
+      "type": "enterprise",
+      "n": 7,
+      "pct": 4
+     },
+     {
+      "type": "network services",
+      "n": 5,
+      "pct": 3
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 1
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 1
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Cloudflare",
+     "Google",
+     "Microsoft"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Cloudflare",
+     "Google",
+     "Microsoft"
+    ],
+    "n_facilities": 7,
+    "n_facilities_total": 8,
+    "score": 63,
+    "tier": "high",
+    "why": "167 member networks, ~2,926 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Cloudflare, Google, Microsoft. Dominant customer group: carrier/transit (36%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.86994,
+     51.18611
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "DE-CIX Dusseldorf",
+    "name_long": "",
+    "city": "Düsseldorf",
+    "city_rank": 6,
+    "placement": "local facilities",
+    "website": "https://www.de-cix.net/locations/dusseldorf",
+    "pdb_url": "https://www.peeringdb.com/ix/1214",
+    "members": 204,
+    "capacity_gbps": 4181,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 63,
+      "pct": 31
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 37,
+      "pct": 18
+     },
+     {
+      "type": "content/cloud",
+      "n": 33,
+      "pct": 16
+     },
+     {
+      "type": "?",
+      "n": 18,
+      "pct": 9
+     },
+     {
+      "type": "non-profit",
+      "n": 15,
+      "pct": 7
+     },
+     {
+      "type": "research/edu",
+      "n": 14,
+      "pct": 7
+     },
+     {
+      "type": "enterprise",
+      "n": 12,
+      "pct": 6
+     },
+     {
+      "type": "network services",
+      "n": 10,
+      "pct": 5
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 0
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 0
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Cloudflare",
+     "Microsoft",
+     "Telefónica DE"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Cloudflare",
+     "Microsoft"
+    ],
+    "n_facilities": 5,
+    "n_facilities_total": 5,
+    "score": 63,
+    "tier": "high",
+    "why": "204 member networks, ~4,181 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Cloudflare, Microsoft. Dominant customer group: carrier/transit (31%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.29667,
+     53.46439
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "LINX Manchester",
+    "name_long": "LINX Manchester",
+    "city": "Manchester",
+    "city_rank": 4,
+    "placement": "local facilities",
+    "website": "http://www.linx.net",
+    "pdb_url": "https://www.peeringdb.com/ix/583",
+    "members": 137,
+    "capacity_gbps": 5219,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 47,
+      "pct": 34
+     },
+     {
+      "type": "carrier/transit",
+      "n": 36,
+      "pct": 26
+     },
+     {
+      "type": "content/cloud",
+      "n": 22,
+      "pct": 16
+     },
+     {
+      "type": "?",
+      "n": 10,
+      "pct": 7
+     },
+     {
+      "type": "network services",
+      "n": 8,
+      "pct": 6
+     },
+     {
+      "type": "enterprise",
+      "n": 6,
+      "pct": 4
+     },
+     {
+      "type": "research/edu",
+      "n": 4,
+      "pct": 3
+     },
+     {
+      "type": "route collector",
+      "n": 2,
+      "pct": 1
+     },
+     {
+      "type": "non-profit",
+      "n": 1,
+      "pct": 1
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 1
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Apple",
+     "Cloudflare",
+     "Fastly",
+     "Meta",
+     "Microsoft",
+     "TalkTalk",
+     "Virgin Media"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Apple",
+     "Cloudflare",
+     "Fastly",
+     "Meta",
+     "Microsoft"
+    ],
+    "n_facilities": 7,
+    "n_facilities_total": 7,
+    "score": 61,
+    "tier": "high",
+    "why": "137 member networks, ~5,219 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Apple, Cloudflare, Fastly, Meta, Microsoft. Dominant customer group: eyeball ISP (34%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.13362,
+     41.36944
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "ES",
+    "name": "CATNIX",
+    "name_long": "Catalunya Neutral Internet Exchange",
+    "city": "Barcelona",
+    "city_rank": 2,
+    "placement": "local facilities",
+    "website": "http://www.catnix.net",
+    "pdb_url": "https://www.peeringdb.com/ix/62",
+    "members": 51,
+    "capacity_gbps": 2140,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 14,
+      "pct": 27
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 13,
+      "pct": 25
+     },
+     {
+      "type": "content/cloud",
+      "n": 9,
+      "pct": 18
+     },
+     {
+      "type": "research/edu",
+      "n": 5,
+      "pct": 10
+     },
+     {
+      "type": "?",
+      "n": 4,
+      "pct": 8
+     },
+     {
+      "type": "non-profit",
+      "n": 2,
+      "pct": 4
+     },
+     {
+      "type": "network services",
+      "n": 2,
+      "pct": 4
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 2
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 2
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Cloudflare",
+     "Google",
+     "Meta",
+     "Microsoft",
+     "Orange ES",
+     "Telefónica ES",
+     "Vodafone ES"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Cloudflare",
+     "Google",
+     "Meta",
+     "Microsoft"
+    ],
+    "n_facilities": 4,
+    "n_facilities_total": 4,
+    "score": 61,
+    "tier": "high",
+    "why": "51 member networks, ~2,140 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Cloudflare, Google, Meta, Microsoft. Dominant customer group: carrier/transit (27%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.62905,
+     51.52381
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "Equinix London",
+    "name_long": "Equinix Internet Exchange London",
+    "city": "London",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://www.equinix.co.uk/services/interconnection-connectivity/internet-exchange/",
+    "pdb_url": "https://www.peeringdb.com/ix/1997",
+    "members": 53,
+    "capacity_gbps": 2908,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 20,
+      "pct": 38
+     },
+     {
+      "type": "content/cloud",
+      "n": 15,
+      "pct": 28
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 10,
+      "pct": 19
+     },
+     {
+      "type": "enterprise",
+      "n": 3,
+      "pct": 6
+     },
+     {
+      "type": "network services",
+      "n": 2,
+      "pct": 4
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 2
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 2
+     },
+     {
+      "type": "non-profit",
+      "n": 1,
+      "pct": 2
+     }
+    ],
+    "marquee": [
+     "Apple",
+     "Cloudflare",
+     "Fastly",
+     "Google",
+     "Microsoft",
+     "Netflix",
+     "TalkTalk"
+    ],
+    "hyperscalers": [
+     "Apple",
+     "Cloudflare",
+     "Fastly",
+     "Google",
+     "Microsoft",
+     "Netflix"
+    ],
+    "n_facilities": 7,
+    "n_facilities_total": 7,
+    "score": 59,
+    "tier": "medium",
+    "why": "53 member networks, ~2,908 Gbit/s of connected port capacity; hyperscalers on the fabric: Apple, Cloudflare, Fastly, Google, Microsoft, Netflix. Dominant customer group: carrier/transit (38%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     21.00131,
+     52.22706
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PL",
+    "name": "EPIX.Warszawa",
+    "name_long": "EPIX",
+    "city": "Warsaw",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://www.epix.net.pl/",
+    "pdb_url": "https://www.peeringdb.com/ix/474",
+    "members": 380,
+    "capacity_gbps": 9901,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 295,
+      "pct": 78
+     },
+     {
+      "type": "?",
+      "n": 26,
+      "pct": 7
+     },
+     {
+      "type": "content/cloud",
+      "n": 23,
+      "pct": 6
+     },
+     {
+      "type": "carrier/transit",
+      "n": 22,
+      "pct": 6
+     },
+     {
+      "type": "enterprise",
+      "n": 8,
+      "pct": 2
+     },
+     {
+      "type": "non-profit",
+      "n": 2,
+      "pct": 1
+     },
+     {
+      "type": "network services",
+      "n": 2,
+      "pct": 1
+     },
+     {
+      "type": "research/edu",
+      "n": 1,
+      "pct": 0
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 0
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Cloudflare",
+     "Google",
+     "Meta",
+     "Netflix",
+     "Play/Netia",
+     "Valve"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Cloudflare",
+     "Google",
+     "Meta",
+     "Netflix"
+    ],
+    "n_facilities": 4,
+    "n_facilities_total": 4,
+    "score": 59,
+    "tier": "medium",
+    "why": "380 member networks, ~9,901 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Cloudflare, Google, Meta, Netflix. Dominant customer group: eyeball ISP (78%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -9.14658,
+     38.75644
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PT",
+    "name": "GigaPIX - LAN 1",
+    "name_long": "GIGAbit Portuguese Internet eXchange - LAN 1",
+    "city": "Lisbon",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "http://www.gigapix.pt",
+    "pdb_url": "https://www.peeringdb.com/ix/72",
+    "members": 55,
+    "capacity_gbps": 2226,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 15,
+      "pct": 27
+     },
+     {
+      "type": "carrier/transit",
+      "n": 15,
+      "pct": 27
+     },
+     {
+      "type": "content/cloud",
+      "n": 13,
+      "pct": 24
+     },
+     {
+      "type": "research/edu",
+      "n": 4,
+      "pct": 7
+     },
+     {
+      "type": "?",
+      "n": 3,
+      "pct": 5
+     },
+     {
+      "type": "network services",
+      "n": 3,
+      "pct": 5
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 2
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 2
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Cloudflare",
+     "Fastly",
+     "Meta",
+     "Microsoft",
+     "NOS",
+     "Vodafone PT"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Cloudflare",
+     "Fastly",
+     "Meta",
+     "Microsoft"
+    ],
+    "n_facilities": 3,
+    "n_facilities_total": 4,
+    "score": 59,
+    "tier": "medium",
+    "why": "55 member networks, ~2,226 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Cloudflare, Fastly, Meta, Microsoft. Dominant customer group: eyeball ISP (27%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.62305,
+     40.43975
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "ES",
+    "name": "IXPlay Global Peers",
+    "name_long": "",
+    "city": "Madrid",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://ixplay.global",
+    "pdb_url": "https://www.peeringdb.com/ix/3149",
+    "members": 59,
+    "capacity_gbps": 2068,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 25,
+      "pct": 42
+     },
+     {
+      "type": "content/cloud",
+      "n": 15,
+      "pct": 25
+     },
+     {
+      "type": "carrier/transit",
+      "n": 9,
+      "pct": 15
+     },
+     {
+      "type": "?",
+      "n": 6,
+      "pct": 10
+     },
+     {
+      "type": "network services",
+      "n": 2,
+      "pct": 3
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 2
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 2
+     }
+    ],
+    "marquee": [
+     "Cloudflare",
+     "Google",
+     "Netflix",
+     "OVHcloud",
+     "Valve",
+     "Vodafone ES"
+    ],
+    "hyperscalers": [
+     "Cloudflare",
+     "Google",
+     "Netflix"
+    ],
+    "n_facilities": 5,
+    "n_facilities_total": 6,
+    "score": 57,
+    "tier": "medium",
+    "why": "59 member networks, ~2,068 Gbit/s of connected port capacity; hyperscalers on the fabric: Cloudflare, Google, Netflix. Dominant customer group: eyeball ISP (42%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.81752,
+     51.21963
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "MegaIX Dusseldorf",
+    "name_long": "Megaport MegaIX Dusseldorf",
+    "city": "Düsseldorf",
+    "city_rank": 6,
+    "placement": "local facilities",
+    "website": "https://www.megaport.com/services/internet-exchange/",
+    "pdb_url": "https://www.peeringdb.com/ix/91",
+    "members": 94,
+    "capacity_gbps": 3308,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 30,
+      "pct": 32
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 24,
+      "pct": 26
+     },
+     {
+      "type": "content/cloud",
+      "n": 23,
+      "pct": 24
+     },
+     {
+      "type": "non-profit",
+      "n": 6,
+      "pct": 6
+     },
+     {
+      "type": "research/edu",
+      "n": 4,
+      "pct": 4
+     },
+     {
+      "type": "enterprise",
+      "n": 3,
+      "pct": 3
+     },
+     {
+      "type": "?",
+      "n": 2,
+      "pct": 2
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 1
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 1
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Cloudflare",
+     "Meta",
+     "Microsoft",
+     "Netflix"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Cloudflare",
+     "Meta",
+     "Microsoft",
+     "Netflix"
+    ],
+    "n_facilities": 3,
+    "n_facilities_total": 3,
+    "score": 55,
+    "tier": "medium",
+    "why": "94 member networks, ~3,308 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Cloudflare, Meta, Microsoft, Netflix. Dominant customer group: carrier/transit (32%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.60998,
+     50.09794
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "Equinix Frankfurt",
+    "name_long": "Equinix Internet Exchange Frankfurt",
+    "city": "Frankfurt am Main",
+    "city_rank": 5,
+    "placement": "local facilities",
+    "website": "https://www.equinix.de/services/interconnection-connectivity/internet-exchange/",
+    "pdb_url": "https://www.peeringdb.com/ix/1998",
+    "members": 79,
+    "capacity_gbps": 2974,
+    "customer_mix": [
+     {
+      "type": "content/cloud",
+      "n": 26,
+      "pct": 33
+     },
+     {
+      "type": "carrier/transit",
+      "n": 22,
+      "pct": 28
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 13,
+      "pct": 16
+     },
+     {
+      "type": "enterprise",
+      "n": 7,
+      "pct": 9
+     },
+     {
+      "type": "?",
+      "n": 6,
+      "pct": 8
+     },
+     {
+      "type": "network services",
+      "n": 4,
+      "pct": 5
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 1
+     }
+    ],
+    "marquee": [
+     "Apple",
+     "Cloudflare",
+     "Google",
+     "Microsoft",
+     "Netflix"
+    ],
+    "hyperscalers": [
+     "Apple",
+     "Cloudflare",
+     "Google",
+     "Microsoft",
+     "Netflix"
+    ],
+    "n_facilities": 6,
+    "n_facilities_total": 6,
+    "score": 55,
+    "tier": "medium",
+    "why": "79 member networks, ~2,974 Gbit/s of connected port capacity; hyperscalers on the fabric: Apple, Cloudflare, Google, Microsoft, Netflix. Dominant customer group: content/cloud (33%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.63091,
+     50.09794
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "ERA-IX Frankfurt",
+    "name_long": "ERA-IX Frankfurt",
+    "city": "Frankfurt am Main",
+    "city_rank": 5,
+    "placement": "local facilities",
+    "website": "https://www.era-ix.com/frankfurt",
+    "pdb_url": "https://www.peeringdb.com/ix/4630",
+    "members": 73,
+    "capacity_gbps": 5330,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 28,
+      "pct": 38
+     },
+     {
+      "type": "content/cloud",
+      "n": 17,
+      "pct": 23
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 15,
+      "pct": 21
+     },
+     {
+      "type": "?",
+      "n": 5,
+      "pct": 7
+     },
+     {
+      "type": "network services",
+      "n": 3,
+      "pct": 4
+     },
+     {
+      "type": "enterprise",
+      "n": 3,
+      "pct": 4
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 1
+     },
+     {
+      "type": "research/edu",
+      "n": 1,
+      "pct": 1
+     }
+    ],
+    "marquee": [
+     "Cloudflare",
+     "Hetzner",
+     "Meta",
+     "OVHcloud",
+     "TalkTalk"
+    ],
+    "hyperscalers": [
+     "Cloudflare",
+     "Meta"
+    ],
+    "n_facilities": 10,
+    "n_facilities_total": 10,
+    "score": 55,
+    "tier": "medium",
+    "why": "73 member networks, ~5,330 Gbit/s of connected port capacity; hyperscalers on the fabric: Cloudflare, Meta. Dominant customer group: carrier/transit (38%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.67898,
+     50.12453
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "LOCIX FRANKFURT",
+    "name_long": "LOCIX EXCHANGE FRANKFURT",
+    "city": "Frankfurt am Main",
+    "city_rank": 5,
+    "placement": "local facilities",
+    "website": "https://locix.online",
+    "pdb_url": "https://www.peeringdb.com/ix/2084",
+    "members": 225,
+    "capacity_gbps": 3715,
+    "customer_mix": [
+     {
+      "type": "research/edu",
+      "n": 61,
+      "pct": 27
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 33,
+      "pct": 15
+     },
+     {
+      "type": "?",
+      "n": 32,
+      "pct": 14
+     },
+     {
+      "type": "carrier/transit",
+      "n": 29,
+      "pct": 13
+     },
+     {
+      "type": "content/cloud",
+      "n": 23,
+      "pct": 10
+     },
+     {
+      "type": "enterprise",
+      "n": 19,
+      "pct": 8
+     },
+     {
+      "type": "non-profit",
+      "n": 18,
+      "pct": 8
+     },
+     {
+      "type": "network services",
+      "n": 7,
+      "pct": 3
+     },
+     {
+      "type": "route server",
+      "n": 2,
+      "pct": 1
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 0
+     }
+    ],
+    "marquee": [
+     "Cloudflare",
+     "Hetzner",
+     "Valve"
+    ],
+    "hyperscalers": [
+     "Cloudflare"
+    ],
+    "n_facilities": 10,
+    "n_facilities_total": 14,
+    "score": 51,
+    "tier": "medium",
+    "why": "225 member networks, ~3,715 Gbit/s of connected port capacity; hyperscalers on the fabric: Cloudflare. Dominant customer group: research/edu (27%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     19.01392,
+     50.25762
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PL",
+    "name": "EPIX.Katowice",
+    "name_long": "",
+    "city": "Katowice",
+    "city_rank": 11,
+    "placement": "local facilities",
+    "website": "https://www.epix.net.pl/",
+    "pdb_url": "https://www.peeringdb.com/ix/491",
+    "members": 394,
+    "capacity_gbps": 8599,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 317,
+      "pct": 80
+     },
+     {
+      "type": "?",
+      "n": 26,
+      "pct": 7
+     },
+     {
+      "type": "carrier/transit",
+      "n": 15,
+      "pct": 4
+     },
+     {
+      "type": "content/cloud",
+      "n": 13,
+      "pct": 3
+     },
+     {
+      "type": "enterprise",
+      "n": 12,
+      "pct": 3
+     },
+     {
+      "type": "research/edu",
+      "n": 4,
+      "pct": 1
+     },
+     {
+      "type": "non-profit",
+      "n": 4,
+      "pct": 1
+     },
+     {
+      "type": "network services",
+      "n": 2,
+      "pct": 1
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 0
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Google",
+     "Play/Netia"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Google"
+    ],
+    "n_facilities": 2,
+    "n_facilities_total": 2,
+    "score": 51,
+    "tier": "medium",
+    "why": "394 member networks, ~8,599 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Google. Dominant customer group: eyeball ISP (80%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.04365,
+     53.55097
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "MegaIX Hamburg",
+    "name_long": "Megaport MegaIX Hamburg",
+    "city": "Hamburg",
+    "city_rank": 2,
+    "placement": "local facilities",
+    "website": "https://www.megaport.com/services/internet-exchange/",
+    "pdb_url": "https://www.peeringdb.com/ix/291",
+    "members": 54,
+    "capacity_gbps": 1381,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 20,
+      "pct": 37
+     },
+     {
+      "type": "content/cloud",
+      "n": 12,
+      "pct": 22
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 9,
+      "pct": 17
+     },
+     {
+      "type": "non-profit",
+      "n": 6,
+      "pct": 11
+     },
+     {
+      "type": "research/edu",
+      "n": 3,
+      "pct": 6
+     },
+     {
+      "type": "enterprise",
+      "n": 2,
+      "pct": 4
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 2
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 2
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Cloudflare",
+     "Google",
+     "Meta",
+     "Telefónica DE"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Cloudflare",
+     "Google",
+     "Meta"
+    ],
+    "n_facilities": 5,
+    "n_facilities_total": 5,
+    "score": 50,
+    "tier": "medium",
+    "why": "54 member networks, ~1,381 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Cloudflare, Google, Meta. Dominant customer group: carrier/transit (37%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -9.18222,
+     38.75329
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PT",
+    "name": "DE-CIX Lisbon",
+    "name_long": "",
+    "city": "Lisbon",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://www.de-cix.net/locations/lisbon",
+    "pdb_url": "https://www.peeringdb.com/ix/2531",
+    "members": 61,
+    "capacity_gbps": 1606,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 20,
+      "pct": 33
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 14,
+      "pct": 23
+     },
+     {
+      "type": "content/cloud",
+      "n": 12,
+      "pct": 20
+     },
+     {
+      "type": "?",
+      "n": 4,
+      "pct": 7
+     },
+     {
+      "type": "research/edu",
+      "n": 4,
+      "pct": 7
+     },
+     {
+      "type": "network services",
+      "n": 3,
+      "pct": 5
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 2
+     },
+     {
+      "type": "non-profit",
+      "n": 1,
+      "pct": 2
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 2
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 2
+     }
+    ],
+    "marquee": [
+     "Cloudflare",
+     "Google",
+     "Hetzner",
+     "Microsoft",
+     "NOS"
+    ],
+    "hyperscalers": [
+     "Cloudflare",
+     "Google",
+     "Microsoft"
+    ],
+    "n_facilities": 2,
+    "n_facilities_total": 3,
+    "score": 50,
+    "tier": "medium",
+    "why": "61 member networks, ~1,606 Gbit/s of connected port capacity; hyperscalers on the fabric: Cloudflare, Google, Microsoft. Dominant customer group: carrier/transit (33%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.63188,
+     50.09927
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "PITER-IX Frankfurt",
+    "name_long": "",
+    "city": "Frankfurt am Main",
+    "city_rank": 5,
+    "placement": "local facilities",
+    "website": "https://piter-ix.eu",
+    "pdb_url": "https://www.peeringdb.com/ix/3739",
+    "members": 155,
+    "capacity_gbps": 7308,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 58,
+      "pct": 37
+     },
+     {
+      "type": "carrier/transit",
+      "n": 39,
+      "pct": 25
+     },
+     {
+      "type": "content/cloud",
+      "n": 21,
+      "pct": 14
+     },
+     {
+      "type": "?",
+      "n": 14,
+      "pct": 9
+     },
+     {
+      "type": "enterprise",
+      "n": 11,
+      "pct": 7
+     },
+     {
+      "type": "research/edu",
+      "n": 5,
+      "pct": 3
+     },
+     {
+      "type": "network services",
+      "n": 4,
+      "pct": 3
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 1
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 1
+     },
+     {
+      "type": "non-profit",
+      "n": 1,
+      "pct": 1
+     }
+    ],
+    "marquee": [
+     "Hetzner",
+     "Valve"
+    ],
+    "hyperscalers": [],
+    "n_facilities": 2,
+    "n_facilities_total": 2,
+    "score": 49,
+    "tier": "medium",
+    "why": "155 member networks, ~7,308 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: eyeball ISP (37%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.64417,
+     50.11925
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "FogIXP Frankfurt",
+    "name_long": "FogIXP Regional IXP Frankfurt",
+    "city": "Frankfurt am Main",
+    "city_rank": 5,
+    "placement": "local facilities",
+    "website": "https://fogixp.org/our-ixps/frankfurt",
+    "pdb_url": "https://www.peeringdb.com/ix/4200",
+    "members": 53,
+    "capacity_gbps": 893,
+    "customer_mix": [
+     {
+      "type": "content/cloud",
+      "n": 14,
+      "pct": 26
+     },
+     {
+      "type": "research/edu",
+      "n": 12,
+      "pct": 23
+     },
+     {
+      "type": "carrier/transit",
+      "n": 10,
+      "pct": 19
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 7,
+      "pct": 13
+     },
+     {
+      "type": "non-profit",
+      "n": 3,
+      "pct": 6
+     },
+     {
+      "type": "?",
+      "n": 3,
+      "pct": 6
+     },
+     {
+      "type": "network services",
+      "n": 2,
+      "pct": 4
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 2
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 2
+     }
+    ],
+    "marquee": [
+     "Cloudflare",
+     "Hetzner",
+     "Valve"
+    ],
+    "hyperscalers": [
+     "Cloudflare"
+    ],
+    "n_facilities": 5,
+    "n_facilities_total": 5,
+    "score": 46,
+    "tier": "medium",
+    "why": "53 member networks, ~893 Gbit/s of connected port capacity; hyperscalers on the fabric: Cloudflare. Dominant customer group: content/cloud (26%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.68417,
+     50.11552
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "BGP.Exchange - Frankfurt",
+    "name_long": "BGP.Exchange - Frankfurt",
+    "city": "Frankfurt am Main",
+    "city_rank": 5,
+    "placement": "city centroid",
+    "website": "https://bgp.exchange",
+    "pdb_url": "https://www.peeringdb.com/ix/3829",
+    "members": 214,
+    "capacity_gbps": 250,
+    "customer_mix": [
+     {
+      "type": "research/edu",
+      "n": 80,
+      "pct": 37
+     },
+     {
+      "type": "content/cloud",
+      "n": 32,
+      "pct": 15
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 26,
+      "pct": 12
+     },
+     {
+      "type": "?",
+      "n": 26,
+      "pct": 12
+     },
+     {
+      "type": "non-profit",
+      "n": 17,
+      "pct": 8
+     },
+     {
+      "type": "network services",
+      "n": 15,
+      "pct": 7
+     },
+     {
+      "type": "enterprise",
+      "n": 11,
+      "pct": 5
+     },
+     {
+      "type": "carrier/transit",
+      "n": 7,
+      "pct": 3
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 45,
+    "tier": "medium",
+    "why": "214 member networks, ~250 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: research/edu (37%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     21.00419,
+     52.22754
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PL",
+    "name": "Giganet IXN Warsaw",
+    "name_long": "GigaNET Warsaw local exchange",
+    "city": "Warsaw",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "http://giganet.ua/en",
+    "pdb_url": "https://www.peeringdb.com/ix/2918",
+    "members": 47,
+    "capacity_gbps": 2960,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 26,
+      "pct": 55
+     },
+     {
+      "type": "content/cloud",
+      "n": 7,
+      "pct": 15
+     },
+     {
+      "type": "carrier/transit",
+      "n": 5,
+      "pct": 11
+     },
+     {
+      "type": "network services",
+      "n": 3,
+      "pct": 6
+     },
+     {
+      "type": "?",
+      "n": 3,
+      "pct": 6
+     },
+     {
+      "type": "enterprise",
+      "n": 2,
+      "pct": 4
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 2
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Google",
+     "Play/Netia",
+     "Valve"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Google"
+    ],
+    "n_facilities": 4,
+    "n_facilities_total": 6,
+    "score": 45,
+    "tier": "medium",
+    "why": "47 member networks, ~2,960 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Google. Dominant customer group: eyeball ISP (55%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.63188,
+     50.10299
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "KleyReX",
+    "name_long": "KleyReX Internet Exchange",
+    "city": "Frankfurt am Main",
+    "city_rank": 5,
+    "placement": "local facilities",
+    "website": "https://www.kleyrex.net/",
+    "pdb_url": "https://www.peeringdb.com/ix/123",
+    "members": 271,
+    "capacity_gbps": 1189,
+    "customer_mix": [
+     {
+      "type": "research/edu",
+      "n": 87,
+      "pct": 32
+     },
+     {
+      "type": "carrier/transit",
+      "n": 42,
+      "pct": 15
+     },
+     {
+      "type": "?",
+      "n": 40,
+      "pct": 15
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 37,
+      "pct": 14
+     },
+     {
+      "type": "content/cloud",
+      "n": 24,
+      "pct": 9
+     },
+     {
+      "type": "non-profit",
+      "n": 24,
+      "pct": 9
+     },
+     {
+      "type": "enterprise",
+      "n": 9,
+      "pct": 3
+     },
+     {
+      "type": "network services",
+      "n": 7,
+      "pct": 3
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 0
+     }
+    ],
+    "marquee": [
+     "Cloudflare",
+     "Google"
+    ],
+    "hyperscalers": [
+     "Cloudflare",
+     "Google"
+    ],
+    "n_facilities": 12,
+    "n_facilities_total": 12,
+    "score": 44,
+    "tier": "medium",
+    "why": "271 member networks, ~1,189 Gbit/s of connected port capacity; hyperscalers on the fabric: Cloudflare, Google. Dominant customer group: research/edu (32%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.3699,
+     52.46578
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "MegaIX Berlin",
+    "name_long": "Megaport MegaIX Berlin",
+    "city": "Berlin",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://www.megaport.com/services/internet-exchange/",
+    "pdb_url": "https://www.peeringdb.com/ix/209",
+    "members": 42,
+    "capacity_gbps": 1200,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 15,
+      "pct": 36
+     },
+     {
+      "type": "content/cloud",
+      "n": 12,
+      "pct": 29
+     },
+     {
+      "type": "non-profit",
+      "n": 5,
+      "pct": 12
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 4,
+      "pct": 10
+     },
+     {
+      "type": "research/edu",
+      "n": 2,
+      "pct": 5
+     },
+     {
+      "type": "enterprise",
+      "n": 2,
+      "pct": 5
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 2
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 2
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Apple",
+     "Cloudflare",
+     "Meta",
+     "Microsoft",
+     "Netflix"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Apple",
+     "Cloudflare",
+     "Meta",
+     "Microsoft",
+     "Netflix"
+    ],
+    "n_facilities": 5,
+    "n_facilities_total": 5,
+    "score": 44,
+    "tier": "medium",
+    "why": "42 member networks, ~1,200 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Apple, Cloudflare, Meta, Microsoft, Netflix. Dominant customer group: carrier/transit (36%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.57427,
+     48.15079
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "MegaIX Munich",
+    "name_long": "Megaport MegaIX Munich",
+    "city": "Munich",
+    "city_rank": 3,
+    "placement": "local facilities",
+    "website": "https://www.megaport.com/services/internet-exchange/",
+    "pdb_url": "https://www.peeringdb.com/ix/73",
+    "members": 35,
+    "capacity_gbps": 908,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 14,
+      "pct": 40
+     },
+     {
+      "type": "content/cloud",
+      "n": 10,
+      "pct": 29
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 4,
+      "pct": 11
+     },
+     {
+      "type": "research/edu",
+      "n": 2,
+      "pct": 6
+     },
+     {
+      "type": "non-profit",
+      "n": 2,
+      "pct": 6
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 3
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 3
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 3
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Cloudflare",
+     "Google",
+     "Meta",
+     "Microsoft"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Cloudflare",
+     "Google",
+     "Meta",
+     "Microsoft"
+    ],
+    "n_facilities": 4,
+    "n_facilities_total": 4,
+    "score": 42,
+    "tier": "medium",
+    "why": "35 member networks, ~908 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Cloudflare, Google, Meta, Microsoft. Dominant customer group: carrier/transit (40%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.84413,
+     51.2261
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "LOCIX DUSSELDORF",
+    "name_long": "LOCIX EXCHANGE DUSSELDORF",
+    "city": "Düsseldorf",
+    "city_rank": 6,
+    "placement": "local facilities",
+    "website": "https://locix.online",
+    "pdb_url": "https://www.peeringdb.com/ix/2730",
+    "members": 180,
+    "capacity_gbps": 886,
+    "customer_mix": [
+     {
+      "type": "research/edu",
+      "n": 46,
+      "pct": 26
+     },
+     {
+      "type": "?",
+      "n": 30,
+      "pct": 17
+     },
+     {
+      "type": "content/cloud",
+      "n": 26,
+      "pct": 14
+     },
+     {
+      "type": "enterprise",
+      "n": 18,
+      "pct": 10
+     },
+     {
+      "type": "carrier/transit",
+      "n": 18,
+      "pct": 10
+     },
+     {
+      "type": "non-profit",
+      "n": 17,
+      "pct": 9
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 16,
+      "pct": 9
+     },
+     {
+      "type": "network services",
+      "n": 8,
+      "pct": 4
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 1
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 2,
+    "n_facilities_total": 2,
+    "score": 40,
+    "tier": "medium",
+    "why": "180 member networks, ~886 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: research/edu (26%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.2674,
+     53.46589
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "Equinix Manchester",
+    "name_long": "Equinix Internet Exchange Manchester",
+    "city": "Manchester",
+    "city_rank": 4,
+    "placement": "local facilities",
+    "website": "http://www.equinix.co.uk/services/interconnection-connectivity/internet-exchange/",
+    "pdb_url": "https://www.peeringdb.com/ix/1927",
+    "members": 20,
+    "capacity_gbps": 608,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 6,
+      "pct": 30
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 6,
+      "pct": 30
+     },
+     {
+      "type": "content/cloud",
+      "n": 5,
+      "pct": 25
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 5
+     },
+     {
+      "type": "network services",
+      "n": 1,
+      "pct": 5
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 5
+     }
+    ],
+    "marquee": [
+     "Apple",
+     "Cloudflare",
+     "Microsoft",
+     "TalkTalk"
+    ],
+    "hyperscalers": [
+     "Apple",
+     "Cloudflare",
+     "Microsoft"
+    ],
+    "n_facilities": 4,
+    "n_facilities_total": 4,
+    "score": 40,
+    "tier": "medium",
+    "why": "20 member networks, ~608 Gbit/s of connected port capacity; hyperscalers on the fabric: Apple, Cloudflare, Microsoft. Dominant customer group: carrier/transit (30%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.13362,
+     41.35009
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "ES",
+    "name": "DE-CIX Barcelona",
+    "name_long": "DE-CIX Barcelona",
+    "city": "Barcelona",
+    "city_rank": 2,
+    "placement": "local facilities",
+    "website": "https://www.de-cix.net/en/locations/barcelona",
+    "pdb_url": "https://www.peeringdb.com/ix/3446",
+    "members": 41,
+    "capacity_gbps": 668,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 10,
+      "pct": 24
+     },
+     {
+      "type": "content/cloud",
+      "n": 9,
+      "pct": 22
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 7,
+      "pct": 17
+     },
+     {
+      "type": "network services",
+      "n": 4,
+      "pct": 10
+     },
+     {
+      "type": "research/edu",
+      "n": 4,
+      "pct": 10
+     },
+     {
+      "type": "?",
+      "n": 3,
+      "pct": 7
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 2
+     },
+     {
+      "type": "non-profit",
+      "n": 1,
+      "pct": 2
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 2
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 2
+     }
+    ],
+    "marquee": [
+     "Cloudflare",
+     "Google",
+     "Hetzner",
+     "Microsoft"
+    ],
+    "hyperscalers": [
+     "Cloudflare",
+     "Google",
+     "Microsoft"
+    ],
+    "n_facilities": 4,
+    "n_facilities_total": 4,
+    "score": 40,
+    "tier": "medium",
+    "why": "41 member networks, ~668 Gbit/s of connected port capacity; hyperscalers on the fabric: Cloudflare, Google, Microsoft. Dominant customer group: carrier/transit (24%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     21.00364,
+     52.22767
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PL",
+    "name": "1-PL FREE",
+    "name_long": "1-PL Internet Exchange Poland",
+    "city": "Warsaw",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://1-ix.eu/1pl",
+    "pdb_url": "https://www.peeringdb.com/ix/4916",
+    "members": 23,
+    "capacity_gbps": 2010,
+    "customer_mix": [
+     {
+      "type": "content/cloud",
+      "n": 8,
+      "pct": 35
+     },
+     {
+      "type": "carrier/transit",
+      "n": 6,
+      "pct": 26
+     },
+     {
+      "type": "?",
+      "n": 4,
+      "pct": 17
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 4,
+      "pct": 17
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 4
+     }
+    ],
+    "marquee": [
+     "Valve"
+    ],
+    "hyperscalers": [],
+    "n_facilities": 5,
+    "n_facilities_total": 7,
+    "score": 39,
+    "tier": "medium",
+    "why": "23 member networks, ~2,010 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: content/cloud (35%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.92073,
+     52.41183
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PL",
+    "name": "POZIX",
+    "name_long": "Poznan Internet Exchange",
+    "city": "Poznań",
+    "city_rank": 5,
+    "placement": "local facilities",
+    "website": "http://www.pozix.pl/",
+    "pdb_url": "https://www.peeringdb.com/ix/230",
+    "members": 28,
+    "capacity_gbps": 1298,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 10,
+      "pct": 36
+     },
+     {
+      "type": "carrier/transit",
+      "n": 8,
+      "pct": 29
+     },
+     {
+      "type": "content/cloud",
+      "n": 6,
+      "pct": 21
+     },
+     {
+      "type": "?",
+      "n": 2,
+      "pct": 7
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 4
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 4
+     }
+    ],
+    "marquee": [
+     "Google",
+     "Play/Netia",
+     "T-Mobile PL"
+    ],
+    "hyperscalers": [
+     "Google"
+    ],
+    "n_facilities": 3,
+    "n_facilities_total": 4,
+    "score": 38,
+    "tier": "medium",
+    "why": "28 member networks, ~1,298 Gbit/s of connected port capacity; hyperscalers on the fabric: Google. Dominant customer group: eyeball ISP (36%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.77927,
+     51.22319
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "BGP.Exchange - Dusseldorf",
+    "name_long": "BGP.Exchange - Dusseldorf",
+    "city": "Düsseldorf",
+    "city_rank": 6,
+    "placement": "city centroid",
+    "website": "https://bgp.exchange",
+    "pdb_url": "https://www.peeringdb.com/ix/3844",
+    "members": 138,
+    "capacity_gbps": 177,
+    "customer_mix": [
+     {
+      "type": "research/edu",
+      "n": 48,
+      "pct": 35
+     },
+     {
+      "type": "content/cloud",
+      "n": 24,
+      "pct": 17
+     },
+     {
+      "type": "?",
+      "n": 23,
+      "pct": 17
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 17,
+      "pct": 12
+     },
+     {
+      "type": "non-profit",
+      "n": 10,
+      "pct": 7
+     },
+     {
+      "type": "network services",
+      "n": 6,
+      "pct": 4
+     },
+     {
+      "type": "carrier/transit",
+      "n": 6,
+      "pct": 4
+     },
+     {
+      "type": "enterprise",
+      "n": 4,
+      "pct": 3
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 35,
+    "tier": "medium",
+    "why": "138 member networks, ~177 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: research/edu (35%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.12574,
+     51.50853
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "BGP.Exchange - London",
+    "name_long": "BGP.Exchange - London",
+    "city": "London",
+    "city_rank": 1,
+    "placement": "city centroid",
+    "website": "https://bgp.exchange",
+    "pdb_url": "https://www.peeringdb.com/ix/3821",
+    "members": 110,
+    "capacity_gbps": 131,
+    "customer_mix": [
+     {
+      "type": "research/edu",
+      "n": 36,
+      "pct": 33
+     },
+     {
+      "type": "content/cloud",
+      "n": 19,
+      "pct": 17
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 16,
+      "pct": 15
+     },
+     {
+      "type": "?",
+      "n": 15,
+      "pct": 14
+     },
+     {
+      "type": "enterprise",
+      "n": 7,
+      "pct": 6
+     },
+     {
+      "type": "non-profit",
+      "n": 6,
+      "pct": 5
+     },
+     {
+      "type": "network services",
+      "n": 6,
+      "pct": 5
+     },
+     {
+      "type": "carrier/transit",
+      "n": 5,
+      "pct": 5
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 35,
+    "tier": "medium",
+    "why": "110 member networks, ~131 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: research/edu (33%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.60998,
+     50.09794
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "1-DE FREE",
+    "name_long": "1-DE Internet Exchange Germany",
+    "city": "Frankfurt am Main",
+    "city_rank": 5,
+    "placement": "local facilities",
+    "website": "https://1-ix.eu/1de",
+    "pdb_url": "https://www.peeringdb.com/ix/4917",
+    "members": 19,
+    "capacity_gbps": 1860,
+    "customer_mix": [
+     {
+      "type": "content/cloud",
+      "n": 5,
+      "pct": 26
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 4,
+      "pct": 21
+     },
+     {
+      "type": "carrier/transit",
+      "n": 4,
+      "pct": 21
+     },
+     {
+      "type": "?",
+      "n": 2,
+      "pct": 11
+     },
+     {
+      "type": "enterprise",
+      "n": 2,
+      "pct": 11
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 5
+     },
+     {
+      "type": "network services",
+      "n": 1,
+      "pct": 5
+     }
+    ],
+    "marquee": [
+     "Cloudflare",
+     "Hetzner",
+     "Valve"
+    ],
+    "hyperscalers": [
+     "Cloudflare"
+    ],
+    "n_facilities": 6,
+    "n_facilities_total": 6,
+    "score": 32,
+    "tier": "medium",
+    "why": "19 member networks, ~1,860 Gbit/s of connected port capacity; hyperscalers on the fabric: Cloudflare. Dominant customer group: content/cloud (26%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.632,
+     50.09885
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "Giganet IXN Frankfurt",
+    "name_long": "",
+    "city": "Frankfurt am Main",
+    "city_rank": 5,
+    "placement": "local facilities",
+    "website": "http://giganet.ua/en",
+    "pdb_url": "https://www.peeringdb.com/ix/4233",
+    "members": 47,
+    "capacity_gbps": 2020,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 26,
+      "pct": 55
+     },
+     {
+      "type": "carrier/transit",
+      "n": 6,
+      "pct": 13
+     },
+     {
+      "type": "content/cloud",
+      "n": 6,
+      "pct": 13
+     },
+     {
+      "type": "?",
+      "n": 4,
+      "pct": 9
+     },
+     {
+      "type": "network services",
+      "n": 2,
+      "pct": 4
+     },
+     {
+      "type": "enterprise",
+      "n": 2,
+      "pct": 4
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 2
+     }
+    ],
+    "marquee": [
+     "Hetzner",
+     "Valve"
+    ],
+    "hyperscalers": [],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 31,
+    "tier": "medium",
+    "why": "47 member networks, ~2,020 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: eyeball ISP (55%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.12978,
+     41.34862
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "ES",
+    "name": "BGP.Exchange - Barcelona",
+    "name_long": "BGP.Exchange - Barcelona",
+    "city": "Barcelona",
+    "city_rank": 2,
+    "placement": "local facilities",
+    "website": "https://bgp.exchange",
+    "pdb_url": "https://www.peeringdb.com/ix/3832",
+    "members": 50,
+    "capacity_gbps": 60,
+    "customer_mix": [
+     {
+      "type": "research/edu",
+      "n": 12,
+      "pct": 24
+     },
+     {
+      "type": "content/cloud",
+      "n": 10,
+      "pct": 20
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 9,
+      "pct": 18
+     },
+     {
+      "type": "?",
+      "n": 7,
+      "pct": 14
+     },
+     {
+      "type": "non-profit",
+      "n": 4,
+      "pct": 8
+     },
+     {
+      "type": "network services",
+      "n": 3,
+      "pct": 6
+     },
+     {
+      "type": "carrier/transit",
+      "n": 3,
+      "pct": 6
+     },
+     {
+      "type": "enterprise",
+      "n": 2,
+      "pct": 4
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 30,
+    "tier": "medium",
+    "why": "50 member networks, ~60 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: research/edu (24%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.06364,
+     49.45341
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "N-IX",
+    "name_long": "Nuernberger Internet Exchange [N-IX.de]",
+    "city": "Nuremberg",
+    "city_rank": 12,
+    "placement": "local facilities",
+    "website": "http://www.n-ix.net",
+    "pdb_url": "https://www.peeringdb.com/ix/135",
+    "members": 23,
+    "capacity_gbps": 257,
+    "customer_mix": [
+     {
+      "type": "content/cloud",
+      "n": 9,
+      "pct": 39
+     },
+     {
+      "type": "carrier/transit",
+      "n": 7,
+      "pct": 30
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 4,
+      "pct": 17
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 4
+     },
+     {
+      "type": "non-profit",
+      "n": 1,
+      "pct": 4
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 4
+     }
+    ],
+    "marquee": [
+     "Hetzner"
+    ],
+    "hyperscalers": [],
+    "n_facilities": 8,
+    "n_facilities_total": 8,
+    "score": 29,
+    "tier": "low",
+    "why": "23 member networks, ~257 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: content/cloud (39%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.17098,
+     48.7086
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "Stuttgart-IX",
+    "name_long": "Stuttgarter Internet eXchange, Stuttgart-IX",
+    "city": "Stuttgart",
+    "city_rank": 7,
+    "placement": "local facilities",
+    "website": "http://www.stuttgart-ix.de/",
+    "pdb_url": "https://www.peeringdb.com/ix/212",
+    "members": 36,
+    "capacity_gbps": 1615,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 11,
+      "pct": 31
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 11,
+      "pct": 31
+     },
+     {
+      "type": "content/cloud",
+      "n": 4,
+      "pct": 11
+     },
+     {
+      "type": "research/edu",
+      "n": 3,
+      "pct": 8
+     },
+     {
+      "type": "non-profit",
+      "n": 2,
+      "pct": 6
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 3
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 3
+     },
+     {
+      "type": "government",
+      "n": 1,
+      "pct": 3
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 3
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 3
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Cloudflare",
+     "Telefónica DE"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Cloudflare"
+    ],
+    "n_facilities": 5,
+    "n_facilities_total": 5,
+    "score": 28,
+    "tier": "low",
+    "why": "36 member networks, ~1,615 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Cloudflare. Dominant customer group: carrier/transit (31%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -9.1234,
+     38.78769
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PT",
+    "name": "Equinix Lisbon",
+    "name_long": "Equinix Internet Exchange Lisbon",
+    "city": "Lisbon",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://ix.equinix.com/home/lisbon/",
+    "pdb_url": "https://www.peeringdb.com/ix/2131",
+    "members": 19,
+    "capacity_gbps": 488,
+    "customer_mix": [
+     {
+      "type": "content/cloud",
+      "n": 6,
+      "pct": 32
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 6,
+      "pct": 32
+     },
+     {
+      "type": "carrier/transit",
+      "n": 5,
+      "pct": 26
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 5
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 5
+     }
+    ],
+    "marquee": [
+     "Cloudflare",
+     "Google",
+     "Microsoft"
+    ],
+    "hyperscalers": [
+     "Cloudflare",
+     "Google",
+     "Microsoft"
+    ],
+    "n_facilities": 2,
+    "n_facilities_total": 2,
+    "score": 27,
+    "tier": "low",
+    "why": "19 member networks, ~488 Gbit/s of connected port capacity; hyperscalers on the fabric: Cloudflare, Google, Microsoft. Dominant customer group: content/cloud (32%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -9.14658,
+     38.75644
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PT",
+    "name": "GigaPIX - LAN 2",
+    "name_long": "GIGAbit Portuguese Internet eXchange - LAN 2",
+    "city": "Lisbon",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "http://www.gigapix.pt",
+    "pdb_url": "https://www.peeringdb.com/ix/2849",
+    "members": 17,
+    "capacity_gbps": 462,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 6,
+      "pct": 35
+     },
+     {
+      "type": "carrier/transit",
+      "n": 4,
+      "pct": 24
+     },
+     {
+      "type": "content/cloud",
+      "n": 4,
+      "pct": 24
+     },
+     {
+      "type": "research/edu",
+      "n": 1,
+      "pct": 6
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 6
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 6
+     }
+    ],
+    "marquee": [
+     "Meta",
+     "Microsoft",
+     "Vodafone PT"
+    ],
+    "hyperscalers": [
+     "Meta",
+     "Microsoft"
+    ],
+    "n_facilities": 3,
+    "n_facilities_total": 4,
+    "score": 27,
+    "tier": "low",
+    "why": "17 member networks, ~462 Gbit/s of connected port capacity; hyperscalers on the fabric: Meta, Microsoft. Dominant customer group: eyeball ISP (35%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.4879,
+     51.52089
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "DO-IX",
+    "name_long": "Dortmund Internet eXchange",
+    "city": "Dortmund",
+    "city_rank": 9,
+    "placement": "local facilities",
+    "website": "https://www.do-ix.net",
+    "pdb_url": "https://www.peeringdb.com/ix/762",
+    "members": 9,
+    "capacity_gbps": 542,
+    "customer_mix": [
+     {
+      "type": "research/edu",
+      "n": 3,
+      "pct": 33
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 2,
+      "pct": 22
+     },
+     {
+      "type": "content/cloud",
+      "n": 2,
+      "pct": 22
+     },
+     {
+      "type": "carrier/transit",
+      "n": 1,
+      "pct": 11
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 11
+     }
+    ],
+    "marquee": [
+     "Akamai",
+     "Meta"
+    ],
+    "hyperscalers": [
+     "Akamai",
+     "Meta"
+    ],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 26,
+    "tier": "low",
+    "why": "9 member networks, ~542 Gbit/s of connected port capacity; hyperscalers on the fabric: Akamai, Meta. Dominant customer group: research/edu (33%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.98294,
+     51.11193
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PL",
+    "name": "WRIX",
+    "name_long": "Wrocław Internet Exchange",
+    "city": "Wrocław",
+    "city_rank": 3,
+    "placement": "local facilities",
+    "website": "https://wrix.org",
+    "pdb_url": "https://www.peeringdb.com/ix/1423",
+    "members": 35,
+    "capacity_gbps": 1747,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 20,
+      "pct": 57
+     },
+     {
+      "type": "carrier/transit",
+      "n": 7,
+      "pct": 20
+     },
+     {
+      "type": "content/cloud",
+      "n": 4,
+      "pct": 11
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 3
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 3
+     },
+     {
+      "type": "non-profit",
+      "n": 1,
+      "pct": 3
+     },
+     {
+      "type": "research/edu",
+      "n": 1,
+      "pct": 3
+     }
+    ],
+    "marquee": [
+     "Cloudflare",
+     "Play/Netia"
+    ],
+    "hyperscalers": [
+     "Cloudflare"
+    ],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 26,
+    "tier": "low",
+    "why": "35 member networks, ~1,747 Gbit/s of connected port capacity; hyperscalers on the fabric: Cloudflare. Dominant customer group: eyeball ISP (57%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.62121,
+     40.43932
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "ES",
+    "name": "1-ES FREE",
+    "name_long": "",
+    "city": "Madrid",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://1-ix.eu/1es",
+    "pdb_url": "https://www.peeringdb.com/ix/4993",
+    "members": 13,
+    "capacity_gbps": 1240,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 6,
+      "pct": 46
+     },
+     {
+      "type": "?",
+      "n": 2,
+      "pct": 15
+     },
+     {
+      "type": "carrier/transit",
+      "n": 2,
+      "pct": 15
+     },
+     {
+      "type": "content/cloud",
+      "n": 2,
+      "pct": 15
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 8
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 26,
+    "tier": "low",
+    "why": "13 member networks, ~1,240 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: eyeball ISP (46%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.03951,
+     49.45146
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "frankonIX",
+    "name_long": "frankonIX",
+    "city": "Nuremberg",
+    "city_rank": 12,
+    "placement": "local facilities",
+    "website": "https://frankonix.de",
+    "pdb_url": "https://www.peeringdb.com/ix/4503",
+    "members": 21,
+    "capacity_gbps": 732,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 5,
+      "pct": 24
+     },
+     {
+      "type": "?",
+      "n": 4,
+      "pct": 19
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 3,
+      "pct": 14
+     },
+     {
+      "type": "content/cloud",
+      "n": 2,
+      "pct": 10
+     },
+     {
+      "type": "non-profit",
+      "n": 2,
+      "pct": 10
+     },
+     {
+      "type": "network services",
+      "n": 2,
+      "pct": 10
+     },
+     {
+      "type": "research/edu",
+      "n": 2,
+      "pct": 10
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 5
+     }
+    ],
+    "marquee": [
+     "Hetzner"
+    ],
+    "hyperscalers": [],
+    "n_facilities": 4,
+    "n_facilities_total": 4,
+    "score": 24,
+    "tier": "low",
+    "why": "21 member networks, ~732 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: carrier/transit (24%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.36945,
+     52.50192
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "Community-IX",
+    "name_long": "Non-commercial Community Exchange",
+    "city": "Berlin",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://www.community-ix.de/",
+    "pdb_url": "https://www.peeringdb.com/ix/1329",
+    "members": 25,
+    "capacity_gbps": 864,
+    "customer_mix": [
+     {
+      "type": "non-profit",
+      "n": 16,
+      "pct": 64
+     },
+     {
+      "type": "carrier/transit",
+      "n": 4,
+      "pct": 16
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 3,
+      "pct": 12
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 4
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 4
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 3,
+    "n_facilities_total": 6,
+    "score": 22,
+    "tier": "low",
+    "why": "25 member networks, ~864 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: non-profit (64%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.12574,
+     51.50853
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "IXP UK LON",
+    "name_long": "Internet Exchange Point - London",
+    "city": "London",
+    "city_rank": 1,
+    "placement": "city centroid",
+    "website": "https://www.ixp.cat",
+    "pdb_url": "https://www.peeringdb.com/ix/2704",
+    "members": 18,
+    "capacity_gbps": 113,
+    "customer_mix": [
+     {
+      "type": "research/edu",
+      "n": 7,
+      "pct": 39
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 3,
+      "pct": 17
+     },
+     {
+      "type": "content/cloud",
+      "n": 3,
+      "pct": 17
+     },
+     {
+      "type": "enterprise",
+      "n": 2,
+      "pct": 11
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 6
+     },
+     {
+      "type": "non-profit",
+      "n": 1,
+      "pct": 6
+     },
+     {
+      "type": "carrier/transit",
+      "n": 1,
+      "pct": 6
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 21,
+    "tier": "low",
+    "why": "18 member networks, ~113 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: research/edu (39%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     18.5492,
+     54.42159
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PL",
+    "name": "POM-IX",
+    "name_long": "",
+    "city": "Gdańsk",
+    "city_rank": 6,
+    "placement": "local facilities",
+    "website": "https://en.pomix.pl",
+    "pdb_url": "https://www.peeringdb.com/ix/4480",
+    "members": 11,
+    "capacity_gbps": 130,
+    "customer_mix": [
+     {
+      "type": "content/cloud",
+      "n": 4,
+      "pct": 36
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 3,
+      "pct": 27
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 9
+     },
+     {
+      "type": "network services",
+      "n": 1,
+      "pct": 9
+     },
+     {
+      "type": "carrier/transit",
+      "n": 1,
+      "pct": 9
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 9
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 2,
+    "n_facilities_total": 2,
+    "score": 21,
+    "tier": "low",
+    "why": "11 member networks, ~130 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: content/cloud (36%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.64858,
+     40.53686
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "ES",
+    "name": "Equinix Madrid",
+    "name_long": "Equinix Internet Exchange Madrid",
+    "city": "Madrid",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://ix.equinix.com/home/madrid/",
+    "pdb_url": "https://www.peeringdb.com/ix/2130",
+    "members": 12,
+    "capacity_gbps": 760,
+    "customer_mix": [
+     {
+      "type": "content/cloud",
+      "n": 7,
+      "pct": 58
+     },
+     {
+      "type": "carrier/transit",
+      "n": 3,
+      "pct": 25
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 8
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 1,
+      "pct": 8
+     }
+    ],
+    "marquee": [
+     "Google",
+     "Netflix"
+    ],
+    "hyperscalers": [
+     "Google",
+     "Netflix"
+    ],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 20,
+    "tier": "low",
+    "why": "12 member networks, ~760 Gbit/s of connected port capacity; hyperscalers on the fabric: Google, Netflix. Dominant customer group: content/cloud (58%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     16.97688,
+     52.37818
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PL",
+    "name": "EPIX.Poznan",
+    "name_long": "",
+    "city": "Poznań",
+    "city_rank": 5,
+    "placement": "local facilities",
+    "website": "https://www.epix.net.pl",
+    "pdb_url": "https://www.peeringdb.com/ix/3594",
+    "members": 24,
+    "capacity_gbps": 490,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 18,
+      "pct": 75
+     },
+     {
+      "type": "content/cloud",
+      "n": 2,
+      "pct": 8
+     },
+     {
+      "type": "?",
+      "n": 2,
+      "pct": 8
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 4
+     },
+     {
+      "type": "carrier/transit",
+      "n": 1,
+      "pct": 4
+     }
+    ],
+    "marquee": [
+     "Meta"
+    ],
+    "hyperscalers": [
+     "Meta"
+    ],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 19,
+    "tier": "low",
+    "why": "24 member networks, ~490 Gbit/s of connected port capacity; hyperscalers on the fabric: Meta. Dominant customer group: eyeball ISP (75%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.62421,
+     55.8825
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "LINX Scotland",
+    "name_long": "LINX Scotland",
+    "city": "Scotland",
+    "city_rank": null,
+    "placement": "local facilities",
+    "website": "http://www.linx.net",
+    "pdb_url": "https://www.peeringdb.com/ix/745",
+    "members": 33,
+    "capacity_gbps": 359,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 10,
+      "pct": 30
+     },
+     {
+      "type": "carrier/transit",
+      "n": 8,
+      "pct": 24
+     },
+     {
+      "type": "content/cloud",
+      "n": 4,
+      "pct": 12
+     },
+     {
+      "type": "?",
+      "n": 4,
+      "pct": 12
+     },
+     {
+      "type": "non-profit",
+      "n": 2,
+      "pct": 6
+     },
+     {
+      "type": "research/edu",
+      "n": 2,
+      "pct": 6
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 3
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 3
+     },
+     {
+      "type": "network services",
+      "n": 1,
+      "pct": 3
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 2,
+    "n_facilities_total": 2,
+    "score": 17,
+    "tier": "low",
+    "why": "33 member networks, ~359 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: eyeball ISP (30%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.632,
+     50.0997
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "City-IX Frankfurt",
+    "name_long": "",
+    "city": "Frankfurt am Main",
+    "city_rank": 5,
+    "placement": "local facilities",
+    "website": "https://city-ix.net",
+    "pdb_url": "https://www.peeringdb.com/ix/4175",
+    "members": 7,
+    "capacity_gbps": 1500,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 3,
+      "pct": 43
+     },
+     {
+      "type": "content/cloud",
+      "n": 2,
+      "pct": 29
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 14
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 14
+     }
+    ],
+    "marquee": [
+     "Hetzner",
+     "Valve"
+    ],
+    "hyperscalers": [],
+    "n_facilities": 3,
+    "n_facilities_total": 3,
+    "score": 16,
+    "tier": "low",
+    "why": "7 member networks, ~1,500 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: carrier/transit (43%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.63176,
+     50.09885
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "MAINPORT Peer-Exchange",
+    "name_long": "",
+    "city": "Frankfurt am Main",
+    "city_rank": 5,
+    "placement": "local facilities",
+    "website": "https://mainport.one/#peer-exchange",
+    "pdb_url": "https://www.peeringdb.com/ix/4879",
+    "members": 15,
+    "capacity_gbps": 780,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 6,
+      "pct": 40
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 3,
+      "pct": 20
+     },
+     {
+      "type": "research/edu",
+      "n": 2,
+      "pct": 13
+     },
+     {
+      "type": "content/cloud",
+      "n": 2,
+      "pct": 13
+     },
+     {
+      "type": "network services",
+      "n": 1,
+      "pct": 7
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 7
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 7,
+    "n_facilities_total": 7,
+    "score": 16,
+    "tier": "low",
+    "why": "15 member networks, ~780 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: carrier/transit (40%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.13746,
+     41.35156
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "ES",
+    "name": "Equinix Barcelona",
+    "name_long": "Equinix Internet Exchange Barcelona",
+    "city": "Barcelona",
+    "city_rank": 2,
+    "placement": "local facilities",
+    "website": "https://www.equinix.com/data-centers/europe-colocation/spain-colocation/barcelona-data-centers",
+    "pdb_url": "https://www.peeringdb.com/ix/2633",
+    "members": 11,
+    "capacity_gbps": 361,
+    "customer_mix": [
+     {
+      "type": "content/cloud",
+      "n": 3,
+      "pct": 27
+     },
+     {
+      "type": "carrier/transit",
+      "n": 2,
+      "pct": 18
+     },
+     {
+      "type": "network services",
+      "n": 2,
+      "pct": 18
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 9
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 9
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 9
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 1,
+      "pct": 9
+     }
+    ],
+    "marquee": [
+     "Cloudflare",
+     "Microsoft"
+    ],
+    "hyperscalers": [
+     "Cloudflare",
+     "Microsoft"
+    ],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 15,
+    "tier": "low",
+    "why": "11 member networks, ~361 Gbit/s of connected port capacity; hyperscalers on the fabric: Cloudflare, Microsoft. Dominant customer group: content/cloud (27%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     12.38706,
+     51.35621
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "DE-CIX Leipzig",
+    "name_long": "",
+    "city": "Leipzig",
+    "city_rank": 14,
+    "placement": "local facilities",
+    "website": "https://www.de-cix.net/en/locations/leipzig",
+    "pdb_url": "https://www.peeringdb.com/ix/4004",
+    "members": 15,
+    "capacity_gbps": 143,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 4,
+      "pct": 27
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 3,
+      "pct": 20
+     },
+     {
+      "type": "network services",
+      "n": 2,
+      "pct": 13
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 7
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 7
+     },
+     {
+      "type": "non-profit",
+      "n": 1,
+      "pct": 7
+     },
+     {
+      "type": "content/cloud",
+      "n": 1,
+      "pct": 7
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 7
+     },
+     {
+      "type": "research/edu",
+      "n": 1,
+      "pct": 7
+     }
+    ],
+    "marquee": [
+     "Hetzner"
+    ],
+    "hyperscalers": [],
+    "n_facilities": 2,
+    "n_facilities_total": 2,
+    "score": 13,
+    "tier": "low",
+    "why": "15 member networks, ~143 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: carrier/transit (27%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.86728,
+     51.188
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "OpenCarrier OCIX",
+    "name_long": "OpenCarrier eG Member IX Duesseldorf",
+    "city": "Düsseldorf",
+    "city_rank": 6,
+    "placement": "local facilities",
+    "website": "http://www.opencarrier.eu/",
+    "pdb_url": "https://www.peeringdb.com/ix/170",
+    "members": 6,
+    "capacity_gbps": 70,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 4,
+      "pct": 67
+     },
+     {
+      "type": "content/cloud",
+      "n": 1,
+      "pct": 17
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 1,
+      "pct": 17
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 3,
+    "n_facilities_total": 4,
+    "score": 12,
+    "tier": "low",
+    "why": "6 member networks, ~70 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: carrier/transit (67%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.76863,
+     53.08415
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "BREM-IX",
+    "name_long": "Bremen Internet Exchange",
+    "city": "Bremen",
+    "city_rank": 11,
+    "placement": "local facilities",
+    "website": "https://brem-ix.net/",
+    "pdb_url": "https://www.peeringdb.com/ix/796",
+    "members": 6,
+    "capacity_gbps": 51,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 3,
+      "pct": 50
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 2,
+      "pct": 33
+     },
+     {
+      "type": "content/cloud",
+      "n": 1,
+      "pct": 17
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 5,
+    "n_facilities_total": 5,
+    "score": 12,
+    "tier": "low",
+    "why": "6 member networks, ~51 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: carrier/transit (50%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.74229,
+     50.11925
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "TMW-iX",
+    "name_long": "",
+    "city": "Frankfurt am Main",
+    "city_rank": 5,
+    "placement": "local facilities",
+    "website": "https://tmw-ix.t-w.dev/",
+    "pdb_url": "https://www.peeringdb.com/ix/4401",
+    "members": 5,
+    "capacity_gbps": 64,
+    "customer_mix": [
+     {
+      "type": "content/cloud",
+      "n": 3,
+      "pct": 60
+     },
+     {
+      "type": "research/edu",
+      "n": 1,
+      "pct": 20
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 1,
+      "pct": 20
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 3,
+    "n_facilities_total": 5,
+    "score": 12,
+    "tier": "low",
+    "why": "5 member networks, ~64 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: content/cloud (60%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.41053,
+     52.52437
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "BGP.Exchange - Berlin",
+    "name_long": "BGP.Exchange - Berlin",
+    "city": "Berlin",
+    "city_rank": 1,
+    "placement": "city centroid",
+    "website": "https://bgp.exchange",
+    "pdb_url": "https://www.peeringdb.com/ix/4842",
+    "members": 33,
+    "capacity_gbps": 44,
+    "customer_mix": [
+     {
+      "type": "research/edu",
+      "n": 13,
+      "pct": 39
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 5,
+      "pct": 15
+     },
+     {
+      "type": "content/cloud",
+      "n": 4,
+      "pct": 12
+     },
+     {
+      "type": "?",
+      "n": 3,
+      "pct": 9
+     },
+     {
+      "type": "non-profit",
+      "n": 3,
+      "pct": 9
+     },
+     {
+      "type": "carrier/transit",
+      "n": 2,
+      "pct": 6
+     },
+     {
+      "type": "network services",
+      "n": 2,
+      "pct": 6
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 3
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 12,
+    "tier": "low",
+    "why": "33 member networks, ~44 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: research/edu (39%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.77927,
+     51.22319
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "NEXTIX",
+    "name_long": "NEXTIX Dusseldorf",
+    "city": "Düsseldorf",
+    "city_rank": 6,
+    "placement": "city centroid",
+    "website": "https://ixpmanager.nextix.eu",
+    "pdb_url": "https://www.peeringdb.com/ix/5005",
+    "members": 9,
+    "capacity_gbps": 90,
+    "customer_mix": [
+     {
+      "type": "content/cloud",
+      "n": 4,
+      "pct": 44
+     },
+     {
+      "type": "carrier/transit",
+      "n": 1,
+      "pct": 11
+     },
+     {
+      "type": "non-profit",
+      "n": 1,
+      "pct": 11
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 1,
+      "pct": 11
+     },
+     {
+      "type": "research/edu",
+      "n": 1,
+      "pct": 11
+     },
+     {
+      "type": "network services",
+      "n": 1,
+      "pct": 11
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 1,
+    "score": 12,
+    "tier": "low",
+    "why": "9 member networks, ~90 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: content/cloud (44%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.12978,
+     41.34862
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "ES",
+    "name": "Barcelona-IX",
+    "name_long": "Barcelona IXP",
+    "city": "Barcelona",
+    "city_rank": 2,
+    "placement": "local facilities",
+    "website": "https://barcelona-ix.net/",
+    "pdb_url": "https://www.peeringdb.com/ix/4322",
+    "members": 24,
+    "capacity_gbps": 50,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 6,
+      "pct": 25
+     },
+     {
+      "type": "network services",
+      "n": 6,
+      "pct": 25
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 4,
+      "pct": 17
+     },
+     {
+      "type": "research/edu",
+      "n": 2,
+      "pct": 8
+     },
+     {
+      "type": "content/cloud",
+      "n": 2,
+      "pct": 8
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 4
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 4
+     },
+     {
+      "type": "non-profit",
+      "n": 1,
+      "pct": 4
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 4
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 12,
+    "tier": "low",
+    "why": "24 member networks, ~50 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: carrier/transit (25%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.71833,
+     51.02387
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "DD-IX",
+    "name_long": "",
+    "city": "Dresden",
+    "city_rank": 10,
+    "placement": "local facilities",
+    "website": "https://dd-ix.net",
+    "pdb_url": "https://www.peeringdb.com/ix/4282",
+    "members": 11,
+    "capacity_gbps": 231,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 4,
+      "pct": 36
+     },
+     {
+      "type": "research/edu",
+      "n": 2,
+      "pct": 18
+     },
+     {
+      "type": "non-profit",
+      "n": 1,
+      "pct": 9
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 9
+     },
+     {
+      "type": "government",
+      "n": 1,
+      "pct": 9
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 9
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 1,
+      "pct": 9
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 2,
+    "n_facilities_total": 2,
+    "score": 11,
+    "tier": "low",
+    "why": "11 member networks, ~231 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: carrier/transit (36%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.79209,
+     52.42821
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "SON-IX",
+    "name_long": "Süd-Ost Niedersachsen Internet Exchange",
+    "city": "Wolfsburg",
+    "city_rank": 71,
+    "placement": "local facilities",
+    "website": "https://son-ix.net",
+    "pdb_url": "https://www.peeringdb.com/ix/4323",
+    "members": 10,
+    "capacity_gbps": 220,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 3,
+      "pct": 30
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 2,
+      "pct": 20
+     },
+     {
+      "type": "?",
+      "n": 2,
+      "pct": 20
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 10
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 10
+     },
+     {
+      "type": "research/edu",
+      "n": 1,
+      "pct": 10
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 3,
+    "n_facilities_total": 3,
+    "score": 11,
+    "tier": "low",
+    "why": "10 member networks, ~220 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: carrier/transit (30%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.54109,
+     53.79333
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "IXLeeds",
+    "name_long": "Leeds Internet Exchange",
+    "city": "Leeds",
+    "city_rank": 6,
+    "placement": "local facilities",
+    "website": "http://ixleeds.net",
+    "pdb_url": "https://www.peeringdb.com/ix/435",
+    "members": 18,
+    "capacity_gbps": 144,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 5,
+      "pct": 28
+     },
+     {
+      "type": "research/edu",
+      "n": 3,
+      "pct": 17
+     },
+     {
+      "type": "carrier/transit",
+      "n": 3,
+      "pct": 17
+     },
+     {
+      "type": "content/cloud",
+      "n": 2,
+      "pct": 11
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 6
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 6
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 6
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 6
+     },
+     {
+      "type": "non-profit",
+      "n": 1,
+      "pct": 6
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 11,
+    "tier": "low",
+    "why": "18 member networks, ~144 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: eyeball ISP (28%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -3.18,
+     51.48
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "LINX Wales",
+    "name_long": "LINX Wales",
+    "city": "Cardiff",
+    "city_rank": 10,
+    "placement": "city centroid",
+    "website": "https://www.linx.net/",
+    "pdb_url": "https://www.peeringdb.com/ix/1016",
+    "members": 10,
+    "capacity_gbps": 102,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 3,
+      "pct": 30
+     },
+     {
+      "type": "non-profit",
+      "n": 2,
+      "pct": 20
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 10
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 10
+     },
+     {
+      "type": "network services",
+      "n": 1,
+      "pct": 10
+     },
+     {
+      "type": "carrier/transit",
+      "n": 1,
+      "pct": 10
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 10
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 11,
+    "tier": "low",
+    "why": "10 member networks, ~102 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: eyeball ISP (30%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     21.99901,
+     50.04132
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PL",
+    "name": "RZ-IX",
+    "name_long": "Rzeszowski Punkt Wymiany Ruchu",
+    "city": "Rzeszów",
+    "city_rank": 18,
+    "placement": "city centroid",
+    "website": "",
+    "pdb_url": "https://www.peeringdb.com/ix/828",
+    "members": 14,
+    "capacity_gbps": 171,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 11,
+      "pct": 79
+     },
+     {
+      "type": "enterprise",
+      "n": 2,
+      "pct": 14
+     },
+     {
+      "type": "carrier/transit",
+      "n": 1,
+      "pct": 7
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 11,
+    "tier": "low",
+    "why": "14 member networks, ~171 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: eyeball ISP (79%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     19.47395,
+     51.77058
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PL",
+    "name": "IX.LODZ.PL",
+    "name_long": "IX.LODZ.PL - Łódzki Węzeł Telekomunikacyjny",
+    "city": "Łódź",
+    "city_rank": 4,
+    "placement": "city centroid",
+    "website": "http://ix.lodz.pl",
+    "pdb_url": "https://www.peeringdb.com/ix/1516",
+    "members": 10,
+    "capacity_gbps": 311,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 8,
+      "pct": 80
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 10
+     },
+     {
+      "type": "carrier/transit",
+      "n": 1,
+      "pct": 10
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 11,
+    "tier": "low",
+    "why": "10 member networks, ~311 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: eyeball ISP (80%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.80717,
+     53.07582
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "CentralIX",
+    "name_long": "Central Internet Exchange",
+    "city": "Bremen",
+    "city_rank": 11,
+    "placement": "city centroid",
+    "website": "http://www.centralIX.net",
+    "pdb_url": "https://www.peeringdb.com/ix/1151",
+    "members": 3,
+    "capacity_gbps": 400,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 2,
+      "pct": 67
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 1,
+      "pct": 33
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 7,
+    "tier": "low",
+    "why": "3 member networks, ~400 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: carrier/transit (67%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.41639,
+     49.01213
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "KA-NIX",
+    "name_long": "Karlsruhe Neutral Internet Exchange",
+    "city": "Karlsruhe",
+    "city_rank": 28,
+    "placement": "local facilities",
+    "website": "http://ka-nix.de",
+    "pdb_url": "https://www.peeringdb.com/ix/3280",
+    "members": 8,
+    "capacity_gbps": 111,
+    "customer_mix": [
+     {
+      "type": "non-profit",
+      "n": 3,
+      "pct": 38
+     },
+     {
+      "type": "research/edu",
+      "n": 2,
+      "pct": 25
+     },
+     {
+      "type": "?",
+      "n": 2,
+      "pct": 25
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 12
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 3,
+    "n_facilities_total": 3,
+    "score": 7,
+    "tier": "low",
+    "why": "8 member networks, ~111 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: non-profit (38%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.20796,
+     51.53536
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "Ruhr-CIX",
+    "name_long": "",
+    "city": "Ruhr Region",
+    "city_rank": null,
+    "placement": "local facilities",
+    "website": "https://www.ruhr-cix.net",
+    "pdb_url": "https://www.peeringdb.com/ix/3405",
+    "members": 9,
+    "capacity_gbps": 246,
+    "customer_mix": [
+     {
+      "type": "research/edu",
+      "n": 2,
+      "pct": 22
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 11
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 11
+     },
+     {
+      "type": "carrier/transit",
+      "n": 1,
+      "pct": 11
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 1,
+      "pct": 11
+     },
+     {
+      "type": "non-profit",
+      "n": 1,
+      "pct": 11
+     },
+     {
+      "type": "network services",
+      "n": 1,
+      "pct": 11
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 11
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 3,
+    "n_facilities_total": 3,
+    "score": 7,
+    "tier": "low",
+    "why": "9 member networks, ~246 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: research/edu (22%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.99302,
+     53.55073
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "CSNIX - Hamburg",
+    "name_long": "",
+    "city": "Hamburg",
+    "city_rank": 2,
+    "placement": "city centroid",
+    "website": "https://csn.solutions",
+    "pdb_url": "https://www.peeringdb.com/ix/4414",
+    "members": 1,
+    "capacity_gbps": 400,
+    "customer_mix": [
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 100
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 7,
+    "tier": "low",
+    "why": "1 member networks, ~400 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: enterprise (100%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.78835,
+     53.5859
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "CSNIX - Kehrsen",
+    "name_long": "",
+    "city": "Kehrsen",
+    "city_rank": null,
+    "placement": "geocoded place",
+    "website": "https://csn.solutions/ixp",
+    "pdb_url": "https://www.peeringdb.com/ix/4415",
+    "members": 2,
+    "capacity_gbps": 410,
+    "customer_mix": [
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 50
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 50
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 7,
+    "tier": "low",
+    "why": "2 member networks, ~410 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: enterprise (50%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     10.77021,
+     53.55556
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "CSNIX - Gudow",
+    "name_long": "",
+    "city": "Gudow",
+    "city_rank": null,
+    "placement": "geocoded place",
+    "website": "https://csn.solutions/ixp",
+    "pdb_url": "https://www.peeringdb.com/ix/4416",
+    "members": 1,
+    "capacity_gbps": 400,
+    "customer_mix": [
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 100
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 7,
+    "tier": "low",
+    "why": "1 member networks, ~400 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: enterprise (100%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.58796,
+     50.09794
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "SmartIX",
+    "name_long": "SmartIX Frankfurt Internet Exchange",
+    "city": "Frankfurt am Main",
+    "city_rank": 5,
+    "placement": "local facilities",
+    "website": "https://as203446.net/smartix",
+    "pdb_url": "https://www.peeringdb.com/ix/4594",
+    "members": 2,
+    "capacity_gbps": 210,
+    "customer_mix": [
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 50
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 50
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 5,
+    "n_facilities_total": 5,
+    "score": 7,
+    "tier": "low",
+    "why": "2 member networks, ~210 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: enterprise (50%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.73996,
+     50.12081
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "TievoluIX",
+    "name_long": "Tievolu Internet Exchange",
+    "city": "Frankfurt am Main",
+    "city_rank": 5,
+    "placement": "local facilities",
+    "website": "https://tievolu.net/joining-policy",
+    "pdb_url": "https://www.peeringdb.com/ix/4779",
+    "members": 5,
+    "capacity_gbps": 480,
+    "customer_mix": [
+     {
+      "type": "enterprise",
+      "n": 3,
+      "pct": 60
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 20
+     },
+     {
+      "type": "research/edu",
+      "n": 1,
+      "pct": 20
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 2,
+    "n_facilities_total": 2,
+    "score": 7,
+    "tier": "low",
+    "why": "5 member networks, ~480 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: enterprise (60%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.68417,
+     50.11552
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "VexIX",
+    "name_long": "",
+    "city": "Frankfurt am Main",
+    "city_rank": 5,
+    "placement": "city centroid",
+    "website": "https://vexixp.de",
+    "pdb_url": "https://www.peeringdb.com/ix/4946",
+    "members": 1,
+    "capacity_gbps": 100,
+    "customer_mix": [
+     {
+      "type": "content/cloud",
+      "n": 1,
+      "pct": 100
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 7,
+    "tier": "low",
+    "why": "1 member networks, ~100 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: content/cloud (100%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.46746,
+     52.70743
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "IXMidlands",
+    "name_long": "IXMidlands",
+    "city": "Wolverhampton",
+    "city_rank": 28,
+    "placement": "local facilities",
+    "website": "https://www.ixmids.net",
+    "pdb_url": "https://www.peeringdb.com/ix/4912",
+    "members": 2,
+    "capacity_gbps": 200,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 1,
+      "pct": 50
+     },
+     {
+      "type": "carrier/transit",
+      "n": 1,
+      "pct": 50
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 3,
+    "n_facilities_total": 3,
+    "score": 7,
+    "tier": "low",
+    "why": "2 member networks, ~200 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: eyeball ISP (50%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.23066,
+     41.42729
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "ES",
+    "name": "ESpanix Barcelona Lower LAN",
+    "name_long": "Barcelona Lower LAN",
+    "city": "Barcelona",
+    "city_rank": 2,
+    "placement": "local facilities",
+    "website": "https://www.espanix.net",
+    "pdb_url": "https://www.peeringdb.com/ix/4583",
+    "members": 2,
+    "capacity_gbps": 220,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 1,
+      "pct": 50
+     },
+     {
+      "type": "content/cloud",
+      "n": 1,
+      "pct": 50
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 1,
+    "n_facilities_total": 8,
+    "score": 7,
+    "tier": "low",
+    "why": "2 member networks, ~220 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: carrier/transit (50%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     2.23066,
+     41.42729
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "ES",
+    "name": "ESpanix Barcelona Upper LAN",
+    "name_long": "Barcelona Upper LAN",
+    "city": "Barcelona",
+    "city_rank": 2,
+    "placement": "local facilities",
+    "website": "https://www.espanix.net",
+    "pdb_url": "https://www.peeringdb.com/ix/4584",
+    "members": 2,
+    "capacity_gbps": 220,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 1,
+      "pct": 50
+     },
+     {
+      "type": "content/cloud",
+      "n": 1,
+      "pct": 50
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 1,
+    "n_facilities_total": 8,
+    "score": 7,
+    "tier": "low",
+    "why": "2 member networks, ~220 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: carrier/transit (50%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.39049,
+     52.03278
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "EMF-IX",
+    "name_long": "Electromagnetic Field 2022 Popup IX",
+    "city": "Eastnor",
+    "city_rank": null,
+    "placement": "geocoded place",
+    "website": "https://emf-ix.benjojo.co.uk",
+    "pdb_url": "https://www.peeringdb.com/ix/2325",
+    "members": 10,
+    "capacity_gbps": 10,
+    "customer_mix": [
+     {
+      "type": "research/edu",
+      "n": 4,
+      "pct": 40
+     },
+     {
+      "type": "?",
+      "n": 2,
+      "pct": 20
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 1,
+      "pct": 10
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 10
+     },
+     {
+      "type": "network services",
+      "n": 1,
+      "pct": 10
+     },
+     {
+      "type": "non-profit",
+      "n": 1,
+      "pct": 10
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 6,
+    "tier": "low",
+    "why": "10 member networks, ~10 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: research/edu (40%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.76249,
+     53.79521
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "BFD-IX",
+    "name_long": "BFD-IX",
+    "city": "Bradford",
+    "city_rank": 12,
+    "placement": "local facilities",
+    "website": "https://bfd-ix.net",
+    "pdb_url": "https://www.peeringdb.com/ix/3098",
+    "members": 18,
+    "capacity_gbps": 57,
+    "customer_mix": [
+     {
+      "type": "research/edu",
+      "n": 6,
+      "pct": 33
+     },
+     {
+      "type": "carrier/transit",
+      "n": 4,
+      "pct": 22
+     },
+     {
+      "type": "non-profit",
+      "n": 2,
+      "pct": 11
+     },
+     {
+      "type": "content/cloud",
+      "n": 2,
+      "pct": 11
+     },
+     {
+      "type": "?",
+      "n": 2,
+      "pct": 11
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 6
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 6
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 2,
+    "n_facilities_total": 2,
+    "score": 6,
+    "tier": "low",
+    "why": "18 member networks, ~57 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: research/edu (33%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.46719,
+     39.51955
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "ES",
+    "name": "NIXVAL-IX",
+    "name_long": "Neutral Internet Exchange Valencia",
+    "city": "Valencia",
+    "city_rank": 3,
+    "placement": "local facilities",
+    "website": "https://ixp.nixval.com",
+    "pdb_url": "https://www.peeringdb.com/ix/1160",
+    "members": 10,
+    "capacity_gbps": 65,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 5,
+      "pct": 50
+     },
+     {
+      "type": "?",
+      "n": 5,
+      "pct": 50
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 6,
+    "tier": "low",
+    "why": "10 member networks, ~65 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: eyeball ISP (50%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.12574,
+     51.50853
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "BBIX London",
+    "name_long": "BroadBand Internet eXchange London",
+    "city": "London",
+    "city_rank": 1,
+    "placement": "city centroid",
+    "website": "https://www.bbix.net/en/",
+    "pdb_url": "https://www.peeringdb.com/ix/3189",
+    "members": 3,
+    "capacity_gbps": 12,
+    "customer_mix": [
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 33
+     },
+     {
+      "type": "content/cloud",
+      "n": 1,
+      "pct": 33
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 33
+     }
+    ],
+    "marquee": [
+     "Cloudflare"
+    ],
+    "hyperscalers": [
+     "Cloudflare"
+    ],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 4,
+    "tier": "low",
+    "why": "3 member networks, ~12 Gbit/s of connected port capacity; hyperscalers on the fabric: Cloudflare. Dominant customer group: route server (33%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     7.14816,
+     51.25627
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "United Peering - UP-IXP",
+    "name_long": "United Peering - free and open peering (UP-IXP)",
+    "city": "Wuppertal",
+    "city_rank": 18,
+    "placement": "city centroid",
+    "website": "https://united-peering.net/",
+    "pdb_url": "https://www.peeringdb.com/ix/1156",
+    "members": 3,
+    "capacity_gbps": 3,
+    "customer_mix": [
+     {
+      "type": "research/edu",
+      "n": 2,
+      "pct": 67
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 33
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 2,
+    "tier": "low",
+    "why": "3 member networks, ~3 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: research/edu (67%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.40812,
+     49.01213
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "BW-IX Karlsruhe",
+    "name_long": "Baden-Württemberg Internet Exchange - Karlsruhe",
+    "city": "Karlsruhe",
+    "city_rank": 28,
+    "placement": "local facilities",
+    "website": "http://www.bw-ix.net/",
+    "pdb_url": "https://www.peeringdb.com/ix/1421",
+    "members": 6,
+    "capacity_gbps": 51,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 3,
+      "pct": 50
+     },
+     {
+      "type": "research/edu",
+      "n": 2,
+      "pct": 33
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 17
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 2,
+    "tier": "low",
+    "why": "6 member networks, ~51 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: carrier/transit (50%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     11.07752,
+     49.45421
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "IXP NUR",
+    "name_long": "",
+    "city": "Nuremberg",
+    "city_rank": 12,
+    "placement": "city centroid",
+    "website": "https://www.ixp.cat",
+    "pdb_url": "https://www.peeringdb.com/ix/2706",
+    "members": 3,
+    "capacity_gbps": 2,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 2,
+      "pct": 67
+     },
+     {
+      "type": "research/edu",
+      "n": 1,
+      "pct": 33
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 2,
+    "tier": "low",
+    "why": "3 member networks, ~2 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: eyeball ISP (67%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.62719,
+     48.16783
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "Rottweiler Internet Exchange",
+    "name_long": "",
+    "city": "Rottweil",
+    "city_rank": null,
+    "placement": "geocoded place",
+    "website": "https://www.rwix.net",
+    "pdb_url": "https://www.peeringdb.com/ix/2774",
+    "members": 3,
+    "capacity_gbps": 11,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 1,
+      "pct": 33
+     },
+     {
+      "type": "research/edu",
+      "n": 1,
+      "pct": 33
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 33
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 2,
+    "tier": "low",
+    "why": "3 member networks, ~11 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: eyeball ISP (33%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.81752,
+     51.2673
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "SBIX Dusseldorf",
+    "name_long": "Securebit Internet Exchange Dusseldorf",
+    "city": "Düsseldorf",
+    "city_rank": 6,
+    "placement": "local facilities",
+    "website": "https://www.securebit.ch/internet/exchange",
+    "pdb_url": "https://www.peeringdb.com/ix/3118",
+    "members": 5,
+    "capacity_gbps": 31,
+    "customer_mix": [
+     {
+      "type": "?",
+      "n": 3,
+      "pct": 60
+     },
+     {
+      "type": "carrier/transit",
+      "n": 2,
+      "pct": 40
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 2,
+    "tier": "low",
+    "why": "5 member networks, ~31 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: ? (60%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.7352,
+     50.12668
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "STACIX",
+    "name_long": "Staclar Internet Exchange",
+    "city": "Frankfurt am Main",
+    "city_rank": 5,
+    "placement": "local facilities",
+    "website": "https://stacix.net",
+    "pdb_url": "https://www.peeringdb.com/ix/3211",
+    "members": 9,
+    "capacity_gbps": 72,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 2,
+      "pct": 22
+     },
+     {
+      "type": "research/edu",
+      "n": 2,
+      "pct": 22
+     },
+     {
+      "type": "content/cloud",
+      "n": 1,
+      "pct": 11
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 11
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 11
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 1,
+      "pct": 11
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 11
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 3,
+    "n_facilities_total": 4,
+    "score": 2,
+    "tier": "low",
+    "why": "9 member networks, ~72 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: carrier/transit (22%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.95546,
+     49.24038
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "SaarCix",
+    "name_long": "",
+    "city": "Saarbrücken",
+    "city_rank": 50,
+    "placement": "local facilities",
+    "website": "https://www.saarcix.de",
+    "pdb_url": "https://www.peeringdb.com/ix/3572",
+    "members": 1,
+    "capacity_gbps": 10,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 1,
+      "pct": 100
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 2,
+    "tier": "low",
+    "why": "1 member networks, ~10 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: eyeball ISP (100%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.68417,
+     50.11552
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "Electron IX",
+    "name_long": "",
+    "city": "Frankfurt am Main",
+    "city_rank": 5,
+    "placement": "city centroid",
+    "website": "https://network.usercloud.host/VIXP.html",
+    "pdb_url": "https://www.peeringdb.com/ix/4036",
+    "members": 0,
+    "capacity_gbps": 0,
+    "customer_mix": [],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 2,
+    "tier": "low",
+    "why": "."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     13.38908,
+     52.45576
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "FIX Berlin",
+    "name_long": "the Fr(ickel|ee|ei|eundlich) Internet Exchange, Berlin",
+    "city": "Berlin",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://fix-berlin.net/",
+    "pdb_url": "https://www.peeringdb.com/ix/4367",
+    "members": 6,
+    "capacity_gbps": 51,
+    "customer_mix": [
+     {
+      "type": "research/edu",
+      "n": 2,
+      "pct": 33
+     },
+     {
+      "type": "carrier/transit",
+      "n": 1,
+      "pct": 17
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 17
+     },
+     {
+      "type": "content/cloud",
+      "n": 1,
+      "pct": 17
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 17
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 2,
+    "tier": "low",
+    "why": "6 member networks, ~51 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: research/edu (33%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     8.6568,
+     50.00253
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "Pfcloud IX",
+    "name_long": "",
+    "city": "Frankfurt am Main",
+    "city_rank": 5,
+    "placement": "local facilities",
+    "website": "https://ix.pfcloud.io/",
+    "pdb_url": "https://www.peeringdb.com/ix/4410",
+    "members": 0,
+    "capacity_gbps": 0,
+    "customer_mix": [],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 2,
+    "tier": "low",
+    "why": "."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     9.99302,
+     53.55073
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "CSNIX - Hamburg RemotePeering",
+    "name_long": "",
+    "city": "Hamburg",
+    "city_rank": 2,
+    "placement": "city centroid",
+    "website": "https://csn.solutions",
+    "pdb_url": "https://www.peeringdb.com/ix/4417",
+    "members": 0,
+    "capacity_gbps": 0,
+    "customer_mix": [],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 2,
+    "tier": "low",
+    "why": "."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.81752,
+     51.2673
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "GL-IX",
+    "name_long": "Gentlent Internet Exchange",
+    "city": "Düsseldorf",
+    "city_rank": 6,
+    "placement": "local facilities",
+    "website": "https://www.glix.net",
+    "pdb_url": "https://www.peeringdb.com/ix/4457",
+    "members": 2,
+    "capacity_gbps": 30,
+    "customer_mix": [
+     {
+      "type": "content/cloud",
+      "n": 1,
+      "pct": 50
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 50
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 2,
+    "tier": "low",
+    "why": "2 member networks, ~30 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: content/cloud (50%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     6.77927,
+     51.22319
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "DE",
+    "name": "Schleyer-IX",
+    "name_long": "Schleyer-IX",
+    "city": "Düsseldorf",
+    "city_rank": 6,
+    "placement": "city centroid",
+    "website": "https://www.schleyer-ix.com",
+    "pdb_url": "https://www.peeringdb.com/ix/4858",
+    "members": 0,
+    "capacity_gbps": 0,
+    "customer_mix": [],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 2,
+    "tier": "low",
+    "why": "."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.13947,
+     50.82838
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "BDX BTN1",
+    "name_long": "Brighton Internet Exchange",
+    "city": "Brighton",
+    "city_rank": 25,
+    "placement": "city centroid",
+    "website": "http://bdx.coop",
+    "pdb_url": "https://www.peeringdb.com/ix/985",
+    "members": 0,
+    "capacity_gbps": 0,
+    "customer_mix": [],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 2,
+    "tier": "low",
+    "why": "."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.97151,
+     53.40877
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "IX Liverpool - MICT",
+    "name_long": "IX Liverpool - MICT Data Centre",
+    "city": "Liverpool",
+    "city_rank": 8,
+    "placement": "local facilities",
+    "website": "http://www.ixliverpool.net",
+    "pdb_url": "https://www.peeringdb.com/ix/1302",
+    "members": 3,
+    "capacity_gbps": 42,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 2,
+      "pct": 67
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 33
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 3,
+    "n_facilities_total": 3,
+    "score": 2,
+    "tier": "low",
+    "why": "3 member networks, ~42 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: eyeball ISP (67%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.35395,
+     51.52225
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "LONAP Multicast",
+    "name_long": "",
+    "city": "London",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://www.lonap.net",
+    "pdb_url": "https://www.peeringdb.com/ix/2801",
+    "members": 0,
+    "capacity_gbps": 0,
+    "customer_mix": [],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 8,
+    "n_facilities_total": 8,
+    "score": 2,
+    "tier": "low",
+    "why": "."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.97151,
+     53.40877
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "IX Liverpool - Baltic Bubble",
+    "name_long": "IX Liverpool - Baltic Bubble Data Centre",
+    "city": "Liverpool",
+    "city_rank": 8,
+    "placement": "local facilities",
+    "website": "http://www.ixliverpool.net",
+    "pdb_url": "https://www.peeringdb.com/ix/2955",
+    "members": 3,
+    "capacity_gbps": 42,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 2,
+      "pct": 67
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 33
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 3,
+    "n_facilities_total": 3,
+    "score": 2,
+    "tier": "low",
+    "why": "3 member networks, ~42 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: eyeball ISP (67%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.97151,
+     53.40877
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "IX Liverpool Internet of Things LAN",
+    "name_long": "",
+    "city": "Liverpool",
+    "city_rank": 8,
+    "placement": "local facilities",
+    "website": "http://www.ixliverpool.net",
+    "pdb_url": "https://www.peeringdb.com/ix/2956",
+    "members": 0,
+    "capacity_gbps": 0,
+    "customer_mix": [],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 3,
+    "n_facilities_total": 3,
+    "score": 2,
+    "tier": "low",
+    "why": "."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -2.97151,
+     53.40877
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "IX Liverpool GRX Peering Exchange (5G)",
+    "name_long": "",
+    "city": "Liverpool",
+    "city_rank": 8,
+    "placement": "local facilities",
+    "website": "http://www.ixliverpool.net",
+    "pdb_url": "https://www.peeringdb.com/ix/2957",
+    "members": 0,
+    "capacity_gbps": 0,
+    "customer_mix": [],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 3,
+    "n_facilities_total": 3,
+    "score": 2,
+    "tier": "low",
+    "why": "."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.76241,
+     53.79512
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "IXBradford",
+    "name_long": "",
+    "city": "Bradford",
+    "city_rank": 12,
+    "placement": "local facilities",
+    "website": "http://www.ixbradford.net",
+    "pdb_url": "https://www.peeringdb.com/ix/3278",
+    "members": 9,
+    "capacity_gbps": 90,
+    "customer_mix": [
+     {
+      "type": "carrier/transit",
+      "n": 4,
+      "pct": 44
+     },
+     {
+      "type": "non-profit",
+      "n": 2,
+      "pct": 22
+     },
+     {
+      "type": "eyeball ISP",
+      "n": 2,
+      "pct": 22
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 11
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 2,
+    "tier": "low",
+    "why": "9 member networks, ~90 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: carrier/transit (44%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.50011,
+     55.01687
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "NCL-IX",
+    "name_long": "Newcastle IX",
+    "city": "Newcastle upon Tyne",
+    "city_rank": 23,
+    "placement": "local facilities",
+    "website": "https://www.ncl-ix.uk/",
+    "pdb_url": "https://www.peeringdb.com/ix/3373",
+    "members": 6,
+    "capacity_gbps": 72,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 3,
+      "pct": 50
+     },
+     {
+      "type": "route server",
+      "n": 1,
+      "pct": 17
+     },
+     {
+      "type": "non-profit",
+      "n": 1,
+      "pct": 17
+     },
+     {
+      "type": "carrier/transit",
+      "n": 1,
+      "pct": 17
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 2,
+    "n_facilities_total": 2,
+    "score": 2,
+    "tier": "low",
+    "why": "6 member networks, ~72 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: eyeball ISP (50%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.07378,
+     51.5204
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "RapidIX LON1",
+    "name_long": "Rapid Internet Exchange",
+    "city": "London",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://rapidix.net",
+    "pdb_url": "https://www.peeringdb.com/ix/3732",
+    "members": 7,
+    "capacity_gbps": 52,
+    "customer_mix": [
+     {
+      "type": "research/edu",
+      "n": 3,
+      "pct": 43
+     },
+     {
+      "type": "route collector",
+      "n": 1,
+      "pct": 14
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 14
+     },
+     {
+      "type": "content/cloud",
+      "n": 1,
+      "pct": 14
+     },
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 14
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 2,
+    "tier": "low",
+    "why": "7 member networks, ~52 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: research/edu (43%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.12574,
+     51.50853
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "SBIX London",
+    "name_long": "Securebit Internet Exchange London",
+    "city": "London",
+    "city_rank": 1,
+    "placement": "city centroid",
+    "website": "https://www.securebit.ch/internet/exchange",
+    "pdb_url": "https://www.peeringdb.com/ix/3877",
+    "members": 1,
+    "capacity_gbps": 1,
+    "customer_mix": [
+     {
+      "type": "?",
+      "n": 1,
+      "pct": 100
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 2,
+    "tier": "low",
+    "why": "1 member networks, ~1 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: ? (100%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -1.89983,
+     52.48142
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "Edge IX Birmingham",
+    "name_long": "",
+    "city": "Birmingham",
+    "city_rank": 2,
+    "placement": "city centroid",
+    "website": "http://www.ixbirmingham.net",
+    "pdb_url": "https://www.peeringdb.com/ix/4040",
+    "members": 0,
+    "capacity_gbps": 0,
+    "customer_mix": [],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 2,
+    "tier": "low",
+    "why": "."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.12574,
+     51.50853
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "BGPHaus",
+    "name_long": "BGPHaus",
+    "city": "London",
+    "city_rank": 1,
+    "placement": "city centroid",
+    "website": "https://bgp.haus/",
+    "pdb_url": "https://www.peeringdb.com/ix/4073",
+    "members": 0,
+    "capacity_gbps": 0,
+    "customer_mix": [],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 2,
+    "tier": "low",
+    "why": "."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.12574,
+     51.50853
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "Stelia IX",
+    "name_long": "",
+    "city": "London",
+    "city_rank": 1,
+    "placement": "city centroid",
+    "website": "https://stelia.io/ix",
+    "pdb_url": "https://www.peeringdb.com/ix/4374",
+    "members": 0,
+    "capacity_gbps": 0,
+    "customer_mix": [],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 2,
+    "tier": "low",
+    "why": "."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.12574,
+     51.50853
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "LONIX UK",
+    "name_long": "London IX Limited",
+    "city": "London",
+    "city_rank": 1,
+    "placement": "city centroid",
+    "website": "https://lonix.net",
+    "pdb_url": "https://www.peeringdb.com/ix/4836",
+    "members": 0,
+    "capacity_gbps": 0,
+    "customer_mix": [],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 2,
+    "tier": "low",
+    "why": "."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.00339,
+     51.50704
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "GB",
+    "name": "European Edge IX",
+    "name_long": "European Edge Internet Exchange (EE-IX)",
+    "city": "London",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "http://ee-ix.net",
+    "pdb_url": "https://www.peeringdb.com/ix/4965",
+    "members": 0,
+    "capacity_gbps": 0,
+    "customer_mix": [],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 1,
+    "n_facilities_total": 3,
+    "score": 2,
+    "tier": "low",
+    "why": "."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     17.96131,
+     52.65102
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PL",
+    "name": "CePIX.pl",
+    "name_long": "Central Polish Internet eXchange",
+    "city": "Mogilno",
+    "city_rank": null,
+    "placement": "local facilities",
+    "website": "http://cepix.pl/",
+    "pdb_url": "https://www.peeringdb.com/ix/524",
+    "members": 1,
+    "capacity_gbps": 1,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 1,
+      "pct": 100
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 2,
+    "tier": "low",
+    "why": "1 member networks, ~1 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: eyeball ISP (100%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     19.93658,
+     50.06143
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PL",
+    "name": "CIX KR",
+    "name_long": "CIX - Cracow Internet Exchange",
+    "city": "Kraków",
+    "city_rank": 2,
+    "placement": "city centroid",
+    "website": "http://www.ix.krakow.pl/",
+    "pdb_url": "https://www.peeringdb.com/ix/778",
+    "members": 8,
+    "capacity_gbps": 62,
+    "customer_mix": [
+     {
+      "type": "eyeball ISP",
+      "n": 6,
+      "pct": 75
+     },
+     {
+      "type": "research/edu",
+      "n": 1,
+      "pct": 12
+     },
+     {
+      "type": "enterprise",
+      "n": 1,
+      "pct": 12
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 2,
+    "tier": "low",
+    "why": "8 member networks, ~62 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: eyeball ISP (75%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     23.16433,
+     53.13333
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PL",
+    "name": "PIONIER-IX",
+    "name_long": "PIONIER-IX",
+    "city": "Białystok",
+    "city_rank": 10,
+    "placement": "city centroid",
+    "website": "https://docs.psnc.pl/display/PIONIERIX/PIONIER-IX",
+    "pdb_url": "https://www.peeringdb.com/ix/3122",
+    "members": 5,
+    "capacity_gbps": 31,
+    "customer_mix": [
+     {
+      "type": "research/edu",
+      "n": 3,
+      "pct": 60
+     },
+     {
+      "type": "?",
+      "n": 2,
+      "pct": 40
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 1,
+    "score": 2,
+    "tier": "low",
+    "why": "5 member networks, ~31 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: research/edu (60%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -9.09813,
+     38.7474
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PT",
+    "name": "LIS-IX",
+    "name_long": "Lisbon Internet eXchange",
+    "city": "Lisbon",
+    "city_rank": 1,
+    "placement": "local facilities",
+    "website": "https://lis-ix.pt",
+    "pdb_url": "https://www.peeringdb.com/ix/4353",
+    "members": 2,
+    "capacity_gbps": 21,
+    "customer_mix": [
+     {
+      "type": "research/edu",
+      "n": 1,
+      "pct": 50
+     },
+     {
+      "type": "non-profit",
+      "n": 1,
+      "pct": 50
+     }
+    ],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 1,
+    "n_facilities_total": 1,
+    "score": 2,
+    "tier": "low",
+    "why": "2 member networks, ~21 Gbit/s of connected port capacity; no hyperscale networks present. Dominant customer group: research/edu (50%)."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -9.1498,
+     38.72509
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "PT",
+    "name": "BGP.Exchange - Lisbon",
+    "name_long": "BGP.Exchange - Lisbon",
+    "city": "Lisbon",
+    "city_rank": 1,
+    "placement": "city centroid",
+    "website": "https://bgp.exchange",
+    "pdb_url": "https://www.peeringdb.com/ix/4636",
+    "members": 0,
+    "capacity_gbps": 0,
+    "customer_mix": [],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 2,
+    "tier": "low",
+    "why": "."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.70107,
+     38.26218
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "ES",
+    "name": "Mario IX",
+    "name_long": "",
+    "city": "Elche",
+    "city_rank": 25,
+    "placement": "city centroid",
+    "website": "https://ix.mario.gdn",
+    "pdb_url": "https://www.peeringdb.com/ix/4002",
+    "members": 0,
+    "capacity_gbps": 0,
+    "customer_mix": [],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 2,
+    "tier": "low",
+    "why": "."
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     -0.70107,
+     38.26218
+    ]
+   },
+   "properties": {
+    "kind": "ix",
+    "country": "ES",
+    "name": "ELX-IX",
+    "name_long": "Elche Internet Exchange",
+    "city": "Elche",
+    "city_rank": 25,
+    "placement": "city centroid",
+    "website": "https://ix.mario.gdn/",
+    "pdb_url": "https://www.peeringdb.com/ix/4064",
+    "members": 0,
+    "capacity_gbps": 0,
+    "customer_mix": [],
+    "marquee": [],
+    "hyperscalers": [],
+    "n_facilities": 0,
+    "n_facilities_total": 0,
+    "score": 2,
+    "tier": "low",
+    "why": "."
+   }
+  }
+ ]
+}

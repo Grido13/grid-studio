@@ -1,0 +1,136 @@
+investment_id,nep_measure,name,operator,bus0,bus1,v_nom,s_nom,s_nom_source,x,r,length,length_source,num_parallel,cod_year,commitment,match_confidence,source
+7184,,HSL Klostermansfeld - Aschersleben; Neubau HS-Leitung,MITNETZ Strom,39285,27123,110,150.0,standard_per_circuit,14.44,2.09,38.0,stated,1,2030,firm,0.75,VNB Netzausbauplan (NAP 2024)
+7185,,"HSL Crossen-Herlasgrün BA1, BA2 und BA3",MITNETZ Strom,11866,39361,110,150.0,standard_per_circuit,9.5,1.375,25.0,stated,1,2026,safe,0.8,VNB Netzausbauplan (NAP 2024)
+7187,,HSL Falkenstein-Droßdorf; Neubau,MITNETZ Strom,38115,19991,110,150.0,standard_per_circuit,5.32,0.77,14.0,stated,1,2027,firm,0.9,VNB Netzausbauplan (NAP 2024)
+7188,,HSL Herlasgrün-Markneukirchen (Teilabschnitt),MITNETZ Strom,39361,38247,110,150.0,standard_per_circuit,5.32,0.77,14.0,stated,1,2026,safe,0.9,VNB Netzausbauplan (NAP 2024)
+7189,,"HSL Röhrsdorf - Burgstädt, Abz.Oberelsdorf",MITNETZ Strom,39247,38222,110,150.0,standard_per_circuit,6.46,0.935,17.0,stated,1,2026,firm,0.9,VNB Netzausbauplan (NAP 2024)
+7190,,HSL-Eula-Oberelsdorf,MITNETZ Strom,39267,38204,110,150.0,standard_per_circuit,10.64,1.54,28.0,stated,1,2026,safe,0.9,VNB Netzausbauplan (NAP 2024)
+7193,,HSL Marke - Bitterfeld/M. - Piesteritz/Nord,MITNETZ Strom,35116,37801,110,150.0,standard_per_circuit,4.18,0.605,11.0,stated,1,2026,firm,0.9,VNB Netzausbauplan (NAP 2024)
+7201,,HSL Neuendorf-Guben; Erhöhung Stromtragfähigkeit,MITNETZ Strom,38155,16208,110,150.0,standard_per_circuit,4.18,0.605,11.0,stated,1,2030,firm,0.7,VNB Netzausbauplan (NAP 2024)
+7206,,HSL Halle/West-Klostermansfeld; Erhöhung Stromtragfähigkeit,MITNETZ Strom,38312,39285,110,150.0,standard_per_circuit,1.52,0.22,4.0,stated,1,2026,firm,0.75,VNB Netzausbauplan (NAP 2024)
+7207,,HSL Weißenfels-Reinsdorf,MITNETZ Strom,19740,38157,110,150.0,standard_per_circuit,7.98,1.155,21.0,stated,1,2026,firm,0.75,VNB Netzausbauplan (NAP 2024)
+7208,,HSL Marke - Bitterfeld/Mitte; Erhöhung Stromtragfähigkeit,MITNETZ Strom,35116,37155,110,150.0,standard_per_circuit,3.8,0.55,10.0,stated,1,2029,firm,0.75,VNB Netzausbauplan (NAP 2024)
+7209,,HSL Bernburg/Nord-Marke,MITNETZ Strom,37522,35116,110,150.0,standard_per_circuit,0.38,0.055,1.0,stated,1,2026,firm,0.9,VNB Netzausbauplan (NAP 2024)
+7210,,HSL Ragow-Cottbus,MITNETZ Strom,39223,21139,110,150.0,standard_per_circuit,0.38,0.055,1.0,stated,1,2026,firm,0.75,VNB Netzausbauplan (NAP 2024)
+7211,,HSL Großräschen-Graustein,MITNETZ Strom,38535,39241,110,150.0,standard_per_circuit,0.38,0.055,1.0,stated,1,2028,firm,0.75,VNB Netzausbauplan (NAP 2024)
+7212,,HSL Lauta-Graustein,MITNETZ Strom,38284,39241,110,150.0,standard_per_circuit,1.52,0.22,4.0,stated,1,2026,firm,0.9,VNB Netzausbauplan (NAP 2024)
+7213,,HSL Zwönitz - Silberstraße; teilweiser Ersatzneubau,MITNETZ Strom,35824,38147,110,150.0,standard_per_circuit,4.94,0.715,13.0,stated,1,2027,firm,0.9,VNB Netzausbauplan (NAP 2024)
+7215,,HSL Zwenkau - Gößnitz,MITNETZ Strom,39192,38481,110,150.0,standard_per_circuit,16.53,2.3925,43.5,haversine_x1.2,1,2026,safe,0.75,VNB Netzausbauplan (NAP 2024)
+7251,,HSL Drebkau - Graustein,MITNETZ Strom,23971,39241,110,150.0,standard_per_circuit,7.98,1.155,21.0,stated,1,2028,firm,0.7,VNB Netzausbauplan (NAP 2024)
+7277,,HSL Silberstraße - Herlasgrün; Demontage,MITNETZ Strom,38147,39361,110,150.0,standard_per_circuit,11.134,1.6115,29.3,haversine_x1.2,1,2028,firm,0.9,VNB Netzausbauplan (NAP 2024)
+7416,,Leitung Lüdinghausen-Abzw. Lippe,Westnetz,1954,3240,110,150.0,standard_per_circuit,6.46,0.935,17.0,haversine_x1.2,1,2026,firm,0.7,VNB Netzausbauplan (NAP 2024)
+7419,,Leitung BL0100 Koblenz - Niederhausen,Westnetz,9951,37821,110,150.0,standard_per_circuit,29.982,4.3395,78.9,haversine_x1.2,1,2029,safe,0.7,VNB Netzausbauplan (NAP 2024)
+7420,,Leitung BL0102 Niederhausen - Idar-Oberstein,Westnetz,37821,37049,110,150.0,standard_per_circuit,16.644,2.409,43.8,haversine_x1.2,1,2029,firm,0.9,VNB Netzausbauplan (NAP 2024)
+7430,,Leitung BL2444 Wittenhorst - Pfalzdorf,Westnetz,1885,34807,110,150.0,standard_per_circuit,9.994,1.4465,26.3,haversine_x1.2,1,2030,firm,0.75,VNB Netzausbauplan (NAP 2024)
+7438,,Leitung BL2339/2435 Utfort - Niederrhein - Ossenberg,Westnetz,34959,34954,380,3580.0,standard_per_circuit,1.9314,0.2072,14.8,haversine_x1.2,2,2030,firm,0.8,VNB Netzausbauplan (NAP 2024)
+7439,,Leitung BL0210/0169 Geldern - Utfort,Westnetz,2584,34842,110,150.0,standard_per_circuit,8.436,1.221,22.2,haversine_x1.2,1,2028,firm,0.7,VNB Netzausbauplan (NAP 2024)
+7442,,Leitung Sandkaule - Endenich,Westnetz,36669,35350,110,150.0,standard_per_circuit,0.912,0.132,2.4,haversine_x1.2,1,2028,firm,0.9,VNB Netzausbauplan (NAP 2024)
+7444,,Leitung BL0086 Beuel - Siegburg,Westnetz,35352,2009,110,150.0,standard_per_circuit,3.154,0.4565,8.3,haversine_x1.2,1,2030,firm,0.7,VNB Netzausbauplan (NAP 2024)
+7445,,Leitung BL0082 Brauweiler - Frechen,Westnetz,34810,4593,110,150.0,standard_per_circuit,2.888,0.418,7.6,haversine_x1.2,1,2028,firm,0.8,VNB Netzausbauplan (NAP 2024)
+7453,,Leitung Meppen-Rühle,Westnetz,36292,37157,110,150.0,standard_per_circuit,4.294,0.6215,11.3,haversine_x1.2,1,2026,firm,0.75,VNB Netzausbauplan (NAP 2024)
+7454,,Leitung Hanekenfähr-Nordhorn,Westnetz,36531,37774,110,150.0,standard_per_circuit,7.866,1.1385,20.7,haversine_x1.2,1,2026,firm,0.75,VNB Netzausbauplan (NAP 2024)
+7455,,Leitung Nordhorn-Öchtel,Westnetz,37774,4027,110,150.0,standard_per_circuit,8.246,1.1935,21.7,haversine_x1.2,1,2026,firm,0.75,VNB Netzausbauplan (NAP 2024)
+7457,,Leitung Coesfeld-Kusenhorst,Westnetz,1951,35385,110,150.0,standard_per_circuit,12.844,1.859,33.8,haversine_x1.2,1,2027,firm,0.7,VNB Netzausbauplan (NAP 2024)
+7465,,Leitung BL1398 Pfungstadt–Heppenheim,Westnetz,154,35637,110,150.0,standard_per_circuit,8.968,1.298,23.6,haversine_x1.2,1,2028,firm,0.8,VNB Netzausbauplan (NAP 2024)
+7467,,Leitung BL1048 Waldlaubersheim-Pkt. Guldental,Westnetz,38365,10117,110,150.0,standard_per_circuit,1.52,0.22,4.0,haversine_x1.2,1,2026,firm,0.9,VNB Netzausbauplan (NAP 2024)
+7473,,Leitung BL1220 Morbach - Thalfang,Westnetz,38458,38709,110,150.0,standard_per_circuit,4.408,0.638,11.6,haversine_x1.2,1,2026,firm,0.7,VNB Netzausbauplan (NAP 2024)
+7474,,Leitung BL0748 Morbach - Wengerohr,Westnetz,38458,9838,110,150.0,standard_per_circuit,10.412,1.507,27.4,haversine_x1.2,1,2026,firm,0.7,VNB Netzausbauplan (NAP 2024)
+7482,,Leitung Westerkappeln-Merzen,Westnetz,4896,2090,220,984.0,standard_per_circuit,4.3248,0.8024,27.2,haversine_x1.2,2,2031,firm,0.7,VNB Netzausbauplan (NAP 2024)
+7487,,Leitung Enniger-Warendorf,Westnetz,5088,8423,110,150.0,standard_per_circuit,6.65,0.9625,17.5,haversine_x1.2,1,2029,firm,0.9,VNB Netzausbauplan (NAP 2024)
+7493,,Leitung BL0787 Morbach - Sohren,Westnetz,38458,36422,110,150.0,standard_per_circuit,8.208,1.188,21.6,haversine_x1.2,1,2027,firm,0.7,VNB Netzausbauplan (NAP 2024)
+7495,,Leitung BL1388 Osburg - Thalfang,Westnetz,36066,38709,110,150.0,standard_per_circuit,6.688,0.968,17.6,haversine_x1.2,1,2030,firm,0.9,VNB Netzausbauplan (NAP 2024)
+7498,,Leitung BL2326 Koblenz - Merzig,Westnetz,9951,36882,110,150.0,standard_per_circuit,56.278,8.1455,148.1,haversine_x1.2,1,2027,safe,0.7,VNB Netzausbauplan (NAP 2024)
+7506,,Leitung BL0108 Kelsterbach - Dettingen,Westnetz,38111,7968,110,150.0,standard_per_circuit,14.592,2.112,38.4,haversine_x1.2,1,2026,firm,0.7,VNB Netzausbauplan (NAP 2024)
+7507,,Leitung BL4592 Urberach - Großkrotzenburg,Westnetz,34835,36079,110,150.0,standard_per_circuit,8.17,1.1825,21.5,haversine_x1.2,1,2028,firm,0.8,VNB Netzausbauplan (NAP 2024)
+7510,,Leitung BL0099 Plaidt - Mayen,Westnetz,36926,26189,110,150.0,standard_per_circuit,5.206,0.7535,13.7,haversine_x1.2,1,2027,firm,0.7,VNB Netzausbauplan (NAP 2024)
+8383,,Leitung UW Ahrenviöl - UW Husum Nord,SH Netz,40375,27664,110,150.0,standard_per_circuit,3.192,0.462,8.4,haversine_x1.2,1,2027,firm,0.8,§14d EnWG NAP 2024
+8391,,Leitung UW Weding - UW Schuby-West,SH Netz,36749,39195,110,150.0,standard_per_circuit,11.742,1.6995,30.9,haversine_x1.2,1,2027,firm,0.9,§14d EnWG NAP 2024
+8392,,Leitung UW Katenstedt - UW Brachenfeld,SH Netz,39877,36461,110,150.0,standard_per_circuit,8.322,1.2045,21.9,haversine_x1.2,1,2028,firm,0.9,§14d EnWG NAP 2024
+8393,,Leitung UW Schuby-West- UW Alt Duvenstedt,SH Netz,36649,14128,110,150.0,standard_per_circuit,9.728,1.408,25.6,haversine_x1.2,1,2028,firm,0.75,§14d EnWG NAP 2024
+8394,,Leitung UW Kummerfeld - UW Pinneberg-Mitte,SH Netz,16225,2224,110,150.0,standard_per_circuit,1.292,0.187,3.4,haversine_x1.2,1,2029,firm,0.8,§14d EnWG NAP 2024
+8398,,Leitung UW Grevenkop - UW Uetersen West,SH Netz,39670,14406,110,150.0,standard_per_circuit,8.588,1.243,22.6,haversine_x1.2,1,2030,firm,0.9,§14d EnWG NAP 2024
+8408,,Leitung UW Büttel - UW Brunsbüttel 2,SH Netz,15642,19685,110,150.0,standard_per_circuit,0.874,0.1265,2.3,haversine_x1.2,1,2030,firm,0.75,§14d EnWG NAP 2024
+8409,,Leitung UW Büttel - UW Brunsbüttel,SH Netz,15642,19685,110,150.0,standard_per_circuit,0.874,0.1265,2.3,haversine_x1.2,1,2030,firm,0.75,§14d EnWG NAP 2024
+8412,,Leitung UW Glinde - UW Krümmel,SH Netz,35641,39248,110,150.0,standard_per_circuit,258.78,37.455,681.0,stated,1,2030,firm,0.9,§14d EnWG NAP 2024
+8428,,Leitung UW Süderheistedt - UW Strübbel 3,SH Netz,14075,39071,110,150.0,standard_per_circuit,6.498,0.9405,17.1,haversine_x1.2,1,2031,firm,0.7,§14d EnWG NAP 2024
+8447,,"110-kV-Leitung L5/K5, Anlage 04543 UW Meitingen - Stützpunkt 19 Ellgau",LEW Verteilnetz,34999,25569,110,400.0,stated,2.47,0.3575,6.5,stated,1,2030,firm,0.7,§14d EnWG NAP 2024
+8448,,"110-kV-Leitung L5/K5, Anlage 52001 Stützpunkt 19 Ellgau - UW Bäumenheim",LEW Verteilnetz,25569,35074,110,600.0,stated,4.18,0.605,11.0,stated,1,2030,firm,0.7,§14d EnWG NAP 2024
+8469,,110-kV-Leitung Bad Langensalza - Ebenheim,TEN Thüringer Energienetze,35901,5498,110,30.0,stated,8.208,1.188,21.6,haversine_x1.2,1,2025,firm,0.7,§14d EnWG NAP 2024
+8480,,110-kV-Leitung Suhl - Hildburghausen,TEN Thüringer Energienetze,1730,11392,110,80.0,stated,9.348,1.353,24.6,haversine_x1.2,1,2027,firm,0.7,§14d EnWG NAP 2024
+8481,,110-kV-Leitung Hildburghausen - Eisfeld - Mürschnitz,TEN Thüringer Energienetze,11392,38060,110,80.0,stated,12.882,1.8645,33.9,haversine_x1.2,1,2027,firm,0.75,§14d EnWG NAP 2024
+8485,,110-kV-Leitung Großschwabhausen - Apolda,TEN Thüringer Energienetze,39290,19075,110,76.0,stated,5.624,0.814,14.8,haversine_x1.2,1,2028,firm,0.9,§14d EnWG NAP 2024
+8488,,110-kV-Leitung Altenfeld - Suhl,TEN Thüringer Energienetze,13764,1730,110,120.0,stated,11.552,1.672,30.4,haversine_x1.2,1,2031,firm,0.7,§14d EnWG NAP 2024
+8489,,110-kV-Leitung Vieselbach - Bad Langensalza,TEN Thüringer Energienetze,35741,35901,110,30.0,stated,16.682,2.4145,43.9,haversine_x1.2,1,2025,firm,0.7,§14d EnWG NAP 2024
+8491,,110-kV-Leitung Walschleben- Gispersleben- Langensalza,TEN Thüringer Energienetze,960,35901,110,60.0,stated,10.716,1.551,28.2,haversine_x1.2,1,2030,firm,0.9,§14d EnWG NAP 2024
+8496,,110-kV-Leitung Großschwabhausen- Blankenhain,TEN Thüringer Energienetze,39290,21269,110,63.0,stated,5.054,0.7315,13.3,haversine_x1.2,1,2030,firm,0.9,§14d EnWG NAP 2024
+8498,,110-kV-Leitung Wolkramshausen-Neuhof,TEN Thüringer Energienetze,36192,14625,110,110.0,stated,8.816,1.276,23.2,haversine_x1.2,1,2028,firm,0.75,§14d EnWG NAP 2024
+8501,,110-kV-Leitung Wolkramshausen- Bernterode,TEN Thüringer Energienetze,36192,38213,110,200.0,stated,9.158,1.3255,24.1,haversine_x1.2,1,2028,firm,0.75,§14d EnWG NAP 2024
+8505,,110-kV-Leitung Leinefelde-Heiligenstadt,TEN Thüringer Energienetze,37333,37392,110,63.0,stated,4.826,0.6985,12.7,haversine_x1.2,1,2027,firm,0.9,§14d EnWG NAP 2024
+8507,,110-kV-Leitung Menteroda-Mühlhausen,TEN Thüringer Energienetze,38131,35902,110,30.0,stated,4.94,0.715,13.0,haversine_x1.2,1,2029,firm,0.75,§14d EnWG NAP 2024
+8508,,110-kV-Leitung Bad Langensalza - Mühlhausen,TEN Thüringer Energienetze,35901,35902,110,30.0,stated,7.562,1.0945,19.9,haversine_x1.2,1,2025,firm,0.7,§14d EnWG NAP 2024
+8509,,110-kV-Leitung Mühlhausen-Breitenbich- Küllstedt-Leinefelde,TEN Thüringer Energienetze,35902,37333,110,30.0,stated,9.652,1.397,25.4,haversine_x1.2,1,2029,firm,0.75,§14d EnWG NAP 2024
+8510,,110-kV-Leitung Wolkramshausen- Menteroda- Großenehrich- Großenehrich Wind- Greußen,TEN Thüringer Energienetze,36192,9652,110,109.0,stated,13.3,1.925,35.0,haversine_x1.2,1,2031,firm,0.75,§14d EnWG NAP 2024
+8512,,110-kV-Leitung Greußen-Schilfa- Sömmerda,TEN Thüringer Energienetze,9652,9656,110,120.0,stated,5.624,0.814,14.8,haversine_x1.2,1,2026,firm,0.75,§14d EnWG NAP 2024
+8513,,110-kV-Leitung Großenehrich- Mühlhausen,TEN Thüringer Energienetze,10496,35902,110,30.0,stated,11.438,1.6555,30.1,haversine_x1.2,1,2029,firm,0.7,§14d EnWG NAP 2024
+8533,,110-kV-Leitung Gera Langenberg- Bethenhausen- Beerwalde,TEN Thüringer Energienetze,38020,20591,110,63.0,stated,6.004,0.869,15.8,haversine_x1.2,1,2025,firm,0.9,§14d EnWG NAP 2024
+8545,,110-kV-Leitung Herda- Martinroda,TEN Thüringer Energienetze,17136,14639,110,63.0,stated,6.65,0.9625,17.5,haversine_x1.2,1,2026,firm,0.9,§14d EnWG NAP 2024
+8546,,110-kV-Leitung Martinroda-Bad Salzungen,TEN Thüringer Energienetze,14639,13961,110,63.0,stated,4.75,0.6875,12.5,haversine_x1.2,1,2026,firm,0.9,§14d EnWG NAP 2024
+8554,,110-kV-Leitung Eisenach-Ebenheim,TEN Thüringer Energienetze,712,5498,110,31.0,stated,3.99,0.5775,10.5,haversine_x1.2,1,2030,firm,0.75,§14d EnWG NAP 2024
+8559,,110-kV-Leitung Mürschnitz-Eisfeld- Hildburghausen,TEN Thüringer Energienetze,38060,11392,110,132.0,stated,12.882,1.8645,33.9,haversine_x1.2,1,2031,firm,0.75,§14d EnWG NAP 2024
+8866,,HS-Freileitung Kirchmöser - Wustermark,E.DIS Netz,36551,1149,110,277.0,stated,15.96,2.31,42.0,stated,1,2031,firm,0.8,§14d EnWG NAP 2024
+8867,,HS-Freileitung Siedenbrünzow - Grimmen,E.DIS Netz,38778,35549,110,319.0,stated,10.26,1.485,27.0,stated,1,2029,firm,0.9,§14d EnWG NAP 2024
+8872,,HS-Freileitung Freienbrink - Erkner,E.DIS Netz,13623,36637,110,73.0,stated,1.52,0.22,4.0,stated,1,2029,firm,0.9,§14d EnWG NAP 2024
+8874,,HS-Freileitung Neuenhagen - Finow,E.DIS Netz,39238,36773,110,352.0,stated,15.58,2.255,41.0,stated,1,2030,firm,0.9,§14d EnWG NAP 2024
+8875,,HS-Freileitung Bentwisch - Schutow,E.DIS Netz,7874,35721,110,126.0,stated,9.12,1.32,24.0,stated,1,2030,firm,0.8,§14d EnWG NAP 2024
+8878,,HS-Freileitung Siedenbrünzow - Malchin,E.DIS Netz,38778,35707,110,107.0,stated,15.96,2.31,42.0,stated,1,2030,firm,0.9,§14d EnWG NAP 2024
+8880,,HS-Freileitung Pasewalk - Löcknitz,E.DIS Netz,35964,36416,110,302.0,stated,5.7,0.825,15.0,stated,1,2030,firm,0.9,§14d EnWG NAP 2024
+8881,,HS-Freileitung Anklam - Bansin,E.DIS Netz,35535,36476,110,107.0,stated,14.06,2.035,37.0,stated,1,2028,firm,0.75,§14d EnWG NAP 2024
+8882,,HS-Freileitung Fürstenberg - Klosterwalde - Prenzlau (Abschnitt Fürstenberg,E.DIS Netz,38775,13508,110,150.0,standard_per_circuit,12.16,1.76,32.0,stated,1,2031,firm,0.75,§14d EnWG NAP 2024
+8884,,HS-Freileitung Fürstenwalde - Rüdersdorf,E.DIS Netz,37134,35264,110,204.0,stated,12.16,1.76,32.0,stated,1,2030,firm,0.9,§14d EnWG NAP 2024
+8893,,HS-Freileitung Gransee - Neuhof,E.DIS Netz,39097,369,110,211.0,stated,2.28,0.33,6.0,stated,1,2029,firm,0.75,§14d EnWG NAP 2024
+8895,,HS-Freileitung Altentreptow Süd - Altentreptow,E.DIS Netz,39098,11918,110,668.0,stated,3.04,0.44,8.0,stated,1,2029,firm,0.9,§14d EnWG NAP 2024
+8896,,HS-Freileitung Siedenbrünzow - Greifswald,E.DIS Netz,38778,35539,110,212.0,stated,10.26,1.485,27.0,stated,1,2031,firm,0.75,§14d EnWG NAP 2024
+8904,,HS-Freileitung Eisenhüttenstadt Pohlitz - Guben,E.DIS Netz,39227,16208,110,203.0,stated,6.46,0.935,17.0,stated,1,2031,firm,0.7,§14d EnWG NAP 2024
+8909,,HS-Freileitung Finow - Eberswalde,E.DIS Netz,36773,38671,110,107.0,stated,2.28,0.33,6.0,stated,1,2030,firm,0.8,§14d EnWG NAP 2024
+8911,,HS-Freileitung Greifswald - Karlshagen,E.DIS Netz,35539,35980,110,199.0,stated,9.88,1.43,26.0,stated,1,2031,firm,0.75,§14d EnWG NAP 2024
+8924,,HS-Freileitung Lüdershagen - Kenz,E.DIS Netz,7169,36470,110,107.0,stated,13.68,1.98,36.0,stated,1,2031,firm,0.8,§14d EnWG NAP 2024
+8933,,HS-Freileitung Siedenbrünzow - Dölitz,E.DIS Netz,38778,36722,110,319.0,stated,13.3,1.925,35.0,stated,1,2030,firm,0.9,§14d EnWG NAP 2024
+9039,,Weißenburg - Adelschlag,N-ERGIE Netz,35533,25100,110,140.0,stated,9.12,1.32,24.0,stated,1,2030,safe,0.9,§14d EnWG NAP 2024
+9040,,HS-Kabel Kriegenbrunn - Hornecker Weg,N-ERGIE Netz,35341,40316,110,190.0,stated,0.76,0.11,2.0,stated,1,2024,firm,0.9,§14d EnWG NAP 2024
+9042,,HS-Kabel Hornecker Weg - Herrnhütte,N-ERGIE Netz,40316,40317,110,120.0,stated,0.76,0.11,2.0,stated,1,2024,firm,0.9,§14d EnWG NAP 2024
+9043,,HS-Kabel Rehhof - Wöhrder Tor,N-ERGIE Netz,34876,40315,110,120.0,stated,2.28,0.33,6.0,stated,1,2031,firm,0.75,§14d EnWG NAP 2024
+9051,,"T027 Winterschneidbach - Müncherlbach, Abschnitt",N-ERGIE Netz,36069,35020,110,1000.0,stated,2.85,0.4125,7.5,stated,1,2029,firm,0.9,§14d EnWG NAP 2024
+9052,,Weißenburg-Oberhochstatt - Kaldorf-Preith,N-ERGIE Netz,35533,25318,110,250.0,stated,10.64,1.54,28.0,stated,1,2028,safe,0.9,§14d EnWG NAP 2024
+9057,,Hartershofen - Rothenburg,N-ERGIE Netz,39500,35138,110,558.0,stated,2.6486,0.3833,6.97,stated,1,2029,firm,0.9,§14d EnWG NAP 2024
+9058,,Kriegenbrunn - Langenzenn,N-ERGIE Netz,35341,24176,110,522.0,stated,5.32,0.77,14.0,stated,1,2029,firm,0.9,§14d EnWG NAP 2024
+9059,,T056 Rehhof - Happurg,N-ERGIE Netz,34876,39357,110,440.0,stated,10.64,1.54,28.0,stated,1,2029,firm,0.9,§14d EnWG NAP 2024
+9060,,T021 Leutershausen - Winterschneidbach,N-ERGIE Netz,30839,36069,110,642.0,stated,5.7,0.825,15.0,stated,1,2029,firm,0.9,§14d EnWG NAP 2024
+9061,,T034 Diespeck - Langenzenn,N-ERGIE Netz,35041,24176,110,522.0,stated,7.22,1.045,19.0,stated,1,2029,firm,0.9,§14d EnWG NAP 2024
+9063,,T023 Martinsheim - Wallmersbach,N-ERGIE Netz,39699,28136,110,1422.0,stated,4.56,0.66,12.0,stated,1,2029,firm,0.9,§14d EnWG NAP 2024
+9066,,T015 Gunzenhausen - Weißenburg,N-ERGIE Netz,24750,35533,110,522.0,stated,7.6,1.1,20.0,stated,1,2029,firm,0.75,§14d EnWG NAP 2024
+9070,,T047 Feucht - Ludersheim,N-ERGIE Netz,28423,37493,110,660.0,stated,4.56,0.66,12.0,stated,1,2029,firm,0.9,§14d EnWG NAP 2024
+9071,,T009 Petersgmünd - Weißenburg,N-ERGIE Netz,24495,35533,110,522.0,stated,6.08,0.88,16.0,stated,1,2029,firm,0.9,§14d EnWG NAP 2024
+9072,,T025 Ketteldorf - Neudorf,N-ERGIE Netz,30056,24486,110,642.0,stated,3.724,0.539,9.8,stated,1,2029,firm,0.9,§14d EnWG NAP 2024
+9074,,Annastraße - Bauhof,N-ERGIE Netz,40315,40314,110,120.0,stated,0.76,0.11,2.0,stated,1,2029,firm,0.75,§14d EnWG NAP 2024
+9075,,Annastraße - Kanzlerstraße,N-ERGIE Netz,40314,40313,110,120.0,stated,0.76,0.11,2.0,stated,1,2029,firm,0.75,§14d EnWG NAP 2024
+9937,M009b,Punkt Wettringen - Punkt Meppen,Amprion,37592,34959,380,3580.0,standard_per_circuit,8.4825,0.91,65.0,stated,2,2027,firm,0.75,NEP 2037/2045 (2025) 2.E
+9942,M032a,Niederrhein - Utfort,Amprion,34959,5369,380,3580.0,standard_per_circuit,1.3702,0.147,10.5,stated,2,2031,firm,0.9,NEP 2037/2045 (2025) 2.E
+9958,M60,Urberach - Pfungstadt - Weinheim,Amprion,165,38047,380,3580.0,standard_per_circuit,7.83,0.84,60.0,stated,2,2031,firm,0.65,NEP 2037/2045 (2025) 2.E
+10081,M-TTG-007a,Dörpen/West - Niederrhein (Punkt Meppen),TenneT,37592,34959,380,3580.0,standard_per_circuit,4.0455,0.434,31.0,stated,2,2027,firm,0.75,NEP 2037/2045 (2025) 2.E
+10091,M385,Sengwarden - Fedderwarden,TenneT,19082,39473,380,3580.0,standard_per_circuit,0.9135,0.098,7.0,stated,2,2027,firm,0.75,NEP 2037/2045 (2025) 2.E
+10094,M51b1,Cappeln/West - Regelzonengrenze TTG/AMP,TenneT,39473,2090,380,3580.0,standard_per_circuit,2.4795,0.266,19.0,stated,2,2026,firm,0.75,NEP 2037/2045 (2025) 2.E
+10103,M464a,Altheim - Isar mit Kreuzung Adlkofen,TenneT,12093,12874,380,3580.0,standard_per_circuit,0.261,0.028,2.0,stated,2,2029,firm,0.8,NEP 2037/2045 (2025) 2.E
+10104,M468a,Lübeck/West - Sahms,TenneT,12610,15065,380,3580.0,standard_per_circuit,6.786,0.728,52.0,stated,2,2029,firm,0.75,NEP 2037/2045 (2025) 2.E
+10115,M74b,Dipperz - Bergrheinfeld/West,TenneT,37687,14633,380,3580.0,standard_per_circuit,13.311,1.428,102.0,stated,2,2031,firm,0.8,NEP 2037/2045 (2025) 2.E
+10127,M351,Abzweig Göhl,TenneT,15935,39750,380,3580.0,standard_per_circuit,5.22,0.56,40.0,stated,2,2027,firm,0.75,NEP 2037/2045 (2025) 2.E
+10141,,HS-Freileitung Thyrow-Wildau,E.DIS Netz,1145,36057,110,246.0,stated,14.06,2.035,37.0,stated,1,2029,firm,0.75,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10228,,HS-Freileitung Allersberg - Kinding,N-ERGIE Netz,30652,35474,110,30.0,stated,12.844,1.859,33.8,stated,1,2025,safe,0.9,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10232,,HS-Leitung Diespeck - Iphofen,N-ERGIE Netz,35041,35040,110,150.0,standard_per_circuit,13.034,1.8865,34.3,haversine_x1.2,1,2024,firm,0.9,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10238,,110-kV-Freileitung Bentwisch - Laage,WEMAG Netz,7874,36329,110,145.0,stated,9.12,1.32,24.0,stated,1,2025,firm,0.8,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10239,,"110-kV-Leitung Görries - Hagenow, Abzweig Barkendorf - Hagenow",WEMAG Netz,39237,37746,110,240.0,stated,3.648,0.528,9.6,stated,1,2022,firm,0.9,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10240,,110-kV-Leitung Görries - Parchim,WEMAG Netz,39237,37351,110,400.0,stated,12.084,1.749,31.8,stated,1,2028,firm,0.9,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10242,,110-kV-Freileitung Güstrow- Brüel,WEMAG Netz,35618,25832,110,370.0,stated,11.362,1.6445,29.9,stated,1,2028,firm,0.8,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10243,,110-kV-Freileitung Görries - Lankow,WEMAG Netz,39237,36924,110,260.0,stated,3.002,0.4345,7.9,stated,1,2025,safe,0.9,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10244,,110-kV-Leitung Görries - Wittenburg,WEMAG Netz,39237,12619,110,260.0,stated,5.282,0.7645,13.9,stated,1,2022,firm,0.8,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10258,,110-kV-Freileitung Görries - Ziegelsee,WEMAG Netz,39237,36588,110,35.0,stated,6.84,0.99,18.0,stated,1,2030,firm,0.9,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10259,,110-kV-Freileitung Görries- Brüel,WEMAG Netz,39237,25832,110,370.0,stated,9.31,1.3475,24.5,stated,1,2030,firm,0.9,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle

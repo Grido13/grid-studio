@@ -1,0 +1,6 @@
+investment_id,nep_measure,name,operator,bus0,bus1,p_nom,p_nom_source,cod_year,commitment,match_confidence,source
+1,DC3,SuedLink West,TenneT / TransnetBW,19685,24880,2000.0,stated,2028,safe,0.8,NEP 2025 / BBPlG / EnLAG
+2,DC4,SuedLink East,TenneT / TransnetBW,38907,14633,2000.0,stated,2028,safe,0.8,NEP 2025 / BBPlG / EnLAG
+3,DC5,SuedOstLink,50Hertz / TenneT,39434,12874,2000.0,stated,2027,safe,0.75,NEP 2025 / BBPlG / EnLAG
+5,DC1,A-Nord,Amprion,4173,4492,2000.0,stated,2027,safe,0.8,NEP 2025 / BBPlG / EnLAG
+6,DC2a/DC2b,Ultranet,Amprion / TransnetBW,4492,36267,2000.0,stated,2028,firm,0.9,NEP 2025 / BBPlG / EnLAG

@@ -1,0 +1,4068 @@
+{
+ "meta": {
+  "built": "2026-07-02T21:41:00+00:00",
+  "as_of": "2026-07-01",
+  "disclaimer": "TSO publications are explicitly non-binding first assessments; coordinates approximate (municipality); MW bands indicative.",
+  "sources": [
+   {
+    "id": "unb-concept",
+    "title": "Reifegradverfahren für Netzanschlüsse an das Übertragungsnetz — Konzept der Übertragungsnetzbetreiber, V1.00, 05.02.2026",
+    "url": "https://www.netztransparenz.de/Portals/1/Dokumente/Presse/2026/2026-02-05_Vier_Uebertragungsnetzbetreiber_Reifegradverfahren_Dokumentation_V100.pdf"
+   },
+   {
+    "id": "amprion-map",
+    "title": "Amprion — Potenzielle Netzanschlussmöglichkeiten inkl. ergänzendes Dokument (Stand 04.2026)",
+    "url": "https://www.amprion.net/Strommarkt/Netzkunden/Netzanschluss/Kundenprojekte-sowie-Schaltfeldverf%C3%BCgbarkeit.html"
+   },
+   {
+    "id": "tng-map",
+    "title": "TransnetBW — Netzanschlusskarte (Netzanschlusspunkte mittel-/langfristig)",
+    "url": "https://www.transnetbw.de/de/transparenz/netzzugang-und-entgelt/netzanschlusskarte"
+   },
+   {
+    "id": "50hz-portal",
+    "title": "50Hertz — Netzanschluss (Reifegradverfahren, interaktive Karte, Stand 31.03.2026)",
+    "url": "https://www.50hertz.com/de/Vertragspartner/Netzkunden/Netzanschluss/"
+   },
+   {
+    "id": "50hz-map-feed",
+    "title": "50Hertz — Netzkapazität map data feed (75 substations: queue, free bays, BKZ; snapshot in data/grid_reform/raw/50hertz_gridcapacity.json)",
+    "url": "https://www.50hertz.com/DesktopModules/Lotes/FrequentModules/API/DigitalMap/GetDnbInfo?path=/GridLoadMapVersion/map/type/gridcapacity"
+   },
+   {
+    "id": "tennet-portal",
+    "title": "TenneT — Netzanschlussanfragen (coordinate table of round-1 locations + Umspannwerks-Projekte map, 04.2026)",
+    "url": "https://www.tennet.eu/de/strommarkt/kunden-deutschland/netzanschlussanfragen"
+   },
+   {
+    "id": "unb-press",
+    "title": "Gemeinsame Pressemitteilung der vier ÜNB zum Reifegradverfahren, 05.02.2026",
+    "url": "https://www.transnetbw.de/de/newsroom/pressemitteilungen/uebertragungsnetzbetreiber-fuehren-reifegradverfahren-ein"
+   }
+  ]
+ },
+ "framework": {
+  "name": "Reifegradverfahren",
+  "name_en": "Maturity-based grid-connection procedure",
+  "principle": "first ready, first served",
+  "replaces": "Windhundprinzip (first come, first served)",
+  "scope": "Storage and large consumers (BESS, data centres, electrolysers, industry) seeking a transmission-grid connection; DSO ad-hoc bulk connections ≥100 MW.",
+  "legal_basis": "KraftNAV amendment in force 2025-12-24 (storage excluded from KraftNAV); BNetzA confirmation foreseen, EnWG amendments proposed.",
+  "scarce_resource": "Free switch bays (Schaltfelder) in transmission substations — not MW. Nearly all free bays are reserved for the next five years.",
+  "three_gw_rule": "Design faults may never trip more than 3 GW of generation or load at once; capacity is assigned per site under this criterion.",
+  "fees": {
+   "application_fee_eur": 50000,
+   "application_fee_refund_pct_if_inadmissible": 50,
+   "application_fee_carries_to_next_cycle": true,
+   "realization_deposit_eur_per_mw": 1500,
+   "deposit_credited_against_bkz": true,
+   "offer_acceptance_window_days": 30,
+   "bkz_tranches": [
+    {
+     "share_pct": "30–50",
+     "due": "signing of the connection contract"
+    },
+    {
+     "share_pct": "30–50",
+     "due": "18 months after tranche 1 or start of construction"
+    },
+    {
+     "share_pct": "20",
+     "due": "commissioning of the connection"
+    }
+   ]
+  },
+  "scoring": {
+   "max_points": 18,
+   "categories": [
+    {
+     "id": "A",
+     "label": "Site control & permits",
+     "weight_pct": 25,
+     "max_points": 4,
+     "sub": [
+      {
+       "id": "A1",
+       "label": "Site control (exclusivity → notarised reservation → lease/ownership)",
+       "min_req": "exclusivity declaration + land-register extract",
+       "points": 3
+      },
+      {
+       "id": "A2",
+       "label": "Permitting status (strategy → formally acknowledged by authorities)",
+       "min_req": "written permitting strategy",
+       "points": 1
+      }
+     ]
+    },
+    {
+     "id": "B",
+     "label": "Technical concept",
+     "weight_pct": 25,
+     "max_points": 5,
+     "sub": [
+      {
+       "id": "B1",
+       "label": "Project plan (technical sketch, site layout, schedule)",
+       "min_req": "project plan",
+       "points": 0
+      },
+      {
+       "id": "B2",
+       "label": "Customer substation (primary / secondary technology plans)",
+       "min_req": "VDE form, P(t) ramp-up, single-line diagram",
+       "points": 2
+      },
+      {
+       "id": "B3",
+       "label": "Routing of the tie-line (corridor → detail survey → secured easements)",
+       "min_req": "routing strategy",
+       "points": 3
+      }
+     ]
+    },
+    {
+     "id": "C",
+     "label": "Applicant capability",
+     "weight_pct": 25,
+     "max_points": 6,
+     "sub": [
+      {
+       "id": "C1",
+       "label": "Company substance",
+       "min_req": "register extract + company profile",
+       "points": 0
+      },
+      {
+       "id": "C2",
+       "label": "Procurement of long-lead items (inventory → offers → signed purchase contracts)",
+       "min_req": "inventory list + procurement schedule",
+       "points": 3
+      },
+      {
+       "id": "C3",
+       "label": "Creditworthiness & financing (rating → full financing proof)",
+       "min_req": "investment volume stated",
+       "points": 3
+      }
+     ]
+    },
+    {
+     "id": "D",
+     "label": "Grid & system benefit",
+     "weight_pct": 25,
+     "max_points": 3,
+     "sub": [
+      {
+       "id": "D1",
+       "label": "Project hybridisation (co-location of 2 → 3 technologies → 3 + overbuilt generation)",
+       "min_req": "none",
+       "points": 3
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "cycle": {
+  "label": "First cycle 2026/27",
+  "today": "2026-07-01",
+  "phases": [
+   {
+    "id": "announce",
+    "label": "Announcement & docs",
+    "start": "2026-02",
+    "end": "2026-04",
+    "note": "Concept V1.00 published 05.02.2026 on netztransparenz.de"
+   },
+   {
+    "id": "phase1",
+    "label": "Phase 1 · Info & application",
+    "start": "2026-04",
+    "end": "2026-07",
+    "note": "Capacity data published; deadline 30.06.2026 24:00 with €50k fee"
+   },
+   {
+    "id": "phase2",
+    "label": "Phase 2 · Cluster study",
+    "start": "2026-07",
+    "end": "2026-12",
+    "note": "Admissibility → maturity scoring → bay assignment → load-flow study"
+   },
+   {
+    "id": "phase3",
+    "label": "Phase 3 · Offers",
+    "start": "2026-12",
+    "end": "2027-02",
+    "note": "1 month to accept by paying €1,500/MW deposit; runner-up round"
+   }
+  ]
+ },
+ "queue": {
+  "as_of": "Q3/Q4 2025 (per-TSO survey window 30.09.–01.12.2025)",
+  "total_requests": 717,
+  "total_gw": 270,
+  "bess_requests": 545,
+  "bess_gw": 211,
+  "bess_reserved_gw": 51,
+  "nep_2037_bess_need_gw": [
+   41,
+   94
+  ],
+  "bdew_all_grid_levels_bess_gw": 800,
+  "bess_growth": [
+   {
+    "year": "2022",
+    "requests": 8,
+    "gw": 3
+   },
+   {
+    "year": "2023",
+    "requests": 48,
+    "gw": 12
+   },
+   {
+    "year": "2024",
+    "requests": 379,
+    "gw": 151
+   },
+   {
+    "year": "2025 Q3",
+    "requests": 545,
+    "gw": 211
+   }
+  ],
+  "notes": [
+   "50Hertz alone holds ~65 GW of BESS connection requests; capacities for commissioning 2025–2029 are exhausted in its zone.",
+   "Reserved BESS capacity (51 GW) already exceeds the lower NEP 2037 scenario need (41 GW)."
+  ]
+ },
+ "substations": [
+  {
+   "name": "Clusorth",
+   "tso": "Amprion",
+   "city": "Lingen (Ems)",
+   "lat": 52.545,
+   "lon": 7.297,
+   "kv": 380,
+   "bays": "n-1",
+   "year": 2035,
+   "feedin": null,
+   "load": null,
+   "restriction": "Load connections only",
+   "why": "Same Emsland logic as Meppen: wind-saturated corridor — only load connections reduce congestion, hence load-only from 2035.",
+   "nep": {
+    "first": null,
+    "proj": null,
+    "cod": null,
+    "note": null
+   }
+  },
+  {
+   "name": "Esch",
+   "tso": "Amprion",
+   "city": "Pulheim",
+   "lat": 51.023,
+   "lon": 6.775,
+   "kv": 380,
+   "bays": "n-1",
+   "year": 2032,
+   "feedin": null,
+   "load": null,
+   "restriction": null,
+   "why": "Rhineland lignite district: Niederaußem/Neurath retirements free bays and headroom at the Cologne ring; NEP keeps Esch a major node.",
+   "nep": {
+    "first": 2021,
+    "proj": null,
+    "cod": null,
+    "note": "mentions rise 5→12→25 across NEPs — increasingly central to the post-lignite Rhineland grid."
+   }
+  },
+  {
+   "name": "Flör",
+   "tso": "Amprion",
+   "city": "Gronau (Westfalen)",
+   "lat": 52.183,
+   "lon": 7.046,
+   "kv": 380,
+   "bays": "n-0",
+   "year": 2032,
+   "feedin": null,
+   "load": null,
+   "restriction": null,
+   "why": "Westmünsterland / NL interconnection area; capacity follows NEP reinforcement of the border corridor.",
+   "nep": {
+    "first": 2025,
+    "proj": "AMP-P315",
+    "cod": null,
+    "note": "Hanekenfähr–Gronau (BBP 63) with a phase-shifter AT Flör — that is the enabler of the 2032 offer."
+   }
+  },
+  {
+   "name": "Herringhausen",
+   "tso": "Amprion",
+   "city": "Bohmte",
+   "lat": 52.383,
+   "lon": 8.36,
+   "kv": 380,
+   "bays": "n-0",
+   "year": 2035,
+   "feedin": null,
+   "load": null,
+   "restriction": "Feed-in only at reduced power",
+   "why": "Feed-in only at reduced power until upstream NEP reinforcements complete (~2035).",
+   "nep": {
+    "first": null,
+    "proj": null,
+    "cod": null,
+    "note": null
+   }
+  },
+  {
+   "name": "Kötz",
+   "tso": "Amprion",
+   "city": "Bubesheim",
+   "lat": 48.402,
+   "lon": 10.272,
+   "kv": 380,
+   "bays": "n-1",
+   "year": 2035,
+   "feedin": null,
+   "load": null,
+   "restriction": "Feed-in only at reduced power",
+   "why": "Bavarian Swabia node; bays realisable but feed-in reduced until the regional 380-kV upgrades land.",
+   "nep": {
+    "first": null,
+    "proj": null,
+    "cod": null,
+    "note": null
+   }
+  },
+  {
+   "name": "Kühmoos",
+   "tso": "Amprion",
+   "city": "Rickenbach",
+   "lat": 47.578,
+   "lon": 7.99,
+   "kv": 380,
+   "bays": "n-0",
+   "year": 2035,
+   "feedin": null,
+   "load": null,
+   "restriction": null,
+   "why": "High Rhine / Swiss border, pumped-storage corridor; capacity appears with the Hochrhein reinforcement. Shared node with TransnetBW.",
+   "nep": {
+    "first": 2019,
+    "proj": "AMP-P204",
+    "cod": 2035,
+    "note": "Kühmoos–Waldshut–CH border (BBP 99): COD 2035 = offer year."
+   }
+  },
+  {
+   "name": "Rieselfeld",
+   "tso": "Amprion",
+   "city": "Waltrop",
+   "lat": 51.64,
+   "lon": 7.38,
+   "kv": 380,
+   "bays": "n-0",
+   "year": 2035,
+   "feedin": null,
+   "load": null,
+   "restriction": "Feed-in only at reduced power",
+   "why": "Ruhr region: coal phase-out frees grid headroom, but feed-in reduced until line upgrades; load welcome.",
+   "nep": {
+    "first": null,
+    "proj": null,
+    "cod": null,
+    "note": null
+   }
+  },
+  {
+   "name": "Meppen",
+   "tso": "Amprion",
+   "city": "Meppen",
+   "lat": 52.69,
+   "lon": 7.31,
+   "kv": 380,
+   "bays": "n-1",
+   "year": 2032,
+   "feedin": null,
+   "load": null,
+   "restriction": "Load connections only",
+   "why": "Emsland/NL-border corridor is feed-in-saturated; load here is grid-serving (absorbs northern wind surplus), so bays are earmarked for consumers only.",
+   "nep": null
+  },
+  {
+   "name": "Pöppinghausen",
+   "tso": "Amprion",
+   "city": "Castrop-Rauxel",
+   "lat": 51.585,
+   "lon": 7.34,
+   "kv": 380,
+   "bays": "n-0",
+   "year": 2033,
+   "feedin": null,
+   "load": null,
+   "restriction": null,
+   "why": "Ruhr coal phase-out frees bays; 2033 after switchgear extension.",
+   "nep": {
+    "first": 2021,
+    "proj": "AMP-P408",
+    "cod": 2029,
+    "note": "central-Ruhr ad-hoc reinforcement (BBP 91)."
+   }
+  },
+  {
+   "name": "Wittenhorst",
+   "tso": "Amprion",
+   "city": "Hamminkeln",
+   "lat": 51.75,
+   "lon": 6.55,
+   "kv": 380,
+   "bays": "n-0",
+   "year": 2033,
+   "feedin": null,
+   "load": null,
+   "restriction": null,
+   "why": "Lower Rhine near the Doetinchem–Wesel NL interconnector; NEP corridor strengthening enables bays from 2033.",
+   "nep": {
+    "first": 2025,
+    "proj": "AMP-P407",
+    "cod": null,
+    "note": "new switchgear listed in the Punktmaßnahmen registry."
+   }
+  },
+  {
+   "name": "Altbach",
+   "tso": "TransnetBW",
+   "city": "Altbach",
+   "lat": 48.723,
+   "lon": 9.379,
+   "kv": 380,
+   "bays": "n-0",
+   "year": 2032,
+   "feedin": [
+    500,
+    1000
+   ],
+   "load": [
+    0,
+    500
+   ],
+   "restriction": "Temporary until 2045",
+   "why": "Coal→gas fuel-switch site; connection only temporary until 2045 because the node is re-planned in the NEP.",
+   "nep": {
+    "first": null,
+    "proj": null,
+    "cod": null,
+    "note": null
+   }
+  },
+  {
+   "name": "Birkenfeld",
+   "tso": "TransnetBW",
+   "city": "Birkenfeld (Enz)",
+   "lat": 48.872,
+   "lon": 8.633,
+   "kv": 380,
+   "bays": "n-1",
+   "year": 2032,
+   "feedin": [
+    1000,
+    1500
+   ],
+   "load": [
+    1000,
+    1500
+   ],
+   "restriction": null,
+   "why": "Node west of Pforzheim strengthened in the NEP; both n-0 and n-1 bays realisable from 2032.",
+   "nep": {
+    "first": null,
+    "proj": null,
+    "cod": null,
+    "note": "was in NEP 2019–2023 (5 mentions each), dropped out of NEP 2025 — reinforcement done/committed."
+   }
+  },
+  {
+   "name": "Bühl",
+   "tso": "TransnetBW",
+   "city": "Bühl",
+   "lat": 48.695,
+   "lon": 8.135,
+   "kv": 380,
+   "bays": "n-1",
+   "year": 2032,
+   "feedin": [
+    1000,
+    1500
+   ],
+   "load": [
+    0,
+    500
+   ],
+   "restriction": null,
+   "why": "Same Rheinschiene reinforcement as Kork; big feed-in band, small load band.",
+   "nep": {
+    "first": 2019,
+    "proj": "TNG-P49",
+    "cod": 2030,
+    "note": null
+   }
+  },
+  {
+   "name": "Eichstetten",
+   "tso": "TransnetBW",
+   "city": "Eichstetten",
+   "lat": 48.09,
+   "lon": 7.755,
+   "kv": 380,
+   "bays": "n-1",
+   "year": 2032,
+   "feedin": [
+    1500,
+    2000
+   ],
+   "load": [
+    500,
+    1000
+   ],
+   "restriction": "Temporary until 2045",
+   "why": "Endpoint of the new Daxlanden–Eichstetten Rheinschiene line; biggest band in BW (1.5–2 GW) but temporary until 2045 — the node is re-dedicated afterwards.",
+   "nep": {
+    "first": 2019,
+    "proj": "TNG-P49",
+    "cod": 2030,
+    "note": "Badische Rheinschiene (BBP 21) COD 2030 → offer 2032."
+   }
+  },
+  {
+   "name": "Gurtweil",
+   "tso": "TransnetBW",
+   "city": "Waldshut-Tiengen",
+   "lat": 47.64,
+   "lon": 8.24,
+   "kv": 380,
+   "bays": "n-1",
+   "year": 2032,
+   "feedin": [
+    500,
+    1000
+   ],
+   "load": [
+    500,
+    1000
+   ],
+   "restriction": null,
+   "why": "High Rhine / Swiss border hydro corridor; Hochrhein upgrade brings capacity 2032.",
+   "nep": {
+    "first": 2019,
+    "proj": "AMP-P206",
+    "cod": 2032,
+    "note": "Hochrhein (BBP 23) COD 2032 = offer year."
+   }
+  },
+  {
+   "name": "Kork",
+   "tso": "TransnetBW",
+   "city": "Kehl-Kork",
+   "lat": 48.56,
+   "lon": 7.87,
+   "kv": 380,
+   "bays": "n-0",
+   "year": 2032,
+   "feedin": [
+    1000,
+    1500
+   ],
+   "load": [
+    1000,
+    1500
+   ],
+   "restriction": null,
+   "why": "Upper Rhine valley; capacity rides on the NEP Badische Rheinschiene 380-kV reinforcement (2032).",
+   "nep": {
+    "first": null,
+    "proj": null,
+    "cod": null,
+    "note": null
+   }
+  },
+  {
+   "name": "Philippsburg",
+   "tso": "TransnetBW",
+   "city": "Philippsburg",
+   "lat": 49.244,
+   "lon": 8.437,
+   "kv": 380,
+   "bays": "n-1",
+   "year": 2032,
+   "feedin": [
+    500,
+    1000
+   ],
+   "load": [
+    500,
+    1000
+   ],
+   "restriction": null,
+   "why": "Nuclear site (KKP off 2011/2019): the plant's bays and strong lines remain, and the Ultranet HVDC converter makes it a premium node — capacity from 2032.",
+   "nep": {
+    "first": 2019,
+    "proj": "TNG-P426",
+    "cod": 2030,
+    "note": "power-flow control (ad-hoc) + Ultranet converter."
+   }
+  },
+  {
+   "name": "Schwörstadt",
+   "tso": "TransnetBW",
+   "city": "Schwörstadt",
+   "lat": 47.59,
+   "lon": 7.87,
+   "kv": 380,
+   "bays": "n-0",
+   "year": 2032,
+   "feedin": [
+    0,
+    500
+   ],
+   "load": [
+    0,
+    500
+   ],
+   "restriction": null,
+   "why": "Small High-Rhine node on the same corridor, 2032.",
+   "nep": {
+    "first": null,
+    "proj": null,
+    "cod": null,
+    "note": null
+   }
+  },
+  {
+   "name": "Mannheim",
+   "tso": "TransnetBW",
+   "city": "Mannheim",
+   "lat": 49.46,
+   "lon": 8.5,
+   "kv": 380,
+   "bays": "n-1",
+   "year": 2032,
+   "feedin": [
+    0,
+    500
+   ],
+   "load": [
+    0,
+    500
+   ],
+   "restriction": "No battery storage (keine BESS)",
+   "why": "GKM hard-coal retirement frees capacity; TSO explicitly bars BESS here (\"keine BESS\") — plausibly short-circuit-power and stability duties of the node, reason not published.",
+   "nep": {
+    "first": 2019,
+    "proj": "TNG-P47",
+    "cod": 2031,
+    "note": "Frankfurt–Karlsruhe region build-out (BBP 19)."
+   }
+  },
+  {
+   "name": "Daxlanden",
+   "tso": "TransnetBW",
+   "city": "Karlsruhe-Daxlanden",
+   "lat": 48.985,
+   "lon": 8.33,
+   "kv": 380,
+   "bays": "n-1",
+   "year": 2035,
+   "feedin": [
+    0,
+    0
+   ],
+   "load": [
+    500,
+    1000
+   ],
+   "restriction": "No feed-in capacity",
+   "why": "RDK power-plant site Karlsruhe: 0 MW feed-in (already used), but 0.5–1 GW load headroom from 2035.",
+   "nep": {
+    "first": 2019,
+    "proj": "TNG-P49",
+    "cod": 2030,
+    "note": null
+   }
+  },
+  {
+   "name": "Engslatt",
+   "tso": "TransnetBW",
+   "city": "Balingen",
+   "lat": 48.253,
+   "lon": 8.86,
+   "kv": 380,
+   "bays": "n-0",
+   "year": 2035,
+   "feedin": [
+    500,
+    1000
+   ],
+   "load": [
+    0,
+    500
+   ],
+   "restriction": null,
+   "why": "Balingen area, long-term after regional 380-kV upgrades (2035).",
+   "nep": {
+    "first": null,
+    "proj": null,
+    "cod": null,
+    "note": null
+   }
+  },
+  {
+   "name": "Kühmoos (TNG)",
+   "tso": "TransnetBW",
+   "city": "Rickenbach",
+   "lat": 47.572,
+   "lon": 7.996,
+   "kv": 380,
+   "bays": "n-1",
+   "year": 2035,
+   "feedin": [
+    0,
+    500
+   ],
+   "load": [
+    0,
+    500
+   ],
+   "restriction": null,
+   "why": "TransnetBW side of the shared Kühmoos node; long-term 2035.",
+   "nep": {
+    "first": 2019,
+    "proj": "AMP-P204",
+    "cod": 2035,
+    "note": null
+   }
+  },
+  {
+   "name": "Mannheim Ost",
+   "tso": "TransnetBW",
+   "city": "Mannheim",
+   "lat": 49.475,
+   "lon": 8.55,
+   "kv": 380,
+   "bays": "n-1",
+   "year": 2035,
+   "feedin": [
+    500,
+    1000
+   ],
+   "load": [
+    500,
+    1000
+   ],
+   "restriction": null,
+   "why": "Second Mannheim node, long-term (2035) once GKM exit and regional reinforcements settle.",
+   "nep": {
+    "first": null,
+    "proj": null,
+    "cod": null,
+    "note": null
+   }
+  },
+  {
+   "name": "Pfullendorf",
+   "tso": "TransnetBW",
+   "city": "Pfullendorf",
+   "lat": 47.92,
+   "lon": 9.25,
+   "kv": 380,
+   "bays": "n-1",
+   "year": 2035,
+   "feedin": [
+    0,
+    500
+   ],
+   "load": [
+    0,
+    500
+   ],
+   "restriction": null,
+   "why": "Oberschwaben node, long-term 2035, small bands.",
+   "nep": {
+    "first": null,
+    "proj": null,
+    "cod": null,
+    "note": null
+   }
+  },
+  {
+   "name": "Wendlingen",
+   "tso": "TransnetBW",
+   "city": "Wendlingen",
+   "lat": 48.67,
+   "lon": 9.37,
+   "kv": 380,
+   "bays": "n-1",
+   "year": 2035,
+   "feedin": [
+    500,
+    1000
+   ],
+   "load": [
+    0,
+    500
+   ],
+   "restriction": null,
+   "why": "Neckar valley node, long-term 2035 (nearby Altbach/Bünzwangen occupied).",
+   "nep": {
+    "first": null,
+    "proj": null,
+    "cod": null,
+    "note": null
+   }
+  },
+  {
+   "name": "Cappeln West",
+   "tso": "TenneT",
+   "city": null,
+   "lat": 52.8017,
+   "lon": 8.016,
+   "kv": null,
+   "bays": "≥1 assumed",
+   "year": 2030,
+   "feedin": null,
+   "load": null,
+   "restriction": null,
+   "why": "Brand-new NEP substation (BImSchG-approved, under construction) in the Cloppenburg wind belt; built to collect onshore wind — customer bays from 2030.",
+   "nep": {
+    "first": 2021,
+    "proj": "TTG-P21",
+    "cod": null,
+    "note": "in the plan since NEP 2021 (Cloppenburg wind build-out)."
+   }
+  },
+  {
+   "name": "Garrel Ost",
+   "tso": "TenneT",
+   "city": null,
+   "lat": 52.9484,
+   "lon": 8.0792,
+   "kv": null,
+   "bays": "≥1 assumed",
+   "year": 2030,
+   "feedin": null,
+   "load": null,
+   "restriction": null,
+   "why": "Twin of Cappeln West, 25 km apart; same new-build logic, 2030.",
+   "nep": {
+    "first": 2021,
+    "proj": "TTG-P21",
+    "cod": null,
+    "note": null
+   }
+  },
+  {
+   "name": "Göhl West",
+   "tso": "TenneT",
+   "city": null,
+   "lat": 54.285,
+   "lon": 10.927,
+   "kv": null,
+   "bays": "≥1 assumed",
+   "year": 2030,
+   "feedin": null,
+   "load": null,
+   "restriction": "Load connections only",
+   "why": "Ostholstein endpoint of the new Ostküstenleitung; wind-saturated coast → load-only offer.",
+   "nep": {
+    "first": 2023,
+    "proj": "TTG-P72",
+    "cod": null,
+    "note": "Ostküstenleitung; 3×380/110-kV transformers planned."
+   }
+  },
+  {
+   "name": "Großenmeer",
+   "tso": "TenneT",
+   "city": null,
+   "lat": 53.2619,
+   "lon": 8.3394,
+   "kv": null,
+   "bays": "≥1 assumed",
+   "year": 2031,
+   "feedin": null,
+   "load": null,
+   "restriction": null,
+   "why": "Wesermarsch node on the Conneforde corridor collecting coastal and offshore wind; 2031.",
+   "nep": {
+    "first": 2025,
+    "proj": "TTG-P119",
+    "cod": 2031,
+    "note": "Conneforde–Großenmeer–Elsfleth/West (BBP 56) — offer year = project COD."
+   }
+  },
+  {
+   "name": "Hochwöhrden",
+   "tso": "TenneT",
+   "city": null,
+   "lat": 54.162,
+   "lon": 9.0464,
+   "kv": null,
+   "bays": "≥1 assumed",
+   "year": 2031,
+   "feedin": null,
+   "load": null,
+   "restriction": "Load connections only",
+   "why": "Dithmarschen / Westküstenleitung corridor; wind-saturated, electrolysis target region (Heide) → load-only.",
+   "nep": {
+    "first": 2025,
+    "proj": null,
+    "cod": null,
+    "note": "appears only in NEP 2025 (reactive-power compensation program); offer is Westküste wind-saturation logic, load-only."
+   }
+  },
+  {
+   "name": "Kiel Rönne",
+   "tso": "TenneT",
+   "city": null,
+   "lat": 54.2662,
+   "lon": 10.1646,
+   "kv": null,
+   "bays": "≥1 assumed",
+   "year": 2036,
+   "feedin": null,
+   "load": null,
+   "restriction": null,
+   "why": "The new Kiel 380-kV substation from the NEP (Audorf–Kiel–Göhl ring); bays come with line completion ~2036.",
+   "nep": {
+    "first": 2025,
+    "proj": "TTG-P71",
+    "cod": 2037,
+    "note": "new UW: 380-kV switchgear + 6 transformers (Punktmaßnahmen)."
+   }
+  },
+  {
+   "name": "Neuenkirchen",
+   "tso": "TenneT",
+   "city": null,
+   "lat": 53.2479,
+   "lon": 8.5295,
+   "kv": null,
+   "bays": "≥1 assumed",
+   "year": 2031,
+   "feedin": null,
+   "load": null,
+   "restriction": null,
+   "why": "Same Conneforde/Wesermarsch build-out, 2031.",
+   "nep": {
+    "first": 2021,
+    "proj": "TTG-P23",
+    "cod": 2028,
+    "note": "Elbe-Weser reinforcement Dollern–Elsfleth/West (BBP 38)."
+   }
+  },
+  {
+   "name": "Pleinting",
+   "tso": "TenneT",
+   "city": null,
+   "lat": 48.6671,
+   "lon": 13.1039,
+   "kv": null,
+   "bays": "≥1 assumed",
+   "year": 2034,
+   "feedin": null,
+   "load": null,
+   "restriction": null,
+   "why": "Site of the retired Pleinting oil plant on the Danube — legacy strong node reactivated after reinforcement, 2034.",
+   "nep": {
+    "first": 2019,
+    "proj": "TTG-P112",
+    "cod": null,
+    "note": "380/110-kV transformer planned (Punktmaßnahme)."
+   }
+  },
+  {
+   "name": "Sande",
+   "tso": "TenneT",
+   "city": null,
+   "lat": 53.4874,
+   "lon": 7.9938,
+   "kv": null,
+   "bays": "≥1 assumed",
+   "year": 2033,
+   "feedin": null,
+   "load": null,
+   "restriction": null,
+   "why": "Near Wilhelmshaven: offshore landing point and planned H2/industry hub; 2033.",
+   "nep": {
+    "first": 2025,
+    "proj": "TTG-P175",
+    "cod": 2027,
+    "note": "Wilhelmshaven–Conneforde (BBP 73), new switchgear."
+   }
+  },
+  {
+   "name": "Wenzenbach",
+   "tso": "TenneT",
+   "city": null,
+   "lat": 49.0812,
+   "lon": 12.1391,
+   "kv": null,
+   "bays": "≥1 assumed",
+   "year": 2036,
+   "feedin": null,
+   "load": null,
+   "restriction": null,
+   "why": "Near Regensburg, endpoint of the Ostbayernring reinforcement; bays with completion ~2036.",
+   "nep": {
+    "first": 2025,
+    "proj": "P472",
+    "cod": null,
+    "note": "brand-new NEP-2025 Zubau project Schwandorf–Regensburg/Wenzenbach."
+   }
+  },
+  {
+   "name": "Altentreptow Nord (ATN)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 53.73673,
+   "lon": 13.317842,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 1579.0,
+    "req_load": 1579.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 250.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 40.0,
+    "dso": "E.DIS Netz"
+   },
+   "why": null,
+   "nep": {
+    "first": 2021,
+    "proj": "50HzT-P216",
+    "cod": 2031,
+    "note": null
+   }
+  },
+  {
+   "name": "Bärwalde (BAE) Schaltanlage",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.413354,
+   "lon": 14.50736,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 750.0,
+    "req_load": 750.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 1400.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "MITNETZ STROM"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Bentwisch (BW)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 54.112586,
+   "lon": 12.21339,
+   "kv": "380/220",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 1177.0,
+    "req_load": 1177.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 40.0,
+    "dso": "E.DIS Netz"
+   },
+   "why": null,
+   "nep": {
+    "first": 2019,
+    "proj": "50HzT-P215",
+    "cod": 2029,
+    "note": null
+   }
+  },
+  {
+   "name": "Bertikow (BE)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 53.252508,
+   "lon": 13.95768,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 300.0,
+    "req_load": 300.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 200.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "E.DIS Netz"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Eisenach (EI)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.001856,
+   "lon": 10.385815,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 1550.0,
+    "req_load": 1550.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "Thüringer Energienetze"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Eula (EU)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.157698,
+   "lon": 12.519923,
+   "kv": "380/220",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 4441.0,
+    "req_load": 5491.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 1450.0,
+    "res_load": 500.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "MITNETZ STROM"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Graustein (GRS)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.554389,
+   "lon": 14.469177,
+   "kv": "380",
+   "bays": "5 free",
+   "year": null,
+   "feedin": [
+    0.0,
+    0.0
+   ],
+   "load": null,
+   "restriction": null,
+   "q": {
+    "bays_free": 5,
+    "req_gen": 3800.0,
+    "req_load": 3800.0,
+    "avail_gen": 0.0,
+    "avail_load": 1900.0,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "MITNETZ STROM"
+   },
+   "why": "1950s lignite-era node in Lusatia (built for the Boxberg/Lübbenau complex): coal decline frees 5 bays. Feed-in is already RE-saturated (0 MW), but 1.9 GW load headroom.",
+   "nep": {
+    "first": 2021,
+    "proj": null,
+    "cod": null,
+    "note": null
+   }
+  },
+  {
+   "name": "Großschwabhausen (GSH)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 50.93036,
+   "lon": 11.471333,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 250.0,
+    "req_load": 250.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "Thüringer Energienetze"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Güstrow (GUE)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 53.81586,
+   "lon": 12.18675,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": [
+    0.0,
+    0.0
+   ],
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 1961.0,
+    "req_load": 1961.0,
+    "avail_gen": 0.0,
+    "avail_load": 170.0,
+    "res_gen": 0.0,
+    "res_load": 135.0,
+    "bkz_eur_per_kw": 40.0,
+    "dso": "WEMAG"
+   },
+   "why": null,
+   "nep": {
+    "first": 2019,
+    "proj": "50HzT-P34",
+    "cod": 2028,
+    "note": "hub of three corridor projects (P34/P215/P216)."
+   }
+  },
+  {
+   "name": "Hagenwerder (HGW)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.062066,
+   "lon": 14.946178,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 1000.0,
+    "req_load": 1000.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "Sachsen Netze"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Hamburg/Nord (NOR)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 53.74237,
+   "lon": 9.984803,
+   "kv": "380",
+   "bays": "3 free",
+   "year": null,
+   "feedin": [
+    700.0,
+    700.0
+   ],
+   "load": null,
+   "restriction": null,
+   "q": {
+    "bays_free": 3,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": 700.0,
+    "avail_load": 700.0,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 40.0,
+    "dso": "Stromnetz Hamburg"
+   },
+   "why": "Hamburg ring reinforcement; 3 bays and 700 MW kept free — city load growth expected.",
+   "nep": null
+  },
+  {
+   "name": "Herlasgrün (HER)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 50.567632,
+   "lon": 12.242675,
+   "kv": "220",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 300.0,
+    "req_load": 300.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 100.0,
+    "dso": "MITNETZ STROM"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Hohenwarte II (HOH2) Schaltanlage",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 50.603987,
+   "lon": 11.474468,
+   "kv": "220",
+   "bays": "0 free",
+   "year": null,
+   "feedin": [
+    2040.0,
+    2040.0
+   ],
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": 2040.0,
+    "avail_load": 2040.0,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "Thüringer Energienetze"
+   },
+   "why": "Pumped-storage plant switchyard (220 kV): plant-scale bays exist, so ~2 GW is technically available.",
+   "nep": null
+  },
+  {
+   "name": "Jessen/Nord (JSN)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.799997,
+   "lon": 13.058399,
+   "kv": "380",
+   "bays": "1 free",
+   "year": null,
+   "feedin": [
+    1500.0,
+    1500.0
+   ],
+   "load": null,
+   "restriction": null,
+   "q": {
+    "bays_free": 1,
+    "req_gen": 932.0,
+    "req_load": 932.0,
+    "avail_gen": 1500.0,
+    "avail_load": 1900.0,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "MITNETZ STROM"
+   },
+   "why": "Wind-collection node in Saxony-Anhalt; bays built with the RE build-out, 1.5–1.9 GW available.",
+   "nep": null
+  },
+  {
+   "name": "Lauchstädt (LAU)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.405644,
+   "lon": 11.894493,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 250.0,
+    "req_load": 1650.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 1900.0,
+    "res_load": 1100.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "MITNETZ STROM"
+   },
+   "why": null,
+   "nep": {
+    "first": 2019,
+    "proj": "50HzT-P124",
+    "cod": 2027,
+    "note": null
+   }
+  },
+  {
+   "name": "Marke (MA)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.739989,
+   "lon": 12.263174,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 1000.0,
+    "req_load": 1000.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 500.0,
+    "res_load": 500.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "MITNETZ STROM"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Neuenhagen (NHG)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 52.540173,
+   "lon": 13.707922,
+   "kv": "110",
+   "bays": "4 free",
+   "year": null,
+   "feedin": [
+    300.0,
+    300.0
+   ],
+   "load": null,
+   "restriction": null,
+   "q": {
+    "bays_free": 4,
+    "req_gen": 342.0,
+    "req_load": 492.0,
+    "avail_gen": 300.0,
+    "avail_load": 700.0,
+    "res_gen": 650.0,
+    "res_load": 500.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "E.DIS Netz"
+   },
+   "why": "Berlin ring node (110 kV listing); 4 bays with modest available capacity.",
+   "nep": null
+  },
+  {
+   "name": "Parchim/Süd (PMS)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 53.407235,
+   "lon": 11.900172,
+   "kv": "380/220",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 800.0,
+    "req_load": 1565.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 1100.0,
+    "res_load": 300.0,
+    "bkz_eur_per_kw": 40.0,
+    "dso": "WEMAG Netz"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Pasewalk (PAS)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 53.508085,
+   "lon": 14.032057,
+   "kv": "380/220",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 1834.0,
+    "req_load": 1834.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 1100.0,
+    "res_load": 500.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "E.DIS Netz"
+   },
+   "why": null,
+   "nep": {
+    "first": 2019,
+    "proj": "50HzT-P216",
+    "cod": 2031,
+    "note": null
+   }
+  },
+  {
+   "name": "Preilack (PRL)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.887543,
+   "lon": 14.427862,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 1250.0,
+    "req_load": 1250.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "MITNETZ STROM"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Pulgar (PUL)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.197211,
+   "lon": 12.337374,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 318.0,
+    "req_load": 318.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "MITNETZ STROM"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Ragow (RAG)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.876494,
+   "lon": 13.903889,
+   "kv": "380",
+   "bays": "4 free",
+   "year": null,
+   "feedin": [
+    100.0,
+    100.0
+   ],
+   "load": null,
+   "restriction": null,
+   "q": {
+    "bays_free": 4,
+    "req_gen": 1690.0,
+    "req_load": 2490.0,
+    "avail_gen": 100.0,
+    "avail_load": 500.0,
+    "res_gen": 800.0,
+    "res_load": 800.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "MITNETZ STROM"
+   },
+   "why": "Lusatia node next to the former Lübbenau plant site; lignite exit frees bays.",
+   "nep": null
+  },
+  {
+   "name": "Schönewalde (SW)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.828824,
+   "lon": 13.157008,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 2600.0,
+    "req_load": 2600.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 1100.0,
+    "res_load": 300.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "E.DIS Netz"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Siedenbrünzow (SOW)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 53.907724,
+   "lon": 13.14361,
+   "kv": "380",
+   "bays": "1 free",
+   "year": null,
+   "feedin": [
+    500.0,
+    500.0
+   ],
+   "load": null,
+   "restriction": null,
+   "q": {
+    "bays_free": 1,
+    "req_gen": 1981.0,
+    "req_load": 1981.0,
+    "avail_gen": 500.0,
+    "avail_load": 900.0,
+    "res_gen": 500.0,
+    "res_load": 500.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "E.DIS Netz"
+   },
+   "why": "Mecklenburg wind-collection node; 1 bay free, 0.5/0.9 GW still available.",
+   "nep": {
+    "first": 2019,
+    "proj": "50HzT-P216",
+    "cod": 2031,
+    "note": "corridor rebuild brings the new bays."
+   }
+  },
+  {
+   "name": "Streumen (STR)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.355241,
+   "lon": 13.38503,
+   "kv": "380",
+   "bays": "1 free",
+   "year": null,
+   "feedin": [
+    200.0,
+    200.0
+   ],
+   "load": null,
+   "restriction": null,
+   "q": {
+    "bays_free": 1,
+    "req_gen": 618.0,
+    "req_load": 618.0,
+    "avail_gen": 200.0,
+    "avail_load": 200.0,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "Sachsen Netze"
+   },
+   "why": "Saxony node; 1 bay, 200 MW available.",
+   "nep": null
+  },
+  {
+   "name": "Thyrow (THY)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 52.23057,
+   "lon": 13.305368,
+   "kv": "380/220",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 250.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 500.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "E.DIS Netz"
+   },
+   "why": null,
+   "nep": {
+    "first": 2019,
+    "proj": "50HzT-P531",
+    "cod": null,
+    "note": null
+   }
+  },
+  {
+   "name": "Wolmirstedt (WOL)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 52.26787,
+   "lon": 11.639757,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 675.0,
+    "req_load": 675.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 750.0,
+    "res_load": 750.0,
+    "bkz_eur_per_kw": 40.0,
+    "dso": "Avacon Netz"
+   },
+   "why": null,
+   "nep": {
+    "first": 2019,
+    "proj": "50HzT-P124",
+    "cod": 2027,
+    "note": "plus SuedOstLink converter (BBP 5) 2028."
+   }
+  },
+  {
+   "name": "Altdöbern (ADB)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.64,
+   "lon": 14.0,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 1000.0,
+    "res_load": 1000.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "MITNETZ STROM"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Altenfeld (ATF)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 50.574011,
+   "lon": 10.990019,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "Thüringer Energienetze"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Altentreptow Süd (ATS)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 53.62405,
+   "lon": 13.174416,
+   "kv": "380",
+   "bays": "1 free",
+   "year": null,
+   "feedin": [
+    650.0,
+    650.0
+   ],
+   "load": null,
+   "restriction": null,
+   "q": {
+    "bays_free": 1,
+    "req_gen": 5193.0,
+    "req_load": 5193.0,
+    "avail_gen": 650.0,
+    "avail_load": 1300.0,
+    "res_gen": 850.0,
+    "res_load": 250.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "E.DIS Netz"
+   },
+   "why": "Mecklenburg wind belt: bays exist from RE build-out, but 5.2 GW requested vs 0.65 GW available — Germany's most oversubscribed node.",
+   "nep": {
+    "first": 2021,
+    "proj": "50HzT-P216",
+    "cod": 2031,
+    "note": null
+   }
+  },
+  {
+   "name": "Charlottenburg (CH)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 52.521994,
+   "lon": 13.315787,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 100.0,
+    "dso": "Stromnetz Berlin"
+   },
+   "why": null,
+   "nep": {
+    "first": 2019,
+    "proj": "50HzT-P180",
+    "cod": 2038,
+    "note": null
+   }
+  },
+  {
+   "name": "Crossen (CRO)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 50.752871,
+   "lon": 12.478012,
+   "kv": "220",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 300.0,
+    "req_load": 300.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "MITNETZ STROM"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Dresden/Süd (DRS)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 50.989497,
+   "lon": 13.841191,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "Sachsen Netze"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Eisenhüttenstadt (EH)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 52.174997,
+   "lon": 14.605066,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 902.0,
+    "req_load": 902.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "E.DIS Netz"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Eulenberg (EUB) Neubau",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 52.0714,
+   "lon": 11.547,
+   "kv": "380",
+   "bays": "4 free",
+   "year": null,
+   "feedin": [
+    1800.0,
+    1800.0
+   ],
+   "load": null,
+   "restriction": null,
+   "q": {
+    "bays_free": 4,
+    "req_gen": 1650.0,
+    "req_load": 2850.0,
+    "avail_gen": 1800.0,
+    "avail_load": 2000.0,
+    "res_gen": 200.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 100.0,
+    "dso": "Avacon Netz"
+   },
+   "why": "Brand-new 50Hertz substation near Magdeburg/A14, designed 400→1,600 MW — new bays, top BKZ (100 €/kW).",
+   "nep": {
+    "first": 2023,
+    "proj": null,
+    "cod": null,
+    "note": null
+   }
+  },
+  {
+   "name": "Förderstedt (FOE)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.908641,
+   "lon": 11.644526,
+   "kv": "380/110",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 309.0,
+    "req_load": 309.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 200.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 80.0,
+    "dso": "Avacon Netz"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Freiberg/Nord (FRN)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 50.930124,
+   "lon": 13.255827,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 800.0,
+    "res_load": 800.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "MITNETZ STROM"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Friedrichshain (FRH)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 52.521763,
+   "lon": 13.456045,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 100.0,
+    "dso": "Stromnetz Berlin"
+   },
+   "why": null,
+   "nep": {
+    "first": 2019,
+    "proj": "50HzT-P180",
+    "cod": 2038,
+    "note": null
+   }
+  },
+  {
+   "name": "Görries (GOES)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 53.600573,
+   "lon": 11.372619,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 1750.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 40.0,
+    "dso": "WEMAG Netz"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Gransee (GSE)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 52.994338,
+   "lon": 13.263318,
+   "kv": "380",
+   "bays": "1 free",
+   "year": null,
+   "feedin": [
+    1550.0,
+    1550.0
+   ],
+   "load": null,
+   "restriction": null,
+   "q": {
+    "bays_free": 1,
+    "req_gen": 1421.0,
+    "req_load": 1421.0,
+    "avail_gen": 1550.0,
+    "avail_load": 1550.0,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "E.DIS Netz"
+   },
+   "why": "Rural Brandenburg node recently extended for wind collection; 1.55 GW still available.",
+   "nep": null
+  },
+  {
+   "name": "Güstrow (GUES)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 53.81586,
+   "lon": 12.18675,
+   "kv": "380/110",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 1961.0,
+    "req_load": 1961.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 100.0,
+    "bkz_eur_per_kw": 40.0,
+    "dso": "WEMAG Netz"
+   },
+   "why": null,
+   "nep": {
+    "first": 2019,
+    "proj": "50HzT-P34",
+    "cod": 2028,
+    "note": null
+   }
+  },
+  {
+   "name": "Hamburg/Ost (OST)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 53.55514,
+   "lon": 10.156144,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 350.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 40.0,
+    "dso": "Stromnetz Hamburg"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Hamburg/Süd (SUE)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 53.488283,
+   "lon": 9.908323,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 200.0,
+    "res_load": 300.0,
+    "bkz_eur_per_kw": 40.0,
+    "dso": "Stromnetz Hamburg"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Heinersdorf (HND)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 52.444,
+   "lon": 14.133,
+   "kv": "380",
+   "bays": "1 free",
+   "year": null,
+   "feedin": [
+    500.0,
+    500.0
+   ],
+   "load": null,
+   "restriction": null,
+   "q": {
+    "bays_free": 1,
+    "req_gen": 824.0,
+    "req_load": 1324.0,
+    "avail_gen": 500.0,
+    "avail_load": 700.0,
+    "res_gen": 200.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "E.DIS Netz"
+   },
+   "why": "East-Brandenburg node; 1 bay, 0.5/0.7 GW available.",
+   "nep": null
+  },
+  {
+   "name": "Klostermansfeld (KLM)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.584422,
+   "lon": 11.515071,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 300.0,
+    "req_load": 300.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 1500.0,
+    "res_load": 1500.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "MITNETZ STROM"
+   },
+   "why": null,
+   "nep": {
+    "first": 2019,
+    "proj": "50HzT-P124",
+    "cod": 2027,
+    "note": null
+   }
+  },
+  {
+   "name": "Lubmin (LUB)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 54.138725,
+   "lon": 13.685154,
+   "kv": "380/220",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 400.0,
+    "req_load": 400.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 600.0,
+    "bkz_eur_per_kw": 40.0,
+    "dso": "E.DIS Netz"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Lüdershagen (LHG)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 54.285292,
+   "lon": 13.080248,
+   "kv": "220",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 40.0,
+    "dso": "E.DIS Netz"
+   },
+   "why": null,
+   "nep": {
+    "first": 2019,
+    "proj": "50HzT-P215",
+    "cod": 2029,
+    "note": null
+   }
+  },
+  {
+   "name": "Malchow (MOW)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 52.591067,
+   "lon": 13.493454,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 500.0,
+    "req_load": 500.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "Stromnetz Berlin"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Marzahn (MZA)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 52.535671,
+   "lon": 13.523465,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "Stromnetz Berlin"
+   },
+   "why": null,
+   "nep": {
+    "first": 2019,
+    "proj": "50HzT-P180",
+    "cod": 2038,
+    "note": null
+   }
+  },
+  {
+   "name": "Mitte (MIT)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 52.503414,
+   "lon": 13.368434,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 100.0,
+    "dso": "Stromnetz Berlin"
+   },
+   "why": null,
+   "nep": {
+    "first": 2019,
+    "proj": "50HzT-P180",
+    "cod": 2038,
+    "note": "380-kV Kabeldiagonale Berlin — city cable rebuild not done before 2038."
+   }
+  },
+  {
+   "name": "Niederwartha (NW)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.094238,
+   "lon": 13.610245,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "Sachsen Netze"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Niederwiesa (NWS)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 50.865244,
+   "lon": 13.002922,
+   "kv": "220",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 300.0,
+    "req_load": 300.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "MITNETZ STROM"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Perleberg (PE)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 53.086124,
+   "lon": 11.853087,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "WEMAG Netz"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Remptendorf (RE)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 50.533642,
+   "lon": 11.646517,
+   "kv": "380/220",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 250.0,
+    "req_load": 250.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "Thüringer Energienetze"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Reuter (REU)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 52.531339,
+   "lon": 13.249496,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 80.0,
+    "dso": "Stromnetz Berlin"
+   },
+   "why": null,
+   "nep": {
+    "first": 2019,
+    "proj": "50HzT-P180",
+    "cod": 2038,
+    "note": null
+   }
+  },
+  {
+   "name": "Röhrsdorf (ROE)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 50.858039,
+   "lon": 12.812184,
+   "kv": "380/220",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "MITNETZ STROM"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Schmölln (SM)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.121216,
+   "lon": 14.220813,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 800.0,
+    "req_load": 800.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "Sachsen Netze"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Stendal/West (STW)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 52.569049,
+   "lon": 11.727855,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 553.0,
+    "req_load": 553.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 40.0,
+    "dso": "Avacon Netz"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Taucha (TA)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.371606,
+   "lon": 12.471156,
+   "kv": "220",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "MITNETZ STROM"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Teufelsbruch (TB)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 52.580765,
+   "lon": 13.211599,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 80.0,
+    "dso": "Stromnetz Berlin"
+   },
+   "why": null,
+   "nep": {
+    "first": 2019,
+    "proj": "50HzT-P180",
+    "cod": 2038,
+    "note": null
+   }
+  },
+  {
+   "name": "Vierraden (VIE)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 53.096733,
+   "lon": 14.272083,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 2789.0,
+    "req_load": 2789.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "E.DIS Netz"
+   },
+   "why": null,
+   "nep": {
+    "first": 2019,
+    "proj": "50HzT-P128",
+    "cod": 2026,
+    "note": "3rd + 4th phase-shifter (PL border flow control)."
+   }
+  },
+  {
+   "name": "Vieselbach (VIB)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.000271,
+   "lon": 11.124052,
+   "kv": "380/220",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "Thüringer Energienetze"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Weida (WD)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 50.780501,
+   "lon": 12.045214,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "Thüringer Energienetze"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Wessin (WE)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 53.572483,
+   "lon": 11.699513,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 300.0,
+    "req_load": 300.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 40.0,
+    "dso": "WEMAG Netz"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Wolkramshausen (WK)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.440652,
+   "lon": 10.734483,
+   "kv": "380/220",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 300.0,
+    "req_load": 300.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 250.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "Thüringer Energienetze"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Wuhlheide (WUH)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 52.474259,
+   "lon": 13.505978,
+   "kv": "220",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 100.0,
+    "dso": "Stromnetz Berlin"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Wustermark (WU)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 52.560869,
+   "lon": 12.942115,
+   "kv": "380/220",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 300.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "E.DIS Netz"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Zwönitz (ZW)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 50.626583,
+   "lon": 12.788104,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "MITNETZ STROM"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Bärwalde (BAE)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 51.413354,
+   "lon": 14.50736,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 750.0,
+    "req_load": 750.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 60.0,
+    "dso": "MITNETZ STROM"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Eulenberg (EUB)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 52.0714,
+   "lon": 11.547,
+   "kv": "380",
+   "bays": "4 free",
+   "year": null,
+   "feedin": [
+    1800.0,
+    1800.0
+   ],
+   "load": null,
+   "restriction": null,
+   "q": {
+    "bays_free": 4,
+    "req_gen": 1650.0,
+    "req_load": 2850.0,
+    "avail_gen": 1800.0,
+    "avail_load": 2000.0,
+    "res_gen": 200.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 100.0,
+    "dso": "Avacon Netz"
+   },
+   "why": "Brand-new 50Hertz substation near Magdeburg/A14 (industrial build-out corridor), designed 400→1,600 MW — hence 1.8–2 GW still available but BKZ 100 €/kW.",
+   "nep": {
+    "first": 2023,
+    "proj": null,
+    "cod": null,
+    "note": null
+   }
+  },
+  {
+   "name": "Putlitz/Süd (PZS)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 53.250466,
+   "lon": 12.108906,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 2954.0,
+    "req_load": 2954.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 150.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 40.0,
+    "dso": "E.DIS Netz"
+   },
+   "why": null,
+   "nep": null
+  },
+  {
+   "name": "Berlin/Südost (BnS)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 52.3723,
+   "lon": 13.4402,
+   "kv": "380",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 0,
+    "req_load": 200.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 100.0,
+    "dso": "Stromnetz Berlin"
+   },
+   "why": null,
+   "nep": {
+    "first": 2021,
+    "proj": "50HzT-P531",
+    "cod": null,
+    "note": "Berlin build-out BBP 87: Thyrow–Großbeeren–Berlin/Südost."
+   }
+  },
+  {
+   "name": "Gnewitz (GNW)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 54.0807,
+   "lon": 12.4808,
+   "kv": "380/220",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 900.0,
+    "req_load": 900.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 40.0,
+    "dso": "E.DIS Netz"
+   },
+   "why": null,
+   "nep": {
+    "first": 2023,
+    "proj": "50HzT-P215",
+    "cod": 2029,
+    "note": "new 380-kV switchgear (Punktmaßnahme M748SA)."
+   }
+  },
+  {
+   "name": "Iven/West (IVW)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 53.7913,
+   "lon": 13.4005,
+   "kv": "380",
+   "bays": "1 free",
+   "year": null,
+   "feedin": [
+    250.0,
+    250.0
+   ],
+   "load": null,
+   "restriction": null,
+   "q": {
+    "bays_free": 1,
+    "req_gen": 1600.0,
+    "req_load": 1600.0,
+    "avail_gen": 250.0,
+    "avail_load": 1350.0,
+    "res_gen": 370.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 40.0,
+    "dso": "E.DIS Netz"
+   },
+   "why": "Mecklenburg node; 1 bay free, load headroom 1.35 GW.",
+   "nep": {
+    "first": 2025,
+    "proj": "50HzT-P216",
+    "cod": 2031,
+    "note": "Güstrow–Siedenbrünzow–Iven/West–Pasewalk rebuild; new 380-kV switchgear."
+   }
+  },
+  {
+   "name": "Stilow (STI)",
+   "tso": "50Hertz",
+   "city": null,
+   "lat": 54.0943,
+   "lon": 13.5838,
+   "kv": "380/220",
+   "bays": "0 free",
+   "year": null,
+   "feedin": null,
+   "load": null,
+   "restriction": "No free switch bay",
+   "q": {
+    "bays_free": 0,
+    "req_gen": 1543.0,
+    "req_load": 1543.0,
+    "avail_gen": null,
+    "avail_load": null,
+    "res_gen": 0.0,
+    "res_load": 0.0,
+    "bkz_eur_per_kw": 40.0,
+    "dso": "E.DIS Netz"
+   },
+   "why": null,
+   "nep": null
+  }
+ ],
+ "tng_unavailable": [
+  "Altlussheim",
+  "Beuren",
+  "Bruchsal",
+  "Bünzwangen",
+  "Dellmensingen",
+  "Endersbach",
+  "Goldshöfe",
+  "Großgartach",
+  "Grünkraut",
+  "Heidelberg-Süd",
+  "Heidelberg-Neurott",
+  "Herbertingen",
+  "Höpfingen",
+  "Hüffenhardt",
+  "Karlsruhe-Ost",
+  "Karlsruhe-West",
+  "Kupferzell",
+  "Kuppenheim",
+  "Laichingen",
+  "Marbach",
+  "Metzingen",
+  "Mühlhausen",
+  "Neckarwestheim",
+  "Niederstotzingen",
+  "Oberjettingen",
+  "Oberwald",
+  "Pulverdingen",
+  "Rheinau",
+  "Rotensohl",
+  "Schaltanlage Obermooweiler",
+  "Stalldorf",
+  "Stockach",
+  "Trossingen",
+  "Villingen",
+  "Weier",
+  "Weinheim",
+  "Wiesloch"
+ ],
+ "analysis_overview": [
+  {
+   "nep": "NEP 2019 / 2021",
+   "horizon": "2030/2035",
+   "text": "Grid planned around the coal phase-out and 65% renewables. Large batteries barely exist in the scenarios (low single-digit GW), and connection bays are sized for known projects only. None of today's queue was anticipated."
+  },
+  {
+   "nep": "NEP 2023",
+   "horizon": "2037/2045",
+   "text": "First climate-neutrality plan: ~70 GW offshore, four new HVDC corridors, and a wave of brand-new 380-kV substations — including the TenneT sites now offered for 2030–2036 (Ostküstenleitung, Cloppenburg wind belt, Wesermarsch). Their bays only arrive with the lines."
+  },
+  {
+   "nep": "NEP 2025",
+   "horizon": "2037/2045",
+   "text": "First plan that carries the storage wave (41–94 GW BESS by 2037) and data-centre load. But its new bays land 2030+, while 211 GW of BESS requests arrived 2023–2025 — the mismatch that forced the Reifegradverfahren."
+  },
+  {
+   "nep": "Pattern",
+   "horizon": "why these nodes",
+   "text": "Capacity exists where conventional plants died (Philippsburg nuclear, Mannheim/Altbach/Ruhr coal, Lusatia lignite — bays freed), where NEP new-builds land (TenneT 2030–36 sites, Eulenberg), and where load is grid-serving in wind-saturated areas (load-only offers at Göhl, Hochwöhrden, Clusorth, Meppen)."
+  },
+  {
+   "nep": "Finding",
+   "horizon": "two kinds of offers",
+   "text": "Machine-parsing all four NEP Projektsteckbriefe shows two offer classes. NEP-driven: the offer year equals a project COD (Großenmeer = TTG-P119 2031, Kühmoos = AMP-P204 2035, Rheinschiene nodes = TNG-P49 2030, Kiel Rönne = TTG-P71 2037, Flör = a new phase-shifter in BBPlG 63). Legacy: Clusorth, Kötz, Rieselfeld, Kork, Engslatt, Schwörstadt, Altbach and others appear in NO NEP — those offers ride on existing bays and assets, and are gone once taken."
+  }
+ ],
+ "analysis_compare": [
+  {
+   "title": "Philippsburg (offered) vs Karlsruhe-West/Ost (red)",
+   "text": "Philippsburg inherited a nuclear plant's oversized switchyard and gets the Ultranet converter (~2027) on top. The Karlsruhe nodes feed the city and the RDK site — their bays are consumed by DSO transformers and industry, and there is no room to extend inside the urban footprint."
+  },
+  {
+   "title": "Graustein, 5 free bays vs Röhrsdorf/Zwönitz, none",
+   "text": "Lignite-era switchyards were built oversized for power plants that are now gone — Graustein (Boxberg complex) keeps plant-scale bays. Ordinary regional supply nodes were sized to demand and have nothing spare."
+  },
+  {
+   "title": "Siedenbrünzow & Iven/West (bays free) vs Pasewalk (0)",
+   "text": "All three sit on the BBPlG-53 corridor. Siedenbrünzow and Iven/West are being rebuilt with new switchgear as part of the line project; at Pasewalk 1.1 GW is already reserved and the remaining bays are committed."
+  },
+  {
+   "title": "Altentreptow Süd (1 bay) vs Altentreptow Nord (0)",
+   "text": "Süd was extended during the wind build-out and kept a spare bay; Nord's diameter is fully occupied. Same town, opposite queue position — bays, not MW, decide."
+  },
+  {
+   "title": "TransnetBW green vs red",
+   "text": "The 9 green nodes sit on corridors the NEP is reinforcing anyway (Rheinschiene, Hochrhein) or on retired-plant sites (Philippsburg, Mannheim, Altbach) with physical room for new bays. The 37 red ones are mostly urban/DSO supply nodes — every bay feeds a 110-kV transformer already."
+  },
+  {
+   "title": "Load-only offers (Göhl, Hochwöhrden, Meppen, Clusorth)",
+   "text": "In wind-saturated coastal areas new feed-in would deepen congestion, but new load absorbs surplus and cuts redispatch — so the TSO offers the bay, but only for consumers."
+  }
+ ],
+ "candidates": [
+  {
+   "name": "Sommerland",
+   "tso": "TenneT",
+   "lat": 53.752,
+   "lon": 9.545,
+   "cod": 2031,
+   "tier": 1,
+   "driver": "New UW in Gemeinde Sommerland (Kreis Steinburg), looped into both 380-kV circuits — upsized from 2 to 4 380/110-kV transformers between NEP 2023 and NEP 2025 (TTG-P24/P26 Unterelbe corridor)",
+   "effect": "A doubling between drafts is the plan reacting to demand: prime vertical load-injection node between Hamburg and the west coast."
+  },
+  {
+   "name": "Leingarten (Großgartach)",
+   "tso": "TransnetBW",
+   "lat": 49.143,
+   "lon": 9.113,
+   "cod": 2028,
+   "tier": 1,
+   "driver": "SuedLink southern converter (BBPlG 3), COD 2028",
+   "effect": "Highest-confidence red→green flip: Großgartach is 'nicht verfügbar' today only because the converter is being built. 2 GW DC lands here in 2028."
+  },
+  {
+   "name": "Bommersheim",
+   "tso": "TenneT",
+   "lat": 50.193,
+   "lon": 8.577,
+   "cod": 2032,
+   "tier": 1,
+   "driver": "TTG-P486 Großkrotzenburg/West – Frankfurt/Nord – Suchraum Bommersheim, COD 2032",
+   "effect": "New node in the Frankfurt data-centre belt — will be the most oversubscribed offer of cycle 2 the moment it appears. Load-only."
+  },
+  {
+   "name": "Frankfurt/Nord",
+   "tso": "TenneT",
+   "lat": 50.163,
+   "lon": 8.685,
+   "cod": 2032,
+   "tier": 1,
+   "driver": "Same TTG-P486 build-out, plus AMP-P161 (southeast of Frankfurt, COD 2030) and P47 Frankfurt–Karlsruhe (2031)",
+   "effect": "Three projects converge on Rhine-Main 2030–32; structural answer to the region's load queue."
+  },
+  {
+   "name": "Rheinau (Mannheim)",
+   "tso": "TransnetBW",
+   "lat": 49.422,
+   "lon": 8.54,
+   "cod": 2031,
+   "tier": 1,
+   "driver": "AMP-P309 Biblis–Bürstadt–Rheinau–Hoheneck (ad-hoc), COD 2031",
+   "effect": "Red today; the corridor rebuild through it is the classic Iven/West pattern — expect a flip with the 2031 COD."
+  },
+  {
+   "name": "Karlsruhe-West",
+   "tso": "TransnetBW",
+   "lat": 49.017,
+   "lon": 8.32,
+   "cod": 2030,
+   "tier": 1,
+   "driver": "TNG-P49 Rheinschiene (COD 2030) + P47 Frankfurt–Karlsruhe (2031) pass directly by",
+   "effect": "Red today (urban bays consumed); at least one Karlsruhe-area node should open when the corridors energise. Uncertain which."
+  },
+  {
+   "name": "Güstrow (completion)",
+   "tso": "50Hertz",
+   "lat": 53.777,
+   "lon": 12.218,
+   "cod": 2031,
+   "tier": 1,
+   "driver": "Hub of three corridor rebuilds: P34 Güstrow–Wolmirstedt (2028), P215 Güstrow–Bentwisch–Gnewitz (2029), P216 Güstrow–Pasewalk (2031)",
+   "effect": "2 GW requested today against nothing free; the triple rebuild is what changes that — the Iven/West pattern at three lines at once."
+  },
+  {
+   "name": "Rostock ring (Bentwisch · Gnewitz · Lüdershagen)",
+   "tso": "50Hertz",
+   "lat": 54.1,
+   "lon": 12.25,
+   "cod": 2029,
+   "tier": 1,
+   "driver": "50HzT-P215 (BBPlG 52), COD 2029; Gnewitz already has a new 380-kV switchyard in the Punktmaßnahmen registry",
+   "effect": "New bays along the rebuilt Rostock ring from 2029 — earliest corridor completion in the northeast."
+  },
+  {
+   "name": "Mitte/Reinickendorf (Berlin)",
+   "tso": "50Hertz",
+   "lat": 52.57,
+   "lon": 13.35,
+   "cod": 2029,
+   "tier": 1,
+   "driver": "50HzT-P531 Berlin build-out (BBPlG 87), first sections ~2029",
+   "effect": "With the Kabeldiagonale not done before 2038, this and Großbeeren are Berlin's only plausible openings before the mid-2030s."
+  },
+  {
+   "name": "Unterelbe (Büttel/Süd · Wilster/West · Stade/West)",
+   "tso": "TenneT",
+   "lat": 53.87,
+   "lon": 9.4,
+   "cod": 2031,
+   "tier": 1,
+   "driver": "TTG-P25/P26 NordElbe (BBPlG 50) + Stade/West new-build under TTG-P24, COD ~2031",
+   "effect": "Industrial Unterelbe cluster (Brunsbüttel–Stade chemistry, LNG, H2): new switchgear at three nodes."
+  },
+  {
+   "name": "Pöschendorf",
+   "tso": "TenneT",
+   "lat": 54.03,
+   "lon": 9.48,
+   "cod": 2031,
+   "tier": 1,
+   "driver": "37 mentions in NEP 2025 (new SH corridor node, Kreis Steinburg)",
+   "effect": "The biggest unoffered new node in Schleswig-Holstein; wind-saturated region → expect load-only."
+  },
+  {
+   "name": "Stegau / Albersdorf",
+   "tso": "TenneT",
+   "lat": 54.13,
+   "lon": 9.3,
+   "cod": 2032,
+   "tier": 1,
+   "driver": "TTG-P476 Netzausbau Hochwöhrden–Stegau, COD 2032; new switchgear at both (Punktmaßnahmen)",
+   "effect": "Extends the Westküste/Heide H2 logic east — sister offers to Hochwöhrden, load-only."
+  },
+  {
+   "name": "Melbeck",
+   "tso": "TenneT",
+   "lat": 53.18,
+   "lon": 10.4,
+   "cod": 2032,
+   "tier": 1,
+   "driver": "Ostniedersachsenleitung (TTG-P113), COD 2032; new 380-kV switchgear (Punktmaßnahme M777SA1)",
+   "effect": "New node south of Lüneburg on the SH–Niedersachsen axis."
+  },
+  {
+   "name": "Pirach",
+   "tso": "TenneT",
+   "lat": 48.2,
+   "lon": 12.75,
+   "cod": 2030,
+   "tier": 1,
+   "driver": "TTG-P112 Pirach–Pleinting–St. Peter, COD 2030; 3×380/110-kV transformers planned",
+   "effect": "Bavarian chemical triangle (Burghausen) load node — pairs with the already-offered Pleinting."
+  },
+  {
+   "name": "Oberbachern – Ottenhofen",
+   "tso": "TenneT",
+   "lat": 48.28,
+   "lon": 11.35,
+   "cod": 2030,
+   "tier": 1,
+   "driver": "TTG-P222 reinforcement north of Munich, COD 2030",
+   "effect": "Munich-region load has nowhere else to connect; watch both endpoints."
+  },
+  {
+   "name": "Osterath",
+   "tso": "Amprion",
+   "lat": 51.268,
+   "lon": 6.618,
+   "cod": 2027,
+   "tier": 1,
+   "driver": "A-Nord + Ultranet DC hub (BBPlG 1/2)",
+   "effect": "4 GW of HVDC lands here; converter build-out adds bays at the Rhineland's strongest node — watch for load offers after COD."
+  },
+  {
+   "name": "Emden Ost",
+   "tso": "TenneT",
+   "lat": 53.359,
+   "lon": 7.238,
+   "cod": 2027,
+   "tier": 1,
+   "driver": "A-Nord northern converter (BBPlG 1)",
+   "effect": "Wind-saturated coast: expect load-only offers (electrolysis) once the DC line exports the surplus."
+  },
+  {
+   "name": "Brunsbüttel",
+   "tso": "TenneT",
+   "lat": 53.9,
+   "lon": 9.12,
+   "cod": 2028,
+   "tier": 1,
+   "driver": "SuedLink northern converter at the ex-nuclear site (BBPlG 3/4)",
+   "effect": "Converter + freed plant bays + industrial site: strong candidate for large load in Schleswig-Holstein."
+  },
+  {
+   "name": "Bergrheinfeld West",
+   "tso": "TenneT",
+   "lat": 50.005,
+   "lon": 10.17,
+   "cod": 2028,
+   "tier": 1,
+   "driver": "SuedLink Bavarian converter (BBPlG 4)",
+   "effect": "2 GW DC into Franconia; candidate for load/BESS offers around Schweinfurt after COD."
+  },
+  {
+   "name": "Wolmirstedt",
+   "tso": "50Hertz",
+   "lat": 52.25,
+   "lon": 11.63,
+   "cod": 2028,
+   "tier": 1,
+   "driver": "SuedOstLink converter (BBPlG 5) + P124 corridor COD 2027",
+   "effect": "Published today with 0 free bays (750 MW reserved); the converter build-out adds switchgear — expect new offers after 2028."
+  },
+  {
+   "name": "Isar",
+   "tso": "TenneT",
+   "lat": 48.606,
+   "lon": 12.293,
+   "cod": 2028,
+   "tier": 1,
+   "driver": "SuedOstLink southern converter at the ex-nuclear site (BBPlG 5)",
+   "effect": "2 GW DC + freed nuclear bays: prime candidate for Bavarian load/BESS."
+  },
+  {
+   "name": "Querfurt",
+   "tso": "50Hertz",
+   "lat": 51.383,
+   "lon": 11.598,
+   "cod": 2027,
+   "tier": 1,
+   "driver": "New 380-kV switchgear on the Wolmirstedt–Lauchstädt axis (50HzT-P124, COD 2027; Punktmaßnahmen registry)",
+   "effect": "Brand-new node in the central-German chemical-triangle load region — one of the earliest new bays anywhere."
+  },
+  {
+   "name": "Großbeeren",
+   "tso": "50Hertz",
+   "lat": 52.36,
+   "lon": 13.3,
+   "cod": 2032,
+   "tier": 1,
+   "driver": "Berlin build-out 50HzT-P531 (BBPlG 87): Thyrow–Großbeeren–Berlin/Südost + new switchgear/transformers",
+   "effect": "South-Berlin logistics/data-centre belt gets its own 380-kV injection; NEP mentions jumped 2→21 between 2023 and 2025."
+  },
+  {
+   "name": "Suchraum Dresden-Nord",
+   "tso": "50Hertz",
+   "lat": 51.15,
+   "lon": 13.72,
+   "cod": 2032,
+   "tier": 1,
+   "driver": "New 380-kV switchgear + 3×380/110-kV transformers, Suchraum Moritzburg/Radeburg/Ottendorf-Okrilla (50HzT-P364, first NEP 2023)",
+   "effect": "Purpose-built vertical injection for the Dresden-North / Silicon-Saxony chip belt — a future large-load connection point."
+  },
+  {
+   "name": "Werderland / Bötersen",
+   "tso": "TenneT",
+   "lat": 53.15,
+   "lon": 8.7,
+   "cod": 2031,
+   "tier": 1,
+   "driver": "TTG-P119 (BBPlG 56) Conneforde–Elsfleth/West–Bötersen: two new 380-kV switchgear sites",
+   "effect": "Brand-new Bremen-region nodes on the same 2031 line that makes the Großenmeer offer possible."
+  },
+  {
+   "name": "Sengwarden",
+   "tso": "TenneT",
+   "lat": 53.6,
+   "lon": 8.05,
+   "cod": 2027,
+   "tier": 1,
+   "driver": "TTG-P175 (BBPlG 73) Wilhelmshaven–Conneforde, new switchgear",
+   "effect": "Wilhelmshaven energy-hub sister node to the offered Sande — COD already 2027."
+  },
+  {
+   "name": "Güstrow–Pasewalk corridor",
+   "tso": "50Hertz",
+   "lat": 53.68,
+   "lon": 13.1,
+   "cod": 2031,
+   "tier": 1,
+   "driver": "50HzT-P216 (BBPlG 53) Güstrow–Siedenbrünzow–Iven/West–Pasewalk, COD 2031",
+   "effect": "More bays and rising available MW at Pasewalk/Nord and Pasewalk as the rebuild that created the Iven/West offer completes."
+  },
+  {
+   "name": "Ulzburg",
+   "tso": "TenneT",
+   "lat": 53.79,
+   "lon": 9.97,
+   "cod": 2030,
+   "tier": 1,
+   "driver": "Ostküstenleitung start point (BBPlG 42)",
+   "effect": "New/extended UW on the new line; candidate alongside the already-offered Göhl West."
+  },
+  {
+   "name": "Lübeck West",
+   "tso": "TenneT",
+   "lat": 53.88,
+   "lon": 10.6,
+   "cod": 2030,
+   "tier": 1,
+   "driver": "Ostküstenleitung new substation (BBPlG 42)",
+   "effect": "Brand-new UW near Lübeck; likely future connection point once the line energises (~2030/31)."
+  },
+  {
+   "name": "Schwandorf",
+   "tso": "TenneT",
+   "lat": 49.325,
+   "lon": 12.11,
+   "cod": 2030,
+   "tier": 1,
+   "driver": "Ostbayernring (BBPlG 18) + NEW NEP-2025 Zubau project P472 Schwandorf–Regensburg / Schwandorf–Wenzenbach",
+   "effect": "Doubling the ring plus a brand-new 2025 line towards Regensburg; the 2036 Wenzenbach offer hangs on exactly this."
+  },
+  {
+   "name": "Bürstadt",
+   "tso": "Amprion",
+   "lat": 49.643,
+   "lon": 8.459,
+   "cod": 2033,
+   "tier": 2,
+   "driver": "Rhein-Main-Link converters (BBPlG 82) + AMP-P159 Bürstadt–BASF (2029) + AMP-P310 Bürstadt–Kühmoos (2033)",
+   "effect": "Up to 8 GW DC into the Rhine-Main data-centre belt (~2033/34); the structural answer to Frankfurt's load queue."
+  },
+  {
+   "name": "Emden/West",
+   "tso": "TenneT",
+   "lat": 53.36,
+   "lon": 7.15,
+   "cod": 2034,
+   "tier": 2,
+   "driver": "New UW Suchraum Emden/West (NEP 2025), COD ~2034",
+   "effect": "Second Emden node once A-Nord exports are running; load-only (electrolysis) logic."
+  },
+  {
+   "name": "Southern BW flips (Herbertingen · Grünkraut · Dellmensingen)",
+   "tso": "TransnetBW",
+   "lat": 48.06,
+   "lon": 9.45,
+   "cod": 2035,
+   "tier": 2,
+   "driver": "AMP-P52/TNG-P52 Netzverstärkung südliches Baden-Württemberg, COD 2035 — runs through all three red nodes",
+   "effect": "The 2035 corridor is the plausible un-redding of Oberschwaben; same pattern as the Rheinschiene nodes in cycle 1."
+  },
+  {
+   "name": "Kupferzell / Hüffenhardt",
+   "tso": "TransnetBW",
+   "lat": 49.28,
+   "lon": 9.69,
+   "cod": 2033,
+   "tier": 2,
+   "driver": "P48 Grafenrheinfeld–Kupferzell done 2026; TNG-P430 rotating condensers with 1.25-GWs storage by 2027 (system strength)",
+   "effect": "Red today, but system-strength hardware arriving is the Streumen pattern — offers often follow the stiffened grid."
+  },
+  {
+   "name": "Hanekenfähr–Gronau corridor",
+   "tso": "Amprion",
+   "lat": 52.35,
+   "lon": 7.25,
+   "cod": 2034,
+   "tier": 2,
+   "driver": "AMP-P315 (BBPlG 63), COD 2034 — the project that already produced the Flör offer (phase-shifter)",
+   "effect": "Emsland–Münsterland axis: more nodes along the new line as sections complete."
+  },
+  {
+   "name": "Raitersaich (Juraleitung)",
+   "tso": "TenneT",
+   "lat": 49.36,
+   "lon": 10.79,
+   "cod": 2035,
+   "tier": 2,
+   "driver": "Juraleitung rebuild (BBPlG 41 / TTG-P53, construction from 2031) with NEW substations Raitersaich/West, Ludersheim/West, Sittling, Rottenburg (Punktmaßnahmen registry)",
+   "effect": "Middle-Franconia corridor renewal creates four new switchgear sites in the second half of the 2030s."
+  }
+ ],
+ "tso_projects": [
+  {
+   "name": "UW Suchraum Blankenfelde/Mahlow/Großbeeren",
+   "tso": "50Hertz",
+   "lat": 52.3446,
+   "lon": 13.2655,
+   "cod": 2030,
+   "status": "Genehmigung (§21 NABEG Mitte 2026)",
+   "basis": "website explicit (IBN 2030)",
+   "kind": "new",
+   "type": "Umspannwerk",
+   "url": "https://www.50hertz.com/de/Netz/Netzausbau/ProjekteanLand/NetzverstaerkungTeltow-Flaeming"
+  },
+  {
+   "name": "Suchraum UW Altwilschdorf",
+   "tso": "50Hertz",
+   "lat": 51.13,
+   "lon": 13.7,
+   "cod": 2030,
+   "status": "Planung",
+   "basis": "website explicit",
+   "kind": "new",
+   "type": "Umspannwerk",
+   "url": "https://www.50hertz.com/de/Netz/Netzausbau/ProjekteanLand/Elbe-OberlausitzLeitung/"
+  },
+  {
+   "name": "Anlage Ostwestfalen",
+   "tso": "Amprion",
+   "lat": null,
+   "lon": null,
+   "cod": 2030,
+   "status": "Genehmigung",
+   "basis": "website explicit (IBN 2030)",
+   "kind": "nep-confirmed",
+   "type": "Umspannanlage",
+   "url": "https://www.amprion.net/Netzausbau/Unsere-Projekte/Anlage-Ostwestfalen/"
+  },
+  {
+   "name": "Umspannanlage Dülken",
+   "tso": "Amprion",
+   "lat": 51.2414,
+   "lon": 6.3293,
+   "cod": 2030,
+   "status": "Bau",
+   "basis": "website explicit (Baustart 2026, IBN 2030)",
+   "kind": "new",
+   "type": "Umspannanlage",
+   "url": "https://www.amprion.net/Netzausbau/Unsere-Projekte/Umspannanlage-Duelken/"
+  },
+  {
+   "name": "Umspannanlage Esch",
+   "tso": "Amprion",
+   "lat": 51.025,
+   "lon": 6.875,
+   "cod": 2030,
+   "status": "Genehmigung",
+   "basis": "website explicit (IBN 2030)",
+   "kind": "new",
+   "type": "Umspannanlage",
+   "url": "https://www.amprion.net/Netzausbau/Unsere-Projekte/Umspannanlage-Esch/"
+  },
+  {
+   "name": "UW Emmerthal",
+   "tso": "TenneT",
+   "lat": 52.0233,
+   "lon": 9.3831,
+   "cod": 2030,
+   "status": "Planung",
+   "basis": "website explicit (Baubeginn 2027, IBN 2030)",
+   "kind": "nep-confirmed",
+   "type": "Umspannwerk",
+   "url": "https://www.tennet.eu/de/projekte/umspannwerk-emmerthal"
+  },
+  {
+   "name": "UW Beetzsee/Nord",
+   "tso": "50Hertz",
+   "lat": 52.4851,
+   "lon": 12.5466,
+   "cod": 2031,
+   "status": "Genehmigung (Antrag Mitte 2027, Bau ab 2029)",
+   "basis": "estimated (Bau ab 2029; NEP: 2031)",
+   "kind": "nep-confirmed",
+   "type": "Umspannwerk",
+   "url": "https://www.50hertz.com/de/Netz/Netzausbau/ProjekteanLand/UmspannwerkBeetzseeNord"
+  },
+  {
+   "name": "Konverter Ostwind 4 (an Land)",
+   "tso": "50Hertz",
+   "lat": 54.1541,
+   "lon": 13.6588,
+   "cod": 2031,
+   "status": "Planung",
+   "basis": "website explicit (Fertigstellung 31.05.2031 §17d EnWG)",
+   "kind": "new",
+   "type": "Konverter",
+   "url": "https://www.50hertz.com/de/Netz/Netzausbau/ProjekteaufSee/Ostwind4"
+  },
+  {
+   "name": "Umspannanlage Eschborn",
+   "tso": "Amprion",
+   "lat": 50.1675,
+   "lon": 8.5406,
+   "cod": 2031,
+   "status": "Konzeption",
+   "basis": "website explicit (IBN 2031)",
+   "kind": "new",
+   "type": "Umspannanlage",
+   "url": "https://www.amprion.net/Netzausbau/Unsere-Projekte/Umspannanlage-Eschborn/"
+  },
+  {
+   "name": "Umspannanlage Wengerohr",
+   "tso": "Amprion",
+   "lat": 49.9736,
+   "lon": 6.9099,
+   "cod": 2031,
+   "status": "Bau",
+   "basis": "website explicit (IBN 2031)",
+   "kind": "new",
+   "type": "Umspannanlage",
+   "url": "https://www.amprion.net/Netzausbau/Unsere-Projekte/Umspannanlage-Wengerohr/"
+  },
+  {
+   "name": "UW Zolling (Neubau)",
+   "tso": "TenneT",
+   "lat": 48.4563,
+   "lon": 11.7986,
+   "cod": 2031,
+   "status": "Planung (Genehmigung Ende 2026 - ca. 2028)",
+   "basis": "estimated (Genehmigung bis ca. 2028, danach Bau)",
+   "kind": "new",
+   "type": "Umspannwerk",
+   "url": "https://www.tennet.eu/de/projekte/umspannwerk-zolling"
+  },
+  {
+   "name": "UW Oberjettingen (Erneuerung/Erweiterung)",
+   "tso": "TransnetBW",
+   "lat": 48.5854,
+   "lon": 8.7861,
+   "cod": 2031,
+   "status": "Bau",
+   "basis": "website explicit (Abschluss aller Arbeiten 2031)",
+   "kind": "new",
+   "type": "Umspannwerk",
+   "url": "https://www.transnetbw.de/de/netzentwicklung/projekte/umspannwerk-oberjettingen"
+  },
+  {
+   "name": "Suchraum UW Großenhain/Nord",
+   "tso": "50Hertz",
+   "lat": 51.3218,
+   "lon": 13.4254,
+   "cod": 2032,
+   "status": "Planung",
+   "basis": "website explicit",
+   "kind": "new",
+   "type": "Umspannwerk",
+   "url": "https://www.50hertz.com/de/Netz/Netzausbau/ProjekteanLand/Elbe-OberlausitzLeitung/"
+  },
+  {
+   "name": "UW Ahlten (Ersatzneubau für UW Lehrte)",
+   "tso": "TenneT",
+   "lat": 52.3817,
+   "lon": 9.9175,
+   "cod": 2032,
+   "status": "Bau (Baustart Q2/2026)",
+   "basis": "website explicit (IBN vsl. 2032)",
+   "kind": "nep-confirmed",
+   "type": "Umspannwerk",
+   "url": "https://www.tennet.eu/de/projekte/umspannwerke-lehrte-und-ahlten"
+  },
+  {
+   "name": "UW Stalldorf (Ertüchtigung)",
+   "tso": "TransnetBW",
+   "lat": 49.5783,
+   "lon": 9.9445,
+   "cod": 2032,
+   "status": "Genehmigung",
+   "basis": "website explicit (Umsetzung Baumaßnahmen 2026-2032)",
+   "kind": "new",
+   "type": "Umspannwerk",
+   "url": "https://www.transnetbw.de/de/netzentwicklung/projekte/umspannwerk-stalldorf"
+  },
+  {
+   "name": "UW Neckarwestheim (Umbau)",
+   "tso": "TransnetBW",
+   "lat": 49.0378,
+   "lon": 9.1775,
+   "cod": 2032,
+   "status": "Planung",
+   "basis": "website ~2032",
+   "kind": "new",
+   "type": "Umspannwerk",
+   "url": "https://www.transnetbw.de/de/netzentwicklung/projekte/umbau-umspannwerk-neckarwestheim"
+  },
+  {
+   "name": "UW Mühlenbeck (Erweiterung)",
+   "tso": "50Hertz",
+   "lat": 52.663,
+   "lon": 13.387,
+   "cod": 2033,
+   "status": "frühe Planung",
+   "basis": "estimated (Genehmigung 1. Abschnitt ab 2028; NEP 2037/45)",
+   "kind": "new",
+   "type": "Umspannwerk",
+   "url": "https://www.50hertz.com/de/Netz/Netzausbau/ProjekteanLand/NetzverstaerkungGuestrow-Sahms/"
+  },
+  {
+   "name": "UW Energiedreieck Mitteldeutschland (2 Standorte)",
+   "tso": "50Hertz",
+   "lat": 51.15,
+   "lon": 12.25,
+   "cod": 2033,
+   "status": "Planung",
+   "basis": "website explicit (2033)",
+   "kind": "new",
+   "type": "Umspannwerk",
+   "url": "https://www.50hertz.com/de/Netz/Netzausbau/ProjekteanLand/EnergiedreieckMitteldeutschland"
+  },
+  {
+   "name": "UW Markt Bibart Ost",
+   "tso": "TenneT",
+   "lat": 49.6982,
+   "lon": 10.1816,
+   "cod": 2034,
+   "status": "Planung (Genehmigung ab ca. 2029)",
+   "basis": "website explicit (IBN ab ca. 2034)",
+   "kind": "nep-confirmed",
+   "type": "Umspannwerk",
+   "url": "https://www.tennet.eu/de/projekte/umspannwerk-markt-bibart-ost"
+  },
+  {
+   "name": "Netzknoten Kühmoos (Ausbaustufe B)",
+   "tso": "Amprion",
+   "lat": 47.5955,
+   "lon": 7.9581,
+   "cod": 2035,
+   "status": "Bau",
+   "basis": "website explicit (IBN 2035)",
+   "kind": "new",
+   "type": "Schaltanlage",
+   "url": "https://www.amprion.net/Netzausbau/Unsere-Projekte/Netzknoten-K%C3%BChmoos/"
+  },
+  {
+   "name": "Umspannanlage BASF",
+   "tso": "Amprion",
+   "lat": 49.5065,
+   "lon": 8.4245,
+   "cod": 2035,
+   "status": "Bau",
+   "basis": "website explicit (Baustart 2025, IBN 2035)",
+   "kind": "new",
+   "type": "Umspannanlage",
+   "url": "https://www.amprion.net/Netzausbau/Unsere-Projekte/Umspannanlage-BASF/"
+  },
+  {
+   "name": "Umspannanlage Utfort",
+   "tso": "Amprion",
+   "lat": 51.4736,
+   "lon": 6.6139,
+   "cod": 2035,
+   "status": "Bau",
+   "basis": "website explicit (Baustart 2025, IBN 2035)",
+   "kind": "new",
+   "type": "Umspannanlage",
+   "url": "https://www.amprion.net/Netzausbau/Unsere-Projekte/Umspannanlage-Utfort/"
+  },
+  {
+   "name": "UW Borken (Neubau)",
+   "tso": "TenneT",
+   "lat": 51.0586,
+   "lon": 9.2578,
+   "cod": 2035,
+   "status": "Planung (Standortsuche)",
+   "basis": "website (IBN Mitte der 2030er)",
+   "kind": "new",
+   "type": "Umspannwerk",
+   "url": "https://www.tennet.eu/de/projekte/umspannwerk-borken"
+  },
+  {
+   "name": "UW Pulverdingen (Gesamtprojekt)",
+   "tso": "TransnetBW",
+   "lat": 48.903,
+   "lon": 9.0454,
+   "cod": 2035,
+   "status": "Bau",
+   "basis": "website explicit (IBN Gesamtprojekt 2035; Neubau Bestandsanlage ab 2027)",
+   "kind": "nep-confirmed",
+   "type": "Umspannwerk",
+   "url": "https://www.transnetbw.de/de/netzentwicklung/projekte/umspannwerk-pulverdingen"
+  },
+  {
+   "name": "Netzknoten Kühmoos (Ausbaustufe A)",
+   "tso": "TransnetBW",
+   "lat": 47.5955,
+   "lon": 7.9581,
+   "cod": 2035,
+   "status": "Bau",
+   "basis": "website (IBN Mitte der 2030er)",
+   "kind": "new",
+   "type": "Schaltanlage",
+   "url": "https://www.transnetbw.de/de/netzentwicklung/projekte/netzknoten-kuehmoos"
+  },
+  {
+   "name": "Konverter OstWestLink (DC40, 2 Standorte)",
+   "tso": "50Hertz",
+   "lat": 51.335,
+   "lon": 13.425,
+   "cod": 2037,
+   "status": "frühe Planung",
+   "basis": "NEP 2037/45 (website nennt kein Jahr)",
+   "kind": "new",
+   "type": "Konverter",
+   "url": "https://www.50hertz.com/de/Netz/Netzausbau/ProjekteanLand/OstWestLink"
+  },
+  {
+   "name": "Konverter SuedWestLink (DC42, 2 Standorte)",
+   "tso": "50Hertz",
+   "lat": 53.615,
+   "lon": 10.685,
+   "cod": 2037,
+   "status": "frühe Planung",
+   "basis": "NEP 2037/45 (website nennt kein Jahr)",
+   "kind": "new",
+   "type": "Konverter",
+   "url": "https://www.50hertz.com/de/Netz/Netzausbau/ProjekteanLand/SuedWestLink"
+  },
+  {
+   "name": "UW Kyritz (MEL)",
+   "tso": "50Hertz",
+   "lat": 52.9491,
+   "lon": 12.4024,
+   "cod": 2037,
+   "status": "frühe Planung",
+   "basis": "website explicit (abschnittsweise 2037-2045)",
+   "kind": "new",
+   "type": "Umspannwerk",
+   "url": "https://www.50hertz.com/de/MEL/"
+  },
+  {
+   "name": "UW Jerichow (MEL)",
+   "tso": "50Hertz",
+   "lat": 52.4515,
+   "lon": 12.2519,
+   "cod": 2037,
+   "status": "frühe Planung",
+   "basis": "website explicit (abschnittsweise 2037-2045)",
+   "kind": "nep-confirmed",
+   "type": "Umspannwerk",
+   "url": "https://www.50hertz.com/de/MEL/"
+  },
+  {
+   "name": "UW Grabowhöfe (MEL)",
+   "tso": "50Hertz",
+   "lat": 53.5891,
+   "lon": 12.6187,
+   "cod": 2037,
+   "status": "frühe Planung",
+   "basis": "website explicit (abschnittsweise 2037-2045)",
+   "kind": "nep-confirmed",
+   "type": "Umspannwerk",
+   "url": "https://www.50hertz.com/de/MEL/"
+  },
+  {
+   "name": "UW Zerbst/Anhalt (MEL)",
+   "tso": "50Hertz",
+   "lat": 51.9452,
+   "lon": 12.0894,
+   "cod": 2037,
+   "status": "frühe Planung",
+   "basis": "website explicit (abschnittsweise 2037-2045)",
+   "kind": "nep-confirmed",
+   "type": "Umspannwerk",
+   "url": "https://www.50hertz.com/de/MEL/"
+  },
+  {
+   "name": "UW Eger-Elster-Leitung (Suchraum Marktleuthen/Kirchenlamitz)",
+   "tso": "50Hertz",
+   "lat": 50.13,
+   "lon": 11.98,
+   "cod": 2037,
+   "status": "frühe Planung",
+   "basis": "website explicit (IBN abschnittsweise, für 2037 vorgesehen)",
+   "kind": "new",
+   "type": "Umspannwerk",
+   "url": "https://www.50hertz.com/de/Netz/Netzausbau/ProjekteanLand/Eger-Elster-Leitung/"
+  },
+  {
+   "name": "UW Raum Nordfriesland Mitte",
+   "tso": "TenneT",
+   "lat": 54.6,
+   "lon": 8.98,
+   "cod": 2037,
+   "status": "frühe Planung",
+   "basis": "website (NEP: IBN im Zeitraum bis 2037)",
+   "kind": "new",
+   "type": "Umspannwerk",
+   "url": "https://www.tennet.eu/de/projekte/umspannwerk-raum-nordfriesland-mitte"
+  },
+  {
+   "name": "UW Suchraum Gambach",
+   "tso": "TenneT",
+   "lat": null,
+   "lon": null,
+   "cod": 2037,
+   "status": "Planung",
+   "basis": "estimated (NEP 2037/45; website nennt kein Jahr)",
+   "kind": "nep-confirmed",
+   "type": "Umspannwerk",
+   "url": "https://www.tennet.eu/de/projekte/umspannwerk-suchraum-gambach"
+  },
+  {
+   "name": "UW Netze_West (Phasenschieber)",
+   "tso": "TenneT",
+   "lat": null,
+   "lon": null,
+   "cod": 2037,
+   "status": "Planung",
+   "basis": "estimated (NEP Zielnetz 2037/2045; website nennt kein Jahr)",
+   "kind": "new",
+   "type": "Umspannwerk",
+   "url": "https://www.tennet.eu/de/projekte/umspannwerk-netzewest"
+  }
+ ],
+ "analysis_method": "All four NEP Projektsteckbriefe (2019, 2021, 2023, 2025 — 2,683 pages) and the NEP-2025 Punktmaßnahmen registry were machine-parsed (data/grid_reform/raw/nep/); per-node NEP trails (first appearance, project, COD) come from that index, cross-checked with BBPlG (netzausbau.de) and TSO project pages. Interpretations, not TSO statements.",
+ "capacity_semantics": {
+  "requested": "angefragt — pending applications in the queue; NOT yet granted. Measured against what is still available, not against the site maximum.",
+  "reserved": "vergeben/reserviert — connection capacity already contractually committed, mostly granted first-come-first-served before the reform. It is gone.",
+  "available": "verfügbar — what the TSO estimates it can still offer AFTER subtracting reservations (and its own needs) from the technical site limit. So: site maximum ≈ reserved + available.",
+  "oversubscription": "requested ÷ available. Example Altentreptow Süd: 5,193 MW requested vs 650 MW still available (850 MW already reserved) — 8× oversubscribed.",
+  "caveat": "The TSOs do not publish the technical site maximum itself; 'available' is their non-binding planning estimate per the 31.03.2026 map state."
+ },
+ "tso_status": [
+  {
+   "tso": "50Hertz",
+   "published_points": 75,
+   "form": "interactive Netzkapazität map (data feed, Stand 31.03.2026)",
+   "note": "Per-substation queue: requested vs available MW, free bays and site BKZ (€/kW). Capacities for commissioning 2025–2029 exhausted; most sites connect only if a new bay can be built."
+  },
+  {
+   "tso": "Amprion",
+   "published_points": 10,
+   "form": "PDF map + substation list (04.2026)",
+   "note": "10 connection points presumed realisable, 2032–2035; bay design published, no MW bands."
+  },
+  {
+   "tso": "TenneT",
+   "published_points": 10,
+   "form": "map + coordinate table (04.2026)",
+   "note": "10 substation projects with secured land and mature planning, connections 2030–2036; two of them load-only."
+  },
+  {
+   "tso": "TransnetBW",
+   "published_points": 15,
+   "form": "interactive SVG map (tooltips parsed, raw/transnetbw_tooltips.json)",
+   "note": "9 medium-term points from 2032 (green) and 6 long-term from 2035 (yellow), with indicative feed-in/load MW bands; 37 substations flagged 'nicht verfügbar' (red)."
+  }
+ ],
+ "stats": {
+  "published_points": 110,
+  "with_bay_detail": 110,
+  "earliest_year": 2030,
+  "n1_points": 15,
+  "restricted_points": 73,
+  "hz_sites": 75,
+  "hz_sites_with_free_bay": 13,
+  "hz_requested_gen_gw": 59.8,
+  "hz_requested_load_gw": 67.7
+ }
+}

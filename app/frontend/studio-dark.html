@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Grid Studio — German Transmission Grid 2025</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<style>
+:root{
+  --bg:#000;--bg2:#0a0a0c;
+  --glass:rgba(28,28,32,.68);--glass2:rgba(22,22,26,.82);
+  --stroke:rgba(255,255,255,.10);--stroke2:rgba(255,255,255,.06);
+  --txt:#f5f5f7;--txt2:#a1a1a6;--txt3:#6e6e73;
+  --blue:#0a84ff;--green:#30d158;--orange:#ff9f0a;--red:#ff453a;--pink:#ff375f;--teal:#64d2ff;--purple:#bf5af2;
+  --r:18px;--r-sm:12px;
+}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;background:var(--bg);color:var(--txt);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",sans-serif;
+  -webkit-font-smoothing:antialiased;font-feature-settings:"tnum"}
+::selection{background:rgba(10,132,255,.35)}
+::-webkit-scrollbar{width:8px;height:8px}::-webkit-scrollbar-thumb{background:rgba(255,255,255,.14);border-radius:4px}
+::-webkit-scrollbar-track{background:transparent}
+
+/* ── Nav ─────────────────────────────────────────────── */
+nav{position:fixed;top:0;left:0;right:0;z-index:2000;display:flex;align-items:center;gap:18px;
+  padding:10px 22px;background:rgba(10,10,12,.62);backdrop-filter:blur(28px) saturate(180%);
+  -webkit-backdrop-filter:blur(28px) saturate(180%);border-bottom:0.5px solid var(--stroke2)}
+nav .brand{font-size:15px;font-weight:600;letter-spacing:-.01em;display:flex;align-items:center;gap:9px}
+nav .brand .dot{width:9px;height:9px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--teal));
+  box-shadow:0 0 12px rgba(10,132,255,.8)}
+.seg{display:flex;background:rgba(255,255,255,.06);border-radius:12px;padding:3px;gap:2px;margin:0 auto}
+.seg button{appearance:none;border:0;background:transparent;color:var(--txt2);font:inherit;font-size:13px;
+  font-weight:500;padding:6px 16px;border-radius:9px;cursor:pointer;transition:all .25s cubic-bezier(.4,0,.2,1);
+  letter-spacing:-.01em;white-space:nowrap}
+.seg button:hover{color:var(--txt)}
+.seg button.on{background:rgba(255,255,255,.14);color:var(--txt);box-shadow:0 1px 4px rgba(0,0,0,.4)}
+nav .meta{font-size:11px;color:var(--txt3);min-width:130px;text-align:right}
+
+/* ── Views ───────────────────────────────────────────── */
+.view{display:none;position:fixed;inset:53px 0 0 0;animation:fadein .35s cubic-bezier(.3,0,.2,1)}
+.view.on{display:block}
+@keyframes fadein{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+
+/* ── Overview ────────────────────────────────────────── */
+#v-home{overflow-y:auto;background:radial-gradient(1200px 700px at 70% -10%,rgba(10,132,255,.13),transparent 60%),
+  radial-gradient(900px 600px at 15% 110%,rgba(191,90,242,.10),transparent 60%),var(--bg)}
+.hero{max-width:980px;margin:0 auto;padding:84px 32px 20px;text-align:center}
+.hero .eyebrow{font-size:13px;font-weight:600;color:var(--blue);text-transform:uppercase;letter-spacing:.14em}
+.hero h1{font-size:clamp(38px,6vw,64px);font-weight:700;letter-spacing:-.025em;line-height:1.05;margin:14px 0 18px;
+  background:linear-gradient(180deg,#fff 30%,#9a9aa0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{font-size:18px;line-height:1.55;color:var(--txt2);max-width:680px;margin:0 auto}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;max-width:980px;margin:42px auto;padding:0 32px}
+.stat{background:var(--glass);backdrop-filter:blur(22px);border:0.5px solid var(--stroke);border-radius:var(--r);
+  padding:20px 18px;transition:transform .3s cubic-bezier(.3,0,.2,1)}
+.stat:hover{transform:translateY(-3px)}
+.stat .v{font-size:30px;font-weight:700;letter-spacing:-.02em}
+.stat .k{font-size:12px;color:var(--txt2);margin-top:4px;line-height:1.35}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;max-width:980px;margin:8px auto 70px;padding:0 32px}
+.card{background:var(--glass);backdrop-filter:blur(22px);border:0.5px solid var(--stroke);border-radius:var(--r);
+  padding:24px;cursor:pointer;transition:all .3s cubic-bezier(.3,0,.2,1)}
+.card:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.22);box-shadow:0 18px 44px rgba(0,0,0,.5)}
+.card .ic{font-size:26px;margin-bottom:10px}
+.card h3{font-size:17px;font-weight:600;letter-spacing:-.01em;margin-bottom:6px}
+.card p{font-size:13.5px;color:var(--txt2);line-height:1.5}
+.footer-note{max-width:980px;margin:0 auto 60px;padding:0 32px;font-size:12px;color:var(--txt3);text-align:center;line-height:1.6}
+
+/* ── Map layout ──────────────────────────────────────── */
+.maplay{position:absolute;inset:0;display:flex}
+.map{flex:1;background:#0a0d12}
+aside{width:400px;display:flex;flex-direction:column;gap:0;overflow:hidden;
+  background:var(--glass2);backdrop-filter:blur(30px) saturate(180%);-webkit-backdrop-filter:blur(30px) saturate(180%);
+  border-left:0.5px solid var(--stroke2)}
+aside header{padding:18px 20px 12px}
+aside header h2{font-size:19px;font-weight:700;letter-spacing:-.02em}
+aside header p{font-size:12.5px;color:var(--txt2);margin-top:3px;line-height:1.45}
+.scroller{flex:1;overflow-y:auto;padding:4px 20px 24px}
+.sect{font-size:11px;font-weight:600;color:var(--txt3);text-transform:uppercase;letter-spacing:.09em;margin:18px 0 8px}
+.glassrow{background:rgba(255,255,255,.05);border:0.5px solid var(--stroke2);border-radius:var(--r-sm);padding:12px 14px;margin-bottom:8px}
+.kpis{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.kpi{background:rgba(255,255,255,.05);border:0.5px solid var(--stroke2);border-radius:var(--r-sm);padding:11px 12px}
+.kpi .v{font-size:19px;font-weight:700;letter-spacing:-.02em}
+.kpi .k{font-size:10px;color:var(--txt2);margin-top:2px;text-transform:uppercase;letter-spacing:.05em}
+.note{font-size:12px;color:var(--txt2);line-height:1.5;margin:8px 0}
+.warn{background:rgba(255,159,10,.10);border:0.5px solid rgba(255,159,10,.3);border-radius:var(--r-sm);
+  padding:10px 12px;font-size:12px;line-height:1.5;color:#ffd60a;margin:8px 0}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{font-size:10px;color:var(--txt3);text-transform:uppercase;letter-spacing:.06em;text-align:right;padding:6px 6px;font-weight:600}
+td{text-align:right;padding:6px 6px;border-top:0.5px solid var(--stroke2)}
+th:first-child,td:first-child{text-align:left}
+.pos{color:var(--green)}.neg{color:var(--red)}
+.bar{display:flex;align-items:center;gap:8px;font-size:12px;margin:3px 0}
+.bar .n{width:88px;color:var(--txt2)}
+.bar .t{flex:1;height:7px;background:rgba(255,255,255,.07);border-radius:4px;overflow:hidden}
+.bar .f{display:block;height:100%;border-radius:4px;min-width:2px;transition:width .5s cubic-bezier(.3,0,.2,1)}
+.bar .val{width:52px;text-align:right;color:var(--txt2)}
+/* time scrubber */
+.scrub{padding:12px 20px;border-top:0.5px solid var(--stroke2);background:rgba(255,255,255,.025)}
+.scrub .t{font-size:13px;font-weight:600;margin-bottom:7px;display:flex;justify-content:space-between;align-items:baseline}
+.scrub .t small{font-weight:400;color:var(--txt3);font-size:11px}
+input[type=range]{width:100%;appearance:none;-webkit-appearance:none;height:4px;border-radius:2px;
+  background:rgba(255,255,255,.14);outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;
+  background:#fff;box-shadow:0 1px 6px rgba(0,0,0,.5);cursor:grab}
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:500;padding:5px 11px;
+  border-radius:100px;border:0.5px solid var(--stroke);background:rgba(255,255,255,.05);cursor:pointer;
+  transition:all .2s;user-select:none;color:var(--txt2)}
+.chip:hover{background:rgba(255,255,255,.1)}
+.chip.on{background:rgba(255,255,255,.16);color:var(--txt);border-color:rgba(255,255,255,.25)}
+.chip .sw{width:9px;height:9px;border-radius:50%}
+.legend{display:flex;flex-wrap:wrap;gap:10px;font-size:11px;color:var(--txt2);padding:4px 0}
+.legend i{width:10px;height:10px;border-radius:3px;display:inline-block;margin-right:4px;vertical-align:-1px}
+/* assistant */
+#v-ai .wrap{max-width:760px;margin:0 auto;height:calc(100% - 0px);display:flex;flex-direction:column;padding:28px 24px}
+.chat{flex:1;overflow-y:auto;display:flex;flex-direction:column;gap:14px;padding:10px 4px}
+.msg{max-width:78%;padding:12px 16px;border-radius:20px;font-size:14.5px;line-height:1.5;animation:fadein .3s}
+.msg.ai{background:var(--glass);border:0.5px solid var(--stroke);align-self:flex-start;border-bottom-left-radius:6px}
+.msg.me{background:var(--blue);align-self:flex-end;border-bottom-right-radius:6px}
+.sugg{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.composer{display:flex;gap:10px;padding:14px 0 6px}
+.composer input{flex:1;background:var(--glass);border:0.5px solid var(--stroke);border-radius:100px;
+  padding:13px 20px;color:var(--txt);font:inherit;font-size:14.5px;outline:none;transition:border .2s}
+.composer input:focus{border-color:rgba(10,132,255,.6)}
+.composer button{background:var(--blue);border:0;border-radius:100px;width:46px;height:46px;color:#fff;
+  font-size:18px;cursor:pointer;transition:transform .2s}
+.composer button:hover{transform:scale(1.06)}
+.aibadge{display:inline-flex;align-items:center;gap:7px;font-size:11px;font-weight:600;color:var(--purple);
+  background:rgba(191,90,242,.12);border:0.5px solid rgba(191,90,242,.3);padding:4px 11px;border-radius:100px;
+  text-transform:uppercase;letter-spacing:.08em}
+.leaflet-container{font:inherit}
+.leaflet-popup-content-wrapper{background:var(--glass2);backdrop-filter:blur(20px);color:var(--txt);
+  border-radius:14px;border:0.5px solid var(--stroke)}
+.leaflet-popup-tip{background:var(--glass2)}
+.leaflet-popup-content{font-size:12.5px;line-height:1.5}
+#ld{position:fixed;top:64px;left:50%;transform:translateX(-50%);z-index:3000;background:var(--glass2);
+  backdrop-filter:blur(20px);border:0.5px solid var(--stroke);padding:7px 18px;border-radius:100px;
+  font-size:12.5px;display:none}
+</style></head>
+<body>
+<div id="ld">Loading…</div>
+<nav>
+  <div class="brand"><span class="dot"></span>Grid Studio</div>
+  <div class="seg" id="tabs">
+    <button data-v="home" class="on">Overview</button>
+    <button data-v="gen">Generation</button>
+    <button data-v="load">Load</button>
+    <button data-v="flow">Flows & Redispatch</button>
+    <button data-v="cong">Congestion</button>
+    <button data-v="ai">Assistant</button>
+  </div>
+  <div class="meta" id="meta">grid_beta · 1000 h</div>
+</nav>
+
+<!-- ── OVERVIEW ─────────────────────────────────────── -->
+<section class="view on" id="v-home">
+  <div class="hero">
+    <div class="eyebrow">German Transmission Grid · 2025</div>
+    <h1>The grid, hour by hour.</h1>
+    <p>A full-year simulation of the German power system: market dispatch, DC power flow on
+       8,238 corridors, and a DSO ↔ TSO redispatch cascade that mirrors how congestion is
+       actually managed — sectioned 110 kV operation, Mindestfaktor curtailment order and
+       switchable normally-open ties included.</p>
+  </div>
+  <div class="stats" id="homestats"></div>
+  <div class="cards">
+    <div class="card" onclick="go('gen')"><div class="ic">⚡️</div><h3>Generation</h3>
+      <p>Every plant cluster on the map, coloured by technology. Filter by carrier, scrub through
+      the year, inspect any node's installed mix and hourly dispatch.</p></div>
+    <div class="card" onclick="go('load')"><div class="ic">🏙️</div><h3>Load</h3>
+      <p>Demand per grid node and per Landkreis — a choropleth of where Germany draws its
+      power, every hour of the year.</p></div>
+    <div class="card" onclick="go('flow')"><div class="ic">🔀</div><h3>Flows & Redispatch</h3>
+      <p>Line loadings before and after the redispatch cascade, what was curtailed and ramped,
+      the energy balance, and the DSO/TSO split.</p></div>
+    <div class="card" onclick="go('cong')"><div class="ic">🌡️</div><h3>Congestion</h3>
+      <p>How many hours per year each line runs over its rating — the grid-reinforcement map,
+      before and after redispatch.</p></div>
+    <div class="card" onclick="go('ai')"><div class="ic">✨</div><h3>Assistant</h3>
+      <p>Ask the grid anything. A local open-source model will answer from the simulation data —
+      coming soon.</p></div>
+  </div>
+  <div class="footer-note">
+    Model: grid_beta scenario · 7,723 buses · merged v8 topology (one line per corridor) ·
+    v9 sectioned 110 kV operation (618 normally-open points) · harmonized market dispatch
+    (MILP unit commitment against the model's own load and export schedule) ·
+    regional redispatch cascade with 395 DSO pockets and a national TSO stage.
+  </div>
+</section>
+
+<!-- ── GENERATION ───────────────────────────────────── -->
+<section class="view" id="v-gen">
+  <div class="maplay">
+    <div class="map" id="map-gen"></div>
+    <aside>
+      <header><h2>Generation</h2>
+        <p>Nodes sized by installed capacity, coloured by dominant technology.
+        Click a node for its mix and current dispatch.</p></header>
+      <div class="scroller">
+        <div class="sect">Filter technologies</div>
+        <div class="chips" id="gen-chips"></div>
+        <div class="sect">Country dispatch this hour</div>
+        <div id="gen-bars"></div>
+        <div class="sect">Node detail</div>
+        <div class="glassrow" id="gen-detail"><span class="note">Click a node on the map.</span></div>
+      </div>
+      <div class="scrub"><div class="t"><span id="gen-time">—</span><small id="gen-hr"></small></div>
+        <input type="range" id="gen-slider" min="0" max="999" value="0"></div>
+    </aside>
+  </div>
+</section>
+
+<!-- ── LOAD ─────────────────────────────────────────── -->
+<section class="view" id="v-load">
+  <div class="maplay">
+    <div class="map" id="map-load"></div>
+    <aside>
+      <header><h2>Load</h2>
+        <p>Electric demand per Landkreis (choropleth) and per grid node (circles).</p></header>
+      <div class="scroller">
+        <div class="kpis" id="load-kpis"></div>
+        <div class="sect">View</div>
+        <div class="chips">
+          <span class="chip on" id="ch-kreis"><span class="sw" style="background:var(--orange)"></span>Landkreise</span>
+          <span class="chip" id="ch-nodes"><span class="sw" style="background:var(--teal)"></span>Nodes</span>
+        </div>
+        <div class="sect">Top districts this hour</div>
+        <table id="load-top"></table>
+        <p class="note">Load profiles are the model's own nodal series (residential & commercial,
+        industry, large industry) — the same demand the market dispatch is balanced against.</p>
+      </div>
+      <div class="scrub"><div class="t"><span id="load-time">—</span><small id="load-hr"></small></div>
+        <input type="range" id="load-slider" min="0" max="999" value="0"></div>
+    </aside>
+  </div>
+</section>
+
+<!-- ── FLOWS & REDISPATCH ───────────────────────────── -->
+<section class="view" id="v-flow">
+  <div class="maplay">
+    <div class="map" id="map-flow"></div>
+    <aside>
+      <header><h2>Flows & Redispatch</h2>
+        <p>Line loadings, the redispatch cascade's actions, and the hourly energy balance.</p></header>
+      <div class="scroller">
+        <div class="chips">
+          <span class="chip on" id="ch-pre"><span class="sw" style="background:var(--blue)"></span>Before</span>
+          <span class="chip" id="ch-post"><span class="sw" style="background:var(--green)"></span>After redispatch</span>
+          <span class="chip" id="ch-curt"><span class="sw" style="background:var(--red)"></span>Curtailment</span>
+        </div>
+        <div class="legend"><i style="background:#30d158"></i>&lt;80% <i style="background:#ffd60a"></i>80–100%
+          <i style="background:#ff9f0a"></i>100–150% <i style="background:#ff453a"></i>&gt;150%</div>
+        <div class="kpis" id="flow-kpis"></div>
+        <div class="sect">Energy balance</div>
+        <div class="glassrow" id="flow-bal"></div>
+        <div class="sect">Top overloads · before → after</div>
+        <table id="flow-top"></table>
+        <div class="sect">Curtailed this hour</div>
+        <table id="flow-curt"></table>
+        <div class="sect">Generation by technology</div>
+        <div id="flow-bars"></div>
+      </div>
+      <div class="scrub"><div class="t"><span id="flow-time">—</span><small id="flow-hr"></small></div>
+        <input type="range" id="flow-slider" min="0" max="999" value="0"></div>
+    </aside>
+  </div>
+</section>
+
+<!-- ── CONGESTION ───────────────────────────────────── -->
+<section class="view" id="v-cong">
+  <div class="maplay">
+    <div class="map" id="map-cong"></div>
+    <aside>
+      <header><h2>Congestion</h2>
+        <p>Hours per year each line is loaded above its rating — after the redispatch did
+        everything it could.</p></header>
+      <div class="scroller">
+        <div class="legend"><i style="background:#30d158"></i>&lt;10 h <i style="background:#ffd60a"></i>&lt;100 h
+          <i style="background:#ff9f0a"></i>&lt;500 h <i style="background:#ff453a"></i>&lt;2000 h
+          <i style="background:#ff375f"></i>&gt;2000 h</div>
+        <div class="sect">Annual summary · before vs after</div>
+        <table id="cong-summary"></table>
+        <div class="sect">Most congested lines (h/yr after redispatch)</div>
+        <table id="cong-top"></table>
+        <p class="note">Lines that stay congested after redispatch flag a structural need —
+        grid reinforcement, not dispatch. Most sit on under-built 110 kV feeders whose load no
+        local generation can relieve.</p>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- ── ASSISTANT ────────────────────────────────────── -->
+<section class="view" id="v-ai">
+  <div class="wrap">
+    <div style="padding:18px 0 6px;display:flex;align-items:center;justify-content:space-between">
+      <h2 style="font-size:22px;font-weight:700;letter-spacing:-.02em">Assistant</h2>
+      <span class="aibadge">● local model · coming soon</span>
+    </div>
+    <div class="chat" id="chat">
+      <div class="msg ai">Hi — I'm the Grid Studio assistant. Soon a small open-source language model
+      will run right here and answer questions against the simulation data: dispatch, flows,
+      congestion, curtailment, any hour of the year.<br><br>Until then, try one of these:</div>
+    </div>
+    <div class="sugg" id="sugg"></div>
+    <div class="composer">
+      <input id="ai-in" placeholder="Ask about the grid… e.g. ‘why is wind curtailed on May 13?’"
+        onkeydown="if(event.key==='Enter')aiSend()">
+      <button onclick="aiSend()">↑</button>
+    </div>
+  </div>
+</section>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const $=id=>document.getElementById(id);
+const ld=b=>$('ld').style.display=b?'block':'none';
+const TECH={solar:'#ffd60a',onwind:'#30d158',offwind:'#64d2ff',biomass:'#a2845e',biogas:'#7ed957',
+  run_of_river:'#0a84ff',reservoir:'#5e5ce6',gas_ccgt:'#ff9f0a',gas_chp:'#ff7b54',coal:'#8e8e93',
+  lignite:'#a96f4c',oil:'#ff375f',waste:'#98989d',other:'#c7c7cc',hydrogen:'#64d2ff'};
+const tc=c=>(c||'').startsWith('import')?'#6e6e73':(TECH[c]||'#c7c7cc');
+const fmtGW=x=>(x/1000).toFixed(1);
+const loadColor=l=>l<.8?'#30d158':l<1?'#ffd60a':l<1.5?'#ff9f0a':'#ff453a';
+const ovlColor=h=>h<10?'#30d158':h<100?'#ffd60a':h<500?'#ff9f0a':h<2000?'#ff453a':'#ff375f';
+let SNAPS=[],SUMMARY=null,CUR=0;
+const TILE='https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png';
+const maps={},layers={};
+function mkmap(id){const m=L.map(id,{preferCanvas:true,zoomControl:false}).setView([51.1,10.4],6);
+  L.tileLayer(TILE,{subdomains:'abcd',maxZoom:19,attribution:'© OSM © CARTO'}).addTo(m);
+  L.control.zoom({position:'bottomleft'}).addTo(m);return m}
+
+/* ── Tabs ── */
+const inited={};
+function go(v){
+  document.querySelectorAll('.view').forEach(e=>e.classList.remove('on'));
+  $('v-'+v).classList.add('on');
+  document.querySelectorAll('#tabs button').forEach(b=>b.classList.toggle('on',b.dataset.v===v));
+  if(!inited[v]){inited[v]=true;init[v]&&init[v]();}
+  setTimeout(()=>{maps[v]&&maps[v].invalidateSize()},60);
+  history.replaceState(null,'','#'+v);
+}
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>go(b.dataset.v));
+
+/* ── shared state fetch ── */
+async function getState(i){const r=await fetch('/api/sample/state?i='+i);return r.json()}
+function scrub(slider,label,hr,cb){
+  $(slider).oninput=e=>{const s=SNAPS[+e.target.value];if(s){$(label).textContent=s.time;$(hr).textContent='hour '+(+e.target.value+1)+'/'+SNAPS.length}};
+  $(slider).onchange=e=>cb(+e.target.value);
+}
+function bars(el,obj,unit){
+  const mx=Math.max(...Object.values(obj),1);
+  $(el).innerHTML=Object.entries(obj).slice(0,12).map(([k,v])=>
+   `<div class="bar"><span class="n">${k}</span><span class="t"><span class="f" style="width:${100*v/mx}%;background:${tc(k)}"></span></span><span class="val">${fmtGW(v)}</span></div>`).join('');
+}
+
+/* ── init per view ── */
+const init={};
+
+/* OVERVIEW */
+async function home(){
+  const s=await (await fetch('/api/sample/summary')).json();SUMMARY=s;
+  const items=[['7,723','grid buses'],['8,238','line corridors (v8 merged)'],['395','DSO supply pockets'],
+   ['618','normally-open ties (v9)'],[s.mean_overloads_per_hour_pre+' → '+s.mean_overloads_per_hour_post,'overloads per hour, before → after redispatch'],
+   [(s.line_hours_pre_yr-s.line_hours_post_yr).toLocaleString(),'overload line-hours removed per year']];
+  $('homestats').innerHTML=items.map(([v,k])=>`<div class="stat"><div class="v">${v}</div><div class="k">${k}</div></div>`).join('');
+}
+
+/* GENERATION */
+let GENNODES=null,genSel=new Set(),genLayer=null;
+init.gen=async()=>{
+  ld(true);maps.gen=mkmap('map-gen');
+  GENNODES=await (await fetch('/api/sample/gen_nodes')).json();
+  const carriers=GENNODES.carriers.filter(c=>!c.startsWith('import'));
+  genSel=new Set(carriers);
+  $('gen-chips').innerHTML=carriers.map(c=>
+   `<span class="chip on" data-c="${c}"><span class="sw" style="background:${tc(c)}"></span>${c}</span>`).join('');
+  document.querySelectorAll('#gen-chips .chip').forEach(ch=>ch.onclick=()=>{
+    const c=ch.dataset.c;ch.classList.toggle('on');
+    ch.classList.contains('on')?genSel.add(c):genSel.delete(c);drawGen()});
+  genLayer=L.layerGroup().addTo(maps.gen);
+  drawGen();
+  scrub('gen-slider','gen-time','gen-hr',loadGenHour);
+  await loadGenHour(0);ld(false);
+};
+function drawGen(){
+  genLayer.clearLayers();
+  for(const n of GENNODES.nodes){
+    const mix=Object.entries(n.mix).filter(([c])=>genSel.has(c));
+    if(!mix.length)continue;
+    const tot=mix.reduce((a,[,v])=>a+v,0);
+    const dom=mix.sort((a,b)=>b[1]-a[1])[0][0];
+    genLayer.addLayer(L.circleMarker([n.lat,n.lon],{radius:Math.min(2+Math.sqrt(tot)/5,15),
+      color:'rgba(0,0,0,.35)',weight:.7,fillColor:tc(dom),fillOpacity:.78})
+     .on('click',()=>genDetail(n.bus)));
+  }
+}
+async function genDetail(bus){
+  const d=await (await fetch(`/api/sample/node?i=${CUR}&bus=${bus}`)).json();
+  $('gen-detail').innerHTML=`<b style="font-size:13px">Bus ${d.bus}</b>
+   <div class="note">installed ${fmtGW(d.cap_MW)} GW · generating ${fmtGW(d.gen_MW)} GW · load ${fmtGW(d.load_MW)} GW · curtailed ${d.curtail_MW} MW</div>
+   <table><thead><tr><th>carrier</th><th>installed</th><th>now</th><th>curt</th></tr></thead><tbody>
+   ${d.carriers.map(x=>`<tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${tc(x.carrier)};margin-right:6px"></span>${x.carrier}</td><td>${x.cap_MW}</td><td>${x.gen_MW}</td><td class="${x.curtail_MW>0?'neg':''}">${x.curtail_MW}</td></tr>`).join('')}
+   </tbody></table>`;
+}
+async function loadGenHour(i){
+  CUR=i;const st=await getState(i);
+  $('gen-time').textContent=st.country.time;$('gen-hr').textContent='hour '+(i+1)+'/'+SNAPS.length;
+  bars('gen-bars',st.country.gen_by_tech_MW);
+}
+
+/* LOAD */
+let KREISGEO=null,kreisLayer=null,nodeLayer=null,loadState=null,kreisOn=true,nodesOn=false;
+init.load=async()=>{
+  ld(true);maps.load=mkmap('map-load');
+  kreisLayer=L.layerGroup().addTo(maps.load);nodeLayer=L.layerGroup();
+  $('ch-kreis').onclick=()=>{kreisOn=!kreisOn;$('ch-kreis').classList.toggle('on');
+    kreisOn?maps.load.addLayer(kreisLayer):maps.load.removeLayer(kreisLayer)};
+  $('ch-nodes').onclick=()=>{nodesOn=!nodesOn;$('ch-nodes').classList.toggle('on');
+    nodesOn?maps.load.addLayer(nodeLayer):maps.load.removeLayer(nodeLayer)};
+  scrub('load-slider','load-time','load-hr',loadLoadHour);
+  await loadLoadHour(0);ld(false);
+};
+async function loadLoadHour(i){
+  ld(true);
+  const [lk,st]=await Promise.all([
+    (await fetch('/api/sample/load_kreis?i='+i)).json(), getState(i)]);
+  loadState=st;
+  $('load-time').textContent=lk.time;$('load-hr').textContent='hour '+(i+1)+'/'+SNAPS.length;
+  const vals=Object.values(lk.load_by_kreis_MW);const mx=Math.max(...vals,1);
+  if(!KREISGEO)KREISGEO=await (await fetch('/api/sample/kreise')).json();
+  kreisLayer.clearLayers();
+  L.geoJSON(KREISGEO,{style:f=>{const v=lk.load_by_kreis_MW[f.properties.ags]||0;
+    return {weight:.4,color:'rgba(255,255,255,.18)',fillColor:'#ff9f0a',fillOpacity:.04+.65*Math.min(v/mx,1)}},
+   onEachFeature:(f,la)=>{const v=lk.load_by_kreis_MW[f.properties.ags]||0;
+    la.bindPopup(`<b>${lk.names[f.properties.ags]||f.properties.ags}</b><br>${v.toLocaleString()} MW`)}}).addTo(kreisLayer);
+  nodeLayer.clearLayers();
+  for(const nd of st.nodes){if(nd.load_MW>1)
+    nodeLayer.addLayer(L.circleMarker([nd.lat,nd.lon],{radius:Math.min(1.5+Math.sqrt(nd.load_MW)/4,13),
+      color:'rgba(0,0,0,.3)',weight:.6,fillColor:'#64d2ff',fillOpacity:.7})
+     .bindPopup(`Bus ${nd.bus}<br>${nd.load_MW.toLocaleString()} MW load`))}
+  const top=Object.entries(lk.load_by_kreis_MW).sort((a,b)=>b[1]-a[1]).slice(0,10);
+  $('load-top').innerHTML='<thead><tr><th>district</th><th>MW</th></tr></thead><tbody>'+
+    top.map(([k,v])=>`<tr><td>${(lk.names[k]||k).replace(/ \(.*\)/,'')}</td><td>${v.toLocaleString()}</td></tr>`).join('')+'</tbody>';
+  $('load-kpis').innerHTML=`<div class="kpi"><div class="v">${fmtGW(st.country.total_load_MW)}</div><div class="k">load GW</div></div>
+   <div class="kpi"><div class="v">${Object.keys(lk.load_by_kreis_MW).length}</div><div class="k">districts</div></div>
+   <div class="kpi"><div class="v">${fmtGW(top[0][1])}</div><div class="k">top district GW</div></div>`;
+  ld(false);
+}
+
+/* FLOWS */
+let flowLayer=null,curtLayer=null,flowPost=false,curtOn=false,flowState=null;
+init.flow=async()=>{
+  ld(true);maps.flow=mkmap('map-flow');
+  flowLayer=L.layerGroup().addTo(maps.flow);curtLayer=L.layerGroup();
+  $('ch-pre').onclick=()=>{flowPost=false;$('ch-pre').classList.add('on');$('ch-post').classList.remove('on');drawFlow()};
+  $('ch-post').onclick=()=>{flowPost=true;$('ch-post').classList.add('on');$('ch-pre').classList.remove('on');drawFlow()};
+  $('ch-curt').onclick=()=>{curtOn=!curtOn;$('ch-curt').classList.toggle('on');
+    curtOn?maps.flow.addLayer(curtLayer):maps.flow.removeLayer(curtLayer)};
+  scrub('flow-slider','flow-time','flow-hr',loadFlowHour);
+  await loadFlowHour(0);ld(false);
+};
+async function loadFlowHour(i){
+  ld(true);CUR=i;flowState=await getState(i);
+  $('flow-time').textContent=flowState.country.time;$('flow-hr').textContent='hour '+(i+1)+'/'+SNAPS.length;
+  drawFlow();panelFlow();ld(false);
+}
+function drawFlow(){
+  if(!flowState)return;
+  flowLayer.clearLayers();curtLayer.clearLayers();
+  for(const ln of flowState.lines){
+    const l=(flowPost?ln.load_post:ln.load_da)||0;
+    if(ln.flow_da===null)continue;
+    flowLayer.addLayer(L.polyline([[ln.y0,ln.x0],[ln.y1,ln.x1]],
+     {color:loadColor(l),weight:l>1?Math.min(1.5+l*1.6,6):(ln.v>=380?1.3:ln.v>=220?1:.45),opacity:l>.8?.95:.4})
+     .bindPopup(`Line ${ln.id} · ${ln.v} kV<br>before ${Math.round((ln.load_da||0)*100)}% · after ${Math.round((ln.load_post||0)*100)}%`));
+  }
+  for(const nd of flowState.nodes){if(nd.curtail_MW>1)
+    curtLayer.addLayer(L.circleMarker([nd.lat,nd.lon],{radius:Math.min(3+Math.sqrt(nd.curtail_MW)/3,16),
+      color:'rgba(0,0,0,.3)',weight:.6,fillColor:'#ff453a',fillOpacity:.75})
+     .bindPopup(`Bus ${nd.bus}<br>curtailed ${nd.curtail_MW} MW`))}
+}
+function panelFlow(){
+  const c=flowState.country;
+  $('flow-kpis').innerHTML=`<div class="kpi"><div class="v">${fmtGW(c.total_load_MW)}</div><div class="k">load GW</div></div>
+   <div class="kpi"><div class="v">${fmtGW(c.total_gen_MW)}</div><div class="k">gen GW</div></div>
+   <div class="kpi"><div class="v" style="color:var(--red)">${(c.total_curtail_MW/1000).toFixed(2)}</div><div class="k">curtailed GW</div></div>`;
+  const sgn=x=>(x>=0?'+':'−')+Math.abs(x/1000).toFixed(1);
+  $('flow-bal').innerHTML=`<div style="font-size:13px;font-weight:600;margin-bottom:4px">
+    gen ${fmtGW(c.total_gen_MW)} ${sgn(c.imports_MW)} imports ${sgn(c.storage_MW)} storage
+    &nbsp;=&nbsp; load ${fmtGW(c.total_load_MW)} ${sgn(c.exports_MW)} exports</div>
+   <div class="note">Balanced each hour by construction — the market dispatch, export schedule and
+   grid model share one demand. Congestion: ${c.n_overload} lines over limit before →
+   <b>${c.n_overload_post}</b> after (DSO 110 kV ${c.n_dso}→${c.n_dso_post} · TSO ${c.n_tso}→${c.n_tso_post}).</div>`;
+  $('flow-top').innerHTML='<thead><tr><th>line</th><th>kV</th><th>before</th><th>after</th></tr></thead><tbody>'+
+   (c.top_overloads||[]).map(o=>`<tr><td>${o.id}</td><td>${o.v}</td>
+    <td class="${o.load_da>1?'neg':'pos'}">${Math.round(o.load_da*100)}%</td>
+    <td class="${o.load_post>1?'neg':'pos'}">${Math.round(o.load_post*100)}%</td></tr>`).join('')+'</tbody>';
+  $('flow-curt').innerHTML=(c.curtail_rows&&c.curtail_rows.length)?
+   '<thead><tr><th>carrier</th><th>bus</th><th>MW down</th></tr></thead><tbody>'+
+   c.curtail_rows.map(r=>`<tr><td><span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${tc(r.carrier)};margin-right:6px"></span>${r.carrier}</td><td>${r.bus}</td><td>${r.mw}</td></tr>`).join('')+'</tbody>'
+   :'<tbody><tr><td class="note">nothing curtailed this hour</td></tr></tbody>';
+  bars('flow-bars',c.gen_by_tech_MW);
+}
+
+/* CONGESTION */
+init.cong=async()=>{
+  ld(true);maps.cong=mkmap('map-cong');
+  const d=await (await fetch('/api/sample/overload_hours')).json();
+  const lay=L.layerGroup().addTo(maps.cong);
+  for(const ln of d.lines){if(ln.h_post<1)continue;
+    lay.addLayer(L.polyline([[ln.y0,ln.x0],[ln.y1,ln.x1]],
+     {color:ovlColor(ln.h_post),weight:Math.min(1.5+ln.h_post/250,7),opacity:.9})
+     .bindPopup(`Line ${ln.id} · ${ln.v} kV<br><b>${ln.h_post} h/yr</b> overloaded after redispatch<br>${ln.h_da} h/yr before`))}
+  if(!SUMMARY)SUMMARY=await (await fetch('/api/sample/summary')).json();
+  const s=SUMMARY;
+  $('cong-summary').innerHTML=`<thead><tr><th></th><th>before</th><th>after</th></tr></thead><tbody>
+   <tr><td>hours with ≥1 overload</td><td>${s.hours_with_overload_pre}</td><td>${s.hours_with_overload_post}</td></tr>
+   <tr><td>lines ever overloaded</td><td>${s.lines_ever_overloaded_pre}</td><td>${s.lines_ever_overloaded_post}</td></tr>
+   <tr><td>overload line-hours /yr</td><td>${s.line_hours_pre_yr.toLocaleString()}</td><td class="pos">${s.line_hours_post_yr.toLocaleString()}</td></tr>
+   <tr><td>mean overloads /hour</td><td>${s.mean_overloads_per_hour_pre}</td><td class="pos">${s.mean_overloads_per_hour_post}</td></tr>
+   <tr><td>max loading</td><td>${Math.round(s.max_loading_pre*100)}%</td><td>${Math.round(s.max_loading_post*100)}%</td></tr></tbody>`;
+  $('cong-top').innerHTML='<thead><tr><th>line</th><th>kV</th><th>h/yr after</th><th>before</th></tr></thead><tbody>'+
+   d.lines.slice(0,12).map(l=>`<tr><td>${l.id}</td><td>${l.v}</td><td class="neg">${l.h_post}</td><td>${l.h_da}</td></tr>`).join('')+'</tbody>';
+  ld(false);
+};
+
+/* ASSISTANT */
+const SUGGS=['Why is wind curtailed in the north?','Which line is congested the most?',
+ 'What does the DSO↔TSO cascade do?','How is the energy balance closed?'];
+const CANNED={
+ 'Why is wind curtailed in the north?':'Wind is curtailed when the lines that evacuate it hit their thermal limit and no cheaper remedy is left. The cascade first lets each DSO curtail locally (Mindestfaktor: conventional plants are moved first, renewables cost 10× more to touch), then the TSO redispatches the EHV grid. In this dataset wind curtailment is only ~0.2% of wind generation — most congestion is relieved by ramping lignite and coal instead.',
+ 'Which line is congested the most?':'Open the Congestion tab — the table lists the worst lines by hours-per-year over their rating after redispatch. The persistent ones sit on under-built 110 kV feeders whose demand no local generation can relieve: a grid-reinforcement signal, not a dispatch problem.',
+ 'What does the DSO↔TSO cascade do?':'Each of the 395 distribution pockets first clears its own 110 kV congestion using only its own generation (down-only, local). The TSO then redispatches transmission-connected plants nationally — monitoring every line so it never creates new distribution congestion — and supplies the balancing energy for what the DSOs curtailed. The loop repeats until nothing improves, mirroring the German Kaskadenprinzip.',
+ 'How is the energy balance closed?':'By construction: the market dispatch (a MILP unit commitment) is run against the grid model’s own nodal load, and its hourly export schedule is written onto the border loads. Generation + imports + storage = load + exports in every hour, so nothing leans on a slack bus.'};
+init.ai=()=>{
+  $('sugg').innerHTML=SUGGS.map(s=>`<span class="chip" onclick="aiAsk('${s.replace(/'/g,"\\'")}')">${s}</span>`).join('');
+};
+function aiPush(cls,txt){const d=document.createElement('div');d.className='msg '+cls;d.innerHTML=txt;
+  $('chat').appendChild(d);$('chat').scrollTop=$('chat').scrollHeight}
+function aiAsk(q){aiPush('me',q);
+  setTimeout(()=>aiPush('ai',CANNED[q]||'The local model isn’t wired up yet — this box is its future home. For now, the Flows, Congestion and Generation tabs answer most questions visually.'),420)}
+function aiSend(){const v=$('ai-in').value.trim();if(!v)return;$('ai-in').value='';aiAsk(v)}
+
+/* boot */
+(async function(){
+  ld(true);
+  const d=await (await fetch('/api/sample/snapshots')).json();
+  SNAPS=d.snapshots;
+  ['gen-slider','load-slider','flow-slider'].forEach(s=>$(s).max=SNAPS.length-1);
+  $('meta').textContent='grid_beta · '+SNAPS.length+' h sampled · v9 harmonized';
+  await home();ld(false);
+  const h=(location.hash||'').slice(1);
+  if(h&&h!=='home')go(h);
+})();
+</script>
+</body></html>

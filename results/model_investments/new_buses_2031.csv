@@ -1,0 +1,97 @@
+investment_id,name,operator,v_nom,lat,lon,cod_year,commitment,source
+7646,Neubau UA RZ Kelsterbach,Syna,110,50.0781,8.5372,2026,safe,VNB Netzausbauplan (NAP 2024)
+7647,Neubau RZ FRA4.2,Syna,110,,,2028,firm,VNB Netzausbauplan (NAP 2024)
+7652,Neubau UA RZ Gewerbegebiet Nord,Syna,110,48.72,7.9981,2027,firm,VNB Netzausbauplan (NAP 2024)
+7653,Neubau UA RZ Liederbach,Syna,110,50.1258,8.5089,2028,firm,VNB Netzausbauplan (NAP 2024)
+7662,Neubau UA Sossenheim RZ FRA6,Syna,110,50.1173,8.5631,2028,firm,VNB Netzausbauplan (NAP 2024)
+7667,Neubau SST Eschhofen,Syna,110,49.1731,9.957,2028,firm,VNB Netzausbauplan (NAP 2024)
+7669,Neubau SST Niederselters Nord,Syna,110,49.1731,9.957,2028,firm,VNB Netzausbauplan (NAP 2024)
+7670,Neubau SST Niederselters Süd,Syna,110,49.1731,9.957,2029,firm,VNB Netzausbauplan (NAP 2024)
+7672,Neubau SST Ilsfeld,Syna,110,49.0667,9.2665,2028,firm,VNB Netzausbauplan (NAP 2024)
+7673,Neubau SST Kirchberg/Zwingelshausen,Syna,110,49.9549,7.4051,2028,firm,VNB Netzausbauplan (NAP 2024)
+7716,UW Schierstedt/Nord; Neubau,MITNETZ Strom,110,51.7515,11.5211,2031,firm,VNB Netzausbauplan (NAP 2024)
+7732,"UW Zschopau, Neubau",MITNETZ Strom,110,50.7432,13.0719,2028,firm,VNB Netzausbauplan (NAP 2024)
+7739,"UW Zörbig, Neubau",MITNETZ Strom,110,51.6972,12.215,2029,firm,VNB Netzausbauplan (NAP 2024)
+7741,UW Annaberg/Ost; Neubau,MITNETZ Strom,110,51.5513,6.5737,2027,firm,VNB Netzausbauplan (NAP 2024)
+7742,UW Schkeuditz/West; Neubau HS/MS-UW,MITNETZ Strom,110,51.3981,12.2114,2027,firm,VNB Netzausbauplan (NAP 2024)
+7757,UW Drebkau; Neubau HS/MS-UW,MITNETZ Strom,110,51.6712,14.1139,2028,firm,VNB Netzausbauplan (NAP 2024)
+7788,Neubau UA Schwabach Süd,N-ERGIE Netz,110,49.3381,10.998,2027,firm,VNB Netzausbauplan (NAP 2024)
+7789,"Neubau UA Altentrüdingen,",N-ERGIE Netz,110,49.0627,10.6177,2026,firm,VNB Netzausbauplan (NAP 2024)
+7808,Sammler Umspannwerk HS-MS Neubau Umspannanlage,N-ERGIE Netz,110,,,2028,firm,VNB Netzausbauplan (NAP 2024)
+7833,UW im Suchraum,TEN Thüringer Energienetze,110,,,2030,firm,VNB Netzausbauplan (NAP 2024)
+7973,UW Forchheim-West - Neubau Umspannwerk,Bayernwerk Netz,110,49.7017,11.0383,2026,firm,VNB Netzausbauplan (NAP 2024)
+8326,UW Suchraum Ost,LEW Verteilnetz,110,,,2027,firm,VNB Netzausbauplan (NAP 2024)
+8374,UW Suchraum Donauried,LEW Verteilnetz,110,48.5189,10.531,2027,firm,VNB Netzausbauplan (NAP 2024)
+8404,UW Suchraum Aitrang,LEW Verteilnetz,110,47.8178,10.5363,2029,firm,VNB Netzausbauplan (NAP 2024)
+8405,UW Suchraum Dessau,LEW Verteilnetz,110,51.8135,12.2338,2030,firm,VNB Netzausbauplan (NAP 2024)
+8635,Neubau UW (Suchraum Wolgast),E.DIS Netz,110,54.0536,13.7758,2028,firm,VNB Netzausbauplan (NAP 2024)
+8652,Neubau UW (Suchraum Riekdahl),E.DIS Netz,110,54.0916,12.1863,2028,firm,VNB Netzausbauplan (NAP 2024)
+8680,Neubau UW (Suchraum Hohen Neuendorf),E.DIS Netz,110,52.6733,13.2807,2028,firm,VNB Netzausbauplan (NAP 2024)
+8692,Neubau UW (Suchraum Dahlwitz-Hoppegarten),E.DIS Netz,110,52.5155,13.6685,2028,firm,VNB Netzausbauplan (NAP 2024)
+8695,Neubau UW (Suchraum Blumberg),E.DIS Netz,110,52.6024,13.6172,2028,firm,VNB Netzausbauplan (NAP 2024)
+8705,Neubau UW (Suchraum Stralsund),E.DIS Netz,110,54.3096,13.0821,2028,firm,VNB Netzausbauplan (NAP 2024)
+8711,Neubau UW (Suchraum Schönefeld),E.DIS Netz,110,52.3886,13.5048,2028,firm,VNB Netzausbauplan (NAP 2024)
+8715,Neubau UW (Suchraum Oranienburg),E.DIS Netz,110,52.7529,13.2458,2028,firm,VNB Netzausbauplan (NAP 2024)
+8716,Neubau UW (Suchraum Neubrandenburg),E.DIS Netz,110,53.5574,13.2603,2028,firm,VNB Netzausbauplan (NAP 2024)
+8721,Neubau UW (Suchraum Neuruppin),E.DIS Netz,110,52.9244,12.8093,2027,firm,VNB Netzausbauplan (NAP 2024)
+8726,Neubau UW (Suchraum Knieper),E.DIS Netz,110,54.3256,13.0668,2027,firm,VNB Netzausbauplan (NAP 2024)
+8735,Neubau UW (Suchraum Finkenheerd),E.DIS Netz,110,52.249,14.567,2026,firm,VNB Netzausbauplan (NAP 2024)
+8736,Neubau UW (Suchraum Eisenhüttenstadt),E.DIS Netz,110,52.1449,14.6294,2027,firm,VNB Netzausbauplan (NAP 2024)
+8743,Neubau UW (Suchraum Selchow),E.DIS Netz,110,52.3576,13.4722,2027,firm,VNB Netzausbauplan (NAP 2024)
+8745,Neubau UW (Suchraum Hennigsdorf),E.DIS Netz,110,52.6376,13.2058,2026,firm,VNB Netzausbauplan (NAP 2024)
+8747,Neubau UW (Suchraum Germendorf),E.DIS Netz,110,52.7492,13.1746,2026,firm,VNB Netzausbauplan (NAP 2024)
+8750,Neubau UW (Suchraum Torgelow),E.DIS Netz,110,53.6304,14.0113,2028,firm,VNB Netzausbauplan (NAP 2024)
+8751,Neubau UW (Suchraum Teltow),E.DIS Netz,110,52.3806,13.2685,2027,firm,VNB Netzausbauplan (NAP 2024)
+8752,Neubau UW (Suchraum Beeskow),E.DIS Netz,110,52.1722,14.2471,2027,firm,VNB Netzausbauplan (NAP 2024)
+8997,UW Suchraum Blankenfelde/Mahlow/Großbeeren,50Hertz,380,52.3446,13.2655,2030,firm,TSO website (2026-07)
+9008,UW Zolling (Neubau),TenneT,380,48.4563,11.7986,2031,firm,TSO website (2026-07)
+9899,Suchraum Gemeinden Moritzburg/Radeburg/Ottendorf-Okrilla/Stadtbezirk Klotzsche: 380-kV-Kompensationsspule (1x 176 Mvar),50Hertz,380,51.214,13.7331,2030,firm,NEP 2037/2045 (2025) 2.E
+9958,Suchraum Ludersheim/West: 380-kV-Kompensationsspule (1x),TenneT,380,49.394,11.3271,2030,firm,NEP 2037/2045 (2025) 2.E
+9968,Suchraum Melbeck: 380-kV-Kompensationsspule (1x),TenneT,380,53.1783,10.4085,2030,firm,NEP 2037/2045 (2025) 2.E
+10086,UW Aichkirchen - Neubau Umspannwerk,Bayernwerk Netz,110,49.0091,11.7557,2029,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10088,UW Aiterhofen - Neubau Umspannwerk,Bayernwerk Netz,110,48.8457,12.6195,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10089,UW Altdorf-Nord - Neubau Umspannwerk,Bayernwerk Netz,110,48.5521,12.1034,2029,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10091,UW Altmannstein - Neubau Umspannwerk,Bayernwerk Netz,110,48.943,11.6292,2029,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10092,UW Anzing - Neubau Umspannwerk,Bayernwerk Netz,110,48.1506,11.8541,2029,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10094,UW Aßling - Neubau Umspannwerk,Bayernwerk Netz,110,47.9928,12.0058,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10096,UW Bad Feilnbach - Neubau Umspannwerk,Bayernwerk Netz,110,47.5082,12.1117,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10097,UW Bad Staffelstein - Neubau Umspannwerk,Bayernwerk Netz,110,47.5082,12.1117,2029,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10099,UW Brücklein - Neubau Umspannwerk,Bayernwerk Netz,110,49.5214,9.5048,2029,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10104,UW Eichendorf - Neubau Umspannwerk,Bayernwerk Netz,110,48.6336,12.8564,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10105,UW Ensdorf - Neubau Umspannwerk,Bayernwerk Netz,110,49.2888,6.78,2029,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10106,UW Ergoldsbach - Neubau Umspannwerk,Bayernwerk Netz,110,48.6911,12.2018,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10107,UW Ering-Nord - Neubau Umspannwerk,Bayernwerk Netz,110,48.2268,13.1044,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10109,UW Garching Leibnitz RZ - Neubau Umspannwerk,Bayernwerk Netz,110,48.2634,11.653,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10110,UW Gaubitzhausen - Neubau Umspannwerk,Bayernwerk Netz,110,48.6437,12.4535,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10116,UW Grünbach - Neubau Umspannwerk,Bayernwerk Netz,110,50.446,12.3649,2029,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10118,UW Hebertsfelden - Neubau Umspannwerk,Bayernwerk Netz,110,48.4065,12.82,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10119,UW Heitzenhofen - Neubau Umspannwerk,Bayernwerk Netz,110,49.1253,11.9375,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10120,UW Heitzmannsberg - Neubau Umspannwerk,Bayernwerk Netz,110,48.3039,12.6944,2029,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10121,UW Heldenstein - Neubau Umspannwerk,Bayernwerk Netz,110,49.2983,8.0139,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10123,UW Hermannsberg - Neubau Umspannwerk,Bayernwerk Netz,110,49.1339,11.5305,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10125,UW Huglfing - Neubau Umspannwerk,Bayernwerk Netz,110,47.7673,11.1575,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10126,UW Irlbach - Neubau Umspannwerk,Bayernwerk Netz,110,48.8517,12.7415,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10127,UW Karlshuld - Neubau Umspannwerk,Bayernwerk Netz,110,48.6888,11.2587,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10128,UW Kirchenthumbach - Neubau Umspannwerk,Bayernwerk Netz,110,49.7498,11.7239,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10129,UW Krombach - Neubau Umspannwerk,Bayernwerk Netz,110,51.2907,10.1354,2029,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10130,UW Lam - Neubau Umspannwerk,Bayernwerk Netz,110,49.1964,13.0515,2027,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10133,UW Machtlfing - Neubau Umspannwerk,Bayernwerk Netz,110,47.9471,11.2225,2029,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10137,UW Mühlhausen - Neubau Umspannwerk,Bayernwerk Netz,110,49.1484,11.4457,2029,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10139,UW Neumarkt St. Veit - Neubau Umspannwerk,Bayernwerk Netz,110,49.2673,11.4462,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10142,UW Nittendorf - Neubau Umspannwerk,Bayernwerk Netz,110,49.0226,11.9467,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10143,UW Nöham - Neubau Umspannwerk,Bayernwerk Netz,110,48.4829,12.9002,2029,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10146,UW Oberthulba - Neubau Umspannwerk,Bayernwerk Netz,110,50.2039,9.9431,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10147,UW Palling - Neubau Umspannwerk,Bayernwerk Netz,110,48.0004,12.6389,2027,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10149,UW Pilsting - Neubau Umspannwerk,Bayernwerk Netz,110,48.725,12.6739,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10150,UW Pöttmes - Neubau Umspannwerk,Bayernwerk Netz,110,48.5821,11.0893,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10152,UW Regensburg Universität - Neubau Umspannwerk,Bayernwerk Netz,110,49.0182,12.0585,2029,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10153,UW Regenstauf - Neubau Umspannwerk,Bayernwerk Netz,110,49.1404,12.1083,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10154,UW Rottenburg a.d. Laaber - Neubau Umspannwerk,Bayernwerk Netz,110,48.4975,8.9352,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10155,UW Saal a. d. Saale - Neubau Umspannwerk,Bayernwerk Netz,110,48.9038,11.9229,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10158,UW Schöllnach - Neubau Umspannwerk,Bayernwerk Netz,110,48.7557,13.1797,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10160,UW Stadtlauringen - Neubau Umspannwerk,Bayernwerk Netz,110,50.1826,10.3905,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10164,UW Volkenschwand - Neubau Umspannwerk,Bayernwerk Netz,110,48.5998,11.8711,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10165,UW Waging - Neubau Umspannwerk,Bayernwerk Netz,110,47.9315,12.7271,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10166,UW Wallersdorf-Nord - Neubau Umspannwerk,Bayernwerk Netz,110,48.6956,12.7946,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10168,UW Wettstetten - Neubau Umspannwerk,Bayernwerk Netz,110,48.8371,11.4149,2028,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
+10171,Pilot-Versuch EE-Steckdose - Neubau Umspannwerk,Bayernwerk Netz,110,,,2025,firm,VNB Netzausbauplan (NAP 2024) Maßnahmentabelle
